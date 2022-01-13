@@ -3,7 +3,7 @@
 runDate=$(date '+%Y%m%d')
 
 sites=(
-    1.usa.gov
+1.usa.gov
 10x.gsa.gov
 18f.gsa.gov
 tech.gsa.gov
@@ -227,7 +227,8 @@ piv.golearnportal.org
 pbs-billing.gsa.gov
 )
 
-mkdir "results/"${runDate}
+mkdir -p "results/"${runDate}
 for i in "${sites[@]}"; do
-    npx lighthouse https://$i --output json --output-path "results/${runDate}/${i}_${runDate}.json"
+    echo $i
+    npx lighthouse https://$i --quiet --chrome-flags="--headless" --throttling.cpuSlowdownMultiplier=1.3 --output json --output-path "results/${runDate}/${i}_${runDate}.json"
 done

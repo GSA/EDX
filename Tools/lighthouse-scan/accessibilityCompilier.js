@@ -1,7 +1,7 @@
 import { readFile } from "fs";
 import { opendir, appendFile } from "fs/promises";
 
-const dirName = "results/20211119";
+const dirName = "results/20220112";
 
 try {
   const dir = await opendir(dirName);
