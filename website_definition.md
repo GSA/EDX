@@ -15,4 +15,4 @@ Domains for exclusion are those that:
 The exclusion list is not to say that the data is not valuable, it should be tracked so that we know what is present and do not have to re-examine a previously found property.
 
 
-For record tkeeping purposes, domains will be tracked as the 'bare' domain (no www prefix)
+For record keeping purposes, domains will be tracked as the 'bare' domain (no www prefix)
