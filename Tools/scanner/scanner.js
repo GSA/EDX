@@ -70,6 +70,11 @@ async function scan(url, headless = true) {
   website.endTime = new Date();
   // now that we are done, close the browser instance
   await browser.close();
+  // If Site Scanner returns true for DAP but IT Perf metric does not, overwrite the value
+  if (website.siteScanner.data.dap_detected_final_url) {
+    website.performanceMetric.dap = true;
+  }
+
   await buildOutput(domain, website);
   console.log("Scan Complete", website.endTime);
 }
@@ -134,23 +139,29 @@ const itPerfMetricReport = async function (browser, url) {
   const regexs = {
     identifier: new RegExp("usa-identifier"),
     identifierPrivacy: new RegExp(
-      "https://www.gsa.gov/website-information/website-policies|website-information/website-policies"
+      "https://www.gsa.gov/website-information/website-policies|website-information/website-policies",
+      "i"
     ),
     identifierAccessibility: new RegExp(
-      "https://www.gsa.gov/website-information/website-policies|website-information/website-policies"
+      "https://www.gsa.gov/website-information/website-policies|website-information/website-policies",
+      "i"
     ),
     identifierFoia: new RegExp(
-      "https://www.gsa.gov/reference/freedom-of-information-act-foia"
+      "https://www.gsa.gov/reference/freedom-of-information-act-foia",
+      "i"
     ),
     dap: new RegExp(
-      "https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js"
+      "https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js",
+      "i"
     ),
     search: new RegExp(
-      "https://search.usa.gov/search|https://search.gsa.gov/search|<label.*?>Search</label>"
+      "https://search.usa.gov/search|https://search.gsa.gov/search|<label.*?>Search.*?</label>",
+      "i"
     ),
     banner: new RegExp("usa-banner"),
     contact: new RegExp(
-      "Contact Us|(?<!-)Contact|Get in touch|Email Us|Help Desk|d+(s|-)d+(s|-)d+|(d+)sd+-d+"
+      "Contact Us|(?<!-)Contact|Get in touch|Email Us|Help Desk|d+(s|-)d+(s|-)d+|(d+)sd+-d+",
+      "i"
     ),
   };
 
@@ -244,7 +255,7 @@ const buildOutput = async function (url, website) {
   const domain = await getDomain(url);
   const pageHash = await printHash(url);
   fs.writeFile(
-    `${path}${domain}_${pageHash}.json`,
+    `${path}${domain}_${formattedDate}_${pageHash}.json`,
     JSON.stringify(website),
     (err) => {
       if (err) {
@@ -256,14 +267,20 @@ const buildOutput = async function (url, website) {
 };
 
 const createUrl = async function (domain) {
-  if (domain.includes("http")) {
+  const regex = /(http:\/\/|https:\/\/)/;
+  if (regex.test(domain)) {
     return domain;
   } else {
     return `https://${domain}`;
   }
 };
 
-const domains = ["gsa.gov"];
+const domains = [
+  //"drivethru.gsa.gov",
+  //"https.cio.gov",
+  //"www.pbs-billing.gsa.gov",
+  "mobile.reginfo.gov",
+];
 
 (async () => {
   for (let domain in domains) {

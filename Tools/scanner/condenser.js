@@ -22,13 +22,15 @@ const csvWriter = createCsvWriter({
     { id: "performanceMetric.contact", title: "Contact" },
     { id: "performanceMetric.banner", title: "USA Banner" },
     { id: "performanceMetric.identifier", title: "Identifier" },
-    { id: "performanceMetric.identifierAccessibility", title: "Accessibility" },
-    { id: "performanceMetric.identifierFOIA", title: "FOIA" },
-    { id: "performanceMetric.identifierPrivacy", title: "Privacy Policy" },
+    {
+      id: "performanceMetric.identifierAccessibility",
+      title: "Accessibility Link",
+    },
+    { id: "performanceMetric.identifierFOIA", title: "FOIA Link" },
+    { id: "performanceMetric.identifierPrivacy", title: "Privacy Policy Link" },
     { id: "performanceMetric.search", title: "Search" },
     { id: "siteScanner.data.scan_date", title: "Site Scanner Date" },
     { id: "siteScanner.data.uswds_usa_classes", title: "USA Class Count" },
-    { id: "siteScanner.data.dap_detected_final_url", title: "DAP URL" },
     { id: "siteScanner.data.uswds_semantic_version", title: "USWDS Version" },
     { id: "uswdsComponents.accordion", title: "USWDS Accordion" },
     { id: "uswdsComponents.alert", title: "USWDS Alert" },
@@ -53,14 +55,6 @@ const csvWriter = createCsvWriter({
       title: "(D) SEO Score",
     },
     {
-      id: "lighthouse.desktopData.lhr.categories['best-practices'].score",
-      title: "(D) Best Practices Score",
-    },
-    {
-      id: "lighthouse.desktopData.lhr.categories.accessibility.score",
-      title: "(D) Accessibility Score",
-    },
-    {
       id: "lighthouse.mobileData.lhr.categories.performance.score",
       title: "(M) Performance Score",
     },
@@ -77,12 +71,24 @@ const csvWriter = createCsvWriter({
       title: "(M) SEO Score",
     },
     {
-      id: "lighthouse.mobileData.lhr.categories['best-practices'].score",
-      title: "(M) Best Practices Score",
+      id: "lighthouse.desktopData.lhr.audits['content-width'].score",
+      title: "Page Content Width Set",
     },
     {
-      id: "lighthouse.mobileData.lhr.categories.accessibility.score",
-      title: "(M) Accessibility Score",
+      id: "lighthouse.desktopData.lhr.audits['meta-viewport'].score",
+      title: "Meta Viewport Set",
+    },
+    {
+      id: "lighthouse.desktopData.lhr.audits['meta-description'].score",
+      title: "Meta Description Set",
+    },
+    {
+      id: "lighthouse.desktopData.lhr.audits['document-title'].score",
+      title: "Document Title Set",
+    },
+    {
+      id: "lighthouse.desktopData.lhr.audits['html-has-lang'].score",
+      title: "HTML Language Set",
     },
   ],
 });
@@ -120,7 +126,15 @@ const extractDataPoints = async function (data) {
 };
 
 (async function () {
-  const dirName = path.join(__dirname, "data");
-
-  await condense(dirName);
+  const folderArray = [
+    "20220201",
+    "20220202",
+    "20220215",
+    "20220216",
+    "20220217",
+  ];
+  for (var folder in folderArray) {
+    const dirName = path.join(__dirname, `data/${folderArray[folder]}`);
+    await condense(dirName);
+  }
 })();

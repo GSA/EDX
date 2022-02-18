@@ -2,5 +2,6 @@
 node_modules/
 headersData/
 pageData/
+Tools/scanner/data
 log.txt
 .env
