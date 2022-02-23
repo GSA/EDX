@@ -137,32 +137,55 @@ const screenshots = async function (browser, url) {
 
 const itPerfMetricReport = async function (browser, url) {
   const regexs = {
-    identifier: new RegExp("usa-identifier"),
-    identifierPrivacy: new RegExp(
-      "https://www.gsa.gov/website-information/website-policies|website-information/website-policies",
-      "i"
-    ),
-    identifierAccessibility: new RegExp(
-      "https://www.gsa.gov/website-information/website-policies|website-information/website-policies",
-      "i"
-    ),
-    identifierFoia: new RegExp(
-      "https://www.gsa.gov/reference/freedom-of-information-act-foia",
-      "i"
-    ),
-    dap: new RegExp(
-      "https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js",
-      "i"
-    ),
-    search: new RegExp(
-      "https://search.usa.gov/search|https://search.gsa.gov/search|<label.*?>Search.*?</label>",
-      "i"
-    ),
-    banner: new RegExp("usa-banner"),
-    contact: new RegExp(
-      "Contact Us|(?<!-)Contact|Get in touch|Email Us|Help Desk|d+(s|-)d+(s|-)d+|(d+)sd+-d+",
-      "i"
-    ),
+    identifier: {
+      regex: new RegExp("usa-identifier"),
+      type: "other",
+    },
+    identifierPrivacy: {
+      regex: new RegExp(
+        "https://www.gsa.gov/website-information/website-policies|website-information/website-policies",
+        "i"
+      ),
+      type: "link",
+      titleRegex: "Privacy",
+    },
+    identifierAccessibility: {
+      regex: new RegExp(
+        "https://www.gsa.gov/website-information/website-policies|website-information/website-policies",
+        "i"
+      ),
+      type: "link",
+    },
+    identifierFOIA: {
+      regex: new RegExp(
+        "https://www.gsa.gov/reference/freedom-of-information-act-foia",
+        "i"
+      ),
+      type: "link",
+    },
+    dap: {
+      regex: new RegExp(
+        "https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js",
+        "i"
+      ),
+      type: "link",
+    },
+    search: {
+      regex:
+        /https:\/\/search.usa.gov\/search|https:\/\/search.gsa.gov\/search|<label.*?>Search.*?<\/label>|placeholder=('|")Search/i,
+      type: "link",
+    },
+    banner: {
+      regex: new RegExp("usa-banner"),
+      type: "other",
+    },
+    contact: {
+      regex: new RegExp(
+        "Contact Us|(?<!-)Contact|Get in touch|Email Us|Help Desk|d+(s|-)d+(s|-)d+|(d+)sd+-d+",
+        "i"
+      ),
+      type: "other",
+    },
   };
 
   const data = new Website.PerformanceMetric();
@@ -177,15 +200,92 @@ const itPerfMetricReport = async function (browser, url) {
       return;
     });
   data.hsts = response.headers().hasOwnProperty("strict-transport-security");
+  const content = await page.content();
 
-  //data.hsts = httpResponse.headers()
+  // some pages load the content of the identifier at the end, give the page a grace period to see if it all loads
+  try {
+    await page.waitForSelector("a.usa-identifier__required-link.usa-link", {
+      timeout: 10000,
+    });
+  } catch (e) {
+    console.log("timeout issue");
+  }
+  let reqdLinks;
   for (let regex in regexs) {
-    const content = await page.content();
-    data[regex] = regexs[regex].test(content);
+    if (regexs[regex].regex.test(content)) {
+      data[regex] = true;
+    } else if (regexs[regex].type == "link") {
+      // is there a reqd links array available
+      if (typeof reqdLinks === "undefined") {
+        // if not, get it
+        reqdLinks = await reqdLinkEvaluation(browser, url);
+      }
+      // now that you have the array, start looping through it to look for matches
+      for (let link in reqdLinks) {
+        if (regexs[regex].regex.test(reqdLinks[link].url)) {
+          data[regex] = true;
+          break;
+        }
+      }
+    }
   }
   return data;
 };
 
+const reqdLinkEvaluation = async function (browser, url) {
+  console.log(
+    "...Double checking links to cover single page applications which do not use hrefs"
+  );
+  let i = 0;
+  let linkDestinations = [];
+  let reqdLinks = [];
+  const page = await browser.newPage();
+  console.log(
+    "browser tab count: ",
+    await browser.pages().then((value) => value.length)
+  );
+  await page.setCacheEnabled(false);
+  do {
+    console.log("loop: ", i);
+    const beforeClickTabCount = await browser
+      .pages()
+      .then((value) => value.length);
+    linkDestination = { title: "", url: "" };
+    await page
+      .goto(await createUrl(url), {
+        waitUntil: "networkidle2",
+      })
+      .catch((e) => {
+        console.error("reqd links error: ", e);
+        return;
+      });
+    // this list of ElementHandles are auto-disposed when the underlying page gets navigated. https://devdocs.io/puppeteer/#class-elementhandle. For this reason, the ElementHandles have to be re-gathered each time.
+    reqdLinks = await page.$$("a.usa-identifier__required-link.usa-link");
+    if (reqdLinks.length == 0) {
+      return linkDestinations;
+    }
+    linkDestination.title = await reqdLinks[i].evaluate(
+      (node) => node.innerText
+    );
+    await Promise.all([
+      //page.waitForNavigation({ waitUntil: "domcontentloaded" }),
+      //the onclick opens a new page
+      reqdLinks[i].click(),
+      page.waitForTimeout(1000),
+    ]);
+    // if the click creates a new tab, identify that here and fetch url from the new tab. Otherwise, fetch from current
+    const pages = await browser.pages(); // get all pages
+    const page2 = pages[pages.length - 1]; // get the new page
+    //this shows the current URL- compare it with the list
+    linkDestination.url = page2.url();
+    if (pages.length > beforeClickTabCount) {
+      await page2.close();
+    }
+    linkDestinations.push(linkDestination);
+    i++;
+  } while (i < reqdLinks.length);
+  return linkDestinations;
+};
 const uswdsComponentsReport = async function (browser, url) {
   const data = new UswdsComponents.UswdsComponents();
   const page = await browser.newPage();
@@ -276,10 +376,13 @@ const createUrl = async function (domain) {
 };
 
 const domains = [
-  //"drivethru.gsa.gov",
-  //"https.cio.gov",
-  //"www.pbs-billing.gsa.gov",
-  "mobile.reginfo.gov",
+  //"labs.gsa.gov",
+  //"property.reporting.gov",
+  //"www.travel.reporting.gov",
+  //"disposal.gsa.gov",
+  "cmls.gsa.gov",
+  //"fairs.reporting.gov",
+  //"realpropertyprofile.gov",
 ];
 
 (async () => {
