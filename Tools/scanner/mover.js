@@ -15,7 +15,7 @@ const mover = async (folderName, destFolder) => {
       if (file.isDirectory()) {
         await findFiles(`${folderName}/${file.name}`);
       } else {
-        const regex = /(_desktop\.png|_mobile\.png|\.json)/;
+        const regex = /_\w*(\.png|\.json)*/;
         const domainName = file.name.replace(regex, "");
         await fs.mkdir(`${destFolder}/${domainName}`, { recursive: true });
         fs.copyFile(
@@ -29,7 +29,7 @@ const mover = async (folderName, destFolder) => {
 };
 
 (async function () {
-  const dirName = path.join(__dirname, "data/20220201");
-  const destination = path.join(__dirname, "data/mover");
+  const dirName = path.join(__dirname, "data/20220228");
+  const destination = path.join(__dirname, `data/mover/${formattedDate}`);
   await mover(dirName, destination);
 })();
