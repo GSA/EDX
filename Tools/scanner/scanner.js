@@ -155,7 +155,7 @@ const itPerfMetricReport = async function (browser, url) {
       "i"
     ),
     search: new RegExp(
-      "https://search.usa.gov/search|https://search.gsa.gov/search|<label.*?>Search.*?</label>",
+      'https://search.usa.gov/search|https://search.gsa.gov/search|<label.*?>Search.*?</label>|aria-label="search.*"',
       "i"
     ),
     banner: new RegExp("usa-banner"),
@@ -279,7 +279,7 @@ const domains = [
   //"drivethru.gsa.gov",
   //"https.cio.gov",
   //"www.pbs-billing.gsa.gov",
-  "mobile.reginfo.gov",
+  "apps.ocfo.gsa.gov?warning=0",
 ];
 
 (async () => {
