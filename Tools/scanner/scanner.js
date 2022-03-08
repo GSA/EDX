@@ -142,25 +142,19 @@ const itPerfMetricReport = async function (browser, url) {
       type: "other",
     },
     identifierPrivacy: {
-      regex: new RegExp(
-        "https://www.gsa.gov/website-information/website-policies|website-information/website-policies",
-        "i"
-      ),
+      regex:
+        /website-information\/website-policies|website-information\/privacy-and-security-notice/i,
       type: "link",
       titleRegex: "Privacy",
     },
     identifierAccessibility: {
-      regex: new RegExp(
-        "https://www.gsa.gov/website-information/website-policies|website-information/website-policies",
-        "i"
-      ),
+      regex:
+        /website-information\/accessibility-aids|website-information\/website-policies/i,
       type: "link",
     },
     identifierFOIA: {
-      regex: new RegExp(
-        "https://www.gsa.gov/reference/freedom-of-information-act-foia",
-        "i"
-      ),
+      regex:
+        /https:\/\/?(?:www\.)?gsa\.gov\/reference\/freedom-of-information-act-foia/i,
       type: "link",
     },
     dap: {
@@ -380,7 +374,7 @@ const domains = [
   //"property.reporting.gov",
   //"www.travel.reporting.gov",
   //"disposal.gsa.gov",
-  "cmls.gsa.gov",
+  "ask.gsa.gov",
   //"fairs.reporting.gov",
   //"realpropertyprofile.gov",
 ];
