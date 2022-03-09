@@ -1,0 +1,4 @@
+{
+  "extends": ["oclif", "oclif-typescript", "prettier"],
+  "plugins": ["prettier"]
+}
