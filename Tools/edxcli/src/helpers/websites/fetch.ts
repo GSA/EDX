@@ -73,6 +73,7 @@ export default class FetchHelper {
   // }
 }
 
+/* eslint-disable camelcase */ //
 interface SiteScannerRecord {
   scan_date: string;
   target_url_domain: string;
@@ -134,11 +135,14 @@ interface SiteScannerRecord {
   target_url_bureau_owner: string;
   target_url_bureau_code: string;
 }
+/* eslint-enable camelcase */ //
 interface TouchpointsRecord {
   id: string;
   type: string;
   attributes: TouchpointsAttributes;
 }
+
+/* eslint-disable camelcase */ //
 interface TouchpointsAttributes {
   domain: string;
   parent_domain: string;
@@ -172,3 +176,4 @@ interface TouchpointsAttributes {
   created_at: string;
   updated_at: string;
 }
+/* eslint-enable camelcase */ //

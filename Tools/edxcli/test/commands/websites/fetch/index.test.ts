@@ -14,6 +14,7 @@ describe('websites:fetch foo', () => {
 });
 
 describe('websites:fetch Touchpoints', () => {
+  /* eslint-disable camelcase */ //
   const data = {
     data: [
       {
@@ -55,6 +56,7 @@ describe('websites:fetch Touchpoints', () => {
       },
     ],
   };
+  /* eslint-enable camelcase */ //
   describe('No flags', () => {
     test
       .nock('https://api.gsa.gov', (api) =>
@@ -108,6 +110,7 @@ describe('websites:fetch Touchpoints', () => {
 });
 
 describe('websites:fetch "Site Scanner"', () => {
+  /* eslint-disable camelcase */ //
   const data = {
     items: [
       {
@@ -194,6 +197,7 @@ describe('websites:fetch "Site Scanner"', () => {
       last: '/websites?page=343&limit=3',
     },
   };
+  /* eslint-enable camelcase */ //
   describe('no flags"', () => {
     test
       .nock('https://api.gsa.gov', (api) =>
