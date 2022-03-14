@@ -10,7 +10,7 @@ describe('websites:fetch foo', () => {
     .catch(
       'Expected foo to be one of: Site Scanner, Touchpoints\nSee more help with --help',
     )
-    .it('Returns an error message', (ctx) => {});
+    .it('Returns an error message', function () {});
 });
 
 describe('websites:fetch Touchpoints', () => {

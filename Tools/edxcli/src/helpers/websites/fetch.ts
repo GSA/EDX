@@ -1,6 +1,3 @@
-import _ from 'lodash';
-import BaseCommand from '../../base';
-
 require('dotenv').config();
 const axios = require('axios').default;
 
@@ -23,10 +20,11 @@ export default class FetchHelper {
     });
     this.siteScanner = axios.create({
       baseURL: 'https://api.gsa.gov/technology/site-scanning/v1',
-      timeout: 10000,
+      timeout: 10_000,
       params: {
         API_KEY: process.env.TOUCHPOINTS_API_KEY,
         limit: 100,
+        // eslint-disable camelcase
         target_url_agency_owner: 'General Services Administration',
       },
     });
@@ -47,7 +45,7 @@ export default class FetchHelper {
   }
 
   async getSiteScannerWebsites(
-    pageNo: number = 1,
+    pageNo = 1,
   ): Promise<never | SiteScannerRecord[]> {
     let data: SiteScannerRecord[] = [];
     let next = '';
@@ -64,13 +62,9 @@ export default class FetchHelper {
             console.error(error);
           }),
       );
-    } while (next != '');
+    } while (next !== '');
     return data;
   }
-
-  // compare(a, b): string[] {
-  //   return [];
-  // }
 }
 
 /* eslint-disable camelcase */ //
