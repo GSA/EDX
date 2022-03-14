@@ -9,11 +9,8 @@ export default class Fetch extends BaseCommand<typeof Fetch.flags> {
     'Retrieves a list of websites from one or more data sources.';
 
   static examples = [
-    `$ oex websites fetch "Site Scanner" 
-    Fetching Site Scanner data... complete
-    Site Scanner data written to Site Scanner_20220312.csv`,
-    `$ oex websites fetch Touchpoints -o ~/mydirectory`,
-    `$ oex websites fetch Touchpoints -o ~/another/directory -l 5`,
+    `$ edxcli websites fetch "Site Scanner"`,
+    `$ edxcli websites fetch Touchpoints -o ~/mydirectory`,
   ];
 
   static flags = {

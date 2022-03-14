@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "author": "US General Services Administration",
   "bin": {
-    "oex": "./bin/run"
+    "edxcli": "./bin/run"
   },
   "bugs": "https://github.com/gsa/edx/issues",
   "dependencies": {
@@ -54,8 +54,8 @@
   "license": "MIT",
   "main": "dist/index.js",
   "oclif": {
-    "bin": "oex",
-    "dirname": "oex",
+    "bin": "edxcli",
+    "dirname": "edxcli",
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",
@@ -68,7 +68,7 @@
       }
     }
   },
-  "repository": "oclif/hello-world",
+  "repository": "gsa/edx",
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint . --ext .ts --config .eslintrc",
