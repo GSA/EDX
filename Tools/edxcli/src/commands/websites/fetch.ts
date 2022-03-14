@@ -2,7 +2,6 @@ import { Flags, CliUx, Config } from '@oclif/core';
 import BaseCommand from '../../base';
 import FetchHelper from '../../helpers/websites/fetch';
 import CSV from '../../helpers/global/csv';
-import { config } from 'dotenv';
 
 export default class Fetch extends BaseCommand<typeof Fetch.flags> {
   static description =
@@ -23,7 +22,6 @@ export default class Fetch extends BaseCommand<typeof Fetch.flags> {
     }),
   };
 
-  // update args, someone should be able to provide the name of the service from which to fetch
   static args = [
     {
       name: 'source',

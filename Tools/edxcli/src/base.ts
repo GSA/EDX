@@ -1,4 +1,4 @@
-import { Command, Flags, Config } from '@oclif/core';
+import { Command, Flags } from '@oclif/core';
 import {
   FlagInput,
   OutputFlags,
@@ -15,7 +15,6 @@ export default abstract class BaseCommand<
   T extends typeof BaseCommand.flags,
 > extends Command {
   static date: any = new Date();
-  static config: Config = this.config;
   static formattedDate(): string {
     return `${this.date.getFullYear()}${this.date.getMonth() < 10 ? '0' : ''}${
       this.date.getMonth() + 1
@@ -60,7 +59,6 @@ export default abstract class BaseCommand<
   async init(): Promise<void> {
     // do some initialization
     this.parsedOutput = await this.parse(this.ctor);
-    this.config = this.config;
   }
 
   async catch(err: any) {
