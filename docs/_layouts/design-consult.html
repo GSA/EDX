@@ -1,0 +1,32 @@
+---
+layout: default 
+---
+
+
+<div class="usa-section bg-base-lighter">
+        <div class="grid-container">
+        {% if page.title %}
+          <h1>{{ page.title }}</h1> 
+          {% endif %}
+          <ul class="usa-button-group usa-button-group--segmented">
+              <li class="usa-button-group__item">
+                <a href="current.html" class="usa-button {% if page.type != 'current' %} usa-button--outline {%endif%}">Current</a>
+              </li>
+              <li class="usa-button-group__item">
+                <a href="proposed.html" class="usa-button {% if page.type != 'proposed' %} usa-button--outline {%endif%}">Proposed</a>
+              </li>
+              <li class="usa-button-group__item">
+                <a href="diff.html" class="usa-button {% if page.type != 'diff' %} usa-button--outline {%endif%}">Diff</a>
+              </li>
+          </ul>
+        </div>
+        <div>
+        <hr class="border-bottom-05 text-accent-cool-darker" />
+    </div>
+    
+        <div class="bg-white {{ page.collection }}"> <!-- {% if page.type == 'diff' %} grid-container {% endif %}-->
+        {{ content }}
+        </div>
+    </div>
+  </div>
+</div>

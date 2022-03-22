@@ -1,0 +1,8 @@
+---
+---
+
+/* makes use of Sass nesting (https://sass-lang.com/documentation/at-rules/import#nesting) to nest a given stylesheet within a class name. Doing so ensures that any global scope styles, e.g., body {}, h1 {}, etc do not impact the overall site css.
+*/
+.contractdirectory {
+    @import url('../design-consults/contractdirectory/default.css');
+}
