@@ -1,5 +1,4 @@
 const puppeteer = require("puppeteer");
-const crawler = require("crawler");
 require("dotenv").config();
 const fs = require("fs");
 const crypto = require("crypto");
@@ -370,11 +369,11 @@ const createUrl = async function (domain) {
 };
 
 const domains = [
-  //"labs.gsa.gov",
+  "apps.ocfo.gsa.gov",
   //"property.reporting.gov",
   //"www.travel.reporting.gov",
   //"disposal.gsa.gov",
-  "ask.gsa.gov",
+  "finance.ocfo.gsa.gov",
   //"fairs.reporting.gov",
   //"realpropertyprofile.gov",
 ];
