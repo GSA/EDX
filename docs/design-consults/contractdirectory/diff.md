@@ -2,6 +2,8 @@
 layout: design-consult
 title: Contract Directory
 type: diff
+collection: 
+css:
 ---
 
 ```diff

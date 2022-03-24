@@ -3,8 +3,9 @@ layout: design-consult
 title: Contract Directory
 type: current
 collection: contractdirectory
+css: contractdirectory
 ---
-
+<!-- markdownlint-disable MD033 -->
 <!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
  saved from url=(0048)https://contractdirectory.gov/contractdirectory/ -->
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -138,7 +139,7 @@ collection: contractdirectory
               </td>
             </tr>
             <tr align="center">
-              <!--			<td><input type="submit" id="button_search" value="Search" onclick="document.pressed=this.value" class="green_button" /></td>-->
+              <!--   <td><input type="submit" id="button_search" value="Search" onclick="document.pressed=this.value" class="green_button" /></td>-->
               <td>
                 <input
                   id="button_search"
@@ -179,14 +180,13 @@ collection: contractdirectory
               </td>
               <td><input type="hidden" id="as" name="as" value="" /></td>
 
-              <!--			<form name="form2" method="get" action="/test">
-			<input type="hidden" name="advSearch" value="true"/></td>
-			<td><input type="submit" id="button_advanced_search" value="Advanced Search" class="green_button" />
-				</td>
+              <!--   <form name="form2" method="get" action="/test">
+   <input type="hidden" name="advSearch" value="true"/></td>
+   <td><input type="submit" id="button_advanced_search" value="Advanced Search" class="green_button" />
+    </td>
 
-
-						<input width="123" align="center" type="image" height="24" alt="search" src="images/Search.png" tabindex="2" />
-				</form>-->
+      <input width="123" align="center" type="image" height="24" alt="search" src="images/Search.png" tabindex="2" />
+    </form>-->
             </tr>
           </tbody>
         </table>

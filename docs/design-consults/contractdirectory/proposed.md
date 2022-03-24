@@ -2,8 +2,10 @@
 layout: design-consult
 title: Contract Directory
 type: proposed
+collection: 
+css:
 ---
-
+<!-- markdownlint-disable MD033 -->
 <!-- <!DOCTYPE html>
 saved from url=(0048)https://contractdirectory.gov/contractdirectory/ -->
 <html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
