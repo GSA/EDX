@@ -496,5 +496,5 @@ a:hover
 	background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), #336600, rgba(0,0,0,0));
 	background:     -ms-linear-gradient(left, rgba(0,0,0,0), #336600, rgba(0,0,0,0));
 	background:      -o-linear-gradient(left, rgba(0,0,0,0), #336600, rgba(0,0,0,0));
-	background-color:#336600\9;
+	background-color:#336600;
 }
