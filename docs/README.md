@@ -74,7 +74,7 @@ govtservice_gsa:
 ```
 
 5. Paste downloaded HTML output into current.md. Update directories for images, styles, js to point at folder within `assets/design-consults/govtservice_gsa`
-6. If the CSS of the site going through a consult changes the overall page (e.g. spacing changes, font colors are different, etc), it is likely due to global scope CSS. To remedy this, update `assets/design-consults.css` by adding a new class (using the same naming pattern as used earlier for folders) and importing the offending style sheet. This will put the CSS into its own namespace. The Design Consults layout will automatically include the class by expecting the CSS class to match the name provided in the pages frontmatter.
+6. If the CSS of the site going through a consult changes the overall page (e.g. spacing changes, font colors are different, etc), it is likely due to global scope CSS. To remedy this, update copy stylesheets into the `_sass/` directory and name as follows `_{govtservice_gsa}_{filename}.scss`. In `assets/design-consults.scss` add a new class which uses the same name as the folder previously created and import the files contained in `_sass/`. This will put the CSS into its own namespace. The Design Consults layout will automatically include the class by expecting the CSS class to match the name provided in the pages frontmatter.
 
 ## Jekyll + U.S. Web Design System
 
