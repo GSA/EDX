@@ -43,6 +43,9 @@ collections:
   contractdirectory:
     output: true
     permalink: /:name
+  apps_ocfo_gsa:
+    output: true
+    permalink: /:name
 collections_dir: "design-consults"
 
 

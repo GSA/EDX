@@ -8,3 +8,7 @@ No need to reference the full directory or use the underscore that is included i
 .contractdirectory {
     @import 'contractdirectory_default';
 }
+.apps_ocfo_gsa {
+    @import 'apps_ocfo_gsa_aloha_styles';
+    @import 'apps_ocfo_gsa_aloha_desktop_styles';
+}

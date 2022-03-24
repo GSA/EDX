@@ -2,7 +2,6 @@
 layout: default 
 ---
 
-
 <div class="usa-section bg-base-lighter">
         <div class="grid-container">
         {% if page.title %}
@@ -18,13 +17,16 @@ layout: default
               <li class="usa-button-group__item">
                 <a href="diff.html" class="usa-button {% if page.type != 'diff' %} usa-button--outline {%endif%}">Diff</a>
               </li>
+              <li class="usa-button-group__item">
+                <a href="production.html" class="usa-button {% if page.type != 'production' %} usa-button--outline {%endif%}">Production</a>
+              </li>
           </ul>
         </div>
         <div>
         <hr class="border-bottom-05 text-accent-cool-darker" />
     </div>
     
-        <div class="bg-white {{ page.collection }}"> <!-- {% if page.type == 'diff' %} grid-container {% endif %}-->
+        <div class="bg-white {{ page.css }}"> 
         {{ content }}
         </div>
     </div>
