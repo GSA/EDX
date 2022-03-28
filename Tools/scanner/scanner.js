@@ -7,6 +7,7 @@ const Website = require("./models/website");
 const lighthouse = require("lighthouse");
 const fetch = require("node-fetch");
 const UswdsComponents = require("./models/uswdsComponents");
+const websiteMetadata = require("./websites-metadata");
 
 const date = new Date();
 const formattedDate = `${date.getFullYear()}${date.getMonth() < 10 ? "0" : ""}${
@@ -135,6 +136,7 @@ const screenshots = async function (browser, url) {
 };
 
 const itPerfMetricReport = async function (browser, url) {
+  const domain = await getDomain(url);
   const regexs = {
     identifier: {
       regex: new RegExp("usa-identifier"),
@@ -184,6 +186,13 @@ const itPerfMetricReport = async function (browser, url) {
   const data = new Website.PerformanceMetric();
   const page = await browser.newPage();
   await page.setCacheEnabled(false);
+  // check for the domain in websiteMetadata, if found, see if the cookies object has a non-blank name attribute.
+  if (Object.prototype.hasOwnProperty.call(websiteMetadata, domain)) {
+    if (websiteMetadata[domain].cookies.name != "") {
+      await page.setCookie(websiteMetadata[domain].cookies);
+    }
+  }
+
   const response = await page
     .goto(await createUrl(url), {
       waitUntil: "networkidle2",
@@ -201,10 +210,15 @@ const itPerfMetricReport = async function (browser, url) {
       timeout: 10000,
     });
   } catch (e) {
-    console.log("timeout issue");
+    console.log(
+      "timeout exceeded while waiting for usa-identifier selector - it may not exist"
+    );
   }
   let reqdLinks;
+  // loop through the list of regex patterns
+  // this needs refactoring, looping through the list of regexs and sending off to the reqdLinkEvaluation is wonky
   for (let regex in regexs) {
+    // test if regex pattern matches page content
     if (regexs[regex].regex.test(content)) {
       data[regex] = true;
     } else if (regexs[regex].type == "link") {
@@ -221,29 +235,35 @@ const itPerfMetricReport = async function (browser, url) {
         }
       }
     }
+    if (regex === "search" && !data[regex]) {
+      // some websites do not require search per digital council recommendation. Check for sites in websitemetadata to see if searchNotReq is true
+      data[regex] = Object.prototype.hasOwnProperty.call(
+        websiteMetadata,
+        domain
+      )
+        ? websiteMetadata[domain].searchNotReq
+        : false;
+    }
   }
   return data;
 };
 
+/* function looks for the identifier on the page and produces a list of links in the identifier. From there, each link is clicked and the resulting page url is reviewed for a match against the required links. This helps address single page applications which do not have hrefs but have onclick() */
 const reqdLinkEvaluation = async function (browser, url) {
-  console.log(
+  /* console.log(
     "...Double checking links to cover single page applications which do not use hrefs"
-  );
+  ); */
   let i = 0;
   let linkDestinations = [];
   let reqdLinks = [];
   const page = await browser.newPage();
-  console.log(
-    "browser tab count: ",
-    await browser.pages().then((value) => value.length)
-  );
+
   await page.setCacheEnabled(false);
   do {
-    console.log("loop: ", i);
     const beforeClickTabCount = await browser
       .pages()
       .then((value) => value.length);
-    linkDestination = { title: "", url: "" };
+    let linkDestination = { title: "", url: "" };
     await page
       .goto(await createUrl(url), {
         waitUntil: "networkidle2",
@@ -361,22 +381,17 @@ const buildOutput = async function (url, website) {
 
 const createUrl = async function (domain) {
   const regex = /(http:\/\/|https:\/\/)/;
-  if (regex.test(domain)) {
-    return domain;
-  } else {
-    return `https://${domain}`;
-  }
+  // strip out http/https if it exists
+  domain = domain.replace(regex, "");
+  const { wwwPrefix, queryString, urlPath } =
+    Object.prototype.hasOwnProperty.call(websiteMetadata, domain)
+      ? websiteMetadata[domain]
+      : { wwwPrefix: "", queryString: "", urlPath: "" };
+
+  return `https://${wwwPrefix}${domain}${urlPath}${queryString}`;
 };
 
-const domains = [
-  "apps.ocfo.gsa.gov",
-  //"property.reporting.gov",
-  //"www.travel.reporting.gov",
-  //"disposal.gsa.gov",
-  "finance.ocfo.gsa.gov",
-  //"fairs.reporting.gov",
-  //"realpropertyprofile.gov",
-];
+const domains = ["acquisition.gov"];
 
 (async () => {
   for (let domain in domains) {
