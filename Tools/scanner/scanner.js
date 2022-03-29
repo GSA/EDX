@@ -144,18 +144,17 @@ const itPerfMetricReport = async function (browser, url) {
     },
     identifierPrivacy: {
       regex:
-        /website-information\/website-policies|website-information\/privacy-and-security-notice/i,
+        /website-information\/website-policies|website-information\/privacy-and-security-notice|portal\/content\/116609/i,
       type: "link",
       titleRegex: "Privacy",
     },
     identifierAccessibility: {
       regex:
-        /website-information\/accessibility-aids|website-information\/website-policies/i,
+        /website-information\/accessibility-aids|website-information\/website-policies|portal\/content\/116609/i,
       type: "link",
     },
     identifierFOIA: {
-      regex:
-        /https:\/\/?(?:www\.)?gsa\.gov\/reference\/freedom-of-information-act-foia/i,
+      regex: /reference\/freedom-of-information-act-foia|\/node\80729/i,
       type: "link",
     },
     dap: {
