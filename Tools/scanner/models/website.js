@@ -10,6 +10,7 @@ class Website {
   /* over time, the contents of scans will change and should follow semantic versioning principles. Pulling from package.json reduces the total number of manual steps when updating the version number */
   scanVersion = packagejson.version;
   url;
+  scanStatus;
   performanceMetric;
   uswdsComponents;
   digitalAnalytics;
@@ -23,11 +24,15 @@ class Website {
     this.endTime = "";
     this.domain = "";
     this.url = "";
+    this.scanStatus = "";
     //this.uswdsComponents = new UswdsComponents.UswdsComponents();
     this.digitalAnalytics = new DigitalAnalytics();
     //this.screenCapture = new GenericDataObj();
     //this.siteScanner = new GenericDataObj();
     //this.lighthouse = new Lighthouse();
+  }
+  setScanStatus(message) {
+    this.scanStatus += message;
   }
   setPerformanceMetric(PerformanceMetric) {
     this.performanceMetric = PerformanceMetric;

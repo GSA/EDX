@@ -62,22 +62,45 @@ async function scan(url, headless = true) {
   website.startTime = start;
   website.domain = domain;
   website.url = url;
-  website.setScreenCapture(await screenshots(browser, url));
-  website.setLighthouse(await lighthouseReport(browser, url));
-  website.setPerformanceMetric(await itPerfMetricReport(browser, url));
-  website.setUswdsComponents(await uswdsComponentsReport(browser, url));
-  website.setSiteScanner(await siteScannerReport(domain));
+
+  const { pageFound, message } = await initialCheck(browser, url);
+  console.log("page found: ", pageFound);
+  if (pageFound) {
+    website.setScanStatus(`Page loaded successfully`);
+    website.setScreenCapture(await screenshots(browser, url));
+    website.setLighthouse(await lighthouseReport(browser, url));
+    website.setPerformanceMetric(await itPerfMetricReport(browser, url));
+    website.setUswdsComponents(await uswdsComponentsReport(browser, url));
+    website.setSiteScanner(await siteScannerReport(domain));
+    // If Site Scanner returns true for DAP but IT Perf metric does not, overwrite the value
+    if (website.siteScanner.data.dap_detected_final_url) {
+      website.performanceMetric.dap = true;
+    }
+  } else {
+    website.setScanStatus(message);
+    console.warn("full scan not retrieved");
+  }
+
   website.endTime = new Date();
   // now that we are done, close the browser instance
   await browser.close();
-  // If Site Scanner returns true for DAP but IT Perf metric does not, overwrite the value
-  if (website.siteScanner.data.dap_detected_final_url) {
-    website.performanceMetric.dap = true;
-  }
 
   await buildOutput(domain, website);
   console.log("Scan Complete", website.endTime);
 }
+
+const initialCheck = async function (browser, url) {
+  const scanStatus = { pageFound: true, message: "" };
+  const page = await browser.newPage();
+  await page
+    .goto(await createUrl(url), { waitUntil: "networkidle2" })
+    .catch((e) => {
+      console.error("Initial check error: ", e);
+      scanStatus.pageFound = false;
+      scanStatus.message = `Initial check error: ${e}`;
+    });
+  return scanStatus;
+};
 
 const lighthouseReport = async function (browser, url) {
   const data = {};
@@ -162,12 +185,12 @@ const itPerfMetricReport = async function (browser, url) {
         "https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js",
         "i"
       ),
-      type: "link",
+      type: "other",
     },
     search: {
       regex:
         /https:\/\/search.usa.gov\/search|https:\/\/search.gsa.gov\/search|<label.*?>Search.*?<\/label>|placeholder=('|")Search|aria-label="search.*"/i,
-      type: "link",
+      type: "other",
     },
     banner: {
       regex: new RegExp("usa-banner"),
@@ -221,6 +244,7 @@ const itPerfMetricReport = async function (browser, url) {
     if (regexs[regex].regex.test(content)) {
       data[regex] = true;
     } else if (regexs[regex].type == "link") {
+      console.log(`regex, ${regex} did not find a match`);
       // is there a reqd links array available
       if (typeof reqdLinks === "undefined") {
         // if not, get it
@@ -390,7 +414,7 @@ const createUrl = async function (domain) {
   return `https://${wwwPrefix}${domain}${urlPath}${queryString}`;
 };
 
-const domains = ["acquisition.gov"];
+const domains = ["gsa.gov"];
 
 (async () => {
   for (let domain in domains) {

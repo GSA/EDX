@@ -17,6 +17,7 @@ const csvWriter = createCsvWriter({
     { id: "url", title: "URL" },
     { id: "scanDate", title: "Scan Date" },
     { id: "scanVersion", title: "Scan Version" },
+    { id: "scanStatus", title: "Scan Status" },
     { id: "performanceMetric.hsts", title: "HSTS" },
     { id: "performanceMetric.dap", title: "Digital Analytics (DAP)" },
     { id: "performanceMetric.contact", title: "Contact" },
@@ -126,13 +127,7 @@ const extractDataPoints = async function (data) {
 };
 
 (async function () {
-  const folderArray = [
-    "20220201",
-    "20220202",
-    "20220215",
-    "20220216",
-    "20220217",
-  ];
+  const folderArray = ["tmp"];
   for (var folder in folderArray) {
     const dirName = path.join(__dirname, `data/${folderArray[folder]}`);
     await condense(dirName);
