@@ -1,9 +1,12 @@
+// @ts-check
+
 /**
  * Class listing each of the USWDS components as a boolean to indicate if the component is present
  */
 class UswdsComponents {
   constructor() {
-    this.description = "listing each of the USWDS components as a boolean to indicate if the component is present";
+    this.description =
+      "listing each of the USWDS components as a boolean to indicate if the component is present";
     this.accordion = false;
     this.alert = false;
     this.banner = false;

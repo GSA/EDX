@@ -1,3 +1,5 @@
+// @ts-check
+
 const createCsvWriter = require("csv-writer").createObjectCsvWriter;
 const fs = require("fs").promises;
 const path = require("path");
@@ -127,9 +129,9 @@ const extractDataPoints = async function (data) {
 };
 
 (async function () {
-  const folderArray = ["tmp"];
+  const folderArray = ["20220331 copy"];
   for (var folder in folderArray) {
-    const dirName = path.join(__dirname, `data/${folderArray[folder]}`);
+    const dirName = `data/${folderArray[folder]}`;
     await condense(dirName);
   }
 })();

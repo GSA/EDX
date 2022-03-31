@@ -1,3 +1,5 @@
+// @ts-check
+
 const puppeteer = require("puppeteer");
 require("dotenv").config();
 const fs = require("fs");
@@ -414,7 +416,7 @@ const createUrl = async function (domain) {
   return `https://${wwwPrefix}${domain}${urlPath}${queryString}`;
 };
 
-const domains = ["gsa.gov"];
+const domains = ["gsa.gov", "labs.gsa.gov", "acquisition.gov", "buy.gsa.gov"];
 
 (async () => {
   for (let domain in domains) {

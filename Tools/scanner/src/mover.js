@@ -1,3 +1,5 @@
+// @ts-check
+
 const fs = require("fs").promises;
 const path = require("path");
 
@@ -29,7 +31,7 @@ const mover = async (folderName, destFolder) => {
 };
 
 (async function () {
-  const dirName = path.join(__dirname, "data/20220228");
-  const destination = path.join(__dirname, `data/mover/${formattedDate}`);
+  const dirName = "data/20220331 copy";
+  const destination = `data/mover/${formattedDate}`;
   await mover(dirName, destination);
 })();

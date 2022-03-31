@@ -1,5 +1,7 @@
+// @ts-check
+
 const UswdsComponents = require("./uswdsComponents");
-const packagejson = require("../package.json");
+const packagejson = require("../../package.json");
 /**
  * Class representing a full website report which consists of scan attributes and sub-classes
  */

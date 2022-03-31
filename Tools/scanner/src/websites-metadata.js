@@ -1,3 +1,5 @@
+// @ts-check
+
 const websiteMetaData = {
   TEMPLATE: {
     cookies: { name: "", value: "", domain: "", path: "" },
