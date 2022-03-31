@@ -7,7 +7,7 @@ const crypto = require("crypto");
 const hash = crypto.createHash("md5");
 const Website = require("./models/website");
 const lighthouse = require("lighthouse");
-const fetch = require("node-fetch");
+const { default: fetch } = require("node-fetch");
 const UswdsComponents = require("./models/uswdsComponents");
 const websiteMetadata = require("./websites-metadata");
 
@@ -44,12 +44,11 @@ async function printHash(text) {
  * Scan fires off a number of functions which return results which are then composed in the buildOutput() function
  * @param {string} url
  * @param {boolean} headless
- * @param {Date} date
  */
 async function scan(url, headless = true) {
   const domain = await getDomain(url);
   console.log("Scanning", domain);
-  const start = new Date();
+  const start = new Date().toISOString();
   console.log("Start time", start);
   fs.mkdir(path, { recursive: true }, function (dirErr) {
     if (dirErr) return;
@@ -83,7 +82,7 @@ async function scan(url, headless = true) {
     console.warn("full scan not retrieved");
   }
 
-  website.endTime = new Date();
+  website.endTime = new Date().toISOString();
   // now that we are done, close the browser instance
   await browser.close();
 
@@ -416,10 +415,13 @@ const createUrl = async function (domain) {
   return `https://${wwwPrefix}${domain}${urlPath}${queryString}`;
 };
 
-const domains = ["gsa.gov", "labs.gsa.gov", "acquisition.gov", "buy.gsa.gov"];
+const domains = [
+  "gsa.gov",
+  //"labs.gsa.gov", "acquisition.gov", "buy.gsa.gov"
+];
 
 (async () => {
   for (let domain in domains) {
-    await scan(domains[domain], false, formattedDate);
+    await scan(domains[domain], false);
   }
 })();

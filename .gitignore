@@ -3,5 +3,6 @@ node_modules/
 headersData/
 pageData/
 Tools/scanner/data
+Tools/scanner/dist
 log.txt
 .env

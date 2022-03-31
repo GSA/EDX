@@ -4,8 +4,12 @@
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Running Scripts](#running-scripts)
-  - [Output to CSV](#output-to-csv)
+    - [Scan](#scan)
+    - [Output to CSV](#output-to-csv)
+    - [Organize Outputs](#organize-outputs)
   - [Release Notes](#release-notes)
+    - [0.0.8](#008)
+    - [0.0.7](#007)
     - [0.0.6](#006)
     - [0.0.5](#005)
     - [0.0.4](#004)
@@ -28,9 +32,17 @@ Create a .env file and add api.data.gov key.
 
 `echo "API_KEY=" >> .env`
 
+Build
+
+`npm run build`
+
 ## Running Scripts
 
-Directory contains a primary `scanner.js` script which performs scans of websites using Puppeteer and saves relevant output in the `data/` directory. Output is organized by date of scan, website domain name, and a unique hash (md5) of the page which was scanned. For example:
+### Scan
+
+`npm run scan`
+
+Performs scans of websites using Puppeteer and saves relevant output in the `data/` directory. Output is organized by date of scan, website domain name, and a unique hash (md5) of the page which was scanned. For example:
 
 ```
 data
@@ -50,13 +62,71 @@ data
 │   │   mysite.gsa.gov_mobile_49f19d2991daf234309a99566370019a.png
 ```
 
-## Output to CSV
+### Output to CSV
 
-`condenser.js` recursively consumes specified folder of data and organizes the results in a CSV file.
+`npm run condense`
+
+Recursively consumes specified folder of data and organizes the results in a CSV file.
+
+### Organize Outputs
+
+`npm run move`
+
+Consumes an array of directory names and copies files for a given site into their own folder. Using the example output directory from `scan`:
+
+```
+data
+│
+└───20220131
+│   │   mysite.gsa.gov_3888d0bdca29e1ee9b4e8bf31af13a33.json
+│   │   mysite.gsa.gov_desktop_3888d0bdca29e1ee9b4e8bf31af13a33.png
+│   │   mysite.gsa.gov_mobile_3888d0bdca29e1ee9b4e8bf31af13a33.png
+│   │   anothersite.gsa.gov_eef43cee08182ff071924710f380e8d4.json
+│   │   anothersite.gsa.gov_desktop_eef43cee08182ff071924710f380e8d4.png
+│   │   anothersite.gsa.gov_mobile_eef43cee08182ff071924710f380e8d4.png
+│   │   ...
+│
+└───20211220
+│   │   mysite.gsa.gov_49f19d2991daf234309a99566370019a.json
+│   │   mysite.gsa.gov_desktop_49f19d2991daf234309a99566370019a.png
+│   │   mysite.gsa.gov_mobile_49f19d2991daf234309a99566370019a.png
+```
+
+Copies of the files would be reorganized as:
+
+```
+data
+│
+└───mover
+│   │
+│   └───mysite.gsa.gov
+│   │   │
+│   │   │   mysite.gsa.gov_3888d0bdca29e1ee9b4e8bf31af13a33.json
+│   │   │   mysite.gsa.gov_desktop_3888d0bdca29e1ee9b4e8bf31af13a33.png
+│   │   │   mysite.gsa.gov_mobile_3888d0bdca29e1ee9b4e8bf31af13a33.png
+│   │
+│   └───anothersite.gsa.gov
+│   │   │
+│   │   │   anothersite.gsa.gov_eef43cee08182ff071924710f380e8d4.json
+│   │   │   anothersite.gsa.gov_desktop_eef43cee08182ff071924710f380e8d4.png
+│   │   │   anothersite.gsa.gov_mobile_eef43cee08182ff071924710f380e8d4.png
+```
 
 ## Release Notes
 
 All scan contain a `scanVersion` attribute which ties back to the version number listed in package.json. Each time an update has been made to the logic of the scans, the version number gets bumped. Doing so allows all teams to see the criteria at the time of the scan. We expect to update the version regularly so as to provide the most complete and accurate picture of websites at GSA.
+
+### 0.0.8
+
+Added logic to perform an initial check of a given site and report errors such as DNS not resolving. This information is fed into a new scanStatus attribute which captures any errors or success messages.
+
+Added two new sites to websites-metadata; slc.gsa.gov and pbs-billing.gsa.gov.
+
+Bug fix: Switched dap and search regex options to type of "other" so as not to be included in the more robust required links evaluation.
+
+### 0.0.7
+
+Added support for urls which point at Drupal node numbers and ultimately resolve to the correct page.
 
 ### 0.0.6
 

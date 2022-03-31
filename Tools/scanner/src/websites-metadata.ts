@@ -1,6 +1,25 @@
 // @ts-check
 
-const websiteMetaData = {
+interface WebsiteList {
+  [key: string]: WebsiteMetadata;
+}
+interface WebsiteMetadata {
+  cookies: Cookies;
+  searchNotReq: Boolean;
+  wwwPrefix: String;
+  queryString: String;
+  urlPath: String;
+  notes: String;
+}
+
+interface Cookies {
+  name: String;
+  value: String;
+  domain: String;
+  path: String;
+}
+
+export const websiteMetaData: WebsiteList = {
   TEMPLATE: {
     cookies: { name: "", value: "", domain: "", path: "" },
     searchNotReq: true,
@@ -329,4 +348,4 @@ const websiteMetaData = {
   },
 };
 
-module.exports = websiteMetaData;
+export * from "./websites-metadata";

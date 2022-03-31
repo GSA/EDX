@@ -1,7 +1,6 @@
 // @ts-check
 
 const UswdsComponents = require("./uswdsComponents");
-const packagejson = require("../../package.json");
 /**
  * Class representing a full website report which consists of scan attributes and sub-classes
  */
@@ -10,7 +9,7 @@ class Website {
   startTime;
   endTime;
   /* over time, the contents of scans will change and should follow semantic versioning principles. Pulling from package.json reduces the total number of manual steps when updating the version number */
-  scanVersion = packagejson.version;
+  scanVersion = process.env.npm_package_version;
   url;
   scanStatus;
   performanceMetric;

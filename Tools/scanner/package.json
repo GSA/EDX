@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "condense": "node src/condenser.js",
-    "move": "node src/mover.js",
-    "scan": "node src/scanner.js",
+    "build": "tsc -b",
+    "condense": "node dist/condenser.js",
+    "move": "node dist/mover.js",
+    "pretty": "echo \"Running Prettier against outputs\" && npx prettier --write data/ --loglevel silent",
+    "scan": "node dist/scanner.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node-fetch": "^2.6.1",
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
     "dotenv": "^14.3.2",
@@ -24,6 +27,7 @@
   },
   "devDependencies": {
     "prettier": "^2.5.1",
+    "tslib": "^2.3.1",
     "typescript": "^4.6.3"
   }
 }
