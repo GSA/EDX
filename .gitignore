@@ -3,6 +3,7 @@ node_modules/
 headersData/
 pageData/
 Tools/scanner/data
+Tools/scanner/coverage
 Tools/scanner/dist
 log.txt
 .env

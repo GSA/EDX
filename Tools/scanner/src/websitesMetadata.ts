@@ -1,11 +1,8 @@
 // @ts-check
 
-interface WebsiteList {
-  [key: string]: WebsiteMetadata;
-}
 interface WebsiteMetadata {
   cookies: Cookies;
-  searchNotReq: Boolean;
+  searchNotReq: boolean;
   wwwPrefix: String;
   queryString: String;
   urlPath: String;
@@ -18,8 +15,36 @@ interface Cookies {
   domain: String;
   path: String;
 }
+export const doesNotRequireSearch = function (
+  websiteList: Record<string, WebsiteMetadata>,
+  domain: string
+): boolean {
+  return Object.prototype.hasOwnProperty.call(websiteList, domain)
+    ? websiteList[domain].searchNotReq
+    : false;
+};
 
-export const websiteMetaData: WebsiteList = {
+export const getWebsiteMetadata = function (
+  websiteList: Record<string, WebsiteMetadata>,
+  domain: string
+): WebsiteMetadata {
+  return Object.prototype.hasOwnProperty.call(websiteList, domain)
+    ? websiteList[domain]
+    : emptyWebsiteMetadata();
+};
+
+export const emptyWebsiteMetadata = function (): WebsiteMetadata {
+  return {
+    cookies: { name: "", value: "", domain: "", path: "" },
+    searchNotReq: false,
+    wwwPrefix: "",
+    queryString: "",
+    urlPath: "",
+    notes: "",
+  };
+};
+
+export const websiteMetaData: Record<string, WebsiteMetadata> = {
   TEMPLATE: {
     cookies: { name: "", value: "", domain: "", path: "" },
     searchNotReq: true,
@@ -348,4 +373,4 @@ export const websiteMetaData: WebsiteList = {
   },
 };
 
-export * from "./websites-metadata";
+export * from "./websitesMetadata";

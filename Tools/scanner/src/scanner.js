@@ -9,12 +9,10 @@ const Website = require("./models/website");
 const lighthouse = require("lighthouse");
 const { default: fetch } = require("node-fetch");
 const UswdsComponents = require("./models/uswdsComponents");
-const websiteMetadata = require("./websites-metadata");
+import * as wmd from "./websitesMetadata";
+import * as utils from "./utils";
 
-const date = new Date();
-const formattedDate = `${date.getFullYear()}${date.getMonth() < 10 ? "0" : ""}${
-  date.getMonth() + 1
-}${date.getDate() < 10 ? "0" : ""}${date.getDate()}`; //_${date.getHours()}${date.getMinutes() < 10 ? "0" : ""}${date.getMinutes()}`;
+const formattedDate = utils.getFormattedDate();
 const path = `data/${formattedDate}/`;
 
 const devices = {
@@ -33,20 +31,14 @@ const devices = {
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
   },
 };
-async function getDomain(url) {
-  return url.replace(/\/.*/, "");
-}
-async function printHash(text) {
-  hash.update(text);
-  return hash.copy().digest("hex");
-}
+
 /**
  * Scan fires off a number of functions which return results which are then composed in the buildOutput() function
  * @param {string} url
  * @param {boolean} headless
  */
 async function scan(url, headless = true) {
-  const domain = await getDomain(url);
+  const domain = await utils.getDomain(url);
   console.log("Scanning", domain);
   const start = new Date().toISOString();
   console.log("Start time", start);
@@ -94,7 +86,7 @@ const initialCheck = async function (browser, url) {
   const scanStatus = { pageFound: true, message: "" };
   const page = await browser.newPage();
   await page
-    .goto(await createUrl(url), { waitUntil: "networkidle2" })
+    .goto(await utils.createUrl(url), { waitUntil: "networkidle2" })
     .catch((e) => {
       console.error("Initial check error: ", e);
       scanStatus.pageFound = false;
@@ -109,7 +101,7 @@ const lighthouseReport = async function (browser, url) {
     const page = await browser.newPage();
     await page.emulate(devices[device]);
     await page
-      .goto(await createUrl(url), { waitUntil: "networkidle2" })
+      .goto(await utils.createUrl(url), { waitUntil: "networkidle2" })
       .catch((e) => {
         console.error("Lighthouse error: ", e);
         return;
@@ -119,7 +111,7 @@ const lighthouseReport = async function (browser, url) {
       output: "json",
     };
 
-    data[device] = await lighthouse(await createUrl(url), options);
+    data[device] = await lighthouse(await utils.createUrl(url), options);
     delete data[device].lhr.stackPacks;
     delete data[device].lhr.i18n;
     delete data[device].lhr.timing;
@@ -131,19 +123,19 @@ const lighthouseReport = async function (browser, url) {
 };
 
 const screenshots = async function (browser, url) {
-  const domain = await getDomain(url);
+  const domain = await utils.getDomain(url);
   let imgCaptures = [];
   for (var device in devices) {
     const page = await browser.newPage();
     await page.emulate(devices[device]);
     await page
-      .goto(await createUrl(url), { waitUntil: "networkidle2" })
+      .goto(await utils.createUrl(url), { waitUntil: "networkidle2" })
       .catch((e) => {
         console.error("screenshots error: ", e);
         console.error("device", device);
         return;
       });
-    const pageHash = await printHash(url);
+    const pageHash = await utils.printHash(url);
     const imgPath = `data/${formattedDate}/${domain}_${device}_${pageHash}.png`;
 
     await page.screenshot({
@@ -160,7 +152,7 @@ const screenshots = async function (browser, url) {
 };
 
 const itPerfMetricReport = async function (browser, url) {
-  const domain = await getDomain(url);
+  const domain = await utils.getDomain(url);
   const regexs = {
     identifier: {
       regex: new RegExp("usa-identifier"),
@@ -210,14 +202,13 @@ const itPerfMetricReport = async function (browser, url) {
   const page = await browser.newPage();
   await page.setCacheEnabled(false);
   // check for the domain in websiteMetadata, if found, see if the cookies object has a non-blank name attribute.
-  if (Object.prototype.hasOwnProperty.call(websiteMetadata, domain)) {
-    if (websiteMetadata[domain].cookies.name != "") {
-      await page.setCookie(websiteMetadata[domain].cookies);
-    }
+  const siteMetadata = wmd.getWebsiteMetadata(wmd.websiteMetaData, domain);
+  if (siteMetadata.cookies.name != "") {
+    await page.setCookie(siteMetadata.cookies);
   }
 
   const response = await page
-    .goto(await createUrl(url), {
+    .goto(await utils.createUrl(url), {
       waitUntil: "networkidle2",
     })
     .catch((e) => {
@@ -261,12 +252,7 @@ const itPerfMetricReport = async function (browser, url) {
     }
     if (regex === "search" && !data[regex]) {
       // some websites do not require search per digital council recommendation. Check for sites in websitemetadata to see if searchNotReq is true
-      data[regex] = Object.prototype.hasOwnProperty.call(
-        websiteMetadata,
-        domain
-      )
-        ? websiteMetadata[domain].searchNotReq
-        : false;
+      data[regex] = siteMetadata.searchNotReq;
     }
   }
   return data;
@@ -289,7 +275,7 @@ const reqdLinkEvaluation = async function (browser, url) {
       .then((value) => value.length);
     let linkDestination = { title: "", url: "" };
     await page
-      .goto(await createUrl(url), {
+      .goto(await utils.createUrl(url), {
         waitUntil: "networkidle2",
       })
       .catch((e) => {
@@ -327,7 +313,7 @@ const uswdsComponentsReport = async function (browser, url) {
   const data = new UswdsComponents.UswdsComponents();
   const page = await browser.newPage();
   await page
-    .goto(await createUrl(url), { waitUntil: "networkidle2" })
+    .goto(await utils.createUrl(url), { waitUntil: "networkidle2" })
     .catch((e) => {
       console.error("USWDS error: ", e);
       return;
@@ -389,8 +375,8 @@ const siteScannerReport = async function (domain) {
 };
 
 const buildOutput = async function (url, website) {
-  const domain = await getDomain(url);
-  const pageHash = await printHash(url);
+  const domain = await utils.getDomain(url);
+  const pageHash = await utils.printHash(url);
   fs.writeFile(
     `${path}${domain}_${formattedDate}_${pageHash}.json`,
     JSON.stringify(website),
@@ -401,18 +387,6 @@ const buildOutput = async function (url, website) {
       }
     }
   );
-};
-
-const createUrl = async function (domain) {
-  const regex = /(http:\/\/|https:\/\/)/;
-  // strip out http/https if it exists
-  domain = domain.replace(regex, "");
-  const { wwwPrefix, queryString, urlPath } =
-    Object.prototype.hasOwnProperty.call(websiteMetadata, domain)
-      ? websiteMetadata[domain]
-      : { wwwPrefix: "", queryString: "", urlPath: "" };
-
-  return `https://${wwwPrefix}${domain}${urlPath}${queryString}`;
 };
 
 const domains = [
