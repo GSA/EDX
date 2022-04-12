@@ -5,7 +5,10 @@ flowchart LR;
    annually-->APG;
    annually-->GSA-Website-Inventory;  
 
-   CX-Data-Collections-->touchpoints;
+   CX-Data-Collections-->Collection-cover-page;
+   CX-Data-Collections-->OMB-CX-Reporting-Collection;  
+   Collection-cover-page-->touchpoints;
+   OMB-CX-Reporting-Collection-->touchpoints;
 
    APG-->Goals;
    APG-->Objectives;
