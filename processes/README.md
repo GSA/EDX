@@ -1,3 +1,2 @@
 This directory is for documenting visual processes.
-Here, we colloborate on code
-to generate diagrams.
+Here, we collaborate on code to generate diagrams.
