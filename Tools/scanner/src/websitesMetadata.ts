@@ -165,6 +165,14 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
     urlPath: "",
     notes: "",
   },
+  "find.search.gov": {
+    cookies: { name: "", value: "", domain: "", path: "" },
+    searchNotReq: true,
+    wwwPrefix: "",
+    queryString: "?utf8=✓&affiliate=usasearch&query=example",
+    urlPath: "/search",
+    notes: "find.search.gov/ redirects to search.gov while /search+querystring yeilds results",
+  },
   "fleet.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
     searchNotReq: true,
