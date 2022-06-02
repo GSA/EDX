@@ -171,7 +171,8 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
     wwwPrefix: "",
     queryString: "?utf8=✓&affiliate=usasearch&query=example",
     urlPath: "/search",
-    notes: "find.search.gov/ redirects to search.gov while /search+querystring yeilds results",
+    notes:
+      "find.search.gov/ redirects to search.gov while /search+querystring yeilds results",
   },
   "fleet.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
@@ -284,6 +285,14 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
     notes: "",
   },
   "realpropertyprofile.gov": {
+    cookies: { name: "", value: "", domain: "", path: "" },
+    searchNotReq: true,
+    wwwPrefix: "",
+    queryString: "",
+    urlPath: "",
+    notes: "",
+  },
+  "reporting.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
     searchNotReq: true,
     wwwPrefix: "",
