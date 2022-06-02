@@ -8,8 +8,9 @@ beforeEach(() => {
 
 describe("createUrl", () => {
   test("url created with all options", async () => {
-    const expectedReturn = {
+    const expectedReturn: wmd.WebsiteMetadata = {
       cookies: { name: "", value: "", domain: "", path: "" },
+      customPrivacyPolicy: false,
       searchNotReq: true,
       wwwPrefix: "www.",
       queryString: "?abc=123",
@@ -24,8 +25,9 @@ describe("createUrl", () => {
     );
   });
   test("url created when all properties are blank", async () => {
-    const expectedReturn = {
+    const expectedReturn: wmd.WebsiteMetadata = {
       cookies: { name: "", value: "", domain: "", path: "" },
+      customPrivacyPolicy: false,
       searchNotReq: true,
       wwwPrefix: "",
       queryString: "",

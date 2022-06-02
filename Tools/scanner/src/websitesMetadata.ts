@@ -1,6 +1,6 @@
 // @ts-check
 
-interface WebsiteMetadata {
+export interface WebsiteMetadata {
   cookies: Cookies;
   customPrivacyPolicy: boolean;
   searchNotReq: boolean;
@@ -10,7 +10,7 @@ interface WebsiteMetadata {
   notes: String;
 }
 
-interface Cookies {
+export interface Cookies {
   name: String;
   value: String;
   domain: String;
