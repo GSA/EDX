@@ -2,6 +2,7 @@
 
 interface WebsiteMetadata {
   cookies: Cookies;
+  customPrivacyPolicy: boolean;
   searchNotReq: boolean;
   wwwPrefix: String;
   queryString: String;
@@ -15,15 +16,13 @@ interface Cookies {
   domain: String;
   path: String;
 }
-export const doesNotRequireSearch = function (
-  websiteList: Record<string, WebsiteMetadata>,
-  domain: string
-): boolean {
-  return Object.prototype.hasOwnProperty.call(websiteList, domain)
-    ? websiteList[domain].searchNotReq
-    : false;
-};
 
+/**
+ * Given a list of websites and a domain name, returns a WebsiteMetadata object. If no record was found, an empty object is returned.
+ * @param websiteList
+ * @param domain {string} a bare domain such as "gsa.gov" or "something.gsa.gov". Protocol (http) or url path (/do/something) are not applicable.
+ * @returns {WebsiteMetadata} object
+ */
 export const getWebsiteMetadata = function (
   websiteList: Record<string, WebsiteMetadata>,
   domain: string
@@ -33,9 +32,14 @@ export const getWebsiteMetadata = function (
     : emptyWebsiteMetadata();
 };
 
+/**
+ * Returns an empty WebsiteMetadata object
+ * @returns {WebsiteMetadata}
+ */
 export const emptyWebsiteMetadata = function (): WebsiteMetadata {
   return {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: "",
     queryString: "",
@@ -47,6 +51,7 @@ export const emptyWebsiteMetadata = function (): WebsiteMetadata {
 export const websiteMetaData: Record<string, WebsiteMetadata> = {
   TEMPLATE: {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "www.",
     queryString: "?abc=123",
@@ -55,7 +60,17 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "1.usa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
+    wwwPrefix: "",
+    queryString: "",
+    urlPath: "",
+    notes: "",
+  },
+  "10x.gsa.gov": {
+    cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: true,
+    searchNotReq: false,
     wwwPrefix: "",
     queryString: "",
     urlPath: "",
@@ -63,6 +78,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "amp.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -71,6 +87,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "apps.ocfo.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "?warning=0",
@@ -79,6 +96,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "arm.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -87,6 +105,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "autochoice.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -95,6 +114,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "autovendor.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -103,6 +123,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "cars.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -111,6 +132,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "cm-jira.usa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -119,6 +141,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "extportal.pbs.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -127,6 +150,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "fairs.reporting.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -135,6 +159,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "fdms.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -143,6 +168,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "federalistapp.18f.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -151,6 +177,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "fedpay.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -159,6 +186,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "financeweb.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -167,6 +195,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "find.search.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "?utf8=✓&affiliate=usasearch&query=example",
@@ -176,6 +205,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "fleet.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -184,6 +214,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "fleeteur.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -192,6 +223,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "fms.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -200,6 +232,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "fmseec.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: "",
     queryString: "",
@@ -208,6 +241,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "frpg.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -221,6 +255,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
       domain: "www.gsaadvantage.gov",
       path: "/",
     },
+    customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: "",
     queryString: "",
@@ -229,6 +264,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "gsasolutionssecure.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -237,6 +273,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "inventory.data.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -246,6 +283,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "login.fr.cloud.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -254,6 +292,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "mysales.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: "",
     queryString: "",
@@ -262,6 +301,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "pbs-billing.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: "www.",
     queryString: "",
@@ -270,6 +310,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "portal.eos.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -278,6 +319,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "property.reporting.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -286,6 +328,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "realpropertyprofile.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -294,6 +337,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "reporting.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -302,6 +346,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "sat.reginfo.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: "",
     queryString: "",
@@ -310,6 +355,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "scopereview.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -318,6 +364,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "secure.login.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -326,6 +373,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "slc.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: "www.",
     queryString: "",
@@ -334,6 +382,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "str.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -342,6 +391,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "training.rocis.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -350,6 +400,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "travel.reporting.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -358,6 +409,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "tscportal.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: "",
     queryString: "",
@@ -366,6 +418,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "usaccess-alp.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -374,6 +427,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "vec.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
@@ -382,6 +436,7 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
   },
   "vehicledispatch.fas.gsa.gov": {
     cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: "",
     queryString: "",
