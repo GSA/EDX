@@ -14,11 +14,12 @@ let args = require("minimist")(process.argv.slice(2), {
 
 const formattedDate = utils.getFormattedDate("YYYYMMDD_HHMM");
 export const outputPath = `data/output_${formattedDate}.csv`;
+const csvHeaders = headerConfigurations.default;
 
 const csvWriter = createCsvWriter({
   path: outputPath,
   // create map of csv headers to json elements
-  header: headerConfigurations.default,
+  header: csvHeaders,
 });
 
 export const findFiles = async function (folderName: string): Promise<void> {
