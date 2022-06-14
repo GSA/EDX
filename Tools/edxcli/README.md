@@ -1,32 +1,30 @@
-edxcli
-=================
+# edxcli
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Downloads/week](https://img.shields.io/npm/dw/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
-[![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+* [edxcli](#edxcli)
 <!-- tocstop -->
-# Usage
+
+## Usage
+
 <!-- usage -->
 ```sh-session
 $ npm install -g edx_cli
 $ edxcli COMMAND
 running command...
 $ edxcli (--version)
-edx_cli/0.0.0 darwin-x64 node-v16.13.0
+edx_cli/0.0.0 darwin-x64 node-v16.14.2
 $ edxcli --help [COMMAND]
 USAGE
   $ edxcli COMMAND
 ...
 ```
 <!-- usagestop -->
-# Commands
+
+## Commands
+
 <!-- commands -->
-* [`edxcli hello PERSON`](#edxcli-hello-person)
-* [`edxcli hello world`](#edxcli-hello-world)
 * [`edxcli help [COMMAND]`](#edxcli-help-command)
 * [`edxcli plugins`](#edxcli-plugins)
 * [`edxcli plugins:inspect PLUGIN...`](#edxcli-pluginsinspect-plugin)
@@ -36,46 +34,9 @@ USAGE
 * [`edxcli plugins update`](#edxcli-plugins-update)
 * [`edxcli websites`](#edxcli-websites)
 * [`edxcli websites fetch SOURCE`](#edxcli-websites-fetch-source)
-
-## `edxcli hello PERSON`
-
-Say hello
-
-```
-USAGE
-  $ edxcli hello [PERSON] -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Whom is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [dist/commands/hello/index.ts](https://github.com/gsa/edx/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `edxcli hello world`
-
-Say hello world
-
-```
-USAGE
-  $ edxcli hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ oex hello world
-  hello world! (./src/commands/hello/world.ts)
-```
+* [`edxcli websites push`](#edxcli-websites-push)
+* [`edxcli websites scan`](#edxcli-websites-scan)
+* [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
 
 ## `edxcli help [COMMAND]`
 
@@ -264,6 +225,12 @@ EXAMPLES
   $ edxcli websites fetch Touchpoints
 
   $ edxcli websites fetch "Site Scanner"
+
+  $ edxcli websites push
+
+  $ edxcli websites scan
+
+  $ edxcli websites scan bulk
 ```
 
 _See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v0.0.0/dist/commands/websites/index.ts)_
@@ -292,4 +259,101 @@ EXAMPLES
 
   $ edxcli websites fetch Touchpoints -o ~/mydirectory
 ```
+
+## `edxcli websites push`
+
+Grabs an extract of Touchpoints data and updates or inserts it into Airtable. If the data in Touchpoints matches Airtable, the script will record that an "update" was made but Airtable will not show an updated modified date.
+
+```
+USAGE
+  $ edxcli websites push [--loglevel error|warn|info|debug] [-o <value>]
+
+FLAGS
+  -o, --output=<value>  [default: data] Output directory. Defualts to /edxcli/data directory
+  --loglevel=<option>   [default: info]
+                        <options: error|warn|info|debug>
+
+DESCRIPTION
+  Grabs an extract of Touchpoints data and updates or inserts it into Airtable. If the data in Touchpoints matches
+  Airtable, the script will record that an "update" was made but Airtable will not show an updated modified date.
+
+EXAMPLES
+  $ edxcli websites push
+
+  $ edxcli websites push -o ~/mydirectory
+```
+
+## `edxcli websites scan`
+
+Scans websites using various modules to capture information about the sites
+
+```
+USAGE
+  $ edxcli websites scan -d <value> [--loglevel error|warn|info|debug] [-f analytics|it performance
+    metric|ligthouse desktop|lighthouse mobile|screenshot|s1ite scanner|uswds components] [--headless] [-o <value>] [-p
+    |all|edx scan]
+
+FLAGS
+  -d, --domains=<value>  (required) Comma-separated list of domains to scan.
+  -f, --facets=<option>  Comma-separated list of facets to use for the scan. e.g. (-m "screenshot,lighthouse,it metric")
+                         <options: analytics|it performance metric|ligthouse desktop|lighthouse mobile|screenshot|s1ite
+                         scanner|uswds components>
+  -o, --output=<value>   Output directory. Defualts to current directory
+  -p, --preset=<option>  Run a pre-configured suite of scan facets whose results will be output into a single file.
+                         <options: |all|edx scan>
+  --headless             Boolean flag, whether or not to run scans in headless mode. Defaults to true
+  --loglevel=<option>    [default: info]
+                         <options: error|warn|info|debug>
+
+DESCRIPTION
+  Scans websites using various modules to capture information about the sites
+
+EXAMPLES
+  $ edxcli websites scan -d gsa.gov
+
+  $ edxcli websites scan -d buy.gsa.gov -f screenshot -o ~/some/other/directory
+
+  $ edxcli websites scan -d sftool.gov -p Performance Metric
+
+  $ edxcli websites scan -d 18f.gsa.gov --headless false
+```
+
+## `edxcli websites scan bulk`
+
+Scans websites using various modules to capture information about the sites
+
+```
+USAGE
+  $ edxcli websites scan bulk [--loglevel error|warn|info|debug] [-d Airtable|Touchpoints] [-f analytics|it performance
+    metric|ligthouse desktop|lighthouse mobile|screenshot|s1ite scanner|uswds components] [--headless] [-o <value>] [-p
+    |all|edx scan]
+
+FLAGS
+  -d, --domains=<option>  Name of the system to pull the list of domains
+                          <options: Airtable|Touchpoints>
+  -f, --facets=<option>   Comma-separated list of facets to use for the scan. e.g. (-m "screenshot,lighthouse,it
+                          metric")
+                          <options: analytics|it performance metric|ligthouse desktop|lighthouse mobile|screenshot|s1ite
+                          scanner|uswds components>
+  -o, --output=<value>    Output directory. Defualts to current directory
+  -p, --preset=<option>   Run a pre-configured suite of scan facets whose results will be output into a single file.
+                          <options: |all|edx scan>
+  --headless              Boolean flag, whether or not to run scans in headless mode. Defaults to true
+  --loglevel=<option>     [default: info]
+                          <options: error|warn|info|debug>
+
+DESCRIPTION
+  Scans websites using various modules to capture information about the sites
+
+EXAMPLES
+  $ edxcli websites scan bulk
+```
 <!-- commandsstop -->
+
+<!-- Updating -->
+
+```sh
+yarn run build
+yarn run test
+yarn run prepack
+```

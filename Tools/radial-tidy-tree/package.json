@@ -9,12 +9,9 @@
   },
   "type": "module",
   "peerDependencies": {
-    "@observablehq/runtime": "4"
+    "@observablehq/runtime": "^4.21.1"
   },
   "dependencies": {
     "csvtojson": "^2.0.10"
-  },
-  "devDependencies": {
-    "check-dependencies": "^1.1.0"
   }
 }

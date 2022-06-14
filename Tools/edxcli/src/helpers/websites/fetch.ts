@@ -1,7 +1,10 @@
 require('dotenv').config();
 const axios = require('axios').default;
 
-export default class FetchHelper {
+/**
+ * Provides access to Touchpoints and Site Scanner functions
+ */
+export class FetchHelper {
   formattedDate: string;
   outputDirectory: string;
   touchpoints: any;
@@ -13,7 +16,7 @@ export default class FetchHelper {
     this.outputDirectory = flags.output || '.';
     this.touchpoints = axios.create({
       baseURL: 'https://api.gsa.gov/analytics/touchpoints/v1',
-      timeout: 10000,
+      timeout: 10_000,
       params: {
         API_KEY: process.env.TOUCHPOINTS_API_KEY,
       },
@@ -24,13 +27,15 @@ export default class FetchHelper {
       params: {
         API_KEY: process.env.TOUCHPOINTS_API_KEY,
         limit: 100,
-        // eslint-disable camelcase
+        // eslint-disable-next-line camelcase
         target_url_agency_owner: 'General Services Administration',
       },
     });
   }
 
-  /* getTouchpointsWebsites is an async function which returns a full list of websites as listed in touchpoints */
+  /**
+   * @return {Promise<TouchpointsRecord[]>} Promise containing an array of TouchpointsRecord objects
+   * */
   async getTouchpointsWebsites(): Promise<never | TouchpointsRecord[]> {
     const data = this.touchpoints
       .get(`/websites.json?`)
@@ -44,14 +49,18 @@ export default class FetchHelper {
     return data;
   }
 
-  async getSiteScannerWebsites(
-    pageNo = 1,
-  ): Promise<never | SiteScannerRecord[]> {
-    let data: SiteScannerRecord[] = [];
+  /**
+   * Iterates through and returns siteScanner results. Can start at a later page number provided a pageNo param
+   * @param {number} pageNo - Starting page number of site scanner results. Defaults to 1
+   * @return {Promise<TouchpointsRecord[]>} - Promise containing an array of TouchpointsRecord objects
+   * */
+  async getSiteScannerWebsites(pageNo = 1): Promise<SiteScannerRecord[]> {
+    const promisesArray: Promise<SiteScannerRecord>[] = [];
     let next = '';
+
     do {
-      data = data.concat(
-        await this.siteScanner
+      promisesArray.push(
+        this.siteScanner
           .get(`/websites?page=${pageNo}`)
           .then(function (this: FetchHelper, response: any) {
             next = response.data.links.next;
@@ -63,12 +72,15 @@ export default class FetchHelper {
           }),
       );
     } while (next !== '');
-    return data;
+
+    return Promise.all(promisesArray).then((data) => {
+      return data;
+    });
   }
 }
 
 /* eslint-disable camelcase */ //
-interface SiteScannerRecord {
+export type SiteScannerRecord = {
   scan_date: string;
   target_url_domain: string;
   scan_status: string;
@@ -128,16 +140,22 @@ interface SiteScannerRecord {
   target_url_agency_code: string;
   target_url_bureau_owner: string;
   target_url_bureau_code: string;
-}
+};
 /* eslint-enable camelcase */ //
-interface TouchpointsRecord {
+/**
+ * @typedef {object} TouchpointsRecord
+ * @param {string} id - a unique identifier for the touchpoints website record
+ * @param {string} type - record type, will always be website
+ * @param {TouchpointsAttributes} attributes - other information about the record.
+ */
+export type TouchpointsRecord = {
   id: string;
   type: string;
   attributes: TouchpointsAttributes;
-}
+};
 
 /* eslint-disable camelcase */ //
-interface TouchpointsAttributes {
+export type TouchpointsAttributes = {
   domain: string;
   parent_domain: string;
   office: string;
@@ -169,5 +187,5 @@ interface TouchpointsAttributes {
   https: boolean;
   created_at: string;
   updated_at: string;
-}
+};
 /* eslint-enable camelcase */ //

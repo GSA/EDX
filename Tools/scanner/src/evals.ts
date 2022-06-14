@@ -17,7 +17,11 @@ const AIRTABLE_FIELDS = {
     office: { id: "fldF6peALqDlbDlBp", name: "Office" },
     "sub-office": { id: "fldAsCVsayge6mxhK", name: "Sub-Office" },
     "website-platform": { id: "fldOEB2p3zzQJUfX8", name: "" },
-    "website-category": { id: "fld76C5VCbbfQ0w4v", name: "Website Category" },
+    "digital-brand-category": {
+      id: "fldEJNQ2Bp76EHPPB",
+      name: "Digital Brand Category",
+    },
+    "type-of-domain": { id: "fld76C5VCbbfQ0w4v", name: "Type of Domain" },
     "score-customer-centricity": {
       id: "fldWhw3jTSLJzbbx4",
       name: "Statuscard Score - Customer Centricity",
@@ -47,26 +51,6 @@ Airtable.configure({
   apiKey: `${process.env.AIRTABLE_API_KEY}`,
 });
 
-/**
- * generates dummy data until the real thing is available
- * @param max
- * @returns
- */
-const getRandNo = function (max) {
-  return Math.floor(Math.random() * max);
-};
-const orgNames = ["FAS", "PBS", "GSA IT", "OCE", "OSC", "OGP", "OCFO"];
-const platforms = [
-  "Salesforce",
-  "Drupal",
-  "Wordpress",
-  "Elixr",
-  "Jekyll",
-  "Gatsby",
-  ".NET",
-];
-///////////////////////
-
 let data = [];
 base(AIRTABLE_TABLES.websites)
   .select({
@@ -75,7 +59,8 @@ base(AIRTABLE_TABLES.websites)
       AIRTABLE_FIELDS.websites.office.id,
       AIRTABLE_FIELDS.websites["sub-office"].id,
       AIRTABLE_FIELDS.websites["website-platform"].id,
-      AIRTABLE_FIELDS.websites["website-category"].id,
+      AIRTABLE_FIELDS.websites["digital-brand-category"].id,
+      AIRTABLE_FIELDS.websites["type-of-domain"].id,
       AIRTABLE_FIELDS.websites["score-amp"].id,
       AIRTABLE_FIELDS.websites["score-customer-centricity"].id,
       AIRTABLE_FIELDS.websites["score-ga"].id,
@@ -85,7 +70,7 @@ base(AIRTABLE_TABLES.websites)
     ],
     sort: [{ field: AIRTABLE_FIELDS.websites.website.id, direction: "asc" }],
     // Selecting the first 3 records in Grid view:
-    view: "Active Sites",
+    view: "Sites w Evals",
   })
   .eachPage(
     function page(records, fetchNextPage) {
@@ -129,8 +114,11 @@ const organizeResult = function (record) {
     name: record.fields[AIRTABLE_FIELDS.websites.website.name],
     office: record.fields[AIRTABLE_FIELDS.websites.office.name],
     subOffice: record.fields[AIRTABLE_FIELDS.websites["sub-office"].name],
-    category: record.fields[AIRTABLE_FIELDS.websites["website-category"].name],
-    platform: platforms[getRandNo(7)],
+    digitalBrandCategory:
+      record.fields[AIRTABLE_FIELDS.websites["digital-brand-category"].name],
+    typeOfDomain:
+      record.fields[AIRTABLE_FIELDS.websites["type-of-domain"].name],
+    //platform: platforms[getRandNo(7)],
     datapointA: {
       val: record.fields[
         AIRTABLE_FIELDS.websites["score-customer-centricity"].name
@@ -157,22 +145,5 @@ const organizeResult = function (record) {
       val: record.fields[AIRTABLE_FIELDS.websites["score-uswds"].name],
       max: 1,
     },
-  };
-};
-
-const genDummyData = function (siteName) {
-  return {
-    name: siteName,
-    org: orgNames[getRandNo(7)],
-    platform: platforms[getRandNo(7)],
-    datapointA: {
-      val: getRandNo(10),
-      max: 10,
-    },
-    datapointB: { val: getRandNo(10), max: 10 },
-    datapointC: { val: getRandNo(7), max: 7 },
-    datapointD: { val: getRandNo(12), max: 12 },
-    datapointE: { val: getRandNo(12), max: 12 },
-    datapointF: { val: getRandNo(6), max: 6 },
   };
 };

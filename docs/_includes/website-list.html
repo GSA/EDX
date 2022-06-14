@@ -1,0 +1,76 @@
+<script src="https://cdn.jsdelivr.net/npm/list.js@2.3.1/dist/list.js"></script>
+<style>
+  .usa-table td {
+    white-space: break-spaces;
+  }
+</style>
+<div id="websites">
+  <div class="grid-row margin-bottom-2">
+    <section aria-label="Big search component">
+      <label class="usa-sr-only" for="search-field-en-big"> Search </label>
+      <input
+        class="usa-input search"
+        id="search-field-en-big"
+        type="search"
+        name="search"
+        placeholder="Search e.g. 'FAS', 'Application', 'Leasing'"
+        style="border-right: 1px solid #565c65; width: 450px"
+      />
+    </section>
+  </div>
+  <p><a href="charts.html">View as a chart</a></p>
+  <div class="usa-table-container--scrollable" tabindex="0">
+    <table class="usa-table usa-table--striped">
+      <thead>
+        <tr>
+          <th scope="col" class="text-center">URL</th>
+          <th scope="col" class="text-center">Office</th>
+          <th scope="col" class="text-center">Sub-Office</th>
+          <th scope="col" class="text-center">Digital Brand Category</th>
+          <th scope="col" class="text-center">Type of Domain</th>
+          <th scope="col" class="text-center">Customer Centricity</th>
+          <th scope="col" class="text-center">Required Links</th>
+          <th scope="col" class="text-center">Mobile Performance</th>
+          <th scope="col" class="text-center">Accessibility (AMP)</th>
+          <th scope="col" class="text-center">Google Analytics</th>
+          <th scope="col" class="text-center">USWDS</th>
+        </tr>
+      </thead>
+      <tbody class="list">
+        {% for item in site.data.websites %}
+        <tr>
+          <th class="name" scope="row">{{item.name}}</th>
+          <td class="office">{{item.office}}</td>
+          <td class="subOffice">{{item.subOffice}}</td>
+          <td class="digitalBrandCategory">{{item.digitalBrandCategory}}</td>
+          <td class="typeOfDomain">{{item.typeOfDomain}}</td>
+          <td class="">{{item.datapointA.val | times:100 | round: 2}}</td>
+          <td class="">{{item.datapointB.val | times:100 | round: 2}}</td>
+          <td class="">{{item.datapointC.val | times:100 | round: 2}}</td>
+          <td class="">{{item.datapointD.val | times:100 | round: 2}}</td>
+          <td class="">{{item.datapointE.val | times:100 | round: 2}}</td>
+          <td class="">{{item.datapointF.val | times:100 | round: 2}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  // this sets up search using listjs
+  var options = {
+    valueNames: [
+      "name",
+      "office",
+      "subOffice",
+      "digitalBrandCategory",
+      "typeOfDomain",
+    ],
+  };
+
+  var websiteList = new List("websites", options);
+  function addToList(data) {
+    websiteList.add(data);
+  }
+</script>

@@ -61,7 +61,7 @@ export const run = async () => {
       await findFiles(dirName);
     }
   } else {
-    console.log(`consolidating entire data/ directory. You can specify a subset of folders by passing the --folders parameter. 
+    console.log(`consolidating entire data/ directory. You can specify a subset of folders by passing the --folders parameter. This expects the folder to be present in the data/ directory. 
     npm run condense -- --folders="folder1,folder2"
     `);
 

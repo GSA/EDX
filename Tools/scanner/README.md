@@ -7,6 +7,7 @@
     - [Scan](#scan)
     - [Output to CSV](#output-to-csv)
     - [Organize Outputs](#organize-outputs)
+    - [Get Evaluation Scores](#get-evaluation-scores)
   - [Release Notes](#release-notes)
     - [0.0.8](#008)
     - [0.0.7](#007)
@@ -112,6 +113,12 @@ data
 │   │   │   anothersite.gsa.gov_desktop_eef43cee08182ff071924710f380e8d4.png
 │   │   │   anothersite.gsa.gov_mobile_eef43cee08182ff071924710f380e8d4.png
 ```
+
+### Get Evaluation Scores
+
+Retrieves website data from Airtable and saves results as .yml files. Resulting files are used to inform Statuscard charts available at [gsa.github.io/EDX](https://gsa.github.io/EDX/charts.html)
+
+`npm run get:evals`
 
 ## Release Notes
 

@@ -1,7 +1,12 @@
-import { Flags, CliUx, Config } from '@oclif/core';
+import { Flags, CliUx } from '@oclif/core';
 import BaseCommand from '../../base';
-import FetchHelper from '../../helpers/websites/fetch';
+import {
+  FetchHelper,
+  SiteScannerRecord,
+  TouchpointsRecord,
+} from '../../helpers/websites/fetch';
 import CSV from '../../helpers/global/csv';
+
 
 export default class Fetch extends BaseCommand<typeof Fetch.flags> {
   static description =
@@ -39,18 +44,22 @@ export default class Fetch extends BaseCommand<typeof Fetch.flags> {
     let data;
     switch (args.source) {
       case 'Touchpoints':
-        data = await fh.getTouchpointsWebsites().then((result) => {
-          return result.map((obj) => {
-            return { domain: obj.attributes.domain };
+        data = await fh
+          .getTouchpointsWebsites()
+          .then((result: TouchpointsRecord[]) => {
+            return result.map((obj) => {
+              return { domain: obj.attributes.domain };
+            });
           });
-        });
         break;
       case 'Site Scanner':
-        data = await fh.getSiteScannerWebsites().then((result) => {
-          return result.map((obj) => {
-            return { domain: obj.target_url };
+        data = await fh
+          .getSiteScannerWebsites()
+          .then((result: SiteScannerRecord[]) => {
+            return result.map((obj: SiteScannerRecord) => {
+              return { domain: obj.target_url };
+            });
           });
-        });
         break;
       default:
         this.log(

@@ -164,6 +164,11 @@ const itPerfMetricReport = async function (browser, url) {
       type: "link",
       titleRegex: "Privacy",
     },
+    identifierCustomPrivacy: {
+      regex: /<a.*?>(Privacy Policy|Privacy).*?<\/a>/i,
+      type: "other",
+      titleRegex: "customPrivacy",
+    },
     identifierAccessibility: {
       regex:
         /website-information\/accessibility-aids|website-information\/website-policies|portal\/content\/116609/i,
@@ -191,7 +196,7 @@ const itPerfMetricReport = async function (browser, url) {
     },
     contact: {
       regex: new RegExp(
-        "Contact Us|(?<!-)Contact|Get in touch|Email Us|Help Desk|d+(s|-)d+(s|-)d+|(d+)sd+-d+",
+        "Contact Us|Contact|Get in touch|Email Us|Email|Get support|Help Desk|d+(s|-)d+(s|-)d+|(d+)sd+-d+",
         "i"
       ),
       type: "other",
@@ -254,11 +259,22 @@ const itPerfMetricReport = async function (browser, url) {
       // some websites do not require search per digital council recommendation. Check for sites in websitemetadata to see if searchNotReq is true
       data[regex] = siteMetadata.searchNotReq;
     }
+    // some sites require a custom privacy policy, in that case check to see if a customPrivacyPolicy flag is listed
+    if (regex === "identifierPrivacy" && !data[regex]) {
+      // Check for sites in websitemetadata to see if customPrivacyPolicy is true
+      data[regex] = siteMetadata.customPrivacyPolicy;
+    }
   }
   return data;
 };
 
-/* function looks for the identifier on the page and produces a list of links in the identifier. From there, each link is clicked and the resulting page url is reviewed for a match against the required links. This helps address single page applications which do not have hrefs but have onclick() */
+/**
+ * function looks for the identifier on the page and produces a list of links in the identifier. From there, each link is clicked and the resulting page url is reviewed for a match against the required links. This helps address single page applications which do not have hrefs but have onclick()
+ *
+ * @param browser
+ * @param url
+ * @returns Promise{array} linkDestinations - array of objects containing {title:"link title", url: "desination page url" }
+ */
 const reqdLinkEvaluation = async function (browser, url) {
   /* console.log(
     "...Double checking links to cover single page applications which do not use hrefs"
@@ -390,7 +406,7 @@ const buildOutput = async function (url, website) {
 };
 
 const domains = [
-  "gsa.gov",
+  "designsystem.digital.gov",
   //"labs.gsa.gov", "acquisition.gov", "buy.gsa.gov"
 ];
 

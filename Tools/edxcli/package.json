@@ -11,17 +11,20 @@
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
+    "airtable": "^0.11.4",
     "axios": "^0.26.1",
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
     "dotenv": "^16.0.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "puppeteer": "^14.3.0"
   },
   "devDependencies": {
     "@oclif/test": "^2",
     "@types/chai": "^4",
     "@types/mocha": "^9.0.0",
     "@types/node": "^17.0.21",
+    "@types/puppeteer": "^5.4.6",
     "chai": "^4",
     "eslint": "^7.32.0",
     "eslint-config-oclif": "^4",
@@ -69,6 +72,11 @@
     }
   },
   "repository": "gsa/edx",
+  "mocha": {
+    "spec": [
+      "test/**/*.test.ts"
+    ]
+  },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint . --ext .ts --config .eslintrc",
