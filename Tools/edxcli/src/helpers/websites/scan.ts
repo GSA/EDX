@@ -4,24 +4,30 @@ import { browser } from '../../browser';
 import { printHash, writeJSONFile } from '../global/utils';
 import { WebsiteReportType, websiteReport } from './website-report';
 import { screenshot } from './screenshot';
+import { cuiBanner } from './cui-banner';
 
 export const scan = async (sh: ScanHelper, domain: URL): Promise<void> => {
   // websiteReport forms the shell that all facets fit into
   const report = websiteReport(domain, sh);
   const path = `${sh.outputDirectory}/`;
-
   // create the directory
   fs.mkdir(path, { recursive: true }, function (dirErr: any) {
     if (dirErr) {
       console.error(dirErr);
     }
   });
+  if (sh.facets.includes(<facetType>'cui banner')) {
+    report.cuiBanner.data = await cuiBanner(sh, domain);
+  }
+
   if (sh.facets.includes(<facetType>'screenshot')) {
     report.screenCapture.data = await screenshot(sh, domain);
   }
 
   // scan complete
   report.endTime = new Date().toISOString();
+  // close the browser
+  // sh.browser.close();
   // write the report
   await buildOutput(sh, report);
 };
@@ -30,7 +36,10 @@ export const scanHelper = async (
   formattedDate: string,
   flags: any,
 ): Promise<ScanHelper> => {
-  const cleanedFacets = flags.facets === '' ? [] : flags.facets.split(',');
+  const cleanedFacets =
+    flags.facets === ''
+      ? []
+      : flags.facets.split(',').map((val: string) => val.trim());
   return {
     formattedDate: formattedDate,
     outputDirectory: flags.output || `data/${formattedDate}`,
@@ -63,6 +72,7 @@ const presets = (preset: presetType): facetType[] => {
   const presetMap: Record<presetType, facetType[]> = {
     '': [],
     all: [
+      'cui banner',
       'screenshot',
       'lighthouse desktop',
       'lighthouse mobile',
@@ -122,6 +132,7 @@ export type ScanHelper = {
 export type presetType = '' | 'all' | 'edx scan';
 
 export type facetType =
+  | 'cui banner'
   | 'screenshot'
   | 'lighthouse desktop'
   | 'lighthouse mobile'

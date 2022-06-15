@@ -33,7 +33,7 @@ export const screenshot = async (
     }
   }
 
-  await sh.browser.close();
+  await page.close();
   return screenshotArray;
 };
 

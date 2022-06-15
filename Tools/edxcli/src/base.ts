@@ -44,16 +44,28 @@ export default abstract class BaseCommand<
     >;
   }
 
+  /**
+   * Allows messages to be printed to console at varying levels of detail.
+   * @param msg message to print to console
+   * @param level {string} on of, 'debug' > 'info' > 'error'
+   * @returns void
+   */
   log(msg: string, level: string): void {
-    switch (this.baseFlags.loglevel) {
-      case 'info':
-        console.log(msg);
-        break;
-      case 'error':
-        if (level === 'error') console.error(msg);
-        break;
-      // a complete example would need to have all the levels
+    // logging is heirarchical. For instance, setting the level at debug should also print info logs
+
+    if (this.baseFlags.loglevel === 'debug') {
+      level === 'debug'
+        ? console.log(`DEBUG > ${msg}`)
+        : level === 'error'
+        ? console.error(msg)
+        : console.log(msg);
     }
+
+    if (this.baseFlags.loglevel === 'info') {
+      level === 'error' ? console.error(msg) : console.log(msg);
+    }
+
+    if (level === 'error') console.error(msg);
   }
 
   async init(): Promise<void> {
