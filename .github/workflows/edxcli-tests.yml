@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: create env file
+      run: |
+        touch .env
+        echo "AIRTABLE_API_KEY=${{ secrets.AIRTABLE_API_KEY }}" >> ./Tools/edxcli/.env
+        echo "TOUCHPOINTS_API_KEY=${{ secrets.TOUCHPOINTS_API_KEY }}" >> ./Tools/edxcli/.env
     - name: Read .nvmrc
       working-directory: ./Tools/edxcli
       run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
