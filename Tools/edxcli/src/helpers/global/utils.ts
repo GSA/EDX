@@ -36,9 +36,7 @@ export const writeJSONFile = async (
   date?: string,
 ): Promise<void> => {
   path = path.endsWith('/') ? path : `${path}/`;
-  fs.mkdir(path, { recursive: true }, (dirErr: any) => {
-    if (dirErr) console.error(dirErr);
-  });
+  fs.mkdirSync(path, { recursive: true });
   date = date ? `${date}_` : '';
   fs.writeFileSync(`${path}${date}${filename}.json`, JSON.stringify(jsObject));
 };
