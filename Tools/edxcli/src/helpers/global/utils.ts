@@ -40,15 +40,7 @@ export const writeJSONFile = async (
     if (dirErr) console.error(dirErr);
   });
   date = date ? `${date}_` : '';
-  fs.writeFile(
-    `${path}${date}${filename}.json`,
-    JSON.stringify(jsObject),
-    (err: any) => {
-      if (err) {
-        console.error(err);
-      }
-    },
-  );
+  fs.writeFileSync(`${path}${date}${filename}.json`, JSON.stringify(jsObject));
 };
 
 /**

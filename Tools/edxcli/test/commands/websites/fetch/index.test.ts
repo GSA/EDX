@@ -1,6 +1,11 @@
 import { expect, test } from '@oclif/test';
 import BaseCommand from '../../../../src/base';
+import { tmpdir } from 'node:os';
+import fs, { mkdtempSync, unlink } from 'node:fs';
+import { sep } from 'node:path';
 require('dotenv').config();
+
+const testingDir = mkdtempSync(`${tmpdir()}${sep}`);
 
 describe('websites fetch foo', () => {
   test
@@ -73,7 +78,7 @@ describe('websites fetch Touchpoints', () => {
       .command(['websites fetch', 'Touchpoints'])
       // done is used since the api requests are Promises, this ensures the test suite waits for the response
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      .it('Saves the list of domains to a directory', (done) => {
+      .it('Saves the list of domains to the default directory', (done) => {
         (ctx: any) => {
           expect(ctx.stdout).to.match(
             new RegExp(
@@ -97,19 +102,36 @@ describe('websites fetch Touchpoints', () => {
           .reply(200, data),
       )
       .stdout()
-      .command(['websites fetch', 'Touchpoints', '-o', '~/Documents'])
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      .it('Saves the list of domains to a directory', function (done) {
-        (ctx: any) => {
-          expect(ctx.stdout).to.match(
-            new RegExp(
-              'Touchpoints data written to /?.*Documents/Touchpoints_' +
-                BaseCommand.formattedDate() +
-                '.csv',
-            ),
-          );
-        };
-      });
+      .command(['websites fetch', 'Touchpoints', '-o', testingDir])
+
+      .it(
+        'Saves the list of domains to a specified directory',
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        function (done) {
+          (ctx: any) => {
+            expect(ctx.stdout).to.match(
+              new RegExp(
+                'Touchpoints data written to ' +
+                  testingDir +
+                  '/Touchpoints_' +
+                  BaseCommand.formattedDate() +
+                  '.csv',
+              ),
+            );
+            expect(
+              fs.readFileSync(
+                `${testingDir}/Touchpoints_${BaseCommand.formattedDate()}.csv`,
+                { encoding: 'utf8' },
+              ),
+            ).to.equal(JSON.stringify(data));
+          };
+        },
+      );
+  });
+  after(() => {
+    unlink(`Touchpoints_${BaseCommand.formattedDate()}.csv`, (err) => {
+      if (err) throw err;
+    });
   });
 });
 
@@ -238,18 +260,26 @@ describe('websites fetch "Site Scanner"', () => {
           .reply(200, data),
       )
       .stdout()
-      .command(['websites fetch', 'Site Scanner', '-o', '~/Documents'])
+      .command(['websites fetch', 'Site Scanner', '-o', testingDir])
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       .it('Saves the list of domains to a directory', (done) => {
         (ctx: any) => {
           expect(ctx.stdout).to.match(
             new RegExp(
-              'Site Scanner data written to /?.*Documents/Site Scanner_' +
+              'Site Scanner data written to ' +
+                testingDir +
+                '/Site Scanner_' +
                 BaseCommand.formattedDate() +
                 '.csv',
             ),
           );
         };
       });
+  });
+  after(() => {
+    fs.rmdirSync(testingDir, { recursive: true });
+    unlink(`Site Scanner_${BaseCommand.formattedDate()}.csv`, (err) => {
+      if (err) throw err;
+    });
   });
 });
