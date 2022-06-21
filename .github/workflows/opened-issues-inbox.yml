@@ -6,6 +6,7 @@ on:
 jobs:
   automate-project-columns:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: alex-page/github-project-automation-plus@v0.8.1
         with:
