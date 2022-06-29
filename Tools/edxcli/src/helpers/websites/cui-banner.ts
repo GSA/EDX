@@ -36,18 +36,26 @@ export const cuiBanner = async (
     });
   };
 
+  // go to the home page
   await page.goto(domain.toString());
+  // evaluate for text
   await evaluatePage('home');
-
+  // build an array of links and buttons on the page
   const linkList = await page.$$('a,button');
   const loginTerms = /sign in|login|log in/gi;
-  for (let i = 0; i < linkList.length; i++) {
-    const valueHandle = await linkList[i].getProperty('innerText');
+  // loop the list of buttons and links to find any containing the regex above
+  for (const element of linkList) {
+    // eslint-disable-next-line no-await-in-loop
+    const valueHandle = await element.getProperty('innerText');
 
+    // when a match is found, click on that element then evaluate the page for warning banner content
     if (loginTerms.test(valueHandle.toString())) {
-      await Promise.all([linkList[i].click(), page.waitForTimeout(4000)]);
+      // eslint-disable-next-line no-await-in-loop
+      await Promise.all([element.click(), page.waitForTimeout(4000)]);
 
+      // eslint-disable-next-line no-await-in-loop
       await evaluatePage('login');
+      // once the first page has been evaluated, we break out of the loop
       break;
     }
   }
