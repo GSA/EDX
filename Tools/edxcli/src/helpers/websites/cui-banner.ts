@@ -23,21 +23,42 @@ export const cuiBanner = async (
     bodyContent = dialog.message();
     await dialog.accept();
   });
+
+  const evaluatePage = async (pageType: string): Promise<void> => {
+    const bodyHandle = await page.$('body');
+    bodyContent += await page.evaluate((body) => body.textContent, bodyHandle);
+    // perform fuzzy search on textcontent
+    warningBanner.push({
+      url: page.url(),
+      external: fuzzy(warninBannerExternalMessage, bodyContent),
+      internal: fuzzy(warningBannerInternalMessage, bodyContent),
+      pageType: pageType,
+    });
+  };
+
   await page.goto(domain.toString());
-  const bodyHandle = await page.$('body');
-  bodyContent += await page.evaluate((body) => body.textContent, bodyHandle);
-  // perform fuzzy search on textcontent
-  warningBanner.push({
-    url: domain.toString(),
-    external: fuzzy(warninBannerExternalMessage, bodyContent),
-    internal: fuzzy(warningBannerInternalMessage, bodyContent),
-  });
+  await evaluatePage('home');
+
+  const linkList = await page.$$('a,button');
+  const loginTerms = /sign in|login|log in/gi;
+  for (let i = 0; i < linkList.length; i++) {
+    const valueHandle = await linkList[i].getProperty('innerText');
+
+    if (loginTerms.test(valueHandle.toString())) {
+      await Promise.all([linkList[i].click(), page.waitForTimeout(4000)]);
+
+      await evaluatePage('login');
+      break;
+    }
+  }
+
   await page.close();
   return warningBanner;
 };
 
 export interface ICuiBanner {
   url?: URL | string;
+  pageType?: string;
   external?: number;
   internal?: number;
 }
