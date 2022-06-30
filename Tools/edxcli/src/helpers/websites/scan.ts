@@ -6,11 +6,15 @@ import { WebsiteReportType, websiteReport } from './website-report';
 import { screenshot } from './screenshot';
 import { cuiBanner } from './cui-banner';
 import { metadataTags } from './metadata-tags';
+import { WebsiteMetadata } from './websites-metadata';
 
-export const scan = async (sh: ScanHelper, domain: URL): Promise<void> => {
+export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
+  const websiteMetadata = new WebsiteMetadata(domain);
+
   // websiteReport forms the shell that all facets fit into
-  const report = websiteReport(domain, sh);
+  const report = websiteReport(websiteMetadata.completeUrl, sh);
   const path = `${sh.outputDirectory}/`;
+
   // create the directory
   fs.mkdir(path, { recursive: true }, function (dirErr: any) {
     if (dirErr) {
@@ -18,15 +22,21 @@ export const scan = async (sh: ScanHelper, domain: URL): Promise<void> => {
     }
   });
   if (sh.facets.includes(<facetType>'cui banner')) {
-    report.cuiBanner.data = await cuiBanner(sh, domain);
+    report.cuiBanner.data = await cuiBanner(sh, websiteMetadata.completeUrl);
   }
 
   if (sh.facets.includes(<facetType>'metadata tags')) {
-    report.metadataTags.data = await metadataTags(sh, domain);
+    report.metadataTags.data = await metadataTags(
+      sh,
+      websiteMetadata.completeUrl,
+    );
   }
 
   if (sh.facets.includes(<facetType>'screenshot')) {
-    report.screenCapture.data = await screenshot(sh, domain);
+    report.screenCapture.data = await screenshot(
+      sh,
+      websiteMetadata.completeUrl,
+    );
   }
 
   // scan complete
@@ -104,7 +114,7 @@ const buildOutput = async (
   sh: ScanHelper,
   websiteReport: WebsiteReportType,
 ) => {
-  const pageHash = await printHash(websiteReport.url);
+  const pageHash = await printHash(websiteReport.domain);
   await writeJSONFile(
     websiteReport,
     sh.outputDirectory,

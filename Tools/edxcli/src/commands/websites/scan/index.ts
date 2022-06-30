@@ -7,7 +7,6 @@ import {
   output,
   preset,
 } from '../../../flags/scan';
-import { createHttpsUrl } from '../../../helpers/global/utils';
 import { scanHelper, scan } from '../../../helpers/websites/scan';
 
 export default class Scan extends BaseCommand<typeof Scan.flags> {
@@ -52,7 +51,7 @@ export default class Scan extends BaseCommand<typeof Scan.flags> {
     for (const item of domainArray) {
       this.log(` > ${item}`, 'debug');
       // eslint-disable-next-line no-await-in-loop
-      await scan(sh, await createHttpsUrl(item));
+      await scan(sh, item);
     }
 
     sh.browser.close();

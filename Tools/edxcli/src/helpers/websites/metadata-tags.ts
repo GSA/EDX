@@ -11,7 +11,7 @@ export const metadataTags = async (
     await dialog.accept();
   });
 
-  await page.goto(domain.toString() + 's/', {
+  await page.goto(domain.toString(), {
     waitUntil: 'networkidle2',
   });
   const keywordHandle = await page.$("meta[name='keywords']");
