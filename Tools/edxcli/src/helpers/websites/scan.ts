@@ -21,22 +21,31 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
       console.error(dirErr);
     }
   });
-  if (sh.facets.includes(<facetType>'cui banner')) {
-    report.cuiBanner.data = await cuiBanner(sh, websiteMetadata.completeUrl);
-  }
 
-  if (sh.facets.includes(<facetType>'metadata tags')) {
-    report.metadataTags.data = await metadataTags(
-      sh,
-      websiteMetadata.completeUrl,
-    );
-  }
+  const { pageFound, message } = await initialCheck(
+    sh,
+    websiteMetadata.completeUrl,
+  );
+  report.scanStatus = message;
 
-  if (sh.facets.includes(<facetType>'screenshot')) {
-    report.screenCapture.data = await screenshot(
-      sh,
-      websiteMetadata.completeUrl,
-    );
+  if (pageFound) {
+    if (sh.facets.includes(<facetType>'cui banner')) {
+      report.cuiBanner.data = await cuiBanner(sh, websiteMetadata.completeUrl);
+    }
+
+    if (sh.facets.includes(<facetType>'metadata tags')) {
+      report.metadataTags.data = await metadataTags(
+        sh,
+        websiteMetadata.completeUrl,
+      );
+    }
+
+    if (sh.facets.includes(<facetType>'screenshot')) {
+      report.screenCapture.data = await screenshot(
+        sh,
+        websiteMetadata.completeUrl,
+      );
+    }
   }
 
   // scan complete
@@ -108,6 +117,19 @@ const presets = (preset: presetType): facetType[] => {
   };
 
   return presetMap[preset];
+};
+
+const initialCheck = async function (sh: ScanHelper, url: URL) {
+  const scanStatus = { pageFound: true, message: 'Page loaded successfully' };
+  const page = await sh.browser.newPage();
+  await page
+    .goto(url.toString(), { waitUntil: 'networkidle2' })
+    .catch((error) => {
+      console.error('Initial check error:', error);
+      scanStatus.pageFound = false;
+      scanStatus.message = `Initial check error: ${error}`;
+    });
+  return scanStatus;
 };
 
 const buildOutput = async (
