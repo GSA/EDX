@@ -9,6 +9,7 @@ import { metadataTags } from './metadata-tags';
 import { WebsiteMetadata } from './websites-metadata';
 import { itPerfMetricReport } from './it-performance-metric';
 import { uswdsComponentsReport } from './uswds-components';
+import { siteScannerReport } from './site-scanner';
 
 export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
   const websiteMetadata = new WebsiteMetadata(domain);
@@ -51,6 +52,11 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
         sh,
         websiteMetadata.completeUrl,
       );
+    }
+
+    if (sh.facets.includes(<facetType>'site scanner')) {
+      const scanReport = await siteScannerReport(websiteMetadata);
+      if (scanReport) report.siteScanner.data = scanReport;
     }
 
     if (sh.facets.includes(<facetType>'uswds components')) {

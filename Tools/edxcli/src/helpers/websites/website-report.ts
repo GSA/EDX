@@ -1,4 +1,3 @@
-// @ts-check
 require('dotenv').config();
 import { ScanHelper } from './scan';
 import { ScreenshotType } from './screenshot';
@@ -6,6 +5,7 @@ import { PerformanceMetricReport } from './it-performance-metric';
 import { ICuiBanner } from './cui-banner';
 import { IMetadataTags } from './metadata-tags';
 import { UswdsComponentsReport } from './uswds-components';
+import { SiteScannerRecord } from './fetch';
 
 /**
  * Represents all data elements in a websiteReport
@@ -101,6 +101,72 @@ export const websiteReport = (
         keywords: [],
       },
     },
+    siteScanner: {
+      description: '',
+      data: {
+        /* eslint-disable camelcase */
+        scan_date: '',
+        target_url_domain: '',
+        scan_status: '',
+        final_url: '',
+        final_url_live: false,
+        final_url_domain: '',
+        final_url_MIMEType: '',
+        final_url_same_domain: false,
+        final_url_status_code: 0,
+        final_url_same_website: false,
+        target_url_404_test: false,
+        target_url_redirects: false,
+        solutions_scan_status: '',
+        uswds_usa_classes: 0,
+        uswds_string: 0,
+        uswds_tables: 0,
+        uswds_inline_css: 0,
+        uswds_favicon: 0,
+        uswds_string_in_css: 0,
+        uswds_favicon_in_css: 0,
+        uswds_merriweather_font: 0,
+        uswds_publicsans_font: 0,
+        uswds_source_sans_font: 0,
+        uswds_semantic_version: '',
+        uswds_version: 0,
+        uswds_count: 0,
+        dap_detected_final_url: false,
+        dap_parameters_final_url: {},
+        og_title_final_url: '',
+        og_description_final_url: '',
+        og_article_published_final_url: '',
+        og_article_modified_final_url: '',
+        main_element_present_final_url: false,
+        robots_txt_final_url: '',
+        robots_txt_final_url_status_code: 0,
+        robots_txt_final_url_live: false,
+        robots_txt_detected: false,
+        robots_txt_final_url_MIMETYPE: '',
+        robots_txt_target_url_redirects: false,
+        robots_txt_final_url_size_in_bytes: 0,
+        robots_txt_crawl_delay: '',
+        robots_txt_sitemap_locations: '',
+        sitemap_xml_detected: false,
+        sitemap_xml_final_url_status_code: 0,
+        sitemap_xml_final_url: '',
+        sitemap_xml_final_url_live: false,
+        sitemap_xml_target_url_redirects: false,
+        sitemap_xml_final_url_filesize_in_bytes: 0,
+        sitemap_xml_final_url_MIMETYPE: '',
+        sitemap_xml_count: 0,
+        sitemap_xml_pdf_count: 0,
+        third_party_service_domains: [],
+        third_party_service_count: 0,
+        target_url: '',
+        target_url_branch: '',
+        target_url_agency_owner: '',
+        target_url_agency_code: '',
+        target_url_bureau_owner: '',
+        target_url_bureau_code: '',
+        /* eslint-enable camelcase */
+      },
+    },
   };
 };
 
@@ -118,6 +184,10 @@ export type WebsiteReportType = {
   cuiBanner: CuiBannerReport;
   metadataTags: MetadataTagsReport;
   uswdsComponents: UswdsComponentsReport;
+  siteScanner: {
+    description: string;
+    data: SiteScannerRecord;
+  };
 };
 
 export type ScreenshotReport = {
