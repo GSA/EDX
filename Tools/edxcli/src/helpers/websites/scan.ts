@@ -8,6 +8,7 @@ import { cuiBanner } from './cui-banner';
 import { metadataTags } from './metadata-tags';
 import { WebsiteMetadata } from './websites-metadata';
 import { itPerfMetricReport } from './it-performance-metric';
+import { uswdsComponentsReport } from './uswds-components';
 
 export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
   const websiteMetadata = new WebsiteMetadata(domain);
@@ -47,6 +48,13 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
 
     if (sh.facets.includes(<facetType>'screenshot')) {
       report.screenCapture.data = await screenshot(
+        sh,
+        websiteMetadata.completeUrl,
+      );
+    }
+
+    if (sh.facets.includes(<facetType>'uswds components')) {
+      report.uswdsComponents = await uswdsComponentsReport(
         sh,
         websiteMetadata.completeUrl,
       );
