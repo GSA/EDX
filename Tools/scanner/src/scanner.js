@@ -196,7 +196,7 @@ const itPerfMetricReport = async function (browser, url) {
     },
     contact: {
       regex: new RegExp(
-        "Contact Us|Contact|Get in touch|Email Us|Email|Get support|Help Desk|d+(s|-)d+(s|-)d+|(d+)sd+-d+",
+        "Contact Us|Contact|Get in touch|Email Us|Email|Get support|Help Desk|send us an email|d+(s|-)d+(s|-)d+|(d+)sd+-d+",
         "i"
       ),
       type: "other",

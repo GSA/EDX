@@ -9,6 +9,10 @@
     - [Organize Outputs](#organize-outputs)
     - [Get Evaluation Scores](#get-evaluation-scores)
   - [Release Notes](#release-notes)
+    - [0.0.12](#0012)
+    - [0.0.11](#0011)
+    - [0.0.10](#0010)
+    - [0.0.9](#009)
     - [0.0.8](#008)
     - [0.0.7](#007)
     - [0.0.6](#006)
@@ -123,6 +127,22 @@ Retrieves website data from Airtable and saves results as .yml files. Resulting 
 ## Release Notes
 
 All scan contain a `scanVersion` attribute which ties back to the version number listed in package.json. Each time an update has been made to the logic of the scans, the version number gets bumped. Doing so allows all teams to see the criteria at the time of the scan. We expect to update the version regularly so as to provide the most complete and accurate picture of websites at GSA.
+
+### 0.0.12
+
+Added 'send us an email' to allowed list for "Contact Us" IT Performance Metric.
+
+### 0.0.11
+
+Added 'email' and 'get support' to allowed list for "Contact Us" IT Performance Metric.
+
+### 0.0.10
+
+Added capability to check for custom privacy policy links as well as identify sites who are on the customPrivacyPolicy allowed list.
+
+### 0.0.9
+
+Updated criteria used when looking for a Search box on a page.
 
 ### 0.0.8
 
