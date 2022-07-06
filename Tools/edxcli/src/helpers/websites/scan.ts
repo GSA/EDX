@@ -65,6 +65,11 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
         websiteMetadata.completeUrl,
       );
     }
+
+    // If Site Scanner returns true for DAP but IT Perf metric does not, overwrite the value
+    if (report.siteScanner.data.dap_detected_final_url) {
+      report.performanceMetric.dap = true;
+    }
   }
 
   // scan complete
