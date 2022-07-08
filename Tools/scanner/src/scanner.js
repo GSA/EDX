@@ -406,7 +406,7 @@ const buildOutput = async function (url, website) {
 };
 
 const domains = [
-  "designsystem.digital.gov",
+  "gsa.gov",
   //"labs.gsa.gov", "acquisition.gov", "buy.gsa.gov"
 ];
 

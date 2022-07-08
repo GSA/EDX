@@ -1,7 +1,7 @@
 {
   "name": "edx_cli",
   "description": "oclif based CLI to evaluate web properties",
-  "version": "0.0.0",
+  "version": "0.0.13",
   "author": "US General Services Administration",
   "bin": {
     "edxcli": "./bin/run"
@@ -17,6 +17,7 @@
     "csv-writer": "^1.6.0",
     "dotenv": "^16.0.0",
     "fast-fuzzy": "^1.11.2",
+    "lighthouse": "^9.2.0",
     "lodash": "^4.17.21",
     "puppeteer": "^14.3.0"
   },

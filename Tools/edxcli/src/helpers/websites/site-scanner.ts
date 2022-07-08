@@ -23,6 +23,5 @@ export const siteScannerReport = async function (
         console.error('Error', error);
       }
     });
-  console.log('response info:', response);
   if (response && response.status === 200) return response.data;
 };

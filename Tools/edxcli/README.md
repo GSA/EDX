@@ -14,7 +14,7 @@ $ npm install -g edx_cli
 $ edxcli COMMAND
 running command...
 $ edxcli (--version)
-edx_cli/0.0.0 darwin-x64 node-v16.14.2
+edx_cli/0.0.13 darwin-x64 node-v16.15.1
 $ edxcli --help [COMMAND]
 USAGE
   $ edxcli COMMAND
@@ -233,7 +233,7 @@ EXAMPLES
   $ edxcli websites scan bulk
 ```
 
-_See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v0.0.0/dist/commands/websites/index.ts)_
+_See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v0.0.13/dist/commands/websites/index.ts)_
 
 ## `edxcli websites fetch SOURCE`
 
@@ -349,7 +349,7 @@ DESCRIPTION
   Scans websites using various modules to capture information about the sites
 
 EXAMPLES
-  $ edxcli websites scan bulk
+  $ edxcli websites scan bulk -d Touchpoints
 ```
 <!-- commandsstop -->
 

@@ -22,7 +22,7 @@ export const websiteReport = (
     startTime: new Date().toISOString(),
     endTime: '',
     /* over time, the contents of scans will change and should follow semantic versioning principles. Pulling from package.json reduces the total number of manual steps when updating the version number */
-    scanVersion: process.env.npm_package_version,
+    scanVersion: process.env.npm_package_version ?? '',
     domain: domain.hostname,
     url: domain.toString(),
     scanStatus: '',
@@ -167,6 +167,12 @@ export const websiteReport = (
         /* eslint-enable camelcase */
       },
     },
+    lighthouse: {
+      description:
+        'Google Lighthouse outputs for both desktop and mobile devices',
+      desktopData: {},
+      mobileData: {},
+    },
   };
 };
 
@@ -175,7 +181,7 @@ export type WebsiteReportType = {
   startTime: string;
   endTime: string;
   /* over time, the contents of scans will change and should follow semantic versioning principles. Pulling from package.json reduces the total number of manual steps when updating the version number */
-  scanVersion: string | undefined;
+  scanVersion: string;
   domain: string;
   url: string;
   scanStatus: string;
@@ -187,6 +193,11 @@ export type WebsiteReportType = {
   siteScanner: {
     description: string;
     data: SiteScannerRecord;
+  };
+  lighthouse: {
+    description: string;
+    desktopData: any;
+    mobileData: any;
   };
 };
 

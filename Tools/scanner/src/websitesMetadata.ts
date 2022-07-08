@@ -248,6 +248,15 @@ export const websiteMetaData: Record<string, WebsiteMetadata> = {
     urlPath: "",
     notes: "",
   },
+  "gsa.gov": {
+    cookies: { name: "", value: "", domain: "", path: "" },
+    customPrivacyPolicy: false,
+    searchNotReq: false,
+    wwwPrefix: "www.",
+    queryString: "",
+    urlPath: "",
+    notes: "",
+  },
   "gsaadvantage.gov": {
     cookies: {
       name: "QSI_SI_bxYHdkLDIHcniGp_intercept",
