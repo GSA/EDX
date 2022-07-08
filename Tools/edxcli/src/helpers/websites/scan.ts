@@ -17,7 +17,6 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
 
   // websiteReport forms the shell that all facets fit into
   const report = websiteReport(websiteMetadata.completeUrl, sh);
-  console.log(report.scanVersion);
   const path = `${sh.outputDirectory}/`;
 
   // create the directory

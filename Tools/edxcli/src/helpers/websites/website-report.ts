@@ -6,7 +6,7 @@ import { ICuiBanner } from './cui-banner';
 import { IMetadataTags } from './metadata-tags';
 import { UswdsComponentsReport } from './uswds-components';
 import { SiteScannerRecord } from './fetch';
-
+const { version: appVersion } = require('../../../package.json');
 /**
  * Represents all data elements in a websiteReport
  * @param domain a valid Node URL object for the site that is being scanned
@@ -22,7 +22,7 @@ export const websiteReport = (
     startTime: new Date().toISOString(),
     endTime: '',
     /* over time, the contents of scans will change and should follow semantic versioning principles. Pulling from package.json reduces the total number of manual steps when updating the version number */
-    scanVersion: process.env.npm_package_version ?? '',
+    scanVersion: appVersion ?? '',
     domain: domain.hostname,
     url: domain.toString(),
     scanStatus: '',
