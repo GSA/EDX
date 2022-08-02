@@ -1,0 +1,2140 @@
+<!DOCTYPE html>
+<!DOCTYPE html><html lang="en" class="height-full">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/EDX//vendor/uswds/css/uswds.min.css">
+    <!-- TODO: Fix script tag formatting -->
+    <script src="/EDX//vendor/uswds/js/uswds-init.min.js">
+
+    </script>
+    <title>Charts</title>
+  <link rel="stylesheet" href="/EDX/assets/1b0abe20.427b522b.css" /><script type="module" src="/EDX/hoisted.bc354043.js"></script></head>
+  <body class="height-full display-flex flex-column">
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+    <header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo" id="-logo">
+        <em class="usa-logo__text">
+          <a href="/EDX/" title="Design Consults"> EDX Design Consults</a>
+        </em>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <!-- bottom padding removed for iframe to extend to bottom of viewport -->
+    <main id="main-content" class="usa-section height-full padding-bottom-0">
+      <div class="grid-container height-full display-flex flex-column">
+        <div id="websites" class="website-chart">
+        <div class="grid-row margin-bottom-2">
+            <section aria-label="Big search component">
+                <label class="usa-sr-only" for="search-field-en-big"> Search </label>
+                <input class="usa-input search" id="search-field-en-big" type="search" name="search" placeholder="Search e.g. 'FAS', 'Application', 'Leasing'" style="border-right: 1px solid #565c65; width: 450px">
+            </section>
+        </div>
+        <p><a href="website-list">View as a table</a></p>
+        <div class="grid-col-12 margin-bottom-2">
+            <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable">
+                <h4 class="usa-accordion__heading">
+                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="a1">
+                        Search Guide
+                    </button>
+                </h4>
+                <div id="a1" class="usa-accordion__content usa-prose">
+                    <p>
+                        Search looks across various attributes associated with a given website
+                        such as office, sub-office, website type, and URL. Example searches
+                        include:
+                    </p>
+                    <ul>
+                        <li>TTS Informational</li>
+                        <li>Application Login</li>
+                        <li>Real Property Utilization & Disposal</li>
+                        <li>FAS CASE</li>
+                    </ul>
+                </div>
+                <h4 class="usa-accordion__heading">
+                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="a2">
+                        Terminology
+                    </button>
+                </h4>
+                <div id="a2" class="usa-accordion__content usa-prose">
+                    <ul>
+                        <li>Digital Brand Category</li>
+                        <ul>
+                            <li>
+                                <strong>GSA Business</strong> - Site provides information and
+                                services about GSA products, services or policies, and/or engages
+                                stakeholders with the GSA brand. GSA operates the site. Site
+                                displays the GSA Star Mark.
+                            </li>
+                            <li>
+                                <strong>Hybrid</strong> - Site is for collaboration, engagement,
+                                or information-sharing, NOT necessarily focused on GSA-only
+                                business. GSA operates the site. Site displays the GSA Star Mark.
+                            </li>
+                            <li>
+                                <strong>External</strong> - GSA manages domain registration, but
+                                the website has no other affiliation with GSA, and does NOT
+                                display the GSA Star Mark.
+                            </li>
+                        </ul>
+                        <li>Office / Sub-Office</li>
+                        <ul>
+                            <li>
+                                We try to use the common terms or correspondence symbols for
+                                offices across GSA. For example: "Office of Leasing", "TTS/PIF",
+                                "OGP MV", etc
+                            </li>
+                        </ul>
+                        <li>Website Type</li>
+                        <ul>
+                            <li>
+                                <strong>API</strong> - Application Programming Interface;
+                                typically includes “api” in the domain name
+                            </li>
+                            <li>
+                                <strong>Critical infrastructure</strong> - Required to support a
+                                GSA or shared service
+                            </li>
+                            <li>
+                                <strong>GitHub repo</strong> - Site decommissioned; URL redirects
+                                to a GitHub repo (status is redirect)
+                            </li>
+                            <li>
+                                <strong>Google form</strong> - Site redirects to a Google form
+                                (status is redirect)
+                            </li>
+                            <li>
+                                <strong>Informational</strong> - Informational (not transactional)
+                                site; all content is public-facing, no login required
+                            </li>
+                            <li>
+                                <strong>Login</strong> - Login page to a back-end app or system;
+                                all content (other than guidance on how to log in) is only
+                                accessible after user login
+                            </li>
+                            <li>
+                                <strong>Transactional</strong> - Web application/back-end system
+                                with at least one page of public-facing informational content;
+                                collects data via user input; users must log in to access
+                                additional content, features, and/or functionality
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <h4 class="usa-accordion__heading">
+                    <button class="usa-accordion__button" aria-expanded="true" aria-controls="a3">
+                        Legend
+                    </button>
+                </h4>
+                <div id="a3" class="usa-accordion__content usa-prose">
+                    <p>
+                        The following charts show the relative strengths and weaknesses of
+                        each website across 6 areas. Click on a domain name to view additional
+                        data and stats.
+                    </p>
+                    <p>
+                        A gray semi-circle appears when data is unavailable for the website in
+                        that particular category.
+                    </p>
+                    <div class="grid-row">
+                        <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
+                            <span class="legend one "></span>Customer
+                            Centricity
+                        </div>
+                        <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
+                            <span class="legend two "></span>Required Links
+                        </div>
+                        <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
+                            <span class="legend three "></span>Mobile
+                            Performance
+                        </div>
+                        <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
+                            <span class="legend four "></span>Accessibility
+                            (AMP)
+                        </div>
+                        <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
+                            <span class="legend five "></span>Google
+                            Analytics
+                        </div>
+                        <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
+                            <span class="legend six "></span>USWDS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height: 40rem" class="overflow-scroll">
+            <div class="grid-row">
+                <ul class="list" style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              width: 100%;
+              list-style: none;
+              padding-left: 0px;
+              flex-wrap: wrap;
+              justify-content: space-evenly;
+              gap: 3rem 2rem;
+            " id="website-list">
+                    <li data-id="0" class="website-list-element" id="8astars.fas.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="8astars.fas.gsa.gov" data-office="FAS" data-subOffice="ESM" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.7" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="0.875" data-datapointCMax="1" data-datapointDVal="0.1" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="0.5" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-0">
+                    8astars.fas.gsa.gov
+                </button>
+            </h4>
+            <div id="a-0" class="usa-accordion__content usa-prose">
+                <a href="https://8astars.fas.gsa.gov">8astars.fas.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>8astars.fas.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>ESM</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Application</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.7</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.875</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.1</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.5</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-0" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="1" class="website-list-element" id="10x.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="10x.gsa.gov" data-office="FAS" data-subOffice="TTS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="1" data-datapointAMax="1" data-datapointBVal="1" data-datapointBMax="1" data-datapointCVal="0.875" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="1" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-1">
+                    10x.gsa.gov
+                </button>
+            </h4>
+            <div id="a-1" class="usa-accordion__content usa-prose">
+                <a href="https://10x.gsa.gov">10x.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>10x.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>Hybrid</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>1</dd>
+                    <dt>Required Links:</dt>
+                    <dd>1</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.875</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>1</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-1" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="2" class="website-list-element" id="18f.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="18f.gsa.gov" data-office="FAS" data-subOffice="TTS/18F" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.8" data-datapointAMax="1" data-datapointBVal="0.875" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="1" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-2">
+                    18f.gsa.gov
+                </button>
+            </h4>
+            <div id="a-2" class="usa-accordion__content usa-prose">
+                <a href="https://18f.gsa.gov">18f.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>18f.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS/18F</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.8</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.875</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>1</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-2" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="3" class="website-list-element" id="aas.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="aas.gsa.gov" data-office="FAS" data-subOffice="AAS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.5" data-datapointAMax="1" data-datapointBVal="1" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="1" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="1" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-3">
+                    aas.gsa.gov
+                </button>
+            </h4>
+            <div id="a-3" class="usa-accordion__content usa-prose">
+                <a href="https://aas.gsa.gov">aas.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>aas.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>AAS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.5</dd>
+                    <dt>Required Links:</dt>
+                    <dd>1</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>1</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>1</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-3" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="4" class="website-list-element" id="accessibility.18f.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="accessibility.18f.gov" data-office="FAS" data-subOffice="TTS/18F" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.8" data-datapointAMax="1" data-datapointBVal="1" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="1" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="1" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-4">
+                    accessibility.18f.gov
+                </button>
+            </h4>
+            <div id="a-4" class="usa-accordion__content usa-prose">
+                <a href="https://accessibility.18f.gov">accessibility.18f.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>accessibility.18f.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS/18F</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.8</dd>
+                    <dt>Required Links:</dt>
+                    <dd>1</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>1</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>1</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-4" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="5" class="website-list-element" id="accessibility.digital.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="accessibility.digital.gov" data-office="FAS" data-subOffice="TTS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.8" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.75" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-5">
+                    accessibility.digital.gov
+                </button>
+            </h4>
+            <div id="a-5" class="usa-accordion__content usa-prose">
+                <a href="https://accessibility.digital.gov">accessibility.digital.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>accessibility.digital.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.8</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.75</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-5" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="6" class="website-list-element" id="acquisition.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="acquisition.gov" data-office="OGP" data-subOffice="MV" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="1" data-datapointAMax="1" data-datapointBVal="0.75" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.6" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="0.875" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-6">
+                    acquisition.gov
+                </button>
+            </h4>
+            <div id="a-6" class="usa-accordion__content usa-prose">
+                <a href="https://acquisition.gov">acquisition.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>acquisition.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>OGP</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>MV</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>1</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.75</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.6</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.875</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-6" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="7" class="website-list-element" id="ask.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="ask.gsa.gov" data-office="FAS" data-subOffice="CASE" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="1" data-datapointAMax="1" data-datapointBVal="1" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.5" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-7">
+                    ask.gsa.gov
+                </button>
+            </h4>
+            <div id="a-7" class="usa-accordion__content usa-prose">
+                <a href="https://ask.gsa.gov">ask.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>ask.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>CASE</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Application</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>1</dd>
+                    <dt>Required Links:</dt>
+                    <dd>1</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.5</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-7" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="8" class="website-list-element" id="autoauctions.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="autoauctions.gsa.gov" data-office="FAS" data-subOffice="TTL" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.7" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="0.375" data-datapointCMax="1" data-datapointDVal="0.1" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.5" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-8">
+                    autoauctions.gsa.gov
+                </button>
+            </h4>
+            <div id="a-8" class="usa-accordion__content usa-prose">
+                <a href="https://autoauctions.gsa.gov">autoauctions.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>autoauctions.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTL</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Application</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.7</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.375</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.1</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.5</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-8" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="9" class="website-list-element" id="blog.usa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="blog.usa.gov" data-office="FAS" data-subOffice="TTS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.8" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="0.875" data-datapointCMax="1" data-datapointDVal="0.1" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.625" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-9">
+                    blog.usa.gov
+                </button>
+            </h4>
+            <div id="a-9" class="usa-accordion__content usa-prose">
+                <a href="https://blog.usa.gov">blog.usa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>blog.usa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.8</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.875</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.1</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.625</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-9" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="10" class="website-list-element" id="brand.18f.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="brand.18f.gov" data-office="FAS" data-subOffice="TTS/18F" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.9" data-datapointAMax="1" data-datapointBVal="1" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="1" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="1" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-10">
+                    brand.18f.gov
+                </button>
+            </h4>
+            <div id="a-10" class="usa-accordion__content usa-prose">
+                <a href="https://brand.18f.gov">brand.18f.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>brand.18f.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS/18F</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.9</dd>
+                    <dt>Required Links:</dt>
+                    <dd>1</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>1</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>1</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-10" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="11" class="website-list-element" id="calc.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="calc.gsa.gov" data-office="FAS" data-subOffice="OESM" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.7" data-datapointAMax="1" data-datapointBVal="0.5" data-datapointBMax="1" data-datapointCVal="0.5" data-datapointCMax="1" data-datapointDVal="0.1" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="0.5" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-11">
+                    calc.gsa.gov
+                </button>
+            </h4>
+            <div id="a-11" class="usa-accordion__content usa-prose">
+                <a href="https://calc.gsa.gov">calc.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>calc.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>OESM</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.7</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.5</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.5</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.1</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.5</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-11" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="12" class="website-list-element" id="catalog.data.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="catalog.data.gov" data-office="FAS" data-subOffice="TTS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.6" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="0.75" data-datapointCMax="1" data-datapointDVal="0.3" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="0.5" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-12">
+                    catalog.data.gov
+                </button>
+            </h4>
+            <div id="a-12" class="usa-accordion__content usa-prose">
+                <a href="https://catalog.data.gov">catalog.data.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>catalog.data.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>Hybrid</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.6</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.75</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.3</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.5</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-12" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="13" class="website-list-element" id="cfo.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="cfo.gov" data-office="OGP" data-subOffice="MY" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.6" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="0.75" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="0.875" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-13">
+                    cfo.gov
+                </button>
+            </h4>
+            <div id="a-13" class="usa-accordion__content usa-prose">
+                <a href="https://cfo.gov">cfo.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>cfo.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>OGP</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>MY</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>Hybrid</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.6</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.75</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.875</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-13" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="14" class="website-list-element" id="challenge.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="challenge.gov" data-office="FAS" data-subOffice="TTS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="1" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="0.75" data-datapointCMax="1" data-datapointDVal="0.3" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="0.875" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-14">
+                    challenge.gov
+                </button>
+            </h4>
+            <div id="a-14" class="usa-accordion__content usa-prose">
+                <a href="https://challenge.gov">challenge.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>challenge.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>Hybrid</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>1</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.75</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.3</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.875</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-14" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="15" class="website-list-element" id="cic.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="cic.gsa.gov" data-office="FAS" data-subOffice="ITC" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.8" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="0.75" data-datapointCMax="1" data-datapointDVal="0.6" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.875" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-15">
+                    cic.gsa.gov
+                </button>
+            </h4>
+            <div id="a-15" class="usa-accordion__content usa-prose">
+                <a href="https://cic.gsa.gov">cic.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>cic.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>ITC</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>Hybrid</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.8</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.75</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.6</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.875</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-15" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="16" class="website-list-element" id="cio.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="cio.gov" data-office="OGP" data-subOffice="MY" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.7" data-datapointAMax="1" data-datapointBVal="0.75" data-datapointBMax="1" data-datapointCVal="0.875" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.875" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-16">
+                    cio.gov
+                </button>
+            </h4>
+            <div id="a-16" class="usa-accordion__content usa-prose">
+                <a href="https://cio.gov">cio.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>cio.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>OGP</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>MY</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>Hybrid</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.7</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.75</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.875</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.875</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-16" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="17" class="website-list-element" id="citizenscience.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="citizenscience.gov" data-office="FAS" data-subOffice="TTS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="1" data-datapointAMax="1" data-datapointBVal="0.75" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.8" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.875" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-17">
+                    citizenscience.gov
+                </button>
+            </h4>
+            <div id="a-17" class="usa-accordion__content usa-prose">
+                <a href="https://citizenscience.gov">citizenscience.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>citizenscience.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>Hybrid</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>1</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.75</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.8</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.875</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-17" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="18" class="website-list-element" id="cloud.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="cloud.gov" data-office="FAS" data-subOffice="TTS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="1" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.5" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.875" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-18">
+                    cloud.gov
+                </button>
+            </h4>
+            <div id="a-18" class="usa-accordion__content usa-prose">
+                <a href="https://cloud.gov">cloud.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>cloud.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>1</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.5</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.875</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-18" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="19" class="website-list-element" id="cmls.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="cmls.gsa.gov" data-office="FAS" data-subOffice="R5 National Marketing and Communication Division" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.8" data-datapointAMax="1" data-datapointBVal="1" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="1" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-19">
+                    cmls.gsa.gov
+                </button>
+            </h4>
+            <div id="a-19" class="usa-accordion__content usa-prose">
+                <a href="https://cmls.gsa.gov">cmls.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>cmls.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>R5 National Marketing and Communication Division</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Application</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.8</dd>
+                    <dt>Required Links:</dt>
+                    <dd>1</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>1</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-19" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="20" class="website-list-element" id="code.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="code.gov" data-office="FAS" data-subOffice="TTS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.7" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.875" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-20">
+                    code.gov
+                </button>
+            </h4>
+            <div id="a-20" class="usa-accordion__content usa-prose">
+                <a href="https://code.gov">code.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>code.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>Hybrid</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.7</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.875</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-20" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="21" class="website-list-element" id="coe.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="coe.gsa.gov" data-office="FAS" data-subOffice="TTS/COE" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.8" data-datapointAMax="1" data-datapointBVal="1" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.75" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-21">
+                    coe.gsa.gov
+                </button>
+            </h4>
+            <div id="a-21" class="usa-accordion__content usa-prose">
+                <a href="https://coe.gsa.gov">coe.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>coe.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS/COE</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.8</dd>
+                    <dt>Required Links:</dt>
+                    <dd>1</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.75</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-21" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="22" class="website-list-element" id="computersforlearning.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="computersforlearning.gov" data-office="FAS" data-subOffice="GSS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.7" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="0.75" data-datapointCMax="1" data-datapointDVal="0.1" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="0.5" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-22">
+                    computersforlearning.gov
+                </button>
+            </h4>
+            <div id="a-22" class="usa-accordion__content usa-prose">
+                <a href="https://computersforlearning.gov">computersforlearning.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>computersforlearning.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>GSS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Application</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.7</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.75</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.1</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.5</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-22" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="23" class="website-list-element" id="conectate.gobiernousa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="conectate.gobiernousa.gov" data-office="FAS" data-subOffice="TTS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.8" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.625" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-23">
+                    conectate.gobiernousa.gov
+                </button>
+            </h4>
+            <div id="a-23" class="usa-accordion__content usa-prose">
+                <a href="https://conectate.gobiernousa.gov">conectate.gobiernousa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>conectate.gobiernousa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.8</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.625</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-23" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="24" class="website-list-element" id="connect.usa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="connect.usa.gov" data-office="FAS" data-subOffice="TTS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.8" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.6" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="0.625" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-24">
+                    connect.usa.gov
+                </button>
+            </h4>
+            <div id="a-24" class="usa-accordion__content usa-prose">
+                <a href="https://connect.usa.gov">connect.usa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>connect.usa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>External</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.8</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.6</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.625</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-24" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="25" class="website-list-element" id="contractdirectory.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="contractdirectory.gov" data-office="FAS" data-subOffice="OSM/IAE" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.7" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="0.75" data-datapointCMax="1" data-datapointDVal="0.5" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.5" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-25">
+                    contractdirectory.gov
+                </button>
+            </h4>
+            <div id="a-25" class="usa-accordion__content usa-prose">
+                <a href="https://contractdirectory.gov">contractdirectory.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>contractdirectory.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>OSM/IAE</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.7</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.75</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.5</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.5</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-25" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="26" class="website-list-element" id="corporateapps.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="corporateapps.gsa.gov" data-office="GSA IT" data-subOffice="ICEW" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.6" data-datapointAMax="1" data-datapointBVal="1" data-datapointBMax="1" data-datapointCVal="0.75" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.875" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-26">
+                    corporateapps.gsa.gov
+                </button>
+            </h4>
+            <div id="a-26" class="usa-accordion__content usa-prose">
+                <a href="https://corporateapps.gsa.gov">corporateapps.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>corporateapps.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>GSA IT</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>ICEW</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.6</dd>
+                    <dt>Required Links:</dt>
+                    <dd>1</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.75</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.875</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-26" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="27" class="website-list-element" id="digitalcorps.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="digitalcorps.gsa.gov" data-office="FAS" data-subOffice="TTS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.9" data-datapointAMax="1" data-datapointBVal="1" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="1" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-27">
+                    digitalcorps.gsa.gov
+                </button>
+            </h4>
+            <div id="a-27" class="usa-accordion__content usa-prose">
+                <a href="https://digitalcorps.gsa.gov">digitalcorps.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>digitalcorps.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.9</dd>
+                    <dt>Required Links:</dt>
+                    <dd>1</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>1</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-27" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="28" class="website-list-element" id="fedidcard.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="fedidcard.gov" data-office="FAS" data-subOffice="ITC" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.7" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="0.625" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="0.5" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-28">
+                    fedidcard.gov
+                </button>
+            </h4>
+            <div id="a-28" class="usa-accordion__content usa-prose">
+                <a href="https://fedidcard.gov">fedidcard.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>fedidcard.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>ITC</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>Hybrid</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.7</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.625</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.5</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-28" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="29" class="website-list-element" id="fedpay.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="fedpay.gsa.gov" data-office="CFO" data-subOffice="ICTA" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.5" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="0.375" data-datapointCMax="1" data-datapointDVal="0.6" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.5" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-29">
+                    fedpay.gsa.gov
+                </button>
+            </h4>
+            <div id="a-29" class="usa-accordion__content usa-prose">
+                <a href="https://fedpay.gsa.gov">fedpay.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>fedpay.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>CFO</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>ICTA</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Application Login</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.5</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.375</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.6</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.5</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-29" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="30" class="website-list-element" id="fedsim.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="fedsim.gsa.gov" data-office="FAS" data-subOffice="AAS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="1" data-datapointAMax="1" data-datapointBVal="1" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.5" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="1" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-30">
+                    fedsim.gsa.gov
+                </button>
+            </h4>
+            <div id="a-30" class="usa-accordion__content usa-prose">
+                <a href="https://fedsim.gsa.gov">fedsim.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>fedsim.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>AAS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>1</dd>
+                    <dt>Required Links:</dt>
+                    <dd>1</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.5</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>1</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-30" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="31" class="website-list-element" id="navigator.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="navigator.gsa.gov" data-office="FAS" data-subOffice="ESM" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.8" data-datapointAMax="1" data-datapointBVal="0.875" data-datapointBMax="1" data-datapointCVal="0.75" data-datapointCMax="1" data-datapointDVal="0.1" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="0.5" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-31">
+                    navigator.gsa.gov
+                </button>
+            </h4>
+            <div id="a-31" class="usa-accordion__content usa-prose">
+                <a href="https://navigator.gsa.gov">navigator.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>navigator.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>ESM</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Application</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.8</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.875</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.75</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.1</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.5</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-31" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="32" class="website-list-element" id="oes.gsa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="oes.gsa.gov" data-office="OGP" data-subOffice="MS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="0.9" data-datapointAMax="1" data-datapointBVal="0.875" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="0.9" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="0.875" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-32">
+                    oes.gsa.gov
+                </button>
+            </h4>
+            <div id="a-32" class="usa-accordion__content usa-prose">
+                <a href="https://oes.gsa.gov">oes.gsa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>oes.gsa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>OGP</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>MS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>0.9</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.875</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.9</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.875</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-32" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="33" class="website-list-element" id="playbooks.idmanagement.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="playbooks.idmanagement.gov" data-office="OGP" data-subOffice="ME" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="1" data-datapointAMax="1" data-datapointBVal="1" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="1" data-datapointDMax="1" data-datapointEVal="1" data-datapointEMax="1" data-datapointFVal="1" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-33">
+                    playbooks.idmanagement.gov
+                </button>
+            </h4>
+            <div id="a-33" class="usa-accordion__content usa-prose">
+                <a href="https://playbooks.idmanagement.gov">playbooks.idmanagement.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>playbooks.idmanagement.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>OGP</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>ME</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>Hybrid</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>1</dd>
+                    <dt>Required Links:</dt>
+                    <dd>1</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>1</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>1</dd>
+                    <dt>USWDS:</dt>
+                    <dd>1</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-33" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="34" class="website-list-element" id="sftool.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="sftool.gov" data-office="OGP" data-subOffice="MG" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="1" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="0.75" data-datapointCMax="1" data-datapointDVal="0.5" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="0.625" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-34">
+                    sftool.gov
+                </button>
+            </h4>
+            <div id="a-34" class="usa-accordion__content usa-prose">
+                <a href="https://sftool.gov">sftool.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>sftool.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>OGP</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>MG</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>GSA Business</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Application</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>1</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>0.75</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>0.5</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.625</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-34" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li><li data-id="35" class="website-list-element" id="usa.gov">
+    <div class="website-chart">
+        <!-- accordion -->
+        <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
+            <!-- the classes listed within the h4 must correspond to identifiers for listjs-->
+            <h4 class="usa-accordion__heading name platform uswds office subOffice digitalBrandCategory typeOfDomain" data-name="usa.gov" data-office="FAS" data-subOffice="TTS" data-digitalBrandCategory="{digitalBrandCategory}" data-typeOfDomain="{typeOfDomain}" data-datapointAVal="1" data-datapointAMax="1" data-datapointBVal="0.625" data-datapointBMax="1" data-datapointCVal="1" data-datapointCMax="1" data-datapointDVal="1" data-datapointDMax="1" data-datapointEVal="0.5" data-datapointEMax="1" data-datapointFVal="0.875" data-datapointFMax="1">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="a-35">
+                    usa.gov
+                </button>
+            </h4>
+            <div id="a-35" class="usa-accordion__content usa-prose">
+                <a href="https://usa.gov">usa.gov</a>
+                <dl>
+                    <dt>URL:</dt>
+                    <dd>usa.gov</dd>
+                    <dt>Office:</dt>
+                    <dd>FAS</dd>
+                    <dt>Sub-Office:</dt>
+                    <dd>TTS</dd>
+                    <dt>Digital Brand Category:</dt>
+                    <dd>Hybrid</dd>
+                    <dt>Website Type:</dt>
+                    <dd>Informational</dd>
+                    <dt>Customer Centricity:</dt>
+                    <dd>1</dd>
+                    <dt>Required Links:</dt>
+                    <dd>0.625</dd>
+                    <dt>Mobile Performance:</dt>
+                    <dd>1</dd>
+                    <dt>Accessibility (AMP):</dt>
+                    <dd>1</dd>
+                    <dt>Google Analytics:</dt>
+                    <dd>0.5</dd>
+                    <dt>USWDS:</dt>
+                    <dd>0.875</dd>
+                </dl>
+            </div>
+        </div>
+
+        <svg class="" style="display: block; margin: 0 auto" id="graph" height="100" width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="background">
+                <circle cx="50" cy="50" r="50" pathLength="100"></circle>
+            </g>
+
+            <g id="site-35" class="graph">
+                <circle cx="50" cy="50" class="one " transform="rotate(-90 50 50)"></circle>
+                <circle cx="50" cy="50" class="two " transform="rotate(-30 50 50)"></circle>
+                <circle cx="50" cy="50" class="three " transform="rotate(30 50 50)"></circle>
+                <circle cx="50" cy="50" class="four " transform="rotate(90 50 50)"></circle>
+                <circle cx="50" cy="50" class="five " transform="rotate(150 50 50)"></circle>
+                <circle cx="50" cy="50" class="six " transform="rotate(210 50 50)"></circle>
+            </g>
+        </svg>
+    </div>
+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+      </div>
+    </main>
+
+    <!-- TODO: Fix script tag formatting -->
+    <script src="/EDX//vendor/uswds/js/uswds.min.js">
+
+    </script>
+  </body>
+</html>
