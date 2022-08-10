@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9"> &#x3C;!DOCTYPE html></span></span>
+<span class="line"><span style="color: #C9D1D9"> &#x3C;!-- saved from url=(0040)https://drivethru.gsa.gov/fmdtsys/dthome --></span></span>
+<span class="line"><span style="color: #C9D1D9"> &#x3C;html lang="en"></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> &#x3C;head></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- 12013 - new jquery --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- changelog</span></span>
+<span class="line"><span style="color: #C9D1D9">  11856 - mitigate vulnarability ...     dxm</span></span>
+<span class="line"><span style="color: #C9D1D9">  12537 - replace Fleet News by new paragraph...    dxm  --></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;meta http-equiv="X-UA-Compatible" content="IE=edge"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;meta name="viewport" content="width=device-width, initial-scale=1"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;title>Drive-thru Home Page (dtlogin)&#x3C;/title></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- Bootstrap --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;link href="../drivethru_gsa_files/bootstrap.css" rel="stylesheet"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;link href="../drivethru_gsa_files/dtStyles_v1.css" rel="stylesheet" type="text/css"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;link rel="shortcut icon" href="https://drivethru.gsa.gov/IMAGES/favicon.ico"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- WARNING: Respond.js doesn't work if you view the page via file:// --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!--[if lt IE 9]></span></span>
+<span class="line"><span style="color: #C9D1D9">       &#x3C;script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js">&#x3C;/script></span></span>
+<span class="line"><span style="color: #C9D1D9">       &#x3C;script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">&#x3C;/script></span></span>
+<span class="line"><span style="color: #C9D1D9">     &#x3C;![endif]--></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- &#x3C;script async="" src="../drivethru_gsa_files/analytics.js">&#x3C;/script> --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;script language="JavaScript"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		var temphttp = "https://";</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		var temptcode = "DTLOGIN";</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		var msg = '';</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		var ddcAction = '$REPLACE="SC-DDC-ACTION"';</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		var courseLink = '';</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		var gsaInternal = 'N';</span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;/script></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- &#x3C;script type="text/javascript" src="../drivethru_gsa_files/pagefooter.js">&#x3C;/script>&#x3C;script type="text/javascript" id="_fed_an_ua_tag" src="../drivethru_gsa_files/Universal-Federated-Analytics.js">&#x3C;/script> --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;script type="text/javascript" src="../drivethru_gsa_files/drivethru.js">&#x3C;/script></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;script type="text/javascript" src="../drivethru_gsa_files/pageheadernologout.js">&#x3C;/script></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;script src="../drivethru_gsa_files/jquery.js">&#x3C;/script></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!--&#x3C;script type="text/javascript"></span></span>
+<span class="line"><span style="color: #C9D1D9"> $(document).ready(function(){</span></span>
+<span class="line"><span style="color: #C9D1D9"> 	$("#myModal").modal('show');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 	$('.hide-modal').click(function(){</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		$('#myModal').modal('hide');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 	});</span></span>
+<span class="line"><span style="color: #C9D1D9"> });</span></span>
+<span class="line"><span style="color: #C9D1D9"> &#x3C;/script></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> &#x3C;script type="text/javascript"></span></span>
+<span class="line"><span style="color: #C9D1D9"> $(document).ready(function(){</span></span>
+<span class="line"><span style="color: #C9D1D9"> 	$(".tooltip-navigator a").tooltip({</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		placement : 'top'</span></span>
+<span class="line"><span style="color: #C9D1D9"> 	});</span></span>
+<span class="line"><span style="color: #C9D1D9"> });</span></span>
+<span class="line"><span style="color: #C9D1D9"> &#x3C;/script>--></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;script type="text/javascript"></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		if (msg > "") {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			alert(msg);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			//	return false;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		if (courseLink > "") {			// Defensive Driving Course</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			openWindow(courseLink);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		if (ddcAction == "ddcLogin")</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			window.close();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		function submitLogin() {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			$('#myModalOKTA').modal('show');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		function submitLogon() {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			go('SUBMITLOGON');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		function submitRegister() {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			go('SUBMITREGISTER');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		function submitCAMLogin() {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			go('SUBMITCAMLOGIN');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		function submitForgotPassword() {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			go('SUBMITFORGOTPW');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		function checkError() {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			var errorCode = document.forms[0].scErrorCode.value;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			if (errorCode != '') {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				if (errorCode == "R")</span></span>
+<span class="line"><span style="color: #C9D1D9"> 					document.getElementById('errorLabel').innerHTML = 'Please follow the link provided in your email used during registration to proceed with account setup.';</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				else</span></span>
+<span class="line"><span style="color: #C9D1D9"> 					if (errorCode == "D")</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						document.getElementById('errorLabel').innerHTML = 'Your account has been deactivated. \nPlease contact your agency fleet representative for assistance.';</span></span>
+<span class="line"><span style="color: #C9D1D9"> 					else</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						if (errorCode == "C")</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							document.getElementById('errorLabel').innerHTML = 'Customer record associated with your GSA Drive-thru account was not found. \nPlease contact your agency fleet representative for assistance.';</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						else</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							if (errorCode == "L")</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								document.getElementById('errorLabel').innerHTML = 'Your account has been locked. \nPlease contact an agency fleet manager or fleet service representative (master users) for assistance.';</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							else</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								if (errorCode == "X")</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									document.getElementById('errorLabel').innerHTML = 'ENT user not found. Please provide registered email and password to continue.';</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								else</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									document.getElementById('errorLabel').innerHTML = 'Invalid email or password entered. Please correct and try again.';</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C; !--$('#myModal1').modal('show'); --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					$('#myModalOKTA').modal('show');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		function clickLogin() {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			if ((gsaInternal == "Y") &#x26;&#x26; (window.location.host == "drivethru.gsa.gov" || window.location.host == "drivethru-dr.fas.gsa.gov" || window.location.host == "drivethru-dr.gsa.gov")) {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				go('SUBMITLOGON');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			else {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				$('#myModalOKTA').modal('show');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				$("#gsaSSoLoginId").show();</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				//$('#myModalOKTA').on('shown.bs.modal', function () {$('#inputEmail').focus();})</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		function clickLoginUser() {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			if ((gsaInternal == "Y") &#x26;&#x26; (window.location.host == "drivethru.gsa.gov" || window.location.host == "drivethru-dr.fas.gsa.gov" || window.location.host == "drivethru-dr.gsa.gov")) {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				go('SUBMITLOGON');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			else {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				/* $('#myModal1').modal('show');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				$('#myModal1').on('shown.bs.modal', function () {$('#inputEmail').focus();})</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				*/</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 				$('#myModalOKTA').modal('show');</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				$("#gsaSSoLoginId").show();</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;/script></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- OKTA Code --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- Commented the 2.14.0 verions on 4/1/2020</span></span>
+<span class="line"><span style="color: #C9D1D9"> &#x3C;script</span></span>
+<span class="line"><span style="color: #C9D1D9">   src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.14.0/js/okta-sign-in.min.js"</span></span>
+<span class="line"><span style="color: #C9D1D9">   type="text/javascript">&#x3C;/script></span></span>
+<span class="line"><span style="color: #C9D1D9"> &#x3C;link</span></span>
+<span class="line"><span style="color: #C9D1D9">   href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.14.0/css/okta-sign-in.min.css"</span></span>
+<span class="line"><span style="color: #C9D1D9">   type="text/css"</span></span>
+<span class="line"><span style="color: #C9D1D9">   rel="stylesheet"/></span></span>
+<span class="line"><span style="color: #C9D1D9"> --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- Latest CDN production Javascript and CSS - added on 4/1/2020--></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;script src="../drivethru_gsa_files/okta-sign-in.min.js" type="text/javascript">&#x3C;/script></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;link href="../drivethru_gsa_files/okta-sign-in.min.css" type="text/css" rel="stylesheet"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- end OKTA Code --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;!-- &#x3C;style>#okta-sign-in {margin: 0 auto !important;}&#x3C;/style> --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;style></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			width: 500px;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			margin: 20px auto 8px;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in .auth-header {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			padding: 30px;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			position: relative;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			border-bottom: 0px solid #ddd;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			z-index: 0;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			-moz-transition: padding-bottom .4s;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			-webkit-transition: padding-bottom .4s;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			transition: padding-bottom .4s;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in .button,</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in .button.link-button {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			text-align: center;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			color: #fff;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background-color: #3c80d2;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -o-linear-gradient(top, #fbfbfb 0, #f8f8f8 100%);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -ms-linear-gradient(top, #fbfbfb 0, #f8f8f8 100%);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#f8f8f8));</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -webkit-linear-gradient(#fbfbfb, #f8f8f8);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: linear-gradient(#3c80d2, #155ccf);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			border-color: #3c80d2 #c3c3c3 #c3c3c3;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			box-shadow: 0 1px 0 rgba(0, 0, 0, .05), inset 0 1px 0 0 hsla(0, 0%, 100%, .1);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			width: 260px;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C; !-- NEW CODE -->#okta-sign-in.auth-container .button {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			text-align: center;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			color: #2f3f4a;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background-color: #fbfbfb;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -o-linear-gradient(top, #fbfbfb 0, #f8f8f8 100%);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -ms-linear-gradient(top, #fbfbfb 0, #f8f8f8 100%);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#f8f8f8));</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -webkit-linear-gradient(#fbfbfb, #f8f8f8);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: linear-gradient(#1662dd, #155ccf);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			border-color: #c3c3c3 #c3c3c3 #bbb;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			box-shadow: 0 1px 0 rgba(0, 0, 0, .05), inset 0 1px 0 0 hsla(0, 0%, 100%, .1);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in .enroll-factor-row .enroll-factor-button .button {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			margin-top: 0;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			height: 30px;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			line-height: 28px;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			padding: 0 10px;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			color: #fbfbfb;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in.auth-container .button:focus,</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in.auth-container .button:hover {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			text-decoration: underline;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			text-align: center;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			color: #3c80d2;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background-color: #fbfbfb;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -o-linear-gradient(top, #fbfbfb 0, #f8f8f8 100%);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -ms-linear-gradient(top, #fbfbfb 0, #f8f8f8 100%);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#f8f8f8));</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -webkit-linear-gradient(#fbfbfb, #f8f8f8);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: linear-gradient(#1662dd, #155ccf);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			border-color: #c3c3c3 #c3c3c3 #bbb;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			box-shadow: 0 1px 0 rgba(0, 0, 0, .05), inset 0 1px 0 0 hsla(0, 0%, 100%, .1);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C; !-- -->#okta-sign-in .mfa-verify-passcode .auth-passcode .o-form-input {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			width: 100px;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in .auth-content .auth-content-inner {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			width: 380px;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in.no-beacon .auth-header {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			padding-bottom: 0px;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in .dropdown .options li.option {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			padding: 5px;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			display: block;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			border-bottom: 1px solid #eaeaea;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: #fff;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			position: relative;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			min-height: 50px !important;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			width: 100%;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			white-space: nowrap;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in.auth-container .okta-sign-in-header {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			z-index: 1;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in .beacon-container {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			top: 95px;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-sign-in .o-form-head {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			margin-top: 25px;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-login-container .mfa-okta-sms {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			/* -- Factor Icons (large): SMS -- */</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background-image: url("/images/sms_70x70.png");</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background-color: lightblue;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-login-container .mfa-google-auth {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			/* -- Factor Icons (large): SMS -- */</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background-image: url("/images/googleAuth_70x70.png");</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background-color: lightblue;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		#okta-login-container .mfa-okta-email {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			/* -- Factor Icons (large): SMS -- */</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background-image: url("/images/email_70x70.png");</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background-color: lightblue;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C; !-- #kta-sign-in.auth-container .button {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			color: #2f3f4a;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background-color: ##d02424;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -o-linear-gradient(top, ##d02424 0, #f8f8f8 100%);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -ms-linear-gradient(top, ##d02424 0, #f8f8f8 100%);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -webkit-gradient(linear, left top, left bottom, from(##d02424), to(#f8f8f8));</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: -webkit-linear-gradient(##d02424, #f8f8f8);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			background: linear-gradient(#d02424, #f8f8f8);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			border-color: #c3c3c3 #c3c3c3 #bbb;</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			box-shadow: 0 1px 0 rgba(0, 0, 0, .05), inset 0 1px 0 0 hsla(0, 0%, 100%, .1)</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		--></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;/style></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>	&#x3C;link rel="stylesheet" href="../../../vendor/uswds/css/uswds.min.css" type="text/css" /></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>	&#x3C;script src="../../../vendor/uswds/js/uswds-init.min.js">&#x3C;/script></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>	&#x3C;style></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		.usa-footer__primary-content .usa-list {</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			display: flex;</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			flex-direction: column;</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			flex-wrap: wrap;</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		}</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		.usa-footer__primary-content .usa-list li {</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			padding-top: 0;</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			padding-bottom: 1rem;</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		}</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>	&#x3C;/style></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span></span></span>
+<span class="line"><span style="color: #C9D1D9"> &#x3C;/head></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>&#x3C;body onload="checkError();"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>&#x3C;body onload="checkError();" style="background:#fff"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;form name="mainForm" action="https://drivethru.gsa.gov/fmdtsys/dthome" method="POST" autocomplete="off"></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;input type="hidden" name="scParam" size="80" maxlength="80"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			value="0AA8DE2BB119CE1736C12D13298327AB2022080312503181DTLOGIN          GSAC"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;input type="hidden" name="WEBPCMTRANSID" value="0879124,2773908"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;input type="hidden" name="scLogin" value="00"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;input type="hidden" name="scAction" value=""></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;input type="hidden" name="scPgm" value=""></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;input type="hidden" name="scUserid" value=""></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;input type="hidden" name="scPassword" value=""></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;input type="hidden" name="scErrorCode" value=""></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>		&#x3C;!--- remove background color from this DIV--></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>		&#x3C;div class="container-fluid2 shadowedge"></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>			&#x3C;!-- &#x3C;script type="text/javascript">homepageheaderdlogin();&#x3C;/script> --></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>			&#x3C;div class="banner">&#x3C;img src="../drivethru_gsa_files/DTbanner.jpg" width="465" height="63"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>					title="GSA logo for Fleet Drive-thru" id="gsaLogo"></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>				&#x3C;div title="Privacy and Security">&#x3C;a href="https://drivethru.gsa.gov/fmdtsys/dthome#"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>						onclick="openWindow(&#x26;#39;/html/privacy.HTM&#x26;#39;);"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>						style="font-size:11px; color:#6d6d6d; float:right; margin-top:-55px;">Privacy and Security&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;a class="usa-skipnav" href="#main-content">Skip to main content&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;section class="usa-banner" aria-label="Official government website"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;div class="usa-accordion"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;header class="usa-banner__header"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;div class="usa-banner__inner"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;div class="grid-col-auto"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;img class="usa-banner__header-flag" src="../../../vendor/uswds/img/us_flag_small.png"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								alt="U.S. flag" /></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;div class="grid-col-fill tablet:grid-col-auto"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;p class="usa-banner__header-text"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								An official website of the United States government</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;/p></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;p class="usa-banner__header-action" aria-hidden="true"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								Here's how you know</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;/p></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;button class="usa-accordion__button usa-banner__button" aria-expanded="false"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							aria-controls="gov-banner"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;span class="usa-banner__button-text">Here's how you know&#x3C;/span></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/button></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;/header></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;div class="usa-banner__content usa-accordion__content" id="gov-banner"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;div class="grid-row grid-gap-lg"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;div class="usa-banner__guidance tablet:grid-col-6"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;img class="usa-banner__icon usa-media-block__img"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								src="../../../vendor/uswds/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true" /></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;div class="usa-media-block__body"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								&#x3C;p></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;strong> Official websites use .gov &#x3C;/strong></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;br /></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									A &#x3C;strong>.gov&#x3C;/strong> website belongs to an official</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									government organization in the United States.</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								&#x3C;/p></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;div class="usa-banner__guidance tablet:grid-col-6"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;img class="usa-banner__icon usa-media-block__img"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								src="../../../vendor/uswds/img/icon-https.svg" role="img" alt="" aria-hidden="true" /></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;div class="usa-media-block__body"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								&#x3C;p></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;strong> Secure .gov websites use HTTPS &#x3C;/strong></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;br /></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									A &#x3C;strong>lock&#x3C;/strong> (</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;span class="icon-lock">&#x3C;svg xmlns="http://www.w3.org/2000/svg" width="52"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>											height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>											aria-labelledby="banner-lock-title banner-lock-description"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>											focusable="false"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>											&#x3C;title id="banner-lock-title">Lock&#x3C;/title></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>											&#x3C;desc id="banner-lock-description">A locked padlock&#x3C;/desc></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>											&#x3C;path fill="#000000" fill-rule="evenodd"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z" /></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>										&#x3C;/svg>&#x3C;/span></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									) or &#x3C;strong>https://&#x3C;/strong> means you've safely connected</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									to the .gov website. Share sensitive information only on</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									official, secure websites.</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								&#x3C;/p></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;/section></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;header class="usa-header usa-header--extended"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;div class="usa-navbar"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;div class="usa-logo" id="extended-logo"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;em class="usa-logo__text"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;a href="/"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							GSA Fleet Drive-thru</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;/em></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;button class="usa-menu-btn">Menu&#x3C;/button></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;/header></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;!--- remove background color from this DIV--></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;div class="grid-container"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;!-- &#x3C;script type="text/javascript">homepageheaderdlogin();&#x3C;/script> --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;div class="navbar navbar-default" style="cursor:pointer"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;div class="navbar-header" role="navigation">&#x3C;button id="idnavbtn" type="button" title="Main Navigation"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">&#x3C;span</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							class="icon-bar">&#x3C;/span>&#x3C;span class="icon-bar">&#x3C;/span>&#x3C;span</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							class="icon-bar">&#x3C;/span>&#x3C;/button>&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;div class="collapse navbar-collapse" onmousemove="$(&#x26;quot;ul li a&#x26;quot;).blur()"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;ul id="idnav" class="nav navbar-nav"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;li>&#x3C;a id="close" title="Close Window" href="javaScript: window.close();"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								style="display: none;">CLOSE WINDOW&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;li>&#x3C;a id="findf" title="Find U.S. Alternative Fuel"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								href="https://drivethru.gsa.gov/fmdtsys/dthome#"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								onclick="openWindow(&#x26;quot;http://www.eere.energy.gov/afdc/stations/advanced.php&#x26;quot;)">Find</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								U.S. Alternative Fuel&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;li>&#x3C;a title="About Fleet" href="https://drivethru.gsa.gov/fmdtsys/dthome#"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								onclick="openWindow(&#x26;quot;http://gsa.gov/portal/content/104624&#x26;quot;);">About Fleet&#x3C;/a></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;li>&#x3C;a id="conta" title="Contact Us" href="https://drivethru.gsa.gov/fmdtsys/dthome#"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								onclick="openWindow(&#x26;quot;/html/DTCONTACTUS.htm&#x26;quot;)">Contact Us&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;li id="help">&#x3C;a title="Help" href="https://drivethru.gsa.gov/fmdtsys/dthome#"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								onclick="openWindow(&#x26;quot;/help/HELP_DTLOGIN.PDF&#x26;quot;)">Help&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;/ul></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;ul class="nav navbar-nav navbar-right"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;li>&#x3C;a href="javascript:submitRegister();">New User? Register here&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;li>&#x3C;a data-toggle="modal" href="https://drivethru.gsa.gov/fmdtsys/dthome#"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								onclick="clickLogin(); $(this).trigger(&#x26;quot;keypress&#x26;quot;, {which: 18});">Login&#x3C;/a></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;/ul></span></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;/div>&#x3C;span id="username" style="display:none"> &#x3C;/span></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;div class="container" style="padding:0px;"></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;div class="row" style="margin-top:10px; margin-bottom: 15px;"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;!-- ledt column with images--></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;div class="col-md-8"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;div id="carousel-example-generic" class="carousel slide" data-ride="carousel"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;!-- Indicators --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;ol class="carousel-indicators"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;li data-target="#carousel-example-generic" data-slide-to="0" class="">&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;li data-target="#carousel-example-generic" data-slide-to="1" class="">&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;li data-target="#carousel-example-generic" data-slide-to="2" class="">&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;li data-target="#carousel-example-generic" data-slide-to="3" class="active">&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;li data-target="#carousel-example-generic" data-slide-to="4" class="">&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;/ol></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;!-- Wrapper for slides --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;div class="carousel-inner" role="listbox"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;div class="item"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 									&#x3C;img src="../drivethru_gsa_files/image1.png" alt="image1"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;div class="item"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 									&#x3C;img src="../drivethru_gsa_files/image2.png" alt="image2"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;div class="item"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 									&#x3C;img src="../drivethru_gsa_files/image3.png" alt="image3"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;div class="item active"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 									&#x3C;img src="../drivethru_gsa_files/image4.png" alt="image4"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;div class="item"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 									&#x3C;img src="../drivethru_gsa_files/image5.png" alt="image5"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;!-- end left column with images --></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;!--right column with icons --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;div class="col-md-4"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;!-- 	&#x3C;h4>&#x3C;a href="#" onClick="openWindow('/html/DTDRIVERSAFTY.htm'); return false;" title="Driver Safety">&#x3C;span class="blueHead">Driver Safety&#x3C;/span>&#x3C;/a>&#x3C;/h4>   DXM--></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;h4>&#x3C;span class="blueHead">Driver Safety&#x3C;/span>&#x3C;/h4></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;p>&#x3C;img src="../drivethru_gsa_files/safetyIcon.png" class="homeicon" width="54" height="54"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								title="Driver Safety icon">Learn more about how GSA Fleet is working to reducing driver</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							risk while promoting an attitude of mutual understanding, courtesy, and safe driving. &#x3C;/p></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;div class="clearfix">&#x26;nbsp;&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;!--	&#x3C;h4>&#x3C;a href="#" onClick="openWindow('/html/DTFLEETNEWS.htm'); return false;"  title="Fleet News - What's New">&#x3C;span class="blueHead">Fleet News - What's New&#x3C;/span>&#x3C;/a>&#x3C;/h4> dxm --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;!-- 	&#x3C;h4>&#x3C;span class="blueHead">Fleet News - What's New&#x3C;/span>&#x3C;/h4></span></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;p>&#x3C;img src="/images/newsIcon.png"     class="homeicon" width="56" height="56" title="Fleet News - What's New icon">Learn about GSA Fleet current offerings and updates. Information includes rate notices, customer letters, newsletters, fact sheets and other special announcements on the many services.&#x3C;/p>  12537 dxm --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;p>Federal employees who drive GSA Fleet-leased vehicles are eligible to register for either GSA</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							Fleet's Defensive Driver Course or Professional Truck Driver Course.&#x3C;/p></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;p>If you have a GSA Fleet Drive-thru account, please log in, scroll over &#x3C;i>Training&#x3C;/i> in the</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							upper navigation bar, and click on &#x3C;i>Defensive Driver Course&#x3C;/i>.&#x3C;/p></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;p>If you do not have a GSA Fleet Drive-thru account, please contact your local fleet manager or</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							designated GSA Fleet Drive-thru account holder to begin the course registration process.&#x3C;/p></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;div class="clearfix">&#x26;nbsp;&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;!--	&#x3C;h4>&#x3C;a href="#" onClick="openWindow('/html/DTTRAINING.htm'); return false;"  title="Training">&#x3C;span class="blueHead">Training&#x3C;/span>&#x3C;/a>&#x3C;/h4>  DXM --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;h4>&#x3C;span class="blueHead">Training&#x3C;/span>&#x3C;/h4></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;p>&#x3C;img src="../drivethru_gsa_files/trainingIcon.png" class="homeicon" width="56" height="57"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								title="Training Icon">Our robust Fleet Training course library contains a Sustainability</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							Series, Drive-thru training, prior year FedFleet training, and previously recorded Desktop</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							Workshops on a variety of fleet-related topics.&#x3C;/p></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;!-- end right column--></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;!-- end row div red --></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>				&#x3C;!--Start Footer--></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>				&#x3C;div style="padding-left:13px; padding-right:13px"></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>					&#x3C;script type="text/javascript">pagefooter();&#x3C;/script></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>					&#x3C;div class="footer"></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>						&#x3C;div class="col-md-2"></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>							&#x3C;p>Related Sites&#x3C;/p></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>							&#x3C;p>&#x3C;a title="GSA.gov"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;http://gsa.gov/portal/category/100000&#x26;quot;)">GSA&#x3C;/a>&#x3C;br>&#x3C;a</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									title="Auto Auctions"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;https://autoauctions.gsa.gov&#x26;quot;)">Auto</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									Auctions&#x3C;/a>&#x3C;br>&#x3C;a title="AutoChoice"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;https://autochoice.fas.gsa.gov&#x26;quot;)">AutoChoice&#x3C;/a>&#x3C;br>&#x3C;a</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									title="DRM or Vehicle Dispatch"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;https://vehicledispatch.fas.gsa.gov&#x26;quot;)"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									id="drm">DRM&#x3C;/a>&#x3C;br>&#x3C;a title="Fastweb"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;https://fastweb.inl.gov&#x26;quot;)">F.A.S.T.&#x3C;/a>&#x3C;br></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>							&#x3C;/p></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>						&#x3C;/div></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>						&#x3C;div class="col-md-2"></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>							&#x3C;p>&#x26;nbsp;&#x3C;/p></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>							&#x3C;p>&#x3C;a title="Federal Vehicle Standards" href="javascript: openFedVehStd()">Federal Vehicle</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									Standards&#x3C;/a>&#x3C;br>&#x3C;a title="FedFMS"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;https://ffms.fas.gsa.gov&#x26;quot;)"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									id="ffms">FedFMS&#x3C;/a>&#x3C;br>&#x3C;a title="STR"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;https://str.gsa.gov&#x26;quot;)"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									id="str">STR&#x3C;/a>&#x3C;br>&#x3C;a title="VCSS"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;https://vcss.ocfo.gsa.gov&#x26;quot;)">VCSS&#x3C;/a>&#x3C;br>&#x3C;a</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									title="VFE or Vehicle Fleet Exchange"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;https://drivethru.gsa.gov/vfe.htm&#x26;quot;)">VFE&#x3C;/a></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>							&#x3C;/p></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>						&#x3C;/div></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>						&#x3C;div class="col-md-2"></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>							&#x3C;p>Other Interest&#x3C;br>&#x3C;/p></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>							&#x3C;p>&#x3C;a title="USA.gov"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;http://usa.gov&#x26;quot;)">USA.gov&#x3C;/a>&#x3C;br>&#x3C;a</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									title="Data.gov"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;http://data.gov&#x26;quot;)">Data.gov&#x3C;/a>&#x3C;br>&#x3C;a</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									title="Whitehouse.gov"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;http://whitehouse.gov&#x26;quot;)">Whitehouse.gov&#x3C;/a>&#x3C;br>&#x3C;a</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									title="Section508.gov"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;https://www.section508.gov/manage/laws-and-policies&#x26;quot;)">Section508.gov&#x3C;/a>&#x3C;br>&#x3C;a</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									title="GSA API Directory"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="javascript: openWindow(&#x26;quot;https://open.gsa.gov/api/&#x26;quot;)">GSA API</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									Directory&#x3C;/a>&#x3C;/p></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>							&#x3C;p>&#x3C;/p></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>						&#x3C;/div></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>						&#x3C;div class="col-md-2"></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>							&#x3C;p>&#x26;nbsp;&#x3C;/p></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>						&#x3C;/div></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>						&#x3C;div class="col-md-4 footerbkg"></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>							&#x3C;p style="color:#000">GSA/FAS Asset and Transportation Management Helpdesk&#x3C;/p></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>							&#x3C;p>Hours of Operation&#x3C;br>8:00 AM - 7:00 PM EST&#x3C;br> Tel: 1-866-472-6711&#x3C;br>Email:&#x26;nbsp;&#x3C;a</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									href="mailto:gsadrivethruhelp@gsa.gov"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									title="GSA Drive-thru Help Desk email address"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>									style="color:white">gsadrivethruhelp@gsa.gov&#x3C;/a>&#x3C;/p></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>						&#x3C;/div></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>					&#x3C;/div></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>				&#x3C;/div></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>				&#x3C;!--End Footer--></span></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;!-- /.container --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;/div></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;!-- Modal for login section--></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;div id="myModal1" class="modal fade" data-backdrop="static"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;div class="modal-dialog"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;div class="modal-content"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;div class="modal-header"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							Login&#x3C;button type="button" class="close" data-dismiss="modal" alt="Daria-hidden=" true"=""</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								title="Close Login Window">×&#x3C;/button></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;div class="modal-body"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;div class="form-group">&#x3C;span id="errorLabe2" style="color:red">&#x26;nbsp;&#x3C;/span>&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;div class="form-group"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;label for="inputEmail" class="control-label">Email Address:&#x3C;/label></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;input type="email" class="form-control" id="inputEmail" placeholder="Email Address"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									name="scLoginEmail" value="" onblur="this.value = this.value.toUpperCase();"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;div class="form-group"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;label for="inputPassword3" class="control-label">Password:&#x3C;/label></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;input type="password" class="form-control" id="inputPassword3" placeholder="Password"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									name="scLoginPassword" value=""></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;div class="form-group"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;p>&#x3C;span class="text-danger">&#x3C;strong>Note: Password is case sensitive. &#x3C;/strong>&#x3C;/span></span></span>
+<span class="line"><span style="color: #C9D1D9"> 									&#x3C;a href="https://drivethru.gsa.gov/fmdtsys/dthome#"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										onclick="submitForgotPassword();">Reset/Forgot Password?&#x3C;/a></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;/p></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;div class="form-group" style="text-align:center"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;button type="button" class="btn btn-dt" onclick="submitLogin();">LOG IN&#x3C;/button></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;/div></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;!-- Modal for LID Selection section--></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;div id="myModal" class="modal fade" data-backdrop="static"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;div class="modal-dialog"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;div class="modal-content"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;div class="modal-header">LID Selection&#x3C;button type="button" class="close" data-dismiss="modal"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								alt="Daria-hidden=" true"="" title="Close LID Selection Window">×&#x3C;/button></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;div class="modal-body" style="text-align:center;"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;label class="radio-inline">&#x3C;input type="radio" name="inlineRadioOptions" id="inlineRadio1"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									value="option1"> LID1&#x3C;/label></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;label class="radio-inline">&#x3C;input type="radio" name="inlineRadioOptions" id="inlineRadio2"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									value="option2"> LID2&#x3C;/label></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;label class="radio-inline">&#x3C;input type="radio" name="inlineRadioOptions" id="inlineRadio3"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									value="option3"> LID3&#x3C;/label></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;label class="radio-inline">&#x3C;input type="radio" name="inlineRadioOptions" id="inlineRadio1"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									value="option1"> LID4&#x3C;/label></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;label class="radio-inline">&#x3C;input type="radio" name="inlineRadioOptions" id="inlineRadio2"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									value="option2"> LID5&#x3C;/label></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;label class="radio-inline">&#x3C;input type="radio" name="inlineRadioOptions" id="inlineRadio3"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									value="option3"> LID6&#x3C;/label></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;p style="text-align:center; font-weight:bold;">&#x3C;span class="text-danger">Please select a LID to</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								login.&#x3C;/span>&#x3C;/p></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;p>&#x26;nbsp;&#x3C;/p></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;div class="form-group" style="text-align:center">&#x3C;button type="login" class="btn btn-dt"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								onclick="submitLogin();">LOG IN&#x3C;/button>&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;!--&#x3C;div class="form-group" style="text-align:center"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;button type="previous" class="btn btn-dt">FY16 ACQUISITION CYCLE&#x3C;br>&#x3C;span style="color:#FC0; font-weight:bold;">CAM Users Log In Here&#x3C;/span>&#x3C;/button></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;/div>--></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;!--&#x3C;div class="form-group" style="text-align:center"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;button type="previous" class="btn btn-dt"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;span style="color:#FC0; font-weight:bold;">Register Here for the&#x3C;/span>&#x3C;br> New Drive-thru Modernization&#x3C;/button></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;/div>--></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;/div></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;!-- OKTA Code --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;div id="myModalOKTA" class="modal fade" data-backdrop="static"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;div class="modal-dialog"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;div class="modal-content"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;div class="modal-header">GSA Multi-Factor Authentication(MFA)&#x3C;button type="button"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								class="close" data-dismiss="modal" alt="Daria-hidden=" true"=""</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								title="Close Login Window">×&#x3C;/button></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;div class="modal-body"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;!-- &#x3C;h4 style="margin-top:0px">&#x3C;div style="color:red;text-align:center">GSA Multi-Factor Authentication (MFA) is now live&#x3C;/div>&#x3C;/h4></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;div style="font-weight:bold">If you did not receive your temporary password in your email or if you have forgotten your password, &#x3C;a href="javascript:forgotPassword();" onClick="forgotPassword(); return false;" title="Click here">&#x3C;strong>click here&#x3C;/strong>&#x3C;/a> to reset your password.&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					    --</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;div style="font-weight:bold">*Note, if you are an active user of GSA Advantage, please use your current MFA credentials to log in.&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						--></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;div style="font-weight:bold">*Note, now you can select any or all of the Multi-Factor</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								options to receive the OTP code. &#x3C;br></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;!-- It is recommended that you should set up all factors since this setup option is only available once and is for all your MFA applications.</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						If you want to add additional factors at a later time then you will need to contact the help desk to reset MFA factors for your account. --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								Click &#x3C;a title="Help" href="https://drivethru.gsa.gov/fmdtsys/dthome#"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									onclick="openWindow(&#x26;#39;/help/MFA_Options.PDF&#x26;#39;)">here&#x3C;/a> for help.</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;div class="form-group">&#x3C;span id="errorLabel" style="color:red">&#x26;nbsp;&#x3C;/span>&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;!-- Render the login widget here --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;!-- commented on 4/1/2020</span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;div id="okta-login-container">&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					--></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;div id="widget-container"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;div data-se="auth-container" id="okta-sign-in"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									class="auth-container main-container no-beacon"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 									&#x3C;div class="okta-sign-in-header auth-header"> &#x3C;img</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											src="../drivethru_gsa_files/DTbanner.jpg" class="auth-org-logo" alt=""></span></span>
+<span class="line"><span style="color: #C9D1D9"> 										&#x3C;div data-type="beacon-container" class="beacon-container">&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 									&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 									&#x3C;div class="auth-content"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 										&#x3C;div class="auth-content-inner"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 											&#x3C;div class="primary-auth"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 												&#x3C;form novalidate="novalidate" method="POST"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													action="https://drivethru.gsa.gov/fmdtsys/dthome" data-se="o-form"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													slot="content" id="form1"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													class="primary-auth-form o-form o-form-edit-mode"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 													&#x3C;div data-se="o-form-content"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 														class="o-form-content o-form-theme clearfix"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 														&#x3C;h2 data-se="o-form-head" class="okta-form-title o-form-head"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 															Enter your email and password to login&#x3C;/h2></span></span>
+<span class="line"><span style="color: #C9D1D9"> 														&#x3C;div class="o-form-error-container"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 															data-se="o-form-error-container">&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 														&#x3C;div class="o-form-fieldset-container"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 															data-se="o-form-fieldset-container"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 															&#x3C;div data-se="o-form-fieldset"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																class="o-form-fieldset o-form-label-top margin-btm-5"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																&#x3C;div data-se="o-form-label"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																	class="okta-form-label o-form-label">&#x3C;label</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																		for="okta-signin-username">Enter your email</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																		address&#x26;nbsp;&#x3C;/label>&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																&#x3C;div data-se="o-form-input-container"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																	class="o-form-input"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																	&#x3C;p class="o-form-explain"> &#x3C;/p>&#x3C;span</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																		data-se="o-form-input-username"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																		class="o-form-input-name-username o-form-control okta-form-input-field input-fix"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																		&#x3C;input type="text" placeholder=""</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																			name="username" id="okta-signin-username"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																			value="" aria-label="" autocomplete="off"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																			required=""> &#x3C;/span></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 															&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 															&#x3C;div data-se="o-form-fieldset"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																class="o-form-fieldset o-form-label-top margin-btm-30"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																&#x3C;div data-se="o-form-label"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																	class="okta-form-label o-form-label">&#x3C;label</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																		for="okta-signin-password">Password&#x26;nbsp;&#x3C;/label></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																&#x3C;div data-se="o-form-input-container"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																	class="o-form-input"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																	&#x3C;p class="o-form-explain"> &#x3C;/p>&#x3C;span</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																		data-se="o-form-input-password"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																		class="o-form-input-name-password o-form-control okta-form-input-field input-fix"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																		&#x3C;input type="password" placeholder=""</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																			name="password" id="okta-signin-password"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																			value="" aria-label="" autocomplete="off"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																			required=""> &#x3C;/span></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 															&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 															&#x3C;div data-se="o-form-fieldset"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																class="o-form-fieldset o-form-label-top margin-btm-0"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																&#x3C;div data-se="o-form-input-container"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>																	class="o-form-input">&#x3C;span</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>																		data-se="o-form-input-remember"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>																	class="o-form-input"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>																	&#x3C;span data-se="o-form-input-remember"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																		class="o-form-input-name-remember"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 																		&#x3C;div class="custom-checkbox">&#x3C;input</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																				type="checkbox" name="remember"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																				id="input7">&#x3C;label for="input7"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																				data-se-for-name="remember">Remember</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																				me&#x3C;/label>&#x3C;/div></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>																	&#x3C;/span>&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>																	&#x3C;/span></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>																&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 															&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 														&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 													&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 													&#x3C;div class="o-form-button-bar">&#x3C;input class="button button-primary"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 															type="submit" value="Login" id="okta-signin-submit"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 															data-type="save">&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 												&#x3C;/form></span></span>
+<span class="line"><span style="color: #C9D1D9"> 												&#x3C;div class="auth-footer"> &#x3C;a</span></span>
+<span class="line"><span style="color: #C9D1D9"> 														href="https://drivethru.gsa.gov/fmdtsys/dthome#"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 														data-se="needhelp" aria-expanded="false"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 														aria-controls="help-links-container" class="link help js-help"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 														Need help signing in? &#x3C;/a></span></span>
+<span class="line"><span style="color: #C9D1D9"> 													&#x3C;ul class="help-links js-help-links" id="help-links-container"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 														style="display: none;"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 														&#x3C;li> &#x3C;a href="https://drivethru.gsa.gov/fmdtsys/dthome#"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																data-se="forgot-password"</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>																class="link js-forgot-password"> Forgot password? &#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>																class="link js-forgot-password"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>																Forgot password? &#x3C;/a></span></span>
+<span class="line"><span style="color: #C9D1D9"> 														&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 														&#x3C;li> &#x3C;a href="javascript:gsaSSOLogin();" class="link js-custom"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																rel="noopener noreferrer">GSA User Login&#x3C;/a> &#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 														&#x3C;li> &#x3C;a href="https://drivethru.gsa.gov/docs/MFA_FAQ.pdf"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																data-se="help-link" class="link js-help-link"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																rel="noopener noreferrer" target="_blank"> Help &#x3C;/a></span></span>
+<span class="line"><span style="color: #C9D1D9"> 														&#x3C;/li></span></span>
+<span class="line"><span style="color: #C9D1D9"> 													&#x3C;/ul></span></span>
+<span class="line"><span style="color: #C9D1D9"> 												&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 											&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 										&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 									&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;!-- Script to init the widget --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;script></span></span>
+<span class="line"><span style="color: #C9D1D9"> 								if (window.location.host == "drivethrud.fas.gsa.gov") {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									signInWidgetConfig = {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										baseUrl: "https://dev-atm.oktapreview.com",</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C; !--logo: '/images/DTbanner.jpg', --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 										redirectUri: "https://dev-atm.oktapreview.com/home/devatm_drivethrudev_1/0oal2picxq66p9a0E0h7/alnl2plm00Mf2QUyZ0h7",</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											language: 'en',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												i18n: {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										'en': {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											'primaryauth.title': 'Enter your email and password to login',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'primaryauth.submit': 'Login',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													'primaryauth.username.placeholder': 'Enter your email address',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 														'primaryauth.username.tooltip': ' ',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 															'primaryauth.password.tooltip': ' ',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																'error.username.required': 'Please enter your email',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																	'error.password.required': 'Please enter a password',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																		'errors.E0000004': 'Sign in failed.  Invalid email address/password provided, or you may not be a registered user of this application.  Please check your credentials and try again, or register for an account!',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																			'password.expired.title': 'Your password has expired',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																				'error.auth.lockedOut': 'Your account has been locked for 30 minutes, please try later or contact customer service at 1-866-472-6711',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																					'mfa.sendEmail': 'Send verification email',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 																						'password.oldPassword.placeholder': 'Old/Temporary password'</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									},</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									features: {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										registration: false,                 // Enable self-service registration flow</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											rememberMe: true,                   // Setting to false will remove the checkbox to save username</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												multiOptionalFactorEnroll: true,  // Allow users to enroll in multiple optional factors before finishing the authentication flow.</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													//selfServiceUnlock: true,          // Will enable unlock in addition to forgotten password</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													//smsRecovery: true,                // Enable SMS-based account recovery</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													//callRecovery: true,               // Enable voice call-based account recovery</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													router: true,                       // Leave this set to true for the API demo</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							//autoPush: true, 					// Auto Push</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						},</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									helpLinks: {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										forgotPassword: 'javascript:forgotPassword();',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											help: '/docs/MFA_FAQ.pdf',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												custom: [</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													{</span></span>
+<span class="line"><span style="color: #C9D1D9"> 														text: 'GSA User Login',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 														href: 'javascript:gsaSSOLogin();',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													},</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												]</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									},</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									authParams: {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										issuer: "https://dev-atm.oktapreview.com/oauth2/default",</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											//responseType: ['token', 'id_token'],</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											responseType: ['code'],</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												display: 'page'</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				else if (window.location.host == "drivethrub.gsa.gov") {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									signInWidgetConfig = {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										baseUrl: "https://test-fas.oktapreview.com",</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										logo: '/images/DTbanner.jpg',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										redirectUri: "https://test-fas.oktapreview.com/home/testfas_drivethrutest_1/0oanm3eb4qCnE7C0n0h7/alnnm3fgjsVwk3Zcj0h7",</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										language: 'en',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										i18n: {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											'en': {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'primaryauth.title': 'Enter your email and password to login',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'primaryauth.submit': 'Login',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'primaryauth.username.placeholder': 'Enter your email address',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'primaryauth.username.tooltip': ' ',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'primaryauth.password.tooltip': ' ',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'error.username.required': 'Please enter your email',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'error.password.required': 'Please enter a password',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'errors.E0000004': 'Sign in failed.  Invalid email address/password provided, or you may not be a registered user of this application.  Please check your credentials and try again, or register for an account!',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'password.expired.title': 'Your password has expired',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'error.auth.lockedOut': 'Your account has been locked for 30 minutes, please try later or contact customer service at 1-866-472-6711',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'mfa.sendEmail': 'Send verification email',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'password.oldPassword.placeholder': 'Old/Temporary password'</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										},</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										features: {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											registration: false,                 // Enable self-service registration flow</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											rememberMe: true,                   // Setting to false will remove the checkbox to save username</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											multiOptionalFactorEnroll: true,  // Allow users to enroll in multiple optional factors before finishing the authentication flow.</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											//selfServiceUnlock: true,          // Will enable unlock in addition to forgotten password</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											//smsRecovery: true,                // Enable SMS-based account recovery</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											//callRecovery: true,               // Enable voice call-based account recovery</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											router: true,                       // Leave this set to true for the API demo</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											//autoPush: true, 					// Auto Push</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										},</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										helpLinks: {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											forgotPassword: 'javascript:forgotPassword();',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											help: '/docs/MFA_FAQ.pdf',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											custom: [</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												{</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													text: 'GSA User Login',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													href: 'javascript:gsaSSOLogin();',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												},</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											]</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										},</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										authParams: {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											issuer: "https://test-fas.oktapreview.com/oauth2/default",</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											//responseType: ['token', 'id_token'],</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											responseType: ['code'],</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											display: 'page'</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								else {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									signInWidgetConfig = {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										baseUrl: "https://gsa.okta.com",</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										logo: '/images/DTbanner.jpg',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										redirectUri: "https://gsa.okta.com/home/generalservicesadministration_drivethru_1/0oa1qlm266rMdhNdX297/aln1qlmt606sPdEkB297",</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										language: 'en',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										i18n: {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											'en': {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'primaryauth.title': 'Enter your email and password to login',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'primaryauth.submit': 'Login',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'primaryauth.username.placeholder': 'Enter your email address',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'primaryauth.username.tooltip': ' ',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'primaryauth.password.tooltip': ' ',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'error.username.required': 'Please enter your email',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'error.password.required': 'Please enter a password',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'errors.E0000004': 'Sign in failed.  Invalid email address/password provided, or you may not be a registered user of this application.  Please check your credentials and try again, or register for an account!',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'password.expired.title': 'Your password has expired',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'error.auth.lockedOut': 'Your account has been locked for 30 minutes, please try later or contact customer service at 1-866-472-6711',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'mfa.sendEmail': 'Send verification email',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												'password.oldPassword.placeholder': 'Old/Temporary password'</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										},</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										features: {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											registration: false,                 // Enable self-service registration flow</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											rememberMe: true,                   // Setting to false will remove the checkbox to save username</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											multiOptionalFactorEnroll: true,  // Allow users to enroll in multiple optional factors before finishing the authentication flow.</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											//selfServiceUnlock: true,          // Will enable unlock in addition to forgotten password</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											//smsRecovery: true,                // Enable SMS-based account recovery</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											//callRecovery: true,               // Enable voice call-based account recovery</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											router: true,                       // Leave this set to true for the API demo</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											//autoPush: true, 					// Auto Push</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										},</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										helpLinks: {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											forgotPassword: 'javascript:forgotPassword();',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											help: '/docs/MFA_FAQ.pdf',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											custom: [</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												{</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													text: 'GSA User Login',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 													href: 'javascript:gsaSSOLogin();',</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												},</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											]</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										},</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										authParams: {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											issuer: "https://gsa.okta.com/oauth2/default",</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											//responseType: ['token', 'id_token'],</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											responseType: ['code'],</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											display: 'page'</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								signInWidget = new OktaSignIn(signInWidgetConfig);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								signInWidget.renderEl({ el: '#widget-container' }, success, widgetErrorCallback);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 								function widgetSuccessCallback(res) {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									var key = '';</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									if (res[0]) {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										key = Object.keys(res[0])[0];</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										signInWidget.tokenManager.add(key, res[0]);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									if (res[1]) {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										key = Object.keys(res[1])[0];</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										signInWidget.tokenManager.add(key, res[1]);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									if (res.status === 'SUCCESS') {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										var token = signInWidget.tokenManager.get(key);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										console.log("Logged in to Okta and issued token:");</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										console.log(token);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										console.log("Reload this page to start over.");</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										alert("Logged in! Check your developer console for details");</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 								function widgetErrorCallback(err) {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									alert("error occured");</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 								function success(res) {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									// Nothing to do in this case, the widget will automatically redirect</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									// the user to Okta for authentication, then back to this page if successful</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									if (res.status === 'SUCCESS') {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										//console.log('response status is success, ' + res[0]);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										if (window.location.host == "drivethrud.fas.gsa.gov")</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											res.session.setCookieAndRedirect("https://dev-atm.oktapreview.com/home/devatm_drivethrudev_1/0oal2picxq66p9a0E0h7/alnl2plm00Mf2QUyZ0h7");</span></span>
+<span class="line"><span style="color: #C9D1D9"> 										else</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											if (window.location.host == "drivethrub.gsa.gov")</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												res.session.setCookieAndRedirect("https://test-fas.oktapreview.com/home/testfas_drivethrutest_1/0oanm3eb4qCnE7C0n0h7/alnnm3fgjsVwk3Zcj0h7");</span></span>
+<span class="line"><span style="color: #C9D1D9"> 											else</span></span>
+<span class="line"><span style="color: #C9D1D9"> 												res.session.setCookieAndRedirect("https://gsa.okta.com/home/generalservicesadministration_drivethru_1/0oa1qlm266rMdhNdX297/aln1qlmt606sPdEkB297");</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 									}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;/script></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;div>&#x26;nbsp;&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;!--</span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;div class="form-group">&#x3C;span id="gsaSSoLoginId">If you are a GSA user and can access Drive-thru from an outside GSA Network using your ENT user name and password please &#x3C;a href="javascript:gsaSSOLogin()" style="font-weight:bold">click here.&#x3C;/a>&#x3C;/span>&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					--></span></span>
+<span class="line"><span style="color: #C9D1D9"> 							&#x3C;div>Trouble logging in? Click &#x3C;a title="Help"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									href="https://drivethru.gsa.gov/fmdtsys/dthome#"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									onclick="openWindow(&#x26;#39;/help/MFA_INSTRUCTIONS.PDF&#x26;#39;)">here&#x3C;/a> for Instructions</span></span>
+<span class="line"><span style="color: #C9D1D9"> 								or email: &#x3C;a href="mailto:gsadrivethruhelp@gsa.gov"</span></span>
+<span class="line"><span style="color: #C9D1D9"> 									style="font-weight:bold">gsadrivethruhelp@gsa.gov&#x3C;/a>&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 						&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 					&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 				&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;/div></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;!-- end OKTA Code --></span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 			&#x3C;!-- end Modal lid login section  --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;!--Start Footer--></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;footer class="usa-footer usa-footer--big"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;div class="usa-footer__primary-section"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;div class="grid-container"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;div class="grid-row grid-gap"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;div class="tablet:grid-col-12"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;nav class="usa-footer__nav" aria-label="Footer navigation,,"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								&#x3C;div class="grid-row grid-gap-4"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;div class="mobile-lg:grid-col-6 desktop:grid-col-6"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>										&#x3C;section class="</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				                    usa-footer__primary-content</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				                    usa-footer__primary-content--collapsible</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				                  "></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>											&#x3C;h4 class="usa-footer__primary-link">Related Sites&#x3C;/h4></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>											&#x3C;ul class="usa-list usa-list--unstyled height-card"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>													&#x3C;a href="https://autoauctions.gsa.gov">Auto</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>														Auctions&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>													&#x3C;a href="https://autochoice.fas.gsa.gov">AutoChoice&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>													&#x3C;a href="https://vehicledispatch.fas.gsa.gov/FMVD/VDHOME/"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>														DRM&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>													&#x3C;a href="https://fastweb.inl.gov/">F.A.S.T&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>													&#x3C;a href="https://vehiclestd.fas.gsa.gov/">Federal</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>														Vehicle Standards&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link">&#x3C;a</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>														href="https://ffms.fas.gsa.gov/ffms/fastart/"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>														FedFMS&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link">&#x3C;a</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>														href="https://str.gsa.gov/str/signon">STR&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link">&#x3C;a</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>														href="https://phdc-pub.gsa.gov/vcssregistration/">VCSS&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link"> &#x3C;a</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>														href="https://drivethru.gsa.gov/fmdtsys/dthome">VFE&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>											&#x3C;/ul></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>										&#x3C;/section></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;div class="mobile-lg:grid-col-6 desktop:grid-col-6"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>										&#x3C;section class="</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				                    usa-footer__primary-content</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				                    usa-footer__primary-content--collapsible</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				                  "></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>											&#x3C;h4 class="usa-footer__primary-link">Other Interests&#x3C;/h4></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>											&#x3C;ul class="usa-list usa-list--unstyled height-card"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>													&#x3C;a href="https://USA.gov">USA.gov&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>													&#x3C;a href="https://data.gov">Data.gov&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>													&#x3C;a href="https://whitehouse.gov">Whitehouse.gov&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>													&#x3C;a href="https://section508.gov">Section508.gov&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;li class="usa-footer__secondary-link"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>													&#x3C;a href="https://open.gsa.gov/api">GSA API Directory&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>												&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>											&#x3C;/ul></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>										&#x3C;/section></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;/nav></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;div class="usa-footer__secondary-section"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;div class="grid-container"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;div class="grid-row grid-gap"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;div class="</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				            usa-footer__logo</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				            grid-row</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				            mobile-lg:grid-col-6 mobile-lg:grid-gap-2</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				          "></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;div class="mobile-lg:grid-col-auto"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								&#x3C;img class="usa-footer__logo-img" src="/assets/img/logo-img.png" alt="" /></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;div class="mobile-lg:grid-col-auto"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								&#x3C;p class="usa-footer__logo-heading">Fleet Management&#x3C;/p></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;div class="usa-footer__contact-links mobile-lg:grid-col-6"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;p class="usa-footer__contact-heading">GSA/FAS Asset and Transportation Management</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								Helpdesk&#x3C;/p></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;p>Hours of operation: 8AM - 7PM EST&#x3C;/p></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;address class="usa-footer__address"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								&#x3C;div class="usa-footer__contact-info grid-row grid-gap"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;div class="grid-col-auto"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;div class="grid-col-auto"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>										&#x3C;a href="tel:1-866-472-6711">(866) 472-6711&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;div class="grid-col-auto"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>										&#x3C;a href="gsadrivethruhelp@gsa.gov">gsadrivethruhelp@gsa.gov&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>									&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;/address></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;/footer></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;!--End Footer--></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;div class="usa-identifier"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier,"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;div class="usa-identifier__container"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;div class="usa-identifier__logos"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;a href="javascript:void(0);" class="usa-identifier__logo"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;img class="usa-identifier__logo-img" src="../../../assets/img/gsa_logo.png"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								alt="US General Administration Services Starmark logo" role="img" /></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;div class="usa-identifier__identity"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;p class="usa-identifier__identity-domain"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							drivethru.gsa.gov</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/p></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;p class="usa-identifier__identity-disclaimer"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							An official website of the</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;a href="javascript:void(0);">US General Services Administration&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/p></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;/section></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links,"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;div class="usa-identifier__container"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;ul class="usa-identifier__required-links-list"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;li class="usa-identifier__required-links-item"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;a href="https://www.gsa.gov/about-us" class="usa-identifier__required-link usa-link">About</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								GSA&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;li class="usa-identifier__required-links-item"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;a href="https://www.gsa.gov/website-information/accessibility-aids"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								class="usa-identifier__required-link usa-link">Accessibility support&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;li class="usa-identifier__required-links-item"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;a href="https://www.gsa.gov/reference/freedom-of-information-act-foia"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								class="usa-identifier__required-link usa-link">FOIA requests&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;li class="usa-identifier__required-links-item"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>							&#x3C;a href="https://www.gsa.gov/website-information/website-policies#privacy"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>								class="usa-identifier__required-link usa-link">Privacy policy&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;/ul></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;/nav></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;section class="usa-identifier__section usa-identifier__section--usagov"</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				aria-label="U.S. government information and services,"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;div class="usa-identifier__container"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;div class="usa-identifier__usagov-description"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>						Looking for U.S. government information and services?</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>					&#x3C;a href="https://www.usa.gov/" class="usa-link">Visit USA.gov&#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>				&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>			&#x3C;/section></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;/div></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>		&#x3C;/div></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;script type="text/javascript"></span></span>
+<span class="line"><span style="color: #C9D1D9"> 			function checkSubmit(e) {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				if (browser == "MSIE") {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 					if (event.keyCode == '13')</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						submitLogin()</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				if (browser == "Firefox") {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 					if (e.which == 13)</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						submitLogin();</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				else</span></span>
+<span class="line"><span style="color: #C9D1D9"> 					if (e.keyCode == 13) {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						submitLogin();</span></span>
+<span class="line"><span style="color: #C9D1D9"> 					}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			document.onkeydown = checkSubmit;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 			function forgotPassword() {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				//alert("username:" + document.forms[1].username.value);</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				document.forms[0].scLoginEmail.value = document.forms[1].username.value.toUpperCase();</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				submitForgotPassword();</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			function gsaSSOLogin() {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				if (window.location.host == "drivethrub.gsa.gov") {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 					location.href = "https://secureauth.dev.gsa.gov/secureauth39/SecureAuth.aspx?ReturnURL=https://drivethrub.gsa.gov/fmdtsys/dthome?C=C&#x26;amp;Continue=SAContinue";</span></span>
+<span class="line"><span style="color: #C9D1D9"> 				} else</span></span>
+<span class="line"><span style="color: #C9D1D9"> 					if (window.location.host == "drivethrud.fas.gsa.gov") {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						location.href = "https://secureauth.dev.gsa.gov/secureauth39/SecureAuth.aspx?ReturnURL=https://drivethrud.fas.gsa.gov/fmdtdsys/dthome?C=C&#x26;amp;Continue=SAContinue";</span></span>
+<span class="line"><span style="color: #C9D1D9"> 					} else</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						if (window.location.host == "drivethru-dr.fas.gsa.gov") {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							location.href = "https://secureauth.gsa.gov/secureauth68/SecureAuth.aspx?ReturnURL=https://drivethru-dr.fas.gsa.gov/fmdtsys/dthome?C=C&#x26;amp;Continue=SAContinue";</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						} else {</span></span>
+<span class="line"><span style="color: #C9D1D9"> 							location.href = "https://secureauth.gsa.gov/secureauth68/SecureAuth.aspx?ReturnURL=https://drivethru.gsa.gov/fmdtsys/dthome?C=C&#x26;amp;Continue=SAContinue";</span></span>
+<span class="line"><span style="color: #C9D1D9"> 						}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 			}</span></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;/script></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;!-- Bootstrap core JavaScript</span></span>
+<span class="line"><span style="color: #C9D1D9"> ================================================== --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;!-- Placed at the end of the document so the pages load faster --></span></span>
+<span class="line"><span style="color: #C9D1D9"> 		&#x3C;script src="../drivethru_gsa_files/bootstrap.min.js">&#x3C;/script></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> 	&#x3C;/form></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>	&#x3C;script src="../../../vendor/uswds/js/uswds.min.js">&#x3C;/script></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> &#x3C;/body></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9"> &#x3C;/html></span></span></code></pre>
