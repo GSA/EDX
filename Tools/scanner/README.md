@@ -1,5 +1,7 @@
 # Scanner
 
+**ARCHIVED** Note, scanner is in an archived state as of v0.0.13. Subsequent updates will be made to [edxcli](https://github.com/GSA/EDX/tree/main/Tools/edxcli)
+
 - [Scanner](#scanner)
   - [Requirements](#requirements)
   - [Installation](#installation)
