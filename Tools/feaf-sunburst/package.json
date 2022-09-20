@@ -1,0 +1,14 @@
+{
+  "name": "@d3/zoomable-sunburst",
+  "main": "86ddbc29bd33f9d6@357.js",
+  "version": "357.0.0",
+  "homepage": "https://observablehq.com/@d3/zoomable-sunburst",
+  "author": {
+    "name": "D3",
+    "url": "https://observablehq.com/@d3"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

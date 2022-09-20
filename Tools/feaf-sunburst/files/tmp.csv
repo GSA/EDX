@@ -1,0 +1,299 @@
+buying,General Acquisition,acquisition.gov
+buying,General Acquisition,hallways.cap.gsa.gov
+buying,General Acquisition,cmls.gsa.gov
+buying,General Acquisition,cpars.gov
+buying,General Acquisition,esrs.gov
+buying,General Acquisition,fai.gov
+buying,General Acquisition,fapiis.gov
+buying,General Acquisition,fsd.gov
+buying,General Acquisition,fedspecs.gsa.gov
+buying,General Acquisition,gsaelibrary.gsa.gov
+buying,General Acquisition,fpds.gov
+buying,General Acquisition,gsaglobalsupply.gsa.gov
+buying,General Acquisition,sam.gov
+buying,General Acquisition,usmcservmart.gsa.gov
+buying,General Acquisition,cic.gsa.gov
+buying,General Acquisition,dhsadvantage.gsa.gov
+buying,General Acquisition,afadvantage.gov
+buying,General Acquisition,usdaadvantage.gsa.gov
+buying,General Acquisition,vaadvantage.gsa.gov
+buying,General Acquisition,autochoice.fas.gsa.gov
+buying,General Acquisition,idmanagement.gov
+buying,IT Acquisition,8astars.fas.gsa.gov
+buying,IT Acquisition,cloud.cio.gov
+buying,IT Acquisition,cloud.gov
+buying,IT Acquisition,gsaadvantage.gov
+buying,IT Acquisition,navigator.gsa.gov
+buying,IT Acquisition,techfarhub.cio.gov
+buying,IT Acquisition,dhsadvantage.gsa.gov
+buying,IT Acquisition,afadvantage.gov
+buying,IT Acquisition,usdaadvantage.gsa.gov
+buying,IT Acquisition,vaadvantage.gsa.gov
+buying,Supplies,gsaadvantage.gov
+buying,Supplies,gsaglobalsupply.gsa.gov
+buying,Supplies,usmcservmart.gsa.gov
+buying,Supplies,dhsadvantage.gsa.gov
+buying,Supplies,afadvantage.gov
+buying,Supplies,usdaadvantage.gsa.gov
+buying,Supplies,vaadvantage.gsa.gov
+buying,Credit Card,smartpay.gsa.gov
+buying,Credit Card,training.smartpay.gsa.gov
+buying,Credit Card,spdatawarehouse.gsa.gov
+buying,Credit Card,epay.fas.gsa.gov
+Contracting,Contract,contractdirectory.gov
+Contracting,Contract,eoffer.gsa.gov
+Contracting,Contract,fpds.gov
+Contracting,Contract,sam.gov
+Contracting,Contract,vsc.gsa.gov
+Contracting,Contract,mcm.fas.gsa.gov
+Contracting,Contract,portal.eos.gsa.gov
+Contracting,Contract,recycling.gsa.gov
+Contracting,Contract,scopereview.gsa.gov
+Contracting,Contract,srp.fas.gsa.gov
+Contracting,Contract,tscportal.fas.gsa.gov
+Contracting,Contractor,cpars.gov
+Contracting,Contractor,eoffer.gsa.gov
+Contracting,Contractor,fapiis.gov
+Contracting,Contractor,fsrs.gov
+Contracting,Contractor,gsaelibrary.gsa.gov
+Contracting,Contractor,sam.gov
+Contracting,Contractor,fedpay.gsa.gov
+Contracting,Contractor,mcm.fas.gsa.gov
+Contracting,Subcontractor,esrs.gov
+Contracting,Subcontractor,fsrs.gov
+Contracting,Modification,eoffer.gsa.gov
+Contracting,Modification,mcm.fas.gsa.gov
+Contracting,Vendor,itvmo.gsa.gov
+Contracting,Vendor,financeweb.gsa.gov
+Contracting,Vendor,marketplace.fedramp.gov
+Contracting,Vendor,autovendor.fas.gsa.gov
+Contracting,Vendor,tscportal.fas.gsa.gov
+Contracting,Contract Performance,cpars.gov
+Contracting,Contract Performance,esrs.gov
+Contracting,Contract Performance,fapiis.gov
+Selling,Disposal,gsaxcess.gov
+Selling,Disposal,autoauctions.gsa.gov
+Selling,Disposal,computersforlearning.gov
+Selling,Disposal,gsaxcesspractice.fas.gsa.gov
+Selling,Disposal,gsaauctions.gov
+Selling,Disposal,mysales.fas.gsa.gov
+Selling,Disposal,property.reporting.gov
+Selling,Marketplace/Auction,gsaxcess.gov
+Selling,Marketplace/Auction,autoauctions.gsa.gov
+Selling,Marketplace/Auction,realestatesales.gov
+Selling,Marketplace/Auction,gsaauctions.gov
+Selling,Excess,computersforlearning.gov
+Selling,Excess,disposal.gsa.gov
+Selling,Excess,gsaxcesspractice.fas.gsa.gov
+Selling,Excess,arm.fas.gsa.gov
+Selling,Excess,fleet.fas.gsa.gov
+Selling,Excess,mysales.fas.gsa.gov
+Policy/Regulation,General Acquisition,accessibility.18f.gov
+Policy/Regulation,General Acquisition,accessibility.digital.gov
+Policy/Regulation,General Acquisition,section508.gov
+Policy/Regulation,Regulation,acquisition.gov
+Policy/Regulation,Regulation,atf-eregs.18f.gov
+Policy/Regulation,Regulation,pra.digital.gov
+Policy/Regulation,Regulation,labs.gsa.gov
+Policy/Regulation,Regulation,designsystem.digital.gov
+Policy/Regulation,Regulation,regulations.gov
+Policy/Regulation,Regulation,rocis.gov
+Policy/Regulation,Regulation,dashboard.data.gov
+Policy/Regulation,Regulation,fdms.gov
+Policy/Regulation,Regulation,training.rocis.gov
+Policy/Regulation,IT Security,devicepki.idmanagement.gov
+Policy/Regulation,IT Security,fedramp.gov
+Policy/Regulation,IT Security,https.cio.gov
+Policy/Regulation,Open Data,open.gsa.gov
+Policy/Regulation,Open Data,open.usa.gov
+Policy/Regulation,Open Data,data.gov
+Policy/Regulation,Open Data,dashboard.data.gov
+Policy/Regulation,IT Regulation,management.cio.gov
+Policy/Regulation,IT Regulation,code.gov
+Policy/Regulation,IT Regulation,mobile.reginfo.gov
+Policy/Regulation,IT Regulation,reginfo.gov
+Policy/Regulation,IT Regulation,training.reginfo.gov
+FAS and PBS Core Offerings,Fleet,drivethru.gsa.gov
+FAS and PBS Core Offerings,Fleet,fleet.gsa.gov
+FAS and PBS Core Offerings,Fleet,amp.fas.gsa.gov
+FAS and PBS Core Offerings,Fleet,arm.fas.gsa.gov
+FAS and PBS Core Offerings,Fleet,autochoice.fas.gsa.gov
+FAS and PBS Core Offerings,Fleet,fleet.fas.gsa.gov
+FAS and PBS Core Offerings,Fleet,str.gsa.gov
+FAS and PBS Core Offerings,Fleet,vehicledispatch.fas.gsa.gov
+FAS and PBS Core Offerings,Travel,reporting.gov
+FAS and PBS Core Offerings,Travel,cpsearch.fas.gsa.gov
+FAS and PBS Core Offerings,Travel,travel.reporting.gov
+FAS and PBS Core Offerings,Real Property/ Building,courtsweb.gsa.gov
+FAS and PBS Core Offerings,Real Property/ Building,disposal.gsa.gov
+FAS and PBS Core Offerings,Real Property/ Building,frpg.gov
+FAS and PBS Core Offerings,Real Property/ Building,lop.gsa.gov
+FAS and PBS Core Offerings,Real Property/ Building,pbs-billing.gsa.gov
+FAS and PBS Core Offerings,Real Property/ Building,realestatesales.gov
+FAS and PBS Core Offerings,Real Property/ Building,realpropertyprofile.gov
+FAS and PBS Core Offerings,Real Property/ Building,ret.gsa.gov
+FAS and PBS Core Offerings,Real Property/ Building,sftool.gov
+Guidance,General Guidance,eng-hiring.18f.gov
+Guidance,General Guidance,federation.data.gov
+Guidance,General Guidance,gsa.gov
+Guidance,General Guidance,product-guide.18f.gov
+Guidance,Acquisition Guidance,navigator.gsa.gov
+Guidance,Acquisition Guidance,techfarhub.cio.gov
+Guidance,Acquisition Guidance,vsc.gsa.gov
+Guidance,Acquisition Guidance,cic.gsa.gov
+Guidance,Acquisition Guidance,idmanagement.gov
+Guidance,IT Guidance,fedramp.gov
+Guidance,IT Guidance,engineering.18f.gov
+Guidance,IT Guidance,developers.login.gov
+Guidance,Accessibility Guidance,accessibility.18f.gov
+Guidance,Accessibility Guidance,accessibility.digital.gov
+Guidance,Accessibility Guidance,section508.gov
+Guidance,Real Property Guidance,sftool.gov
+Guidance,Real Property Guidance,frpg.gov
+Guidance,Policy Guidance,management.cio.gov
+Guidance,Policy Guidance,code.gov
+Guidance,Policy Guidance,childtaxcredit.gov
+Guidance,Policy Guidance,https.cio.gov
+Guidance,IT Project Guidance,derisking-guide.18f.gov
+Guidance,IT Project Guidance,agile.18f.gov
+Guidance,IT Project Guidance,tech.gsa.gov
+Guidance,Human-centered Design Guidance,content-guide.18f.gov
+Guidance,Human-centered Design Guidance,design.login.gov
+Guidance,Human-centered Design Guidance,designsystem.digital.gov
+Guidance,Human-centered Design Guidance,digital.gov
+Guidance,Human-centered Design Guidance,labs.usa.gov
+Guidance,Human-centered Design Guidance,methods.18f.gov
+Guidance,Human-centered Design Guidance,playbook.cio.gov
+Guidance,Human-centered Design Guidance,plainlanguage.gov
+Guidance,Human-centered Design Guidance,public-sans.digital.gov
+Guidance,Human-centered Design Guidance,ux-guide.18f.gov
+Guidance,Performance Improvement Guidance,pic.gov
+Guidance,Performance Improvement Guidance,evaluation.gov
+Guidance,Authentication Guidance,idmanagement.gov
+Guidance,Authentication Guidance,playbooks.idmanagement.gov
+Promoting an Organization or Program,General Marketing,18f.gsa.gov
+Promoting an Organization or Program,General Marketing,aas.gsa.gov
+Promoting an Organization or Program,General Marketing,digitalcorps.gsa.gov
+Promoting an Organization or Program,General Marketing,ussm.gsa.gov
+Promoting an Organization or Program,General Marketing,brand.18f.gov
+Promoting an Organization or Program,General Marketing,blog.usa.gov
+Promoting an Organization or Program,General Marketing,madeinamerica.gov
+Promoting an Organization or Program,General Marketing,cfo.gov
+Promoting an Organization or Program,General Marketing,join.tts.gsa.gov
+Promoting an Organization or Program,General Marketing,connect.usa.gov
+Promoting an Organization or Program,General Marketing,cio.gov
+Promoting an Organization or Program,General Marketing,cloud.gov
+Promoting an Organization or Program,General Marketing,conectate.gobiernousa.gov
+Promoting an Organization or Program,General Marketing,portfolios.18f.gov
+Promoting an Organization or Program,General Marketing,tmf.cio.gov
+Promoting an Organization or Program,General Marketing,search.gov
+Promoting an Organization or Program,General Marketing,devicepki.idmanagement.gov
+Promoting an Organization or Program,General Marketing,federalist.18f.gov
+Promoting an Organization or Program,General Marketing,fai.gov
+Promoting an Organization or Program,General Marketing,fedramp.gov
+Promoting an Organization or Program,General Marketing,feedback.usa.gov
+Promoting an Organization or Program,General Marketing,fellows-in-innovation.pif.gov
+Promoting an Organization or Program,General Marketing,gsa.gov
+Promoting an Organization or Program,General Marketing,oes.gsa.gov
+Promoting an Organization or Program,General Marketing,login.gov
+Promoting an Organization or Program,General Marketing,product-guide.18f.gov
+Promoting an Organization or Program,General Marketing,presidentialinnovationfellows.gov
+Promoting an Organization or Program,General Marketing,strategy.data.gov
+Promoting an Organization or Program,General Marketing,tech.gsa.gov
+Promoting an Organization or Program,General Marketing,data.gov
+Promoting an Organization or Program,General Marketing,partners.login.gov
+Promoting an Organization or Program,General Marketing,recycling.gsa.gov
+Promoting an Organization or Program,Hiring,digitalcorps.gsa.gov
+Promoting an Organization or Program,Hiring,join.tts.gsa.gov
+Promoting an Organization or Program,Hiring,eng-hiring.18f.gov
+Promoting an Organization or Program,Hiring,fellows-in-innovation.pif.gov
+Promoting an Organization or Program,Hiring,presidentialinnovationfellows.gov
+Promoting an Organization or Program,Committee/ Commission,facadatabase.gov
+Promoting an Organization or Program,Committee/ Commission,400yaahc.gov
+Promoting an Organization or Program,Committee/ Commission,saferfederalworkforce.gov
+Promoting an Organization or Program,Committee/ Commission,thenamingcommission.gov
+Promoting an Organization or Program,Committee/ Commission,fpc.gov
+Promoting an Organization or Program,Committee/ Commission,pic.gov
+Promoting an Organization or Program,Committee/ Commission,evaluation.gov
+Promoting an Organization or Program,Committee/ Commission,cdo.gov
+Promoting an Organization or Program,Portal,apps.ocfo.gsa.gov
+Promoting an Organization or Program,Portal,corporateapps.gsa.gov
+Promoting an Organization or Program,Portal,reporting.gov
+Promoting an Organization or Program,Portal,financeweb.gsa.gov
+Promoting an Organization or Program,Portal,finance.ocfo.gsa.gov
+Promoting an Organization or Program,Portal,fleet.gsa.gov
+Promoting an Organization or Program,Portal,data.gov
+Promoting an Organization or Program,Portal,fbohome.sam.gov
+Promoting an Organization or Program,Portal,extportal.pbs.gsa.gov
+Promoting an Organization or Program,Portal,fmitservices-external.gsa.gov
+Promoting an Organization or Program,Portal,gsac0.fas.gsa.gov
+data,Inventory,usdigitalregistry.digitalgov.gov
+data,Inventory,api.data.gov
+data,Inventory,touchpoints.digital.gov
+data,Inventory,catalog.data.gov
+data,Inventory,facadatabase.gov
+data,Inventory,fedspecs.gsa.gov
+data,Inventory,gsaelibrary.gsa.gov
+data,Inventory,fpds.gov
+data,Inventory,regulations.gov
+data,Inventory,sam.gov
+data,Inventory,resources.data.gov
+data,Inventory,marketplace.fedramp.gov
+data,Inventory,courtsweb.gsa.gov
+data,Inventory,dashboard.data.gov
+data,Inventory,fairs.reporting.gov
+data,Inventory,fdms.gov
+data,Inventory,fleet.fas.gsa.gov
+data,Inventory,gsa.folio.ecpic.gov
+data,Inventory,mysales.fas.gsa.gov
+data,Inventory,realpropertyprofile.gov
+data,Inventory,travel.reporting.gov
+data,Publishing Data,rocis.gov
+data,Publishing Data,fdms.gov
+data,Publishing Data,gsa.folio.ecpic.gov
+data,Publishing Data,mysales.fas.gsa.gov
+data,Publishing Data,portal.eos.gsa.gov
+data,Publishing Data,property.reporting.gov
+data,Publishing Data,realpropertyprofile.gov
+data,Publishing Data,srp.fas.gsa.gov
+data,Publishing Data,training.rocis.gov
+data,Publishing Data,travel.reporting.gov
+data,Publishing Data,tscportal.fas.gsa.gov
+data,Open Data,open.gsa.gov
+data,Open Data,open.usa.gov
+data,Open Data,data.gov
+data,Open Data,dashboard.data.gov
+data,Analysis/Analytics,analytics.usa.gov
+data,Analysis/Analytics,d2d.gsa.gov
+data,Analysis/Analytics,digitaldashboard.gov
+data,Analysis/Analytics,federation.data.gov
+data,Analysis/Analytics,spdatawarehouse.gsa.gov
+data,Data Sharing,api.data.gov
+data,Data Sharing,federation.data.gov
+data,Data Sharing,open.gsa.gov
+data,Data Sharing,open.usa.gov
+Budgeting and Accounting,Budgeting/ Investment,financeweb.gsa.gov
+Budgeting and Accounting,Budgeting/ Investment,gsa.folio.ecpic.gov
+Budgeting and Accounting,Budgeting/ Investment,finance.ocfo.gsa.gov
+Budgeting and Accounting,Payment/ Invoicing,paymentaccuracy.gov
+Budgeting and Accounting,Payment/ Invoicing,apps.ocfo.gsa.gov
+Budgeting and Accounting,Payment/ Invoicing,financeweb.gsa.gov
+Budgeting and Accounting,Payment/ Invoicing,tams.gsa.gov
+Budgeting and Accounting,Payment/ Invoicing,fedpay.gsa.gov
+Miscellaneous,Federal Performance,pic.gov
+Miscellaneous,Federal Performance,evaluation.gov
+Miscellaneous,External Partner,mobile.reginfo.gov
+Miscellaneous,External Partner,reginfo.gov
+Miscellaneous,External Partner,sdg.data.gov
+Miscellaneous,External Partner,usmcservmart.gsa.gov
+Miscellaneous,External Partner,cic.gsa.gov
+Miscellaneous,External Partner,slc.gsa.gov
+Miscellaneous,External Partner,courtsweb.gsa.gov
+Miscellaneous,External Partner,dhsadvantage.gsa.gov
+Miscellaneous,External Partner,afadvantage.gov
+Miscellaneous,External Partner,usdaadvantage.gsa.gov
+Miscellaneous,External Partner,vaadvantage.gsa.gov
+Miscellaneous,External Partner,training.reginfo.gov
+Miscellaneous,Crowdsourcing,citizenscience.gov
+Miscellaneous,Crowdsourcing,10x.gsa.gov
+Miscellaneous,Crowdsourcing,regulations.gov
