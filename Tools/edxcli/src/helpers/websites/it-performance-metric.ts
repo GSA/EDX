@@ -30,8 +30,7 @@ export const itPerfMetricReport = async (
       type: 'link',
     },
     dap: {
-      regex:
-        /https:\/\/dap\.digitalgov\.gov\/universal-federated-analytics-min\.js/i,
+      regex: /dap\.digitalgov\.gov\/universal-federated-analytics.*?\.js/i,
       type: 'other',
     },
     search: {
