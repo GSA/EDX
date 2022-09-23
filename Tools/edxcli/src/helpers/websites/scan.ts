@@ -106,7 +106,9 @@ export const scanHelper = async (
   const cleanedFacets =
     flags.facets === ''
       ? []
-      : flags.facets.split(',').map((val: string) => val.trim());
+      : flags.facets.flatMap((element: string) =>
+          element.split(',').map((val: string) => val.trim()),
+        );
   return {
     formattedDate: formattedDate,
     outputDirectory: flags.output || `data/scans/${formattedDate}`,
