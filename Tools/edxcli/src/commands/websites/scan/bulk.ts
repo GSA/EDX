@@ -7,7 +7,7 @@ import {
   output,
   preset,
   resume,
-} from '../../../flags/scan';
+} from '../../../flags/flags';
 import { isCountedSite } from '../../../helpers/global/utils';
 import { FetchHelper } from '../../../helpers/websites/fetch';
 import { scanHelper, scan } from '../../../helpers/websites/scan';

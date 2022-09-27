@@ -7,7 +7,6 @@ import {
 } from '../../helpers/websites/fetch';
 import CSV from '../../helpers/global/csv';
 
-
 export default class Fetch extends BaseCommand<typeof Fetch.flags> {
   static description =
     'Retrieves a list of websites from one or more data sources.';
@@ -22,7 +21,7 @@ export default class Fetch extends BaseCommand<typeof Fetch.flags> {
     output: Flags.string({
       char: 'o',
       description: 'Output directory. Defualts to current directory',
-      default: '.',
+      default: 'data/fetch',
       required: false,
     }),
   };

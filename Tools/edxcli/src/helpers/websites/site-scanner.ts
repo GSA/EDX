@@ -17,10 +17,17 @@ export const siteScannerReport = async function (
     })
     .catch(function (error: any) {
       if (error.response) {
-        console.error(error.response.status);
-        console.error(error.response.headers);
+        console.error(
+          'Site Scanner API Error:\n',
+          `>> HTTP Status Code: ${error.response.status}\n`,
+          `>> HTTP Response Headers: ${JSON.stringify(
+            error.response.headers,
+            null,
+            2,
+          )}`,
+        );
       } else {
-        console.error('Error', error);
+        console.error('Site Scanner API Error:', error);
       }
     });
   if (response && response.status === 200) return response.data;

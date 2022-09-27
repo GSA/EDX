@@ -20,8 +20,8 @@ export default class Push extends BaseCommand<typeof Push.flags> {
     ...BaseCommand.flags,
     output: Flags.string({
       char: 'o',
-      description: 'Output directory. Defualts to /edxcli/data directory',
-      default: 'data',
+      description: 'Output directory. Defualts to /edxcli/data/push directory',
+      default: 'data/push',
       required: false,
     }),
   };

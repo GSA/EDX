@@ -1,4 +1,5 @@
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+import { mkdirSync } from 'node:fs';
 import path from 'node:path';
 
 export default class CSV {
@@ -18,6 +19,7 @@ export default class CSV {
     this.outputDirectory = outputDirectory;
     this.callingOperation = callingOperation;
     this.path = path.join(
+      process.cwd(),
       outputDirectory,
       `${this.callingOperation}_${this.formattedDate}.csv`,
     );
@@ -26,9 +28,12 @@ export default class CSV {
       // create map of csv headers to json elements
       header: headers,
     });
+    mkdirSync(path.join(process.cwd(), this.outputDirectory), {
+      recursive: true,
+    });
   }
 
-  async write(data: any): Promise<string> {
+  async write(data: any[]): Promise<string> {
     const message = await this.csvWriter.writeRecords(data).then(() => {
       return `${this.callingOperation} data written to ${this.path}`;
     });

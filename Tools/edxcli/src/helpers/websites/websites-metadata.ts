@@ -512,6 +512,15 @@ const data: Record<string, IWebsiteAttributes> = {
     urlPath: '',
     notes: '',
   },
+  'vltp.gsa.gov': {
+    cookies: { name: '', value: '', domain: '', path: '' },
+    customPrivacyPolicy: false,
+    searchNotReq: true,
+    wwwPrefix: '',
+    queryString: '',
+    urlPath: '',
+    notes: '',
+  },
 };
 
 export * from './websites-metadata';

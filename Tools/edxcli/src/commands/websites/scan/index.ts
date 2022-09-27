@@ -6,7 +6,7 @@ import {
   headless,
   output,
   preset,
-} from '../../../flags/scan';
+} from '../../../flags/flags';
 import { scanHelper, scan } from '../../../helpers/websites/scan';
 
 export default class Scan extends BaseCommand<typeof Scan.flags> {
