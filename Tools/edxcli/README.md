@@ -3,80 +3,75 @@
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 
 <!-- toc -->
-
-- [edxcli](#edxcli)
-- [Usage](#usage)
-- [Commands](#commands)
-  - [`edxcli help [COMMAND]`](#edxcli-help-command)
-  - [`edxcli plugins`](#edxcli-plugins)
-  - [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin)
-  - [`edxcli plugins:inspect PLUGIN...`](#edxcli-pluginsinspect-plugin)
-  - [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin-1)
-  - [`edxcli plugins:link PLUGIN`](#edxcli-pluginslink-plugin)
-  - [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin)
-  - [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-1)
-  - [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-2)
-  - [`edxcli plugins update`](#edxcli-plugins-update)
-  - [`edxcli websites`](#edxcli-websites)
-  - [`edxcli websites fetch SOURCE`](#edxcli-websites-fetch-source)
-  - [`edxcli websites push`](#edxcli-websites-push)
-  - [`edxcli websites scan`](#edxcli-websites-scan)
-  - [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
-- [Release Notes](#release-notes)
-  - [0.0.15](#0015)
-  - [0.0.14](#0014)
-  - [0.0.13](#0013)
-  - [0.0.12](#0012)
-  - [0.0.11](#0011)
-  - [0.0.10](#0010)
-  - [0.0.9](#009)
-  - [0.0.8](#008)
-  - [0.0.7](#007)
-  - [0.0.6](#006)
-  - [0.0.5](#005)
-  - [0.0.4](#004)
-  - [0.0.3](#003)
-  - [0.0.2](#002)
-  - [0.0.1](#001)
+* [edxcli](#edxcli)
+* [Usage](#usage)
+* [Commands](#commands)
+* [Release Notes](#release-notes)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g edx_cli
 $ edxcli COMMAND
 running command...
 $ edxcli (--version)
-edx_cli/0.0.14 darwin-x64 node-v16.15.1
+edx_cli/0.0.15 darwin-x64 node-v16.15.1
 $ edxcli --help [COMMAND]
 USAGE
   $ edxcli COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
+* [`edxcli data condense`](#edxcli-data-condense)
+* [`edxcli help [COMMAND]`](#edxcli-help-command)
+* [`edxcli plugins`](#edxcli-plugins)
+* [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin)
+* [`edxcli plugins:inspect PLUGIN...`](#edxcli-pluginsinspect-plugin)
+* [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin-1)
+* [`edxcli plugins:link PLUGIN`](#edxcli-pluginslink-plugin)
+* [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin)
+* [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-1)
+* [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-2)
+* [`edxcli plugins update`](#edxcli-plugins-update)
+* [`edxcli websites`](#edxcli-websites)
+* [`edxcli websites fetch SOURCE`](#edxcli-websites-fetch-source)
+* [`edxcli websites push`](#edxcli-websites-push)
+* [`edxcli websites scan`](#edxcli-websites-scan)
+* [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
 
-- [`edxcli help [COMMAND]`](#edxcli-help-command)
-- [`edxcli plugins`](#edxcli-plugins)
-- [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin)
-- [`edxcli plugins:inspect PLUGIN...`](#edxcli-pluginsinspect-plugin)
-- [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin-1)
-- [`edxcli plugins:link PLUGIN`](#edxcli-pluginslink-plugin)
-- [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin)
-- [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-1)
-- [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-2)
-- [`edxcli plugins update`](#edxcli-plugins-update)
-- [`edxcli websites`](#edxcli-websites)
-- [`edxcli websites fetch SOURCE`](#edxcli-websites-fetch-source)
-- [`edxcli websites push`](#edxcli-websites-push)
-- [`edxcli websites scan`](#edxcli-websites-scan)
-- [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
+## `edxcli data condense`
+
+Consolidates json output from website scans into CSV files
+
+```
+USAGE
+  $ edxcli data condense [--loglevel error|warn|info|debug] [-f <value>] [-o <value>] [-p <value>]
+
+FLAGS
+  -f, --folders=<value>  List of comma-separated folders within the /data/scans directory.
+  -o, --output=<value>   [default: /data/condensedData] Output directory. Defualts to current directory
+  -p, --preset=<value>   [default: default] A collection of fields to extract into CSV
+  --loglevel=<option>    [default: info]
+                         <options: error|warn|info|debug>
+
+DESCRIPTION
+  Consolidates json output from website scans into CSV files
+
+EXAMPLES
+  $ edxcli data condense
+
+  $ edxcli data condense -f "20220719,20220720"
+
+  $ edxcli data condense -o customDirectory
+
+  $ edxcli data condense -p "lighthouse accessibility"
+```
 
 ## `edxcli help [COMMAND]`
 
@@ -149,7 +144,7 @@ ALIASES
   $ edxcli plugins add
 
 EXAMPLES
-  $ edxcli plugins:install myplugin
+  $ edxcli plugins:install myplugin 
 
   $ edxcli plugins:install https://github.com/someuser/someplugin
 
@@ -209,7 +204,7 @@ ALIASES
   $ edxcli plugins add
 
 EXAMPLES
-  $ edxcli plugins:install myplugin
+  $ edxcli plugins:install myplugin 
 
   $ edxcli plugins:install https://github.com/someuser/someplugin
 
@@ -357,7 +352,7 @@ EXAMPLES
   $ edxcli websites scan bulk
 ```
 
-_See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v0.0.14/dist/commands/websites/index.ts)_
+_See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v0.0.15/dist/commands/websites/index.ts)_
 
 ## `edxcli websites fetch SOURCE`
 
@@ -371,7 +366,7 @@ ARGUMENTS
   SOURCE  (Site Scanner|Touchpoints) Website list source
 
 FLAGS
-  -o, --output=<value>  [default: .] Output directory. Defualts to current directory
+  -o, --output=<value>  [default: data/fetch] Output directory. Defualts to current directory
   --loglevel=<option>   [default: info]
                         <options: error|warn|info|debug>
 
@@ -393,7 +388,7 @@ USAGE
   $ edxcli websites push [--loglevel error|warn|info|debug] [-o <value>]
 
 FLAGS
-  -o, --output=<value>  [default: data] Output directory. Defualts to /edxcli/data directory
+  -o, --output=<value>  [default: data/push] Output directory. Defualts to /edxcli/data/push directory
   --loglevel=<option>   [default: info]
                         <options: error|warn|info|debug>
 
@@ -479,7 +474,6 @@ EXAMPLES
 
   $ edxcli websites scan bulk -d Touchpoints --resume
 ```
-
 <!-- commandsstop -->
 
 <!-- Updating -->
