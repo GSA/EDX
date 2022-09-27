@@ -51,3 +51,9 @@ export const headless = Flags.boolean({
   default: true,
   allowNo: true,
 });
+
+export const auth = Flags.boolean({
+  description: `Boolean flag denoting whether or not to prompt for basic auth credentials for the given site. Defaults to false`,
+  default: false,
+  allowNo: false,
+});

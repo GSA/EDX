@@ -1,6 +1,7 @@
 import { CliUx } from '@oclif/core';
 import BaseCommand from '../../../base';
 import {
+  auth,
   domainsList,
   facets,
   headless,
@@ -29,6 +30,7 @@ export default class Scan extends BaseCommand<typeof Scan.flags> {
     headless: headless,
     output: output(),
     preset: preset(),
+    auth: auth,
   };
 
   async run(): Promise<void> {

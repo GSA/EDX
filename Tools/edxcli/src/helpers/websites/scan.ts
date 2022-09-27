@@ -11,6 +11,7 @@ import { itPerfMetricReport } from './it-performance-metric';
 import { uswdsComponentsReport } from './uswds-components';
 import { siteScannerReport } from './site-scanner';
 import { lighthouseReport } from './lighthouse';
+import { CliUx } from '@oclif/core';
 
 export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
   const websiteMetadata = new WebsiteMetadata(domain);
@@ -133,6 +134,7 @@ export const scanHelper = async (
       },
     },
     browser: await browser(flags.headless),
+    authentication: flags.auth,
   };
 };
 
@@ -167,6 +169,14 @@ const presets = (preset: presetType): facetType[] => {
 const initialCheck = async function (sh: ScanHelper, url: URL) {
   const scanStatus = { pageFound: true, message: 'Page loaded successfully' };
   const page = await sh.browser.newPage();
+  if (sh.authentication) {
+    const authCreds = await constructBasicAuth();
+    await page.authenticate({
+      username: authCreds.username,
+      password: authCreds.password,
+    });
+  }
+
   await page
     .goto(url.toString(), { waitUntil: 'networkidle2' })
     .catch((error) => {
@@ -187,6 +197,15 @@ const buildOutput = async (
     sh.outputDirectory,
     `${websiteReport.domain}_${sh.formattedDate}_${pageHash}`,
   );
+};
+
+const constructBasicAuth = async (): Promise<userCredsType> => {
+  const username = await CliUx.ux.prompt('Username: ');
+  const password = await CliUx.ux.prompt('Password: ', {
+    type: 'hide',
+  });
+
+  return { username, password };
 };
 
 /**
@@ -211,6 +230,7 @@ export type ScanHelper = {
   preset: presetType;
   devices: Record<string, puppeteer.Device>;
   browser: puppeteer.Browser;
+  authentication: boolean;
 };
 
 export type presetType = '' | 'all' | 'edx scan';
@@ -224,3 +244,8 @@ export type facetType =
   | 'screenshot'
   | 'site scanner'
   | 'uswds components';
+
+export type userCredsType = {
+  username: string;
+  password: string;
+};
