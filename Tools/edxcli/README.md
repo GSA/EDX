@@ -3,15 +3,47 @@
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 
 <!-- toc -->
-* [edxcli](#edxcli)
-* [Usage](#usage)
-* [Commands](#commands)
-* [Release Notes](#release-notes)
+
+- [edxcli](#edxcli)
+- [Usage](#usage)
+- [Commands](#commands)
+  - [`edxcli help [COMMAND]`](#edxcli-help-command)
+  - [`edxcli plugins`](#edxcli-plugins)
+  - [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin)
+  - [`edxcli plugins:inspect PLUGIN...`](#edxcli-pluginsinspect-plugin)
+  - [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin-1)
+  - [`edxcli plugins:link PLUGIN`](#edxcli-pluginslink-plugin)
+  - [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin)
+  - [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-1)
+  - [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-2)
+  - [`edxcli plugins update`](#edxcli-plugins-update)
+  - [`edxcli websites`](#edxcli-websites)
+  - [`edxcli websites fetch SOURCE`](#edxcli-websites-fetch-source)
+  - [`edxcli websites push`](#edxcli-websites-push)
+  - [`edxcli websites scan`](#edxcli-websites-scan)
+  - [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
+- [Release Notes](#release-notes)
+  - [0.0.15](#0015)
+  - [0.0.14](#0014)
+  - [0.0.13](#0013)
+  - [0.0.12](#0012)
+  - [0.0.11](#0011)
+  - [0.0.10](#0010)
+  - [0.0.9](#009)
+  - [0.0.8](#008)
+  - [0.0.7](#007)
+  - [0.0.6](#006)
+  - [0.0.5](#005)
+  - [0.0.4](#004)
+  - [0.0.3](#003)
+  - [0.0.2](#002)
+  - [0.0.1](#001)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
+
 ```sh-session
 $ npm install -g edx_cli
 $ edxcli COMMAND
@@ -23,26 +55,28 @@ USAGE
   $ edxcli COMMAND
 ...
 ```
+
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-* [`edxcli help [COMMAND]`](#edxcli-help-command)
-* [`edxcli plugins`](#edxcli-plugins)
-* [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin)
-* [`edxcli plugins:inspect PLUGIN...`](#edxcli-pluginsinspect-plugin)
-* [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin-1)
-* [`edxcli plugins:link PLUGIN`](#edxcli-pluginslink-plugin)
-* [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin)
-* [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-1)
-* [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-2)
-* [`edxcli plugins update`](#edxcli-plugins-update)
-* [`edxcli websites`](#edxcli-websites)
-* [`edxcli websites fetch SOURCE`](#edxcli-websites-fetch-source)
-* [`edxcli websites push`](#edxcli-websites-push)
-* [`edxcli websites scan`](#edxcli-websites-scan)
-* [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
+
+- [`edxcli help [COMMAND]`](#edxcli-help-command)
+- [`edxcli plugins`](#edxcli-plugins)
+- [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin)
+- [`edxcli plugins:inspect PLUGIN...`](#edxcli-pluginsinspect-plugin)
+- [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin-1)
+- [`edxcli plugins:link PLUGIN`](#edxcli-pluginslink-plugin)
+- [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin)
+- [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-1)
+- [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-2)
+- [`edxcli plugins update`](#edxcli-plugins-update)
+- [`edxcli websites`](#edxcli-websites)
+- [`edxcli websites fetch SOURCE`](#edxcli-websites-fetch-source)
+- [`edxcli websites push`](#edxcli-websites-push)
+- [`edxcli websites scan`](#edxcli-websites-scan)
+- [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
 
 ## `edxcli help [COMMAND]`
 
@@ -115,7 +149,7 @@ ALIASES
   $ edxcli plugins add
 
 EXAMPLES
-  $ edxcli plugins:install myplugin 
+  $ edxcli plugins:install myplugin
 
   $ edxcli plugins:install https://github.com/someuser/someplugin
 
@@ -175,7 +209,7 @@ ALIASES
   $ edxcli plugins add
 
 EXAMPLES
-  $ edxcli plugins:install myplugin 
+  $ edxcli plugins:install myplugin
 
   $ edxcli plugins:install https://github.com/someuser/someplugin
 
@@ -445,6 +479,7 @@ EXAMPLES
 
   $ edxcli websites scan bulk -d Touchpoints --resume
 ```
+
 <!-- commandsstop -->
 
 <!-- Updating -->
@@ -460,6 +495,10 @@ yarn run prepack
 # Release Notes
 
 All scan contain a `scanVersion` attribute which ties back to the version number listed in package.json. Each time an update has been made to the logic of the scans, the version number gets bumped. Doing so allows all teams to see the criteria at the time of the scan. We expect to update the version regularly so as to provide the most complete and accurate picture of websites at GSA.
+
+## 0.0.15
+
+Added `searchNotReq: true` for vltp.gsa.gov
 
 ## 0.0.14
 
