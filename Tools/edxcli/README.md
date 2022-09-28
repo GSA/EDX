@@ -17,7 +17,7 @@ $ npm install -g edx_cli
 $ edxcli COMMAND
 running command...
 $ edxcli (--version)
-edx_cli/0.0.15 darwin-x64 node-v16.15.1
+edx_cli/0.0.17 darwin-x64 node-v16.15.1
 $ edxcli --help [COMMAND]
 USAGE
   $ edxcli COMMAND
@@ -352,7 +352,7 @@ EXAMPLES
   $ edxcli websites scan bulk
 ```
 
-_See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v0.0.15/dist/commands/websites/index.ts)_
+_See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v0.0.17/dist/commands/websites/index.ts)_
 
 ## `edxcli websites fetch SOURCE`
 
@@ -409,7 +409,7 @@ Scans websites using various facets to capture information about the sites
 ```
 USAGE
   $ edxcli websites scan -d <value> [--loglevel error|warn|info|debug] [-f <value>] [--headless] [-o <value>] [-p
-    |all|edx scan]
+    |all|edx scan] [--auth]
 
 FLAGS
   -d, --domains=<value>      (required) Comma-separated list of domains to scan.
@@ -420,6 +420,8 @@ FLAGS
   -o, --output=<value>       Output directory. Defualts to current directory
   -p, --preset=<option>      Run a pre-configured suite of scan facets whose results will be output into a single file.
                              <options: |all|edx scan>
+  --auth                     Boolean flag denoting whether or not to prompt for basic auth credentials for the given
+                             site. Defaults to false
   --[no-]headless            Boolean flag, whether or not to run scans in headless mode. Defaults to true
   --loglevel=<option>        [default: info]
                              <options: error|warn|info|debug>
@@ -439,6 +441,8 @@ EXAMPLES
   $ edxcli websites scan -d "18f.gsa.gov,buy.gsa.gov,gsa.gov" -p "edx scan" --no-headless
 
   $ edxcli websites scan -d "18f.gsa.gov" -f "screenshot" --loglevel debug
+
+  $ edxcli websites scan -d "18f.gsa.gov" -f "screenshot" --auth
 ```
 
 ## `edxcli websites scan bulk`
@@ -489,6 +493,10 @@ yarn run prepack
 # Release Notes
 
 All scan contain a `scanVersion` attribute which ties back to the version number listed in package.json. Each time an update has been made to the logic of the scans, the version number gets bumped. Doing so allows all teams to see the criteria at the time of the scan. We expect to update the version regularly so as to provide the most complete and accurate picture of websites at GSA.
+
+## 0.0.17
+
+[Issue 573](https://github.com/GSA/EDX/issues/573) - added ability to pass Basic Auth credentials when running a scan
 
 ## 0.0.16
 

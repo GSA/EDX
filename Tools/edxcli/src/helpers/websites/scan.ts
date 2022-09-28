@@ -200,8 +200,8 @@ const buildOutput = async (
 };
 
 const constructBasicAuth = async (): Promise<userCredsType> => {
-  const username = await CliUx.ux.prompt('Username: ');
-  const password = await CliUx.ux.prompt('Password: ', {
+  const username = await CliUx.ux.prompt('Username');
+  const password = await CliUx.ux.prompt('Password', {
     type: 'hide',
   });
 
