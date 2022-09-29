@@ -12,7 +12,6 @@ describe('Utils', () => {
       'http://gsa.gov': 'https://gsa.gov/',
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     it('should return valid https:// urls', async () => {
       for (const item in inputOutputPairs) {
         if (Object.prototype.hasOwnProperty.call(inputOutputPairs, item)) {

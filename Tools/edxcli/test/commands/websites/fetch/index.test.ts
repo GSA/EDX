@@ -3,7 +3,8 @@ import BaseCommand from '../../../../src/base';
 import { tmpdir } from 'node:os';
 import fs, { mkdtempSync } from 'node:fs';
 import { sep } from 'node:path';
-require('dotenv').config();
+import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config();
 
 const testingDir = mkdtempSync(`${tmpdir()}${sep}`);
 

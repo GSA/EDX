@@ -23,7 +23,6 @@ describe('CSV', () => {
     const callingOperation = 'operationX';
     const csv = new CSV('20220615', tmpdir(), callingOperation, headers);
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     it('should write and create a csv file', async () => {
       csv.write(data).then((msg) => {
         expect(msg).to.equal(`${callingOperation} data written to ${tmpdir()}`);

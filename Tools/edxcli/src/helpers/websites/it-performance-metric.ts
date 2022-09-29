@@ -138,9 +138,9 @@ export const itPerfMetricReport = async (
 /**
  * function looks for the identifier on the page and produces a list of links in the identifier. From there, each link is clicked and the resulting page url is reviewed for a match against the required links. This helps address single page applications which do not have hrefs but have onclick()
  *
- * @param browser
- * @param url
- * @returns Promise{array} linkDestinations - array of objects containing {title:"link title", url: "desination page url" }
+ * @param {ScanHelper} sh - an instance of the ScanHelper class
+ * @param {URL} url - a URL object containing the full url path to test
+ * @returns {Promise} linkDestinations - Promise which ultimately returns an array of objects containing {title:"link title", url: "desination page url" }
  */
 const reqdLinkEvaluation = async function (sh: ScanHelper, url: URL) {
   /* console.log(
