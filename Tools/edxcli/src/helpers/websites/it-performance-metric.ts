@@ -129,6 +129,11 @@ export const itPerfMetricReport = async (
         // Check for sites in websitemetadata to see if customPrivacyPolicy is true
         data[regex] = websiteMetadata.customPrivacyPolicy;
       }
+
+      // some sites link to a FOIA policy other than the GSA standard, in that case check to see if a customFOIA flag is set
+      if (regex === 'identifierFOIA' && !data[regex]) {
+        data[regex] = websiteMetadata.customFOIA;
+      }
     }
   }
 

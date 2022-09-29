@@ -2,6 +2,7 @@ import { URL } from 'node:url';
 
 export type IWebsiteAttributes = {
   cookies: Cookies;
+  customFOIA: boolean;
   customPrivacyPolicy: boolean;
   searchNotReq: boolean;
   wwwPrefix: string;
@@ -20,6 +21,7 @@ export interface Cookies {
 
 export class WebsiteMetadata implements IWebsiteAttributes {
   cookies: Cookies;
+  customFOIA: boolean;
   customPrivacyPolicy: boolean;
   searchNotReq: boolean;
   wwwPrefix: string;
@@ -33,6 +35,7 @@ export class WebsiteMetadata implements IWebsiteAttributes {
     this.domain = domain.replace(/(http:\/\/|https:\/\/)/, '');
     const md = this.getWebsiteMetadata();
     this.cookies = md.cookies;
+    this.customFOIA = md.customFOIA;
     this.customPrivacyPolicy = md.customPrivacyPolicy;
     this.searchNotReq = md.searchNotReq;
     this.wwwPrefix = md.wwwPrefix;
@@ -72,6 +75,7 @@ export class WebsiteMetadata implements IWebsiteAttributes {
 const emptyWebsiteMetadata = function (): IWebsiteAttributes {
   return {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: '',
@@ -84,6 +88,7 @@ const emptyWebsiteMetadata = function (): IWebsiteAttributes {
 const data: Record<string, IWebsiteAttributes> = {
   TEMPLATE: {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: 'www.',
@@ -93,6 +98,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   '1.usa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -102,6 +108,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   '10x.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: true,
     searchNotReq: false,
     wwwPrefix: '',
@@ -111,6 +118,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'amp.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -120,6 +128,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'apps.ocfo.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -129,6 +138,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'arm.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -138,6 +148,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'autochoice.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -147,6 +158,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'autovendor.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -156,6 +168,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'cars.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -165,6 +178,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'cm-jira.usa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -174,6 +188,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'code.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: true,
     searchNotReq: false,
     wwwPrefix: '',
@@ -183,6 +198,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'extportal.pbs.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -192,6 +208,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'fairs.reporting.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -201,6 +218,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'fdms.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -210,6 +228,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'federalistapp.18f.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -219,6 +238,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'fedpay.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -228,6 +248,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'financeweb.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -237,6 +258,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'find.search.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -247,6 +269,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'fleet.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -256,6 +279,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'fleeteur.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -265,6 +289,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'fms.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -274,6 +299,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'fmseec.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: '',
@@ -283,6 +309,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'frpg.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -292,6 +319,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: 'www.',
@@ -306,6 +334,7 @@ const data: Record<string, IWebsiteAttributes> = {
       domain: 'www.gsaadvantage.gov',
       path: '/',
     },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: '',
@@ -315,6 +344,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'gsasolutionssecure.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -324,6 +354,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'inventory.data.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -334,6 +365,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'login.fr.cloud.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -343,6 +375,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'mysales.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: '',
@@ -352,6 +385,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'pbs-billing.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: 'www.',
@@ -361,6 +395,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'phdc-pub.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: '',
@@ -370,6 +405,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'portal.eos.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -379,6 +415,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'property.reporting.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: 'www.',
@@ -388,15 +425,27 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'realpropertyprofile.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
     queryString: '',
     urlPath: '',
+    notes: '',
+  },
+  'reginfo.gov': {
+    cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: true,
+    customPrivacyPolicy: true,
+    searchNotReq: false,
+    wwwPrefix: 'www.',
+    queryString: '',
+    urlPath: '/public/',
     notes: '',
   },
   'reporting.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -404,8 +453,19 @@ const data: Record<string, IWebsiteAttributes> = {
     urlPath: '',
     notes: '',
   },
+  'rocis.gov': {
+    cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: true,
+    customPrivacyPolicy: false,
+    searchNotReq: true,
+    wwwPrefix: 'www.',
+    queryString: '',
+    urlPath: '/rocis/',
+    notes: '',
+  },
   'sat.reginfo.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: '',
@@ -415,6 +475,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'scopereview.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -424,6 +485,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'secure.login.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -433,6 +495,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'slc.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: 'www.',
@@ -442,15 +505,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'str.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
-    customPrivacyPolicy: false,
-    searchNotReq: true,
-    wwwPrefix: '',
-    queryString: '',
-    urlPath: '',
-    notes: '',
-  },
-  'training.rocis.gov': {
-    cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -460,6 +515,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'travel.reporting.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -469,6 +525,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'tscportal.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: false,
     wwwPrefix: '',
@@ -478,6 +535,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'usaccess-alp.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -487,6 +545,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'vec.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -496,6 +555,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'vehicledispatch.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
@@ -505,6 +565,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'vote.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: true,
     searchNotReq: false,
     wwwPrefix: '',
@@ -514,6 +575,7 @@ const data: Record<string, IWebsiteAttributes> = {
   },
   'vltp.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
     customPrivacyPolicy: false,
     searchNotReq: true,
     wwwPrefix: '',
