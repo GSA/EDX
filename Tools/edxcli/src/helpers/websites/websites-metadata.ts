@@ -493,6 +493,16 @@ const data: Record<string, IWebsiteAttributes> = {
     urlPath: '',
     notes: '',
   },
+  'sftool.gov': {
+    cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: false,
+    customPrivacyPolicy: true,
+    searchNotReq: false,
+    wwwPrefix: '',
+    queryString: '',
+    urlPath: '',
+    notes: '',
+  },
   'slc.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
     customFOIA: false,
