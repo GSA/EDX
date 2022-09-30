@@ -105,7 +105,7 @@ export const scanHelper = async (
   flags: any,
 ): Promise<ScanHelper> => {
   const cleanedFacets =
-    flags.facets === ''
+    flags.facets === undefined
       ? []
       : flags.facets.flatMap((element: string) =>
           element.split(',').map((val: string) => val.trim()),
