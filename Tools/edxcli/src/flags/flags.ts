@@ -26,7 +26,6 @@ export const facets = Flags.build({
   multiple: true,
   helpValue: '<options>',
   required: false,
-  default: '',
 });
 
 export const preset = Flags.build({
