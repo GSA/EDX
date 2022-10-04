@@ -16,7 +16,7 @@ export default abstract class BaseCommand<
 > extends Command {
   static date: any = new Date();
   static formattedDate(): string {
-    return `${this.date.getFullYear()}${this.date.getMonth() < 10 ? '0' : ''}${
+    return `${this.date.getFullYear()}${this.date.getMonth() < 9 ? '0' : ''}${
       this.date.getMonth() + 1
     }${this.date.getDate() < 10 ? '0' : ''}${this.date.getDate()}`;
   }
