@@ -29,6 +29,6 @@ export const lighthouseReport = async function (
   delete data.lhr.categoryGroups;
   delete data.artifacts;
   delete data.report;
-
+  page.close();
   return data;
 };

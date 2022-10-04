@@ -184,6 +184,7 @@ const initialCheck = async function (sh: ScanHelper, url: URL) {
       scanStatus.pageFound = false;
       scanStatus.message = `Initial check error: ${error}`;
     });
+  page.close();
   return scanStatus;
 };
 

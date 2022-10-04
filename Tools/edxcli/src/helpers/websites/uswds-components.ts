@@ -158,6 +158,7 @@ export const uswdsComponentsReport = async function (
   data.timePicker = /usa-time-picker/.test(content);
   data.tooltip = /usa-tooltip/.test(content);
   data.validation = /usa-alert--validation/.test(content);
+  page.close();
   return data;
 };
 

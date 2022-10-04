@@ -137,6 +137,7 @@ export const itPerfMetricReport = async (
     }
   }
 
+  page.close();
   return data;
 };
 
@@ -206,6 +207,7 @@ const reqdLinkEvaluation = async function (sh: ScanHelper, url: URL) {
     i++;
   } while (i < reqdLinks.length);
 
+  page.close();
   return linkDestinations;
 };
 

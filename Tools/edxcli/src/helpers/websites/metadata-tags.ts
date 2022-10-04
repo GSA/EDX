@@ -22,6 +22,7 @@ export const metadataTags = async (
       .then((keywords) => keywords.split(','));
   }
 
+  page.close();
   return { keywords: keywordsArray };
 };
 
