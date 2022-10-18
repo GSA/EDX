@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!DOCTYPE html><html lang="en" class="height-full">
+<html lang="en" class="height-full">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -10,7 +10,7 @@
 
     </script>
     <title>Charts</title>
-  <link rel="stylesheet" href="/EDX/assets/1b0abe20.427b522b.css" /><script type="module" src="/EDX/hoisted.bc354043.js"></script></head>
+  <link rel="stylesheet" href="/EDX/assets/index.427b522b.css" /><script type="module" src="/EDX/hoisted.5865e267.js"></script></head>
   <body class="height-full display-flex flex-column">
     <a class="usa-skipnav" href="#main-content">Skip to main content</a>
     <header class="usa-header usa-header--basic">
@@ -29,148 +29,144 @@
     <main id="main-content" class="height-full padding-bottom-0 usa-section">
       <div class="height-full display-flex flex-column grid-container">
         <div id="websites" class="website-chart">
-        <div class="grid-row margin-bottom-2">
-            <section aria-label="Big search component">
-                <label class="usa-sr-only" for="search-field-en-big"> Search </label>
-                <input class="usa-input search" id="search-field-en-big" type="search" name="search" placeholder="Search e.g. 'FAS', 'Application', 'Leasing'" style="border-right: 1px solid #565c65; width: 450px">
-            </section>
+    <div class="grid-row margin-bottom-2">
+      <section aria-label="Big search component">
+        <label class="usa-sr-only" for="search-field-en-big"> Search</label>
+        <input class="usa-input search" id="search-field-en-big" type="search" name="search" placeholder="Search e.g. 'FAS', 'Application', 'Leasing'" style="border-right: 1px solid #565c65; width: 450px">
+      </section>
+    </div>
+    <p><a href="website-list">View as a table</a></p>
+    <div class="grid-col-12 margin-bottom-2">
+      <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable">
+        <h4 class="usa-accordion__heading">
+          <button class="usa-accordion__button" aria-expanded="false" aria-controls="a1">
+            Search Guide
+          </button>
+        </h4>
+        <div id="a1" class="usa-accordion__content usa-prose">
+          <p>
+            Search looks across various attributes associated with a given
+            website such as office, sub-office, website type, and URL. Example
+            searches include:
+          </p>
+          <ul>
+            <li>TTS Informational</li>
+            <li>Application Login</li>
+            <li>Real Property Utilization & Disposal</li>
+            <li>FAS CASE</li>
+          </ul>
         </div>
-        <p><a href="website-list">View as a table</a></p>
-        <div class="grid-col-12 margin-bottom-2">
-            <div class="usa-accordion usa-accordion--bordered usa-accordion--multiselectable">
-                <h4 class="usa-accordion__heading">
-                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="a1">
-                        Search Guide
-                    </button>
-                </h4>
-                <div id="a1" class="usa-accordion__content usa-prose">
-                    <p>
-                        Search looks across various attributes associated with a given website
-                        such as office, sub-office, website type, and URL. Example searches
-                        include:
-                    </p>
-                    <ul>
-                        <li>TTS Informational</li>
-                        <li>Application Login</li>
-                        <li>Real Property Utilization & Disposal</li>
-                        <li>FAS CASE</li>
-                    </ul>
-                </div>
-                <h4 class="usa-accordion__heading">
-                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="a2">
-                        Terminology
-                    </button>
-                </h4>
-                <div id="a2" class="usa-accordion__content usa-prose">
-                    <ul>
-                        <li>Digital Brand Category</li>
-                        <ul>
-                            <li>
-                                <strong>GSA Business</strong> - Site provides information and
-                                services about GSA products, services or policies, and/or engages
-                                stakeholders with the GSA brand. GSA operates the site. Site
-                                displays the GSA Star Mark.
-                            </li>
-                            <li>
-                                <strong>Hybrid</strong> - Site is for collaboration, engagement,
-                                or information-sharing, NOT necessarily focused on GSA-only
-                                business. GSA operates the site. Site displays the GSA Star Mark.
-                            </li>
-                            <li>
-                                <strong>External</strong> - GSA manages domain registration, but
-                                the website has no other affiliation with GSA, and does NOT
-                                display the GSA Star Mark.
-                            </li>
-                        </ul>
-                        <li>Office / Sub-Office</li>
-                        <ul>
-                            <li>
-                                We try to use the common terms or correspondence symbols for
-                                offices across GSA. For example: "Office of Leasing", "TTS/PIF",
-                                "OGP MV", etc
-                            </li>
-                        </ul>
-                        <li>Website Type</li>
-                        <ul>
-                            <li>
-                                <strong>API</strong> - Application Programming Interface;
-                                typically includes “api” in the domain name
-                            </li>
-                            <li>
-                                <strong>Critical infrastructure</strong> - Required to support a
-                                GSA or shared service
-                            </li>
-                            <li>
-                                <strong>GitHub repo</strong> - Site decommissioned; URL redirects
-                                to a GitHub repo (status is redirect)
-                            </li>
-                            <li>
-                                <strong>Google form</strong> - Site redirects to a Google form
-                                (status is redirect)
-                            </li>
-                            <li>
-                                <strong>Informational</strong> - Informational (not transactional)
-                                site; all content is public-facing, no login required
-                            </li>
-                            <li>
-                                <strong>Login</strong> - Login page to a back-end app or system;
-                                all content (other than guidance on how to log in) is only
-                                accessible after user login
-                            </li>
-                            <li>
-                                <strong>Transactional</strong> - Web application/back-end system
-                                with at least one page of public-facing informational content;
-                                collects data via user input; users must log in to access
-                                additional content, features, and/or functionality
-                            </li>
-                        </ul>
-                    </ul>
-                </div>
-                <h4 class="usa-accordion__heading">
-                    <button class="usa-accordion__button" aria-expanded="true" aria-controls="a3">
-                        Legend
-                    </button>
-                </h4>
-                <div id="a3" class="usa-accordion__content usa-prose">
-                    <p>
-                        The following charts show the relative strengths and weaknesses of
-                        each website across 6 areas. Click on a domain name to view additional
-                        data and stats.
-                    </p>
-                    <p>
-                        A gray semi-circle appears when data is unavailable for the website in
-                        that particular category.
-                    </p>
-                    <div class="grid-row">
-                        <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
-                            <span class="legend one "></span>Customer
-                            Centricity
-                        </div>
-                        <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
-                            <span class="legend two "></span>Required Links
-                        </div>
-                        <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
-                            <span class="legend three "></span>Mobile
-                            Performance
-                        </div>
-                        <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
-                            <span class="legend four "></span>Accessibility
-                            (AMP)
-                        </div>
-                        <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
-                            <span class="legend five "></span>Google
-                            Analytics
-                        </div>
-                        <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
-                            <span class="legend six "></span>USWDS
-                        </div>
-                    </div>
-                </div>
+        <h4 class="usa-accordion__heading">
+          <button class="usa-accordion__button" aria-expanded="false" aria-controls="a2">
+            Terminology
+          </button>
+        </h4>
+        <div id="a2" class="usa-accordion__content usa-prose">
+          <ul>
+            <li>Digital Brand Category</li>
+            <ul>
+              <li>
+                <strong>GSA Business</strong> - Site provides information and services
+                about GSA products, services or policies, and/or engages stakeholders
+                with the GSA brand. GSA operates the site. Site displays the GSA
+                Star Mark.
+              </li>
+              <li>
+                <strong>Hybrid</strong> - Site is for collaboration, engagement,
+                or information-sharing, NOT necessarily focused on GSA-only business.
+                GSA operates the site. Site displays the GSA Star Mark.
+              </li>
+              <li>
+                <strong>External</strong> - GSA manages domain registration, but
+                the website has no other affiliation with GSA, and does NOT display
+                the GSA Star Mark.
+              </li>
+            </ul>
+            <li>Office / Sub-Office</li>
+            <ul>
+              <li>
+                We try to use the common terms or correspondence symbols for
+                offices across GSA. For example: "Office of Leasing", "TTS/PIF",
+                "OGP MV", etc
+              </li>
+            </ul>
+            <li>Website Type</li>
+            <ul>
+              <li>
+                <strong>API</strong> - Application Programming Interface; typically
+                includes “api” in the domain name
+              </li>
+              <li>
+                <strong>Critical infrastructure</strong> - Required to support a
+                GSA or shared service
+              </li>
+              <li>
+                <strong>GitHub repo</strong> - Site decommissioned; URL redirects
+                to a GitHub repo (status is redirect)
+              </li>
+              <li>
+                <strong>Google form</strong> - Site redirects to a Google form (status
+                is redirect)
+              </li>
+              <li>
+                <strong>Informational</strong> - Informational (not transactional)
+                site; all content is public-facing, no login required
+              </li>
+              <li>
+                <strong>Login</strong> - Login page to a back-end app or system;
+                all content (other than guidance on how to log in) is only accessible
+                after user login
+              </li>
+              <li>
+                <strong>Transactional</strong> - Web application/back-end system
+                with at least one page of public-facing informational content; collects
+                data via user input; users must log in to access additional content,
+                features, and/or functionality
+              </li>
+            </ul>
+          </ul>
+        </div>
+        <h4 class="usa-accordion__heading">
+          <button class="usa-accordion__button" aria-expanded="true" aria-controls="a3">
+            Legend
+          </button>
+        </h4>
+        <div id="a3" class="usa-accordion__content usa-prose">
+          <p>
+            The following charts show the relative strengths and weaknesses of
+            each website across 6 areas. Click on a domain name to view
+            additional data and stats.
+          </p>
+          <p>
+            A gray semi-circle appears when data is unavailable for the website
+            in that particular category.
+          </p>
+          <div class="grid-row">
+            <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
+              <span class="legend one "></span>Customer Centricity
             </div>
+            <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
+              <span class="legend two "></span>Required Links
+            </div>
+            <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
+              <span class="legend three "></span>Mobile Performance
+            </div>
+            <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
+              <span class="legend four "></span>Accessibility (AMP)
+            </div>
+            <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
+              <span class="legend five "></span>Google Analytics
+            </div>
+            <div class="grid-col-12 tablet:grid-col-4 margin-bottom-105">
+              <span class="legend six "></span>USWDS
+            </div>
+          </div>
         </div>
-        <div style="height: 40rem" class="overflow-scroll">
-            <div class="grid-row">
-                <ul class="list" style="
+      </div>
+    </div>
+    <div style="height: 40rem" class="overflow-scroll">
+      <div class="grid-row">
+        <ul class="list" style="
               display: grid;
               grid-template-columns: 1fr 1fr;
               width: 100%;
@@ -180,7 +176,7 @@
               justify-content: space-evenly;
               gap: 3rem 2rem;
             " id="website-list">
-                    <li data-id="0" class="website-list-element" id="8astars.fas.gsa.gov">
+          <li data-id="0" class="website-list-element" id="8astars.fas.gsa.gov">
     <div class="website-chart">
         <!-- accordion -->
         <div class="usa-accordion usa-accordion--bordered" style="margin-bottom: 1rem">
@@ -2773,10 +2769,10 @@
         </svg>
     </div>
 </li>
-                </ul>
-            </div>
-        </div>
+        </ul>
+      </div>
     </div>
+  </div>
       </div>
     </main>
 
