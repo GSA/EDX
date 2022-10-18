@@ -1,0 +1,6495 @@
+[
+    {
+       "name": "1.usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "8astars.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "ESM",
+       "category": "Application",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0.7,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.5,
+          "max": 1
+       }
+    },
+    {
+       "name": "10x.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.875,
+          "max": 1
+       }
+    },
+    {
+       "name": "18f.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0.8,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 1,
+          "max": 1
+       }
+    },
+    {
+       "name": "aas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "AAS",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.875,
+          "max": 1
+       }
+    },
+    {
+       "name": "accessibility.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0.8,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.875,
+          "max": 1
+       }
+    },
+    {
+       "name": "accessibility.digital.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0.8,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.75,
+          "max": 1
+       }
+    },
+    {
+       "name": "acquisition.gov",
+       "office": "OGP",
+       "subOffice": "MV",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.6,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.875,
+          "max": 1
+       }
+    },
+    {
+       "name": "afadvantage.gov",
+       "office": "FAS",
+       "subOffice": "GSS",
+       "category": "Application",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "agile.18f.gov\n",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "amp.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application Login",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "analytics.usa.gov\n",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "api.acquisition.gov",
+       "office": "OGP",
+       "subOffice": "MV",
+       "category": "API",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "api.data.gov\n",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Application",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "api.usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "API",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "apps.ocfo.gsa.gov\n",
+       "office": "GSA IT",
+       "subOffice": "ICS",
+       "category": "Application",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "arm.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application Login",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "asis.search.usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Critical infrastructure",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "ask.gsa.gov",
+       "office": "FAS",
+       "subOffice": "CASE",
+       "category": "Application",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "atf-eregs.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "autoauctions.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0.7,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "autochoice.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application Login",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "autovendor.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application Login",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "blog.usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0.8,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "brand.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "buy.gsa.gov",
+       "office": "FAS",
+       "subOffice": "OESM",
+       "category": "Application",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "calc.gsa.gov",
+       "office": "FAS",
+       "subOffice": "OESM",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "cars.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application Login",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "catalog.data.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0.6,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.3,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "cdo.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "cfo.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "challenge.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.3,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "chat.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Google form",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "cic.gsa.gov",
+       "office": "FAS",
+       "subOffice": "ITC",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0.8,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.6,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.875,
+          "max": 1
+       }
+    },
+    {
+       "name": "cio.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "citizenscience.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.8,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "cloud.cio.gov\n",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "cloud.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "cm-jira.usa.gov",
+       "office": "GSA IT",
+       "category": "Application Login",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "cmls.gsa.gov",
+       "office": "FAS",
+       "subOffice": "R5 National Marketing and Communication Division",
+       "category": "Application",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0.8,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "code.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "coe.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTS/COE",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "computersforlearning.gov",
+       "office": "FAS",
+       "subOffice": "GSS",
+       "category": "Application",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "conectate.gobiernousa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "connect-guide.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0,
+          "max": 1
+       }
+    },
+    {
+       "name": "connect.digital.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "connect.usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.6,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "content-guide.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "contractdirectory.gov",
+       "office": "FAS",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.7,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.5,
+          "max": 1
+       }
+    },
+    {
+       "name": "corporateapps.gsa.gov",
+       "office": "GSA IT",
+       "subOffice": "ICC",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "courtsweb.gsa.gov",
+       "office": "PBS",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "cpars.gov",
+       "office": "FAS",
+       "subOffice": "OSM/IAE",
+       "category": "Application",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "cpsearch.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "d2d.gsa.gov",
+       "office": "GSA IT",
+       "subOffice": "IDEA",
+       "category": "Application",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "dap.digitalgov.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Critical infrastructure",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "data.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "datacenters.cio.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "derisking-guide.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "design.login.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "designsystem.digital.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "dev.identitysandbox.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Critical infrastructure",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "developers.login.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Critical infrastructure",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "devicepki.idmanagement.gov",
+       "office": "OGP",
+       "subOffice": "ME",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "dhsadvantage.gsa.gov",
+       "office": "FAS",
+       "subOffice": "GSS",
+       "category": "Application",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "digital.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "digitalcorps.gsa.gov",
+       "office": "TTS",
+       "subOffice": "U.S. Digital Corps",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 1,
+          "max": 1
+       }
+    },
+    {
+       "name": "digitaldashboard.gov",
+       "office": "OGP",
+       "subOffice": "ME",
+       "category": "Application",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "disposal.gsa.gov",
+       "office": "PBS",
+       "subOffice": "Real Property Utilization & Disposal",
+       "category": "Application",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "drivethru.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "ebuy.gsa.gov",
+       "office": "FAS",
+       "subOffice": "MAS",
+       "category": "Application",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "eng-hiring.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "engineering.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "eoffer.gsa.gov",
+       "office": "FAS",
+       "subOffice": "MAS",
+       "category": "Application",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "esrs.gov",
+       "office": "FAS",
+       "subOffice": "OSM/IAE",
+       "category": "Application",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "evaluation.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "extportal.pbs.gsa.gov",
+       "office": "PBS",
+       "category": "Application Login",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "facadatabase.gov",
+       "office": "OGP",
+       "subOffice": "MA",
+       "category": "Application",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "fai.gov",
+       "office": "OGP",
+       "subOffice": "MV",
+       "category": "Application",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "fairs.reporting.gov",
+       "office": "OGP",
+       "subOffice": "MA",
+       "category": "Application Login",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "fapiis.gov",
+       "office": "FAS",
+       "subOffice": "OSM/IAE",
+       "category": "Application",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "fbohome.sam.gov",
+       "office": "FAS",
+       "subOffice": "OSM/IAE",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "fdms.gov",
+       "office": "OGP",
+       "subOffice": "MR",
+       "category": "Application Login",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "federalist-builder.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Critical infrastructure",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0,
+          "max": 1
+       }
+    },
+    {
+       "name": "federalist-proxy.app.cloud.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Critical infrastructure",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "federalist.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "federalistapp.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Application Login",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "federation.data.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "fedidcard.gov",
+       "office": "FAS",
+       "subOffice": "ITC",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0.7,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.625,
+          "max": 1
+       }
+    },
+    {
+       "name": "fedpay.gsa.gov",
+       "office": "CFO",
+       "subOffice": "ICTA",
+       "category": "Application Login",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.6,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "fedramp.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "fedsim.gsa.gov",
+       "office": "FAS",
+       "subOffice": "AAS",
+       "category": "Informational",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "fedspecs.gsa.gov",
+       "office": "FAS",
+       "subOffice": "CO",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "feedback.usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "fellows-in-innovation.pif.gov",
+       "office": "FAS",
+       "subOffice": "TTS/PIF",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "ffms.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "finance.ocfo.gsa.gov",
+       "office": "GSA IT",
+       "subOffice": "Corporate IT",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "financeweb.gsa.gov",
+       "office": "CFO",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "find.search.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "fleet.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application Login",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "fleet.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "fleeteur.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application Login",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "fms.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application Login",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "fpc.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "fpds.gov",
+       "office": "FAS",
+       "subOffice": "OSM/IAE",
+       "category": "Application",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "frpg.gov",
+       "office": "OGP",
+       "subOffice": "MA",
+       "category": "Application Login",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "fsd.gov",
+       "office": "FAS",
+       "subOffice": "OSM/IAE",
+       "category": "Application",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "fsrs.gov",
+       "office": "FAS",
+       "subOffice": "OSM/IAE",
+       "category": "Application",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "go.usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Application",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "gsa.gov",
+       "office": "OSC",
+       "subOffice": "ZOD",
+       "category": "Informational",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "gsaadvantage.gov",
+       "office": "FAS",
+       "subOffice": "GSS",
+       "category": "Application",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "gsaauctions.gov",
+       "office": "FAS",
+       "subOffice": "GSS",
+       "category": "Application",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "gsaelibrary.gsa.gov",
+       "office": "FAS",
+       "subOffice": "MAS",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "gsaglobalsupply.gsa.gov",
+       "office": "FAS",
+       "subOffice": "GSS",
+       "category": "Application",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "gsaxcess.gov",
+       "office": "FAS",
+       "subOffice": "GSS",
+       "category": "Application",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "gsaxcesspractice.fas.gsa.gov",
+       "office": "FAS",
+       "category": "Application",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "hallways.cap.gsa.gov",
+       "office": "FAS",
+       "subOffice": "OESM",
+       "category": "Application",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "handbook.tts.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "https.cio.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0,
+          "max": 1
+       }
+    },
+    {
+       "name": "i14y.search.usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Critical infrastructure",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "i14y.usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "API",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "idmanagement.gov",
+       "office": "OGP",
+       "subOffice": "ME",
+       "category": "Critical infrastructure",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "idp.dev.identitysandbox.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Critical infrastructure",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "idp.staging.login.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Critical infrastructure",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "interact.gsa.gov",
+       "office": "FAS",
+       "subOffice": "Enterprise Strategy Management",
+       "category": "Application",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "inventory.data.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Application Login",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "itvmo.gsa.gov",
+       "office": "GSA IT",
+       "category": "Application",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "join.tts.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "labs.gsa.gov",
+       "office": "GSA IT",
+       "subOffice": "Corporate Services",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "login.acquisition.gov",
+       "office": "OGP",
+       "subOffice": "MV",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "login.fr.cloud.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Application Login",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "login.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "lop.gsa.gov",
+       "office": "PBS",
+       "subOffice": "Office of Leasing",
+       "category": "Application",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "madeinamerica.gov",
+       "office": "OMB",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "management.cio.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "marketplace.fedramp.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "methods.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "mobile.reginfo.gov",
+       "office": "OGP",
+       "subOffice": "MR",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "mysales.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "GSS",
+       "category": "Application Login",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "mysmartplans.gsa.gov",
+       "office": "PBS",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "navigator.gsa.gov",
+       "office": "FAS",
+       "subOffice": "ESM",
+       "category": "Application",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.8,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "ncrrecycles.gsa.gov",
+       "office": "PBS",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "odp.gsa.gov",
+       "office": "GSA IT",
+       "subOffice": "ISE",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "oes.gsa.gov",
+       "office": "OGP",
+       "subOffice": "MS",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.9,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.75,
+          "max": 1
+       }
+    },
+    {
+       "name": "open-staging.usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "open.gsa.gov",
+       "office": "GSA IT",
+       "category": "Informational",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "open.usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "partners.login.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "paygap.pif.gov",
+       "office": "FAS",
+       "subOffice": "TTS/PIF",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "paymentaccuracy.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "pbs-billing.gsa.gov",
+       "office": "PBS",
+       "category": "Application",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "performance.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "pic.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "plainlanguage.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "playbook.cio.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "playbooks.idmanagement.gov",
+       "office": "OGP",
+       "subOffice": "ME",
+       "category": "Critical infrastructure",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "portal.eos.gsa.gov",
+       "office": "FAS",
+       "subOffice": "ITC",
+       "category": "Application Login",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "portfolios.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "pra.digital.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "presidentialinnovationfellows.gov",
+       "office": "FAS",
+       "subOffice": "TTS/PIF",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "private-eye.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "product-guide.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "property.reporting.gov",
+       "office": "OGP",
+       "subOffice": "MA",
+       "category": "Application Login",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "public-sans.digital.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "realestatesales.gov",
+       "office": "PBS",
+       "subOffice": "Real Property Utilization & Disposal",
+       "category": "Application",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "realpropertyprofile.gov",
+       "office": "OGP",
+       "subOffice": "MA",
+       "category": "Application Login",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "reginfo.gov\n",
+       "office": "OGP",
+       "subOffice": "MR",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "regulations.gov\n",
+       "office": "OGP",
+       "subOffice": "MR",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "reporting.gov",
+       "office": "OGP",
+       "subOffice": "MA",
+       "category": "Application",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "resources.data.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "ret.gsa.gov",
+       "office": "PBS",
+       "category": "Application",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "rocis.gov",
+       "office": "OGP",
+       "subOffice": "MR",
+       "category": "Application",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "saferfederalworkforce.gov",
+       "office": "Administrator",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "sam.gov",
+       "office": "FAS",
+       "subOffice": "OSM/IAE",
+       "category": "Application",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "sat.reginfo.gov",
+       "office": "OGP",
+       "subOffice": "MR",
+       "category": "Application Login",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "scopereview.gsa.gov",
+       "office": "FAS",
+       "subOffice": "ITC",
+       "category": "Application Login",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.875,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "sdg.data.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "search.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "search.usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Application",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "section508.gov",
+       "office": "OGP",
+       "subOffice": "ME",
+       "category": "Informational",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "secure.login.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Critical infrastructure",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "sftool.gov",
+       "office": "OGP",
+       "subOffice": "MG",
+       "category": "Application",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.5,
+          "max": 1
+       }
+    },
+    {
+       "name": "smartpay.gsa.gov",
+       "office": "FAS",
+       "subOffice": "PSHC",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "spdatawarehouse.gsa.gov",
+       "office": "FAS",
+       "subOffice": "PSHC",
+       "category": "Application",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "str.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application Login",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "strategy.data.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "tams.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "tech.gsa.gov",
+       "office": "GSA IT",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "techfarhub.cio.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "thenamingcommission.gov",
+       "office": "The Naming Commission",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "tmf.cio.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "tmss.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "tophealth.pif.gov",
+       "office": "FAS",
+       "subOffice": "TTS/PIF",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "touchpoints.digital.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Application",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "training.rocis.gov",
+       "office": "OGP",
+       "subOffice": "MR",
+       "category": "Application Login",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "training.smartpay.gsa.gov",
+       "office": "FAS",
+       "category": "Application",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "travel.reporting.gov",
+       "office": "OGP",
+       "subOffice": "MA",
+       "category": "Application Login",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "tscportal.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "ITC",
+       "category": "Application Login",
+       "platform": "Salesforce",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "usa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.75,
+          "max": 1
+       }
+    },
+    {
+       "name": "usaccess-alp.gsa.gov",
+       "office": "FAS",
+       "subOffice": "R5",
+       "category": "Application Login",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "usagov.platform.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Application",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.375,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "usdigitalregistry.digitalgov.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Application",
+       "platform": "Drupal",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "usmcservmart.gsa.gov",
+       "office": "FAS",
+       "subOffice": "GSS",
+       "category": "Application",
+       "platform": ".NET",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "ussm.gsa.gov",
+       "office": "OGP",
+       "subOffice": "MY",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "ux-guide.18f.gov",
+       "office": "FAS",
+       "subOffice": "TTS/18F",
+       "category": "Informational",
+       "platform": "Wordpress",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "vehicledispatch.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application Login",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.625,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "vehiclestd.fas.gsa.gov",
+       "office": "FAS",
+       "subOffice": "TTL",
+       "category": "Application",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "vltp.gsa.gov",
+       "office": "CFO",
+       "category": "Application",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "vote.gov",
+       "office": "FAS",
+       "subOffice": "TTS",
+       "category": "Informational",
+       "platform": "Gatsby",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.25,
+          "max": 1
+       }
+    },
+    {
+       "name": "vsc.gsa.gov",
+       "office": "FAS",
+       "subOffice": "MAS",
+       "category": "Informational",
+       "platform": "Elixr",
+       "datapointA": {
+          "val": 0.5,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 0.75,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0.1,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    },
+    {
+       "name": "wdolhome.sam.gov",
+       "office": "FAS",
+       "subOffice": "OSM/IAE",
+       "category": "Informational",
+       "platform": "Jekyll",
+       "datapointA": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointB": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointC": {
+          "val": 1,
+          "max": 1
+       },
+       "datapointD": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointE": {
+          "val": 0,
+          "max": 1
+       },
+       "datapointF": {
+          "val": 0.125,
+          "max": 1
+       }
+    }
+ ]
