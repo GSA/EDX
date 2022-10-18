@@ -6,8 +6,12 @@ name: Scanner Tests
 on:
   push:
     branches: [ main ]
+    paths:
+      - "Tools/scanner/**"
   pull_request:
     branches: [ main ]
+    paths:
+      - "Tools/scanner/**"
 
 jobs:
   build:

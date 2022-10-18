@@ -6,8 +6,12 @@ name: EDX CLI Tests
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'Tools/edxcli/**'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'Tools/edxcli/**'
 
 jobs:
   build:
