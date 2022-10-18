@@ -390,7 +390,7 @@ const data: Record<string, IWebsiteAttributes> = {
     searchNotReq: false,
     wwwPrefix: 'www.',
     queryString: '',
-    urlPath: '',
+    urlPath: '/users/CheckIfUserExists.aspx',
     notes: '',
   },
   'phdc-pub.gsa.gov': {
