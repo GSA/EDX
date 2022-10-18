@@ -16,8 +16,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: create env file
       run: |
-        touch .env
-        echo AIRTABLE_API_KEY=${{ secrets.AIRTABLE_API_KEY }} >> ./Tools/scanner/.env
+        echo AIRTABLE_API_KEY=${{ secrets.AIRTABLE_API_KEY }} >> design-consults/.env
     
     - name: Use Node.js 18
       uses: actions/setup-node@v3
