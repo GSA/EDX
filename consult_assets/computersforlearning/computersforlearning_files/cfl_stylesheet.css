@@ -1,0 +1,662 @@
+/* CSS Document */
+
+body {
+	margin:0px;
+	padding:0px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	color:#333;
+	background-color:#ffffff;
+	}
+
+p {
+  font-size: .9em;
+  margin-left: 10px;
+  margin-right: 10px;
+ }
+
+a:link {
+  color: #0000CC;}
+  
+a:visited {
+  color: #CC0000;
+}
+a:hover {
+  color: #0000CC;
+}
+a:active {
+  color: #CC0000;
+}
+#page_title {
+  font-size: 1em;
+/*   color: #537447; /* light green */
+  color:#003366;
+  margin-top: 5px;
+/*  margin-bottom: 5px; */
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  text-align : center;
+  font-weight :bold;
+}	
+h1 {
+  font-size: .9em;
+  color: #000000;
+  margin-left: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-bottom: 0px;
+}
+h1 a:hover {
+color: #000000;
+}
+h1 a:link {
+color: #0000CC;
+}
+h1 a:visited {
+color: #CC0000;
+}
+h2 {
+  font-size: 1.0em;
+  color: #000000;
+  margin-left: 5px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+}
+h2 a:hover {
+color: #000000;
+}
+h2 a:link {
+color: #0000CC;
+}
+h2 a:visited {
+color: #CC0000;
+}
+
+h3 {
+  font-size: .9em;
+  color: #000000;
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+h3 a {
+  text-decoration: underline;
+}
+h3 a:hover {
+color: #000000;
+}
+h3 a:link {
+color: #0000CC;
+}
+h3 a:visited {
+color: #CC0000;
+}
+
+h4 {
+  font-size: .8em;
+  color: #000000;
+  margin-left: 15px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h4 a:hover {
+color: #000000;
+}
+h4 a:link {
+color: #0000CC;
+}
+h4 a:visited {
+color: #CC0000;
+}
+h5 {
+  font-size: .75em;
+  color: #000000;
+  margin-left: 25px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h5 a:hover {
+color: #000000;
+}
+h5 a:link {
+color: #0000CC;
+}
+h5 a:visited {
+color: #CC0000;
+}
+
+#browse {
+  font-size: .85em;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 0px;
+  margin-top: 5px;
+  padding-top:20px;
+  margin-bottom: 5px;
+  padding-bottom: 0px;
+}
+#hp_Top_Flag {
+  padding-right: 7px;
+  vertical-align: middle;
+}
+
+#hp_Top_Nav {
+  margin: 0px 0px 0px;
+  color: #ffffff;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 11px;
+  vertical-align: bottom;
+  font-weight: bold;
+  min-width: 720px; 
+  voice-family: "\"}\"";
+   voice-family:inherit;
+   height:22px; /* the correct height */
+}
+
+#hp_Top_Nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+  
+body>#hp_Top_Nav {
+  height: 22px;
+}
+
+#hp_table table {
+margin-left:0px;
+margin-right:0px;
+margin-top:0px;
+float:left;
+margin-bottom:15px;
+width:100%;
+}
+
+#hp_table #hp_td_left {
+margin-left:0px;
+margin-right:0px;
+margin-top:0px;
+/* background-color: #f6e6e7; */
+background-color:#e7e7e7;
+font-size: 0.8em;
+border : .1em solid #477CB8;
+width : 185px;
+vertical-align : text-top;
+}
+#hp_table #hp_left {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+border-top:none;
+border-left:none;
+border-right:none;
+font-size: 0.9em;
+border-bottom : thin dotted #477CB8;
+margin-top:8px;
+padding-bottom:10px;
+}
+#hp_table #hp_td_middle {
+margin-left:1px;
+margin-right:0px;
+margin-top:0px;
+background-color: #ffffff;
+vertical-align : text-top;
+}
+#hp_table #hp_td_right {
+margin-left:1px;
+margin-right:0px;
+margin-top:0px;
+background-color:#e7e7e7;
+font-size: 0.8em;
+border : .1em solid #477CB8;
+width : 270px;
+vertical-align : text-top;
+}
+#hp_table #hp_right {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 0.9em;
+color: #000000;
+border-top:none;
+border-left:none;
+border-right:none;
+margin-top:10px;
+margin-bottom:10px;
+}
+#hp_table #hp_picture {
+float:right;
+font-size:0.8em;
+padding:10px 10px 10px 10px;
+}
+#hp_table #hp_colmn_tit {
+color:#000000;
+font-size:1em;
+font-weight:bold;
+background-color:#477CB8;
+border:.1em solid #477CB8;
+}
+#hp_table #hp_colmn_tit_left {
+color:#000000;
+font-size:1em;
+font-weight:bold;
+background-color:#477CB8;
+border:.1em solid #477CB8;
+}
+#hp_table A {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+PADDING-LEFT: 0px;
+font-size:95%;
+FONT-WEIGHT: bold;
+color:blue;
+FLOAT: left; 
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#hp_table A {FLOAT: none;}
+#hp_table A:hover {
+COLOR: #000000;
+}
+/* #hp_table A:visited {
+COLOR: red;
+} */
+#item_List table {
+margin-left:5px;
+margin-right:5px;
+margin-top:5px;
+margin-bottom:15px;
+width:98%;
+}
+
+#item_List th {
+background-color: #CCCCCC;
+font-size: 0.65em;
+font-weight:bold;
+}
+
+#errmsg {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	font-style: normal;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+}
+
+#tab_nav {
+  margin: 0px 0px 0px;
+  color: #FFF;
+  font-family: verdana, arial, helvetica, sans-serif;
+  border-bottom: 3px solid #A50000;
+  font-size: 11px;
+  font-weight: bold;
+  padding-left: 0px;
+  voice-family: "\"}\"";
+	voice-family:inherit;
+	height:23px; /* the correct height */
+}
+
+#tab_nav a {
+  color: #FFF;
+  text-decoration: none;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+#tab_nav img {
+padding-left:0px;
+  padding-right: 0px;
+}
+
+#header {
+   margin:0px 0px 0px;
+   /* For IE5/Win's benefit height = [correct height] + [top padding] + [top and bottom border widths] */
+   height:83px; /* 14px + 17px + 2px = 33px */
+   line-height:11px;
+   min-width: 720px;
+   background-color:#FFF;
+
+/* Here is the ugly brilliant hack that protects IE5/Win from its own stupidity. 
+Thanks to Tantek Celik for the hack and to Eric Costello for publicizing it. 
+IE5/Win incorrectly parses the "\"}"" value, prematurely closing the style 
+declaration. The incorrect IE5/Win value is above, while the correct value is 
+below. See http://glish.com/css/hacks.asp for details. */
+   voice-family: "\"}\"";
+   voice-family:inherit;
+   }
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it feeds correct 
+length values to user agents that exhibit the parsing error exploited above yet get 
+the CSS box model right and understand the CSS2 parent-child selector. ALWAYS include
+a "be nice to Opera 5" rule every time you use the Tantek Celik hack (above). */
+body>#header {height:83px;}
+
+#hp_Flag_Image {
+  float: left;
+}
+
+#right_Flag {
+  float: right;
+  width: 139px;
+  vertical-align : top;
+}
+
+#main_Box {
+   margin-right:0px;
+  margin-top: 0px;
+  padding-top: 0px;
+  /*z-index: 20; */
+  margin-bottom: 0px;
+  margin-left: 0px;
+  height: auto;
+  background-color: #FFF;
+  min-height: 10px;
+  padding-bottom: 0px;
+   }
+  
+div[class] #main_Box {
+  height: auto;
+}
+
+#main_Audience {
+  margin: 0px 0px 0px;
+  color: #FFF;
+	font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  padding-left: 0px;
+/*  padding-top: 20px; */
+  voice-family: "\"}\"";
+   voice-family:inherit;
+   height:0px; /* the correct height */
+}
+body>#main_Audience {
+  height: 0px;
+}
+
+#hp_Content {
+  margin-right:0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  min-width: 200px;
+  border: 1px solid white;
+  height: auto;
+  background-color: #FFF;
+}
+
+#hp_Content>p {/*margin:0px;*/}
+
+#non_Languages {
+  float: left;
+}
+
+#tab_detail {
+  float: left;
+}  
+
+#hp_bar {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+FONT-SIZE: 93%;
+BACKGROUND: #003366 repeat-x 50% bottom;
+color:#ffffff;
+FLOAT: left; 
+WIDTH: 100%;
+LINE-HEIGHT: normal;
+vertical-align: top;
+}
+#hp_bar A {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+PADDING-LEFT: 0px;
+FONT-WEIGHT: bold;
+color:#ffffff;
+text-align:center;
+PADDING-BOTTOM: 8px;
+PADDING-TOP: 8px;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#hp_bar A {FLOAT: none;}
+#hp_bar A:hover {
+COLOR: #ffffff;
+text-decoration: underline;
+}
+#hp_hdr_bar {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+FONT-SIZE: 93%; 
+BACKGROUND: #003366 repeat-x 50% bottom;
+color:#ffffff;
+FLOAT: left; 
+WIDTH: 100%;
+font-size: 11px;
+LINE-HEIGHT: 12px; 
+vertical-align: top;
+text-decoration : none;
+}
+#hp_hdr_bar A {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+PADDING-LEFT: 0px;
+FONT-WEIGHT: bold;
+color:#ffffff;
+FLOAT: none;
+text-decoration : none;
+vertical-align: top;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#hp_hdr_bar A {FLOAT: none;}
+#hp_hdr_bar A:hover {
+COLOR: #ffffff;
+text-decoration: underline;
+}
+#hp_hdr_bar td {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+FONT-SIZE: 93%; 
+border-right : 2px solid White;
+font-size: 11px;
+text-align:center;
+vertical-align: middle;
+}
+#tab {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+FONT-SIZE: 93%;
+BACKGROUND: #ffffff repeat-x 0% bottom;
+FLOAT: left; 
+WIDTH: 100%;
+LINE-HEIGHT: normal;
+vertical-align: bottom;
+}
+#tab UL {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+PADDING-RIGHT: 7px;
+PADDING-LEFT: 7px;
+PADDING-BOTTOM: 0px;
+MARGIN: 0px;
+PADDING-TOP: 0px;
+LIST-STYLE-TYPE: none;
+}
+#tab LI {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+PADDING-RIGHT: 0px;
+PADDING-LEFT: 5px;
+BACKGROUND: url(../computersforlearning_files/pgmimg/left.gif) no-repeat left top;
+FLOAT: left;
+PADDING-BOTTOM: 0px;
+MARGIN: 0px;
+PADDING-TOP: 0px;
+white-space: nowrap;
+}
+#tab A {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+PADDING-RIGHT: 5px;
+DISPLAY: block;
+PADDING-LEFT: 5px;
+FONT-WEIGHT: bold;
+BACKGROUND: url(../computersforlearning_files/pgmimg/right.gif) no-repeat right top;
+FLOAT: left; 
+PADDING-BOTTOM: 5px;
+COLOR: #0000CC;
+PADDING-TOP: 5px;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tab A {FLOAT: none;}
+#tab A:hover {
+COLOR: #000000
+}
+#tab #current {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+BACKGROUND-IMAGE: url(/pgmimg/left_on.gif);
+}
+#tab #current A {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+BACKGROUND-IMAGE: url(/pgmimg/right_on.gif);
+PADDING-BOTTOM: 5px;
+COLOR: #000000;
+text-decoration: none; }
+
+#plain_text {
+  font-size: .75em;
+  color: #000000;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom:10px;
+  text-align:left;
+  margin-top: 0px;
+}
+#plain_text #bold {
+  font-size: 1.0em;
+  color: #000000;
+  font-weight: bold;
+  margin-top: 0px;
+}
+#plain_text a:hover {
+color: #000000;
+}
+#plain_text a:link {
+color: #0000CC;
+}
+#plain_text a:visited {
+color: #CC0000;
+}
+#requiredfld {
+color:#F4A460;
+font-size:15px;
+font-weight:Bold;
+}
+#requiredtxt {
+font-family:verdana, arial, helvetica, sans-serif;
+text-align:left;
+color:gray;
+font-size:9pt;
+}
+
+#bottom_Nav {
+  margin: 0px 15px 0px;
+  vertical-align: bottom;
+  text-align: center;
+  color: #003366;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  padding-top: 0px;
+  voice-family: "\"}\"";
+  voice-family:inherit;
+  height:10px; /* the correct height */
+}
+body>#bottom_Nav {
+  height: 10px;
+}
+
+#bottom_Nav a {
+  color: #003366;
+  text-decoration: none;
+  padding-left: 6px;
+  border-bottom: 1px solid #003466;
+  padding-right: 6px;
+  text-align: center; 
+}
+
+#footer {
+  margin: 0px 0px 0px;
+  background-color: #ffffff;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  text-align: center;
+  padding-top: 10px;
+  voice-family: "\"}\"";
+  voice-family:inherit;
+  height:15px; /* the correct height */
+  vertical-align:bottom;
+}
+body>#footer {
+  height: 10px;
+}
+
+#footer_Content {
+   padding-top: 15px;
+   float: none;
+   text-align: center; 
+}
+#footer_Content a {
+  color: #FFF;
+  text-align: center;
+}
+.footerWarn	{color:red; font-family:arial,helvetica,verdana; font-size:11px; font-weight:bold;text-align: center;}
+/*Buttons*/
+#BTN {
+color:white;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:15px;
+text-align:center;
+font-weight:bold;
+text-decoration:none;
+background-color:#990000;
+font-size: 80%;
+padding-right: 5px;
+padding-left: 5px;
+border : thin outset white;
+}
+#BTNGRAY{color:white;font-family:helvetica,verdana;font-size:9pt;text-align:center;font-weight:bold;text-decoration:none;background-color: #191970;border : thin outset #191970;
+}
+
+#title_bar {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+margin-left:5px;
+margin-right:5px;
+margin-top:5px;
+margin-bottom:5px;
+width:95%;
+background-color: #CCCCCC;
+font-size: 1em;
+font-weight:bold;
+padding-top: 2px;
+padding-bottom: 2px;
+}
+/* main table of the page */
+#main_table table {
+	margin-left:5px;
+	margin-right:5px;
+	margin-top:5px;
+	margin-bottom:15px;
+	width:95%;
+}
+
+#main_table th {
+	background-color: #CCCCCC;
+	font-size: 0.8em;
+}
+#main_table #td_right {
+	font-size: 0.8em;
+	text-align: right;
+	vertical-align : text-top;
+	font-family: bold Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+#main_table #td_left {
+	font-size: 0.8em;
+	text-align: left;
+	vertical-align : text-top;
+	font-family: bold Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+#main_table #td_center {
+	font-size: 0.8em;
+	text-align: center;
+	vertical-align : text-top;
+	font-family: bold Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+/* end main table of the page */
