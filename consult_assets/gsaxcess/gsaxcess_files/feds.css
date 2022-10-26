@@ -1,0 +1,121 @@
+/* CSS Document */
+.graybox{color:#334d99; font-family:arial,helvetica,verdana; font-size:12px; font-weight:normal; text-decoration:none;}
+.graybox:hover{text-decoration:underline;}
+.mission{color:#990000; font-family:arial,helvetica,verdana; font-size:12px; font-weight:bold;}
+.message{color:#990000; font-family:arial,helvetica,verdana; font-size:16px; font-weight:bold;}
+.feature{color:#003194; font-family:arial,helvetica,verdana; font-size:20px; font-weight:bold;}
+.article{color:#003194; font-family:arial,helvetica,verdana; font-size:16px; font-weight:bold;}
+.category{color:#003194; font-family:arial,helvetica,verdana; font-size:15px; font-weight:bold; text-decoration:none;}
+a.taxCategory{text-decoration:underline;}
+.taxCategory{color:#003194; font-family:arial,helvetica,verdana; font-size:13px; font-weight:bold;}
+.taxBody{color:#003194; font-family:arial,helvetica,verdana; font-size:13px; font-weight:normal;}
+.assoc{color:#ffffff; font-family:arial,helvetica,verdana; font-size:12px; font-weight:normal;}
+.body{color:#003194; font-family:arial,helvetica,verdana; font-size:12px; font-weight:normal;}
+ol.body{color:#003194; font-family:arial,helvetica,verdana; font-size:12px; font-weight:normal;}
+.homelinks{color:#9a0000; font-family:arial,helvetica,verdana; font-size:12px; font-weight:normal; text-decoration:underline;}
+.headlines{color:#334d99; font-family:arial,helvetica,verdana; font-size:12px; font-weight:bold; text-decoration:underline;}
+.footer{color:#334d99; font-family:arial,helvetica,verdana; font-size:11px; font-weight:normal; text-decoration:underline;}
+.tabTitle{color:#9a0000; font-family:arial,helvetica,verdana; font-size:20px; font-weight:bold;}
+.grayboxSubtitle{color:#ffffff; font-family:arial,helvetica,verdana; font-size:12px; font-weight:normal;}
+.breadcrumb{color:#666666; font-family:arial,helvetica,verdana; font-size:11px; font-weight:normal;}
+.footer2{color:#999999; font-family:arial,helvetica,verdana; font-size:11px; font-weight:normal;}
+a.resources{text-decoration:underline;}
+.resources{color:#334d99; font-family:arial,helvetica,verdana; font-size:12px; font-weight:normal;}
+.related{color:#334d99; font-family:arial,helvetica,verdana; font-size:11px; font-weight:normal; text-decoration:none;}
+.related:hover{text-decoration:underline;}
+/* the following styles are used by new pages starts with xcess htm pages  */
+.text
+{color:black; font-family:arial,helvetica,verdana; font-size:13px; font-weight:normal;}
+.subhead
+{display:block;font-family:arial,helvetica,verdana;font-size:15px;	font-weight:bold;font-variant:normal;color:Gray;}
+SPAN.subhead
+{border-top:2px solid #e6e2d6;
+display:block;font-family:arial,helvetica,verdana;font-size:1em;font-weight:bold;
+margin-top:1px;padding:5px 10px 10px 15px;width:100%;}
+.footerWarn	{color:red; font-family:arial,helvetica,verdana; font-size:11px; font-weight:bold;}
+/* end of styles of xcess htm pages */
+#HPA {background-color:#334d99;}
+#MSG {text-align:center;font-weight:Bold;color:red;background-color:white;line-height:20px;font-family: Arial,Helvetica,sans-serif,Verdana,Geneva;font-size:9pt;}
+#MSG1 {text-align:left;font-weight:Bold;color:red;background-color:white;line-height:20px;font-family: Arial,Helvetica,sans-serif,Verdana,Geneva;font-size:9pt;}
+#requiredfld{color:#F4A460;font-size:15px;font-weight:Bold;}
+#requiredtxt{font-family:helv;text-align:left;color:gray;font-size:9pt;}
+#mandatoryfld{color:red;font-size:15px;font-weight:Bold;}
+#BTN{color:white;font-family:arial,helvetica,verdana;font-size:15px;text-align:center; font-weight:bold;font-style:italic;text-decoration:none;background-color:#990000}
+#BTNGRAY{color:white;font-family:helvetica,verdana;font-size:9pt;text-align:center;font-weight:bold;text-decoration:none;background-color: #191970;}
+#BTNBAR{color:white;font-family:arial,helvetica,verdana;font-size:13px;text-align:center;font-weight:bold;text-decoration:none;background-color:#9D0B0B;font-style:italic;}
+#BTNG{color:white;font-family:helvetica,verdana;font-size:9pt;text-align:center;font-weight:bold;text-decoration:none;background-color:green;}
+/* the following Style items reltated to Pubheader.js */
+#HA {font-family:arial;font-weight:Bold;text-align:right;color:#ffffff;background-color:#003399;font-size:8pt;text-decoration:none;}
+.HB {font-family:arial;font-weight:Bold;color:#003399;background-color:#ffffff;font-size:8pt;text-decoration:none;}
+.HB:hover{text-decoration:underline;color:red;}
+#HC {font-family:helv;font-weight:Bold;text-align:left;color:white;font-size:10pt;}
+#HC1 {font-family:helv;font-weight:Bold;text-align:left;color:white;font-size:5pt;}
+#HD {color:#334d99;font-family:helv;font-weight:Bold;font-size:10px;text-decoration:none;}
+#HD1 {font-family: "MS Sans Serif", Geneva, sans-serif;	font-size: smaller;text-decoration:none;}
+#HDBLK {color:black;font-family:helv;font-weight:Bold;font-size:10px;text-decoration:none;}
+#HDRED {color:red;font-family:helv;font-weight:Bold;font-size:10px;text-decoration:none;}
+#HE {color:#9a0000; text-align:center; font-family:arial,helvetica,verdana; font-size:15px; font-weight:bold;}
+#HE H4 {margin:0;}
+#HELEFT {color:#9a0000; text-align:left; font-family:arial,helvetica,verdana; font-size:15px; font-weight:bold;}
+#GLBSRCH {font-family:arial;font-weight:Bold;color:#003399;background-color:#ffffff;font-size:10pt;text-decoration:none;}
+#HDBLUEBAR {font-family:arial;font-weight:Bold;color:#ffffff;background-color:#003399;font-size:8pt;text-decoration:none;line-height:5px;}
+
+/* Slide Door only for NASA Prescreening pages*/	
+#slideDoor {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+FONT-SIZE: 93%;
+BACKGROUND: #ffffff repeat-x 0% bottom;
+FLOAT: left; 
+WIDTH: 100%;
+LINE-HEIGHT: normal;
+vertical-align: bottom;
+}
+#slideDoor UL {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+PADDING-RIGHT: 7px;
+PADDING-LEFT: 7px;
+PADDING-BOTTOM: 0px;
+MARGIN: 0px;
+PADDING-TOP: 0px;
+LIST-STYLE-TYPE: none;
+}
+#slideDoor LI {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+PADDING-RIGHT: 0px;
+PADDING-LEFT: 5px;
+BACKGROUND: url(/pgmimg/left.gif) no-repeat left top;
+FLOAT: left;
+PADDING-BOTTOM: 0px;
+MARGIN: 0px;
+PADDING-TOP: 0px;
+white-space: nowrap;
+}
+#slideDoor A {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+PADDING-RIGHT: 5px;
+DISPLAY: block;
+PADDING-LEFT: 5px;
+FONT-WEIGHT: bold;
+BACKGROUND: url(/pgmimg/right.gif) no-repeat right top;
+FLOAT: left; 
+PADDING-BOTTOM: 5px;
+COLOR: blue;
+PADDING-TOP: 5px;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#slideDoor A {FLOAT: none;}
+#slideDoor A:hover {
+COLOR: #000000
+}
+#slideDoor #current {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+BACKGROUND-IMAGE: url(/pgmimg/left_on.gif);
+}
+#slideDoor #current A {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+BACKGROUND-IMAGE: url(/pgmimg/right_on.gif);
+PADDING-BOTTOM: 5px;
+COLOR: #000000;
+text-decoration: none; }
+
+/* End Slide Door */

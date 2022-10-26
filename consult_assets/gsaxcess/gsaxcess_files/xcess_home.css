@@ -1,0 +1,818 @@
+/* Clearing Floats BP-v4*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
+}
+html[xmlns] .clearfix {
+	display: block;
+}
+* html .clearfix {
+	height: 1%;
+}
+.clear {
+	clear:both;
+	height:1px;
+	overflow:hidden;
+}
+
+/* GSAXcess Style */
+html, body {
+	height:100%;
+	margin:0;
+	padding:0;
+}
+#gsaxcess {
+	background:#f6f6f6 url(./PGMIMG/HomePage/HP/background_page.png) repeat-x;
+	background-position:0 129px;
+	color:#333;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:18px;
+	margin:0;
+	padding:0;
+}
+#gsaxcess img {
+	border:0;
+}
+#gsaxcess ul {
+	list-style:none;
+	margin:0 0 10px;
+	padding:0;
+}
+#gsaxcess li {
+	background:url(./PGMIMG/HomePage/HP/bullet_arrow.png) no-repeat;
+	background-position:0 6px;
+	padding-left:12px;
+}
+#gsaxcess h1, #gsaxcess h2 {
+	font-size:14px;
+	font-weight:bold;
+	margin:0 0 10px;
+	padding:0;
+}
+#gsaxcess h2 {
+	font-size:12px;
+}
+#gsaxcess p {
+	margin:0 0 10px;
+}
+#gsaxcess .wrapper a {
+	color:#113e97;
+	text-decoration:none;
+}
+	#gsaxcess .wrapper a:hover {
+		text-decoration:underline;
+	}
+#gsaxcess a.more {
+	background:#ccc;
+	color:#333;
+	font-size:11px;
+	padding:3px 6px;
+}
+	#gsaxcess a.more:hover {
+		background:#bbb;
+		color:#333;
+	}
+#gsaxcess .red {
+	color:#d21111;
+}
+#gsaxcess .float-left {
+	float:left;
+}
+#gsaxcess .float-center {
+	text-align:center;
+}
+#gsaxcess  .float-right {
+	float:right;
+}
+#gsaxcess span.block {
+	display:block;
+}
+#gsaxcess .wrapper {
+	margin:0 auto;
+	min-height:100%;
+	padding:0 0 20px;
+	position:relative;
+	width:980px;
+}
+#gsaxcess .small {
+	font-size:11px;
+	line-height:16px;
+}
+#gsaxcess .hr {
+	border-top:1px solid #e5e5e5;
+	margin-bottom:10px;
+}
+#gsaxcess .highlight-box {
+	background-color:#f5f5f5;
+	border:1px solid #e5e5e5;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin:20px 0;
+	padding:10px 10px 0;
+}
+#gsaxcess .quicklinks {
+	background:url(./PGMIMG/HomePage/HP/border_shadow.png) no-repeat;
+	margin:25px 0 0;
+	padding:25px 10px 0;
+}
+#gsaxcess .quicklinks h2 {
+	margin:0;
+}
+#gsaxcess .gray-box {
+	background-color:#f5f5f5;
+	border:1px solid #e5e5e5;
+	margin:20px 0 10px;
+	padding:10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/* Forms & Buttons */
+#gsaxcess .form-inline {
+	overflow:hidden;
+}
+#gsaxcess .label {
+	color:#777;
+	display:inline-block;
+	*display:inline;
+	width:170px;
+	zoom:1;
+}
+#gsaxcess label {
+	float:left;
+	margin-right:10px;
+	width:100px;
+}
+	#gsaxcess .form-inline label {
+		display:block;
+		text-align:right;
+		padding-top:6px;
+	}
+#gsaxcess input[type=text], #gsaxcess input[type=password] {
+	border:1px solid #ccc;
+	padding:4px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom:10px;
+	margin-right:7px;
+	float:left;
+}
+	#gsaxcess .form-inline input[type=text] {
+		width:220px;
+	}
+	#gsaxcess .form-inline .short2 {
+		width:25px !important;
+	}
+	#gsaxcess .form-inline .short4Num {
+		width:38px !important;
+	}
+	#gsaxcess .form-inline .shortnum {
+		width:42px !important;
+	}	
+	#gsaxcess .form-inline .short {
+		width:62px !important;
+	}
+	#gsaxcess .form-inline .medium7 {
+		width:70px !important;
+	}
+	#gsaxcess .form-inline .medium10 {
+		width:100px !important;
+	}
+	#gsaxcess .form-inline .medium15 {
+		width:140px !important;
+	}
+	#gsaxcess .form-inline .medium {
+		width:160px !important;
+	}
+	#gsaxcess .form-inline .large {
+		width:320px !important;
+	}
+#gsaxcess .button {
+	border:none;
+	cursor:pointer;
+	font-size:0;
+	height:32px;
+	line-height:0;
+	text-indent:-999px;
+	overflow:hidden;
+}
+#gsaxcess .button-submit {
+	background: #d20f0f; /* Old browsers */
+	background: -moz-linear-gradient(top,  #d20f0f 0%, #850a0a 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d20f0f), color-stop(99%,#850a0a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #d20f0f 0%,#850a0a 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #d20f0f 0%,#850a0a 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #d20f0f 0%,#850a0a 99%); /* IE10+ */
+	background: linear-gradient(to bottom,  #d20f0f 0%,#850a0a 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d20f0f', endColorstr='#850a0a',GradientType=0 ); /* IE6-9 */
+	border: 1px solid #850a0a;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-weight:bold;
+	color:#fff !important;
+	cursor:pointer;
+	display:inline-block;
+	padding:4px 15px;
+	margin:0 3px;
+	overflow: visible !important;
+}
+	#gsaxcess a.button-submit {
+		padding:3px 15px;
+		margin: 0 1px;
+	}
+	#gsaxcess .button-submit:hover {
+		text-decoration:none !important;
+		background: #850a0a; /* Old browsers */
+		background: -moz-linear-gradient(top,  #850a0a 32%, #d20f0f 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(32%,#850a0a), color-stop(100%,#d20f0f)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #850a0a 32%,#d20f0f 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #850a0a 32%,#d20f0f 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #850a0a 32%,#d20f0f 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #850a0a 32%,#d20f0f 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#850a0a', endColorstr='#d20f0f',GradientType=0 ); /* IE6-9 */
+	}
+	#gsaxcess .button-submit.left {
+		float:left;
+	}
+	#gsaxcess .button-submit.right {
+		float:right; 
+	}
+#gsaxcess .button.register {
+	background:url(./PGMIMG/HomePage/HP/button_register.png) no-repeat;
+	width:120px;
+}
+#gsaxcess .button.login {
+	background:url(./PGMIMG/HomePage/HP/button_login.png) no-repeat;
+	width:100px;
+}
+#gsaxcess  .register-text {
+	float:left;
+	line-height:16px;
+	margin:10px 5px 0 0;
+	width:180px;
+}
+#gsaxcess .nasa {
+	background:url(./PGMIMG/HomePage/HP/nasa_button.png) no-repeat;
+	float:left;
+	font-size:11px;
+	line-height:16px;
+	height:58px;
+	padding:0;
+	width:657px;
+}
+	#gsaxcess .nasa a.button-2 {
+		display:block;
+		float:left;
+		height:60px;
+		margin-right:12px;
+		width:270px;
+	}
+	#gsaxcess .nasa p {
+		float:left;
+		margin-top:14px;
+		width:375px;
+	}
+#gsaxcess .login_container {
+	background:url(./PGMIMG/HomePage/HP/login_container.png) no-repeat;
+	float:left;
+	margin-left:13px;
+	height:48px;
+	padding:5px 10px;
+	width:290px;
+}
+#gsaxcess .login_button {
+	float:left;
+	text-align:center;
+	width:105px;
+}
+#gsaxcess #header {
+	background-color:#fff;
+}
+#gsaxcess .breadcrumbs {
+	font-size:11px;
+	line-height:16px;
+	margin:20px 0 0;
+	overflow:hidden;
+}
+	#gsaxcess .breadcrumbs li {
+		background:none;
+		float:left;
+		padding:0 5px 0 0;
+	}
+	#gsaxcess .breadcrumbs a {
+		color:#777;
+	}
+/* Slider */
+#gsaxcess #slides {
+	background:url(./PGMIMG/HomePage/HP/background_slides.png) no-repeat;
+	height:270px;
+	margin:0 auto 5px;
+	position:relative;
+	padding:13px 0 0;
+	width:980px;
+}
+	#gsaxcess #slides li {
+		background:none;
+		padding:0;
+	}
+	#gsaxcess #slides .slides_container {
+		display:block;
+		height:220px;
+		position:absolute;
+		left:40px;
+		width:900px;
+	}
+	#gsaxcess #slides .slide {
+		float:left;
+	}
+	#gsaxcess #slides .slide li {
+		background-color:#fff;
+		border:1px solid #ccc;
+		float:left;
+		height:201px;
+		margin-left:12px;
+		padding:8px 10px;
+		position:relative;
+		width:270px;
+	}
+		#gsaxcess #slides .slide li:first-child {
+			margin-left:0;
+		}
+	#gsaxcess #slides .caption {
+		background:url(./PGMIMG/HomePage/HP/background_caption.png) repeat;
+		bottom:9px;
+		color:#fff;
+		font-size:11px;
+		left:10px;
+		line-height:16px;
+		padding:7px;
+		position:absolute;
+		width:256px;
+		z-index:500;
+	}
+	#gsaxcess #slides .prev, #gsaxcess #slides .next {
+		background:url(./PGMIMG/HomePage/HP/button_arrows.png) no-repeat;
+		display:block;
+		height:19px;
+		position:absolute;
+		width:17px;
+	}
+	#gsaxcess #slides .prev {
+		background-position:2px 0;
+		left:10px;
+		top:124px;
+	}
+	#gsaxcess #slides .next {
+		background-position:2px -24px;
+		right:10px;
+		top:124px;
+	}
+	#gsaxcess #slides .pagination {
+		list-style:none;
+		margin:8px auto;
+		padding:0;
+		text-align: center;
+	}
+	#gsaxcess #slides .pagination li {
+		display:inline-block;
+		zoom:1;
+		*display:inline;
+		margin:0 auto;
+	}
+	#gsaxcess #slides .pagination li a {
+		background:url(./PGMIMG/HomePage/HP/button_slides.png) no-repeat;
+		background-position:-20px 0;
+		display:block;
+		height:0;
+		margin:0 3px;
+		overflow:hidden;
+		padding-top:12px;
+		width:11px;
+	}
+	#gsaxcess #slides .pagination li.current a {
+		background-position:0 0;
+	}
+
+/* Columns */
+#gsaxcess .column {
+	float:left;
+	padding:0 40px 0 0;
+	width:210px;
+}
+	#gsaxcess .column.last {
+		padding-right:0;
+	}
+#gsaxcess .mainbar {
+	float:left;
+	width:585px;
+}
+#gsaxcess .sidebar {
+	float:right;
+	width:380px;
+}
+	#gsaxcess .sidebar img {
+		height:auto;
+		width:340px;
+	}
+/* Content Blocks */	
+#gsaxcess .col-left, #gsaxcess .col-right, #gsaxcess .col-middle, #gsaxcess .col-middle1, #gsaxcess div.block {
+	background:#fff;
+	border-top:4px solid #1549b0;
+	border-left:1px solid #e0e0e0;
+	border-right:1px solid #e0e0e0;
+	border-bottom:1px solid #e0e0e0;
+	margin:12px 0 0;
+	padding:10px 15px;
+	box-shadow:0 2px 2px #ececec;
+	-moz-box-shadow:0 2px 2px #ececec;
+	-webkit-box-shadow:0 2px 2px #ececec;
+}
+	#gsaxcess div.block.secondary {
+		border-top:1px solid #e0e0e0;
+	}
+#gsaxcess .col-left {
+	float:left;
+	width:260px;
+}
+#gsaxcess .col-right {
+	float:right;
+	width:643px;
+}	
+#gsaxcess .col-middle {
+	float:none;
+	width:948px;
+}
+#gsaxcess .col-middle1 {
+	float:none;
+	width:980px;
+}
+#gsaxcess #footer {
+	background:#fff;
+	border-top:1px solid #e0e0e0;
+	color:#777;
+	font-size:11px;
+	line-height:16px;
+	padding:10px 0;
+	width:100%;
+}
+	#gsaxcess #footer a {
+		color:#777;
+		margin:0 5px;
+	}
+	#gsaxcess #footer .container {
+		margin:0 auto;
+		text-align:center;
+		width:980px;
+	}
+#gsaxcess .hpmessage {
+	background:#fff;
+	color:#ce5f71;
+	font-size:12px;
+	text-align:center;
+	padding:8px 1px;
+}
+#gsaxcess table.data_table {
+	border:1px solid #ccc;
+	border-collapse:collapse;
+	margin-bottom:10px;
+	width:100%;
+}
+	#gsaxcess .data_table th, #gsaxcess .data_table td {
+		border:1px solid #ccc;
+		text-align:left;
+		padding:5px;
+	}
+	#gsaxcess .data_table th {
+		background-color:#e5e5e5;
+	}
+	#gsaxcess .data_table .odd {
+		background-color:#f5f5f5;
+	}
+	#gsaxcess .data_table .txClrGR {
+		color:#008000;
+	}
+	#gsaxcess .data_table .txClrRE {
+		color:#ff0000;
+	}
+	#gsaxcess .data_table .txClrBL {
+		color:#0000ff;
+	}
+	#gsaxcess .data_table .txClrMA {
+		color:#800000;
+	}
+	
+#gsaxcess .gallery-thumbs {
+	margin:10px 0 0;
+}
+#gsaxcess .gallery-thumbs li {
+	background:none;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	padding:0 1px !important;
+}
+	#gsaxcess .gallery-thumbs img {
+		width:80px !important;
+	}
+#gsaxcess #gogreen {
+	background-color:#f2f6e8;
+	padding: 0;
+	width: auto !important;
+}
+	#gsaxcess #gogreen h1 {
+		color:#385109;
+	}
+/* NASA CSS */
+#gsaxcess .wrapper_nasa {
+	margin:0 auto;
+	min-height:100%;
+	padding:5px 0 20px;
+	position:relative;
+	width:980px;
+}
+#menu {
+	padding:0 !important;
+	width:260px !important;
+}
+	#menu h3 {
+		background:#f5f5f5 url('./PGMIMG/HomePage/HP/login_container.png') no-repeat;
+		background-position:-10px -3px;
+		cursor:pointer;
+		font-size:12px;
+		margin:0;
+		outline:none;
+		padding:9px 10px;
+	}
+	#menu .section {
+		border-bottom:1px solid #e0e0e0;
+		padding:10px;
+	}
+#nasa {
+	width:673px !important;
+}
+	#nasa .welcome {
+		float:left;
+		width:560px;
+	}
+	#nasa .button.login {
+		float:right;
+		margin-right:5px;
+	}
+	#nasa .content {
+		border-top:1px solid #e0e0e0;
+		padding-top:15px;
+	}
+#nasa  .c1, #nasa  .c2, #nasa  .c3 {
+	float:left;
+}
+	#nasa  .c1 {
+		font-size:11px;
+		line-height:16px;
+		text-align:center;
+		padding-right:15px;
+		width:95px;
+	}
+	#nasa  .c2 {
+		padding-right:15px;
+		width:280px;
+	}
+	#nasa  .c3 {
+		position:relative;
+		text-align:center;
+		width:265px;
+	}
+		#gsaxcess .c3 .slide {
+			height:200px;
+			width:265px;
+		}
+		#gsaxcess .c3 .caption {
+			background:url(./PGMIMG/HomePage/HP/background_caption.png) repeat;
+			bottom:0;
+			color:#fff;
+			font-size:11px;
+			line-height:16px;
+			left:0;
+			padding:7px;
+			position:absolute;
+			text-align:left;
+			width:265px;
+			z-index:500;
+		}
+		#nasa .c3 .pagination {
+			list-style:none;
+			margin-top:10px;
+		}
+		#nasa .c3 .pagination li {
+			background:none;
+			display:inline-block;
+			*display:inline;
+			font-size:11px;
+			margin:1px;
+			zoom:1;
+			padding:0;
+		}
+			#nasa .c3 .pagination li a {
+				background:url(./PGMIMG/HomePage/HP/button_slides.png) no-repeat;
+				background-position:-20px 0;
+				display:block;
+				height:0;
+				margin:0 2px;
+				overflow:hidden;
+				padding-top:12px;
+				width:11px;
+			}
+			#nasa .c3 .pagination li.current a {
+				background-position:0 0;
+			}
+			
+/* By */
+
+#gsaxcess .button-blue {
+    background-color: #191970;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #191970), color-stop(1, #191970));
+    border: 1px solid #191970;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    overflow: visible !important;
+    padding: 3px 15px;
+    }    
+#gsaxcess a.button-blue {
+    color: #FFFFFF;
+    padding: 3px 15px;
+	margin: 0 1px;
+    }   
+#gsaxcess a.button-blue:hover {
+    background: #0F0FC0;
+    }
+#gsaxcess .button-green {
+    background-color: #187A05;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #187A05), color-stop(1, #187A05));
+    border: 1px solid #187A05;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    overflow: visible !important;
+    padding: 3px 15px;
+    }    
+#gsaxcess a.button-green {
+    color: #FFFFFF;
+    padding: 3px 15px;
+	margin: 0 1px;
+    }   
+#gsaxcess a.button-green:hover {
+    background: #0AAF25;
+    }
+#gsaxcess .sidebar img {
+    height: auto;
+    width: auto;
+    }
+#gsaxcess .gallery-main img {
+	height: 300px;
+    width: 350px;
+    }
+#gsaxcess div.block.itemdocs {
+    border-top: 1px solid #E0E0E0;
+    }
+#gsaxcess .itemdocs img {
+    height: 35px;
+    width: 35px;
+    }       
+#gsaxcess .fullline {
+    border-radius: 5px;
+    float: left;
+    padding-top: 10px;
+    text-align: left;
+    width: 980px;
+    }    
+#gsaxcess .fullline li{
+    background:none;
+    padding-left: 0px;
+    }
+#gsaxcess .breadcrumbs1 {
+    color: #333333;
+    font-size: 11px;
+    line-height: 16px;
+    margin: 5px 0 0;
+    overflow: hidden;
+    }    
+#gsaxcess .breadcrumbs1 h1{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 3px 3px 0px;
+    padding: 0;    
+    }
+#gsaxcess .breadcrumbs1 li {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: left;
+    padding: 0 5px 0 0;
+    }    
+#gsaxcess .breadcrumbs1 a{
+    color:#777777;
+    }           
+
+/* Icons */
+.redflag {
+	/*background:url(./PGMIMG/HomePage/HP/redflag.png) no-repeat;*/
+	background:url(./PGMIMG/HomePage/HP/yellowflag.png) no-repeat;
+	display:inline-block;
+	height:25px;
+	margin:0 5px;
+	width:25px;
+}
+
+#gsaxcess .inputAll{
+    background-color: #F4F4F4;
+    border-color: silver;
+	margin-top: 0;
+	border: 1px solid silver;
+    border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+    font-size: 12px;
+    padding:3px 5px;
+	float:left;
+	margin-right:6px;
+	}
+	
+/* qTip2 v2.2.0 None | qtip2.com | Licensed MIT, GPL | Mon Dec 16 2013 11:39:29 */
+.qtip{position:absolute;left:-28000px;top:-28000px;display:none;max-width:280px;min-width:50px;font-size:10.5px;line-height:12px;direction:ltr;box-shadow:none;padding:0}.qtip-content{position:relative;padding:5px 9px;overflow:hidden;text-align:left;word-wrap:break-word}.qtip-titlebar{position:relative;padding:5px 35px 5px 10px;overflow:hidden;border-width:0 0 1px;font-weight:700}.qtip-titlebar+.qtip-content{border-top-width:0!important}.qtip-close{position:absolute;right:-9px;top:-9px;cursor:pointer;outline:medium none;border-width:1px;border-style:solid;border-color:transparent}.qtip-titlebar .qtip-close{right:4px;top:50%;margin-top:-9px}* html .qtip-titlebar .qtip-close{top:16px}.qtip-titlebar .ui-icon,.qtip-icon .ui-icon{display:block;text-indent:-1000em;direction:ltr}.qtip-icon,.qtip-icon .ui-icon{-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;text-decoration:none}.qtip-icon .ui-icon{width:18px;height:14px;line-height:14px;text-align:center;text-indent:0;font:400 bold 10px/13px Tahoma,sans-serif;color:inherit;background:transparent none no-repeat -100em -100em}.qtip-focus{}.qtip-hover{}.qtip-default{border-width:1px;border-style:solid;border-color:#F1D031;background-color:#FFFFA3;color:#555}.qtip-default .qtip-titlebar{background-color:#FFEF93}.qtip-default .qtip-icon{border-color:#CCC;background:#F1F1F1;color:#777}.qtip-default .qtip-titlebar .qtip-close{border-color:#AAA;color:#111}.qtip .qtip-tip{margin:0 auto;overflow:hidden;z-index:10}x:-o-prefocus,.qtip .qtip-tip{visibility:hidden}.qtip .qtip-tip,.qtip .qtip-tip .qtip-vml,.qtip .qtip-tip canvas{position:absolute;color:#123456;background:transparent;border:0 dashed transparent}.qtip .qtip-tip canvas{top:0;left:0}.qtip .qtip-tip .qtip-vml{behavior:url(#default#VML);display:inline-block;visibility:visible}
+
+/* Tooltip */
+.tooltip {
+	background:0 -326px url(./PGMIMG/sprite.png) no-repeat;
+	cursor:pointer;
+	display:inline-block;
+	*display:inline;
+	height:14px;
+	margin:5px 0 0 5px;
+	padding:2px;
+	width:14px;
+	vertical-align:top;
+	zoom:1;
+}
+	.text .tooltip {
+		margin:0 0 0 10px;
+	}
+	.label .tooltip {
+		margin:0 5px 0 0;
+	}
+.ui-tooltip, .arrow:after {
+    background:#d9f0fa;
+    border:2px solid #b1d9e9;
+	line-height:15px;
+	width:230px;
+  }
+  .ui-tooltip {
+	font-size:11px;
+    padding:7px;
+    color:#555;
+  }
+  .arrow {
+    width:50px;
+    height:16px;
+    overflow:hidden;
+    position:absolute;
+    left:50%;
+    margin-left:-35px;
+    bottom:-16px;
+  }
+  .arrow.top {
+    top:-16px;
+    bottom:auto;
+  }
+  .arrow.left {
+    left:20%;
+  }
+  .arrow:after {
+    content: "";
+    position: absolute;
+    left:20px;
+    top:-20px;
+    width:20px;
+    height:20px;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    tranform:rotate(45deg);
+  }
+  .arrow.top:after {
+    bottom:-20px;
+    top:auto;
+  }
+ 
