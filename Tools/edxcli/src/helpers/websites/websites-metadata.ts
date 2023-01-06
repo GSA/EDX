@@ -373,6 +373,16 @@ const data: Record<string, IWebsiteAttributes> = {
     urlPath: '',
     notes: '',
   },
+  'mobile.reginfo.gov': {
+    cookies: { name: '', value: '', domain: '', path: '' },
+    customFOIA: true,
+    customPrivacyPolicy: true,
+    searchNotReq: false,
+    wwwPrefix: '',
+    queryString: '',
+    urlPath: '/public/',
+    notes: '',
+  },
   'mysales.fas.gsa.gov': {
     cookies: { name: '', value: '', domain: '', path: '' },
     customFOIA: false,

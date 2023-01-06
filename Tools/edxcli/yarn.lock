@@ -1154,9 +1154,9 @@
     "indent-string" "^4.0.0"
 
 "airtable@^0.11.4":
-  "integrity" "sha512-y8sEi/sMEdgtgvv0V8AhJyFQB9za+6qGIxllt60Ey5ELBgu+bNEc1hjY2aqzp9C38p0ORfaeRS5RSFWlcq11Aw=="
-  "resolved" "https://registry.npmjs.org/airtable/-/airtable-0.11.4.tgz"
-  "version" "0.11.4"
+  "integrity" "sha512-/fqPA5BZTn5K0J636CfVuyGdNyV6t5RbBDPUBASlb/mlWSJj8WcF9O7/R+BuAlGMsSiKqR9dll99srcQcLEQjg=="
+  "resolved" "https://registry.npmjs.org/airtable/-/airtable-0.11.5.tgz"
+  "version" "0.11.5"
   dependencies:
     "@types/node" ">=8.0.0 <15"
     "abort-controller" "^3.0.0"

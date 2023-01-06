@@ -17,7 +17,7 @@ $ npm install -g edx_cli
 $ edxcli COMMAND
 running command...
 $ edxcli (--version)
-edx_cli/0.0.20 darwin-x64 node-v17.9.1
+edx_cli/0.0.21 darwin-x64 node-v16.14.2
 $ edxcli --help [COMMAND]
 USAGE
   $ edxcli COMMAND
@@ -352,7 +352,7 @@ EXAMPLES
   $ edxcli websites scan bulk
 ```
 
-_See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v0.0.20/dist/commands/websites/index.ts)_
+_See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v0.0.21/dist/commands/websites/index.ts)_
 
 ## `edxcli websites fetch SOURCE`
 
@@ -493,6 +493,10 @@ yarn run prepack
 # Release Notes
 
 All scan contain a `scanVersion` attribute which ties back to the version number listed in package.json. Each time an update has been made to the logic of the scans, the version number gets bumped. Doing so allows all teams to see the criteria at the time of the scan. We expect to update the version regularly so as to provide the most complete and accurate picture of websites at GSA.
+
+## 0.0.21
+
+[Issue 662](https://github.com/GSA/EDX/issues/662) - Copied website metadata settings for reginfo.gov over to mobile.reginfo.gov
 
 ## 0.0.20
 
