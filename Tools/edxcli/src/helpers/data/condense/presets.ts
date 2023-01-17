@@ -87,6 +87,15 @@ export const presets: PresetType = {
       title: 'HTML Language Set',
     },
   ],
+  gearscans: [
+    { id: 'domain', title: 'Domain' },
+    { id: 'scanDate', title: 'Scan Date' },
+    { id: 'scanVersion', title: 'Scan Version' },
+    { id: 'screenCapture.data[0].imgPath', title: 'image' },
+    { id: 'screenCapture.data[0].device', title: 'device' },
+    { id: 'screenCapture.data[1].imgPath', title: 'image' },
+    { id: 'screenCapture.data[1].device', title: 'device' },
+  ],
   lighthouseAccessibility: [
     { id: 'domain', title: 'Domain' },
     { id: 'url', title: 'URL' },
@@ -246,14 +255,5 @@ export const presets: PresetType = {
       id: "lighthouse.desktopData.lhr.audits['meta-viewport'].score",
       title: 'LH Cat Meta Viewport',
     },
-  ],
-  gearscans: [
-    { id: 'domain', title: 'Domain' },
-    { id: 'scanDate', title: 'Scan Date' },
-    { id: 'scanVersion', title: 'Scan Version' },
-    { id: 'screenCapture.data[0].imgPath', title: 'image' },
-    { id: 'screenCapture.data[0].device', title: 'device' },
-    { id: 'screenCapture.data[1].imgPath', title: 'image' },
-    { id: 'screenCapture.data[1].device', title: 'device' },
   ],
 };
