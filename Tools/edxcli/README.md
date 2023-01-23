@@ -51,14 +51,16 @@ Consolidates json output from website scans into CSV files
 
 ```
 USAGE
-  $ edxcli data condense [--loglevel error|warn|info|debug] [-f <value>] [-o <value>] [-p <value>]
+  $ edxcli data condense [--loglevel error|warn|info|debug] [-f <value>] [-o <value>] [-c
+    default|gearScans|lighthouseAccessibility|uswds]
 
 FLAGS
-  -f, --folders=<value>  List of comma-separated folders within the /data/scans directory.
-  -o, --output=<value>   [default: /data/condensedData] Output directory. Defualts to current directory
-  -p, --preset=<value>   [default: default] A collection of fields to extract into CSV
-  --loglevel=<option>    [default: info]
-                         <options: error|warn|info|debug>
+  -c, --collection=<option>  [default: default] A pre-defined set of fields to extract into CSV
+                             <options: default|gearScans|lighthouseAccessibility|uswds>
+  -f, --folders=<value>      List of comma-separated folders within the /data/scans directory.
+  -o, --output=<value>       [default: /data/condensedData] Output directory. Defualts to current directory
+  --loglevel=<option>        [default: info]
+                             <options: error|warn|info|debug>
 
 DESCRIPTION
   Consolidates json output from website scans into CSV files
@@ -70,7 +72,7 @@ EXAMPLES
 
   $ edxcli data condense -o customDirectory
 
-  $ edxcli data condense -p "lighthouse accessibility"
+  $ edxcli data condense -c "lighthouseAccessibility"
 ```
 
 ## `edxcli help [COMMAND]`
