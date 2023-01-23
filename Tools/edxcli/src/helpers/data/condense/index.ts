@@ -2,13 +2,13 @@ import _ from 'lodash';
 import path from 'node:path';
 import fs from 'node:fs/promises';
 import CSV from '../../global/csv';
-import { presets, CsvHeaderType } from './presets';
+import { collections, CsvHeaderType } from './collections';
 
 export class CondenseHelper {
   formattedDate: string;
   outputDirectory: string;
   folderList: string;
-  preset: string;
+  collection: string;
   csvHeaders: CsvHeaderType[];
   csvWriter: CSV;
   fileParsePromiseArray: any[];
@@ -17,10 +17,10 @@ export class CondenseHelper {
     this.formattedDate = formattedDate;
     this.outputDirectory = flags.output;
     this.folderList = flags.folders;
-    this.preset = flags.preset;
-    this.csvHeaders = presets[flags.preset]
-      ? presets[flags.preset]
-      : presets.default;
+    this.collection = flags.collection;
+    this.csvHeaders = collections[flags.collection]
+      ? collections[flags.collection]
+      : collections.default;
     this.csvWriter = new CSV(
       formattedDate,
       this.outputDirectory,

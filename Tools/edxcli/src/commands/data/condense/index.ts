@@ -10,7 +10,7 @@ export default class Condense extends BaseCommand<typeof Condense.flags> {
     `$ edxcli data condense`,
     `$ edxcli data condense -f "20220719,20220720"`,
     `$ edxcli data condense -o customDirectory`,
-    `$ edxcli data condense -p "lighthouse accessibility"`,
+    `$ edxcli data condense -c "lighthouseAccessibility"`,
   ];
 
   static flags = {
@@ -22,10 +22,11 @@ export default class Condense extends BaseCommand<typeof Condense.flags> {
       required: false,
     }),
     output: output({ default: '/data/condensedData' }),
-    preset: Flags.string({
-      char: 'p',
-      description: 'A collection of fields to extract into CSV',
+    collection: Flags.string({
+      char: 'c',
+      description: 'A pre-defined set of fields to extract into CSV',
       default: 'default',
+      options: ['default', 'gearScans', 'lighthouseAccessibility', 'uswds'],
       required: false,
     }),
   };
