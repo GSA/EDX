@@ -1,17 +1,19 @@
-import puppeteer from 'puppeteer';
-import * as fs from 'node:fs';
-import { browser } from '../../browser';
-import { printHash, writeJSONFile } from '../global/utils';
-import { WebsiteReportType, websiteReport } from './website-report';
-import { screenshot } from './screenshot';
-import { cuiBanner } from './cui-banner';
-import { metadataTags } from './metadata-tags';
-import { WebsiteMetadata } from './websites-metadata';
-import { itPerfMetricReport } from './it-performance-metric';
-import { uswdsComponentsReport } from './uswds-components';
-import { siteScannerReport } from './site-scanner';
-import { lighthouseReport } from './lighthouse';
 import { CliUx } from '@oclif/core';
+import * as fs from 'node:fs';
+import puppeteer from 'puppeteer';
+
+import { browser } from '../../browser';
+import { cuiBanner } from './cui-banner';
+import { printHash, writeJSONFile } from '../global/utils';
+import { itPerfMetricReport } from './it-performance-metric';
+import { lighthouseReport } from './lighthouse';
+import { metadataTags } from './metadata-tags';
+import { screenshot } from './screenshot';
+import { siteScannerReport } from './site-scanner';
+import { uswdsComponentsReport } from './uswds-components';
+import { WebsiteMetadata } from './websites-metadata';
+import { WebsiteReportType, websiteReport } from './website-report';
+
 
 export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
   const websiteMetadata = new WebsiteMetadata(domain);
