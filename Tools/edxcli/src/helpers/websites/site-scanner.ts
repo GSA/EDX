@@ -1,9 +1,8 @@
 import { SiteScannerRecord } from './fetch';
-import { WebsiteMetadata } from './websites-metadata';
 const axios = require('axios').default;
 
 export const siteScannerReport = async function (
-  websiteMetadata: WebsiteMetadata,
+  url: URL,
 ): Promise<SiteScannerRecord | void> {
   const siteScan = axios.create({
     baseURL: 'https://api.gsa.gov/technology/site-scanning/v1/',
@@ -11,7 +10,7 @@ export const siteScannerReport = async function (
     params: { API_KEY: process.env.TOUCHPOINTS_API_KEY },
   });
   const response = await siteScan
-    .get(`websites/${websiteMetadata.domain}`)
+    .get(`websites/${url.hostname}`)
     .then(function (response: any) {
       return response;
     })

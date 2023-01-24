@@ -19,41 +19,48 @@ export interface Cookies {
   path: string;
 }
 
-export class WebsiteMetadata implements IWebsiteAttributes {
+export class WebsiteMetadata {
   cookies: Cookies;
   customFOIA: boolean;
   customPrivacyPolicy: boolean;
   searchNotReq: boolean;
-  wwwPrefix: string;
-  queryString: string;
-  urlPath: string;
+  private protocol: string;
+  private protocollessInput: string;
   notes: string;
-  domain: string;
+  private input: string;
   completeUrl: URL;
 
-  constructor(domain: string) {
-    this.domain = domain.replace(/(http:\/\/|https:\/\/)/, '');
+  constructor(input: string) {
+    // eval if file/https
+    // lookup metadata
+    // construct URL
+
+    this.protocol = input.startsWith('file://') ? 'file://' : 'https://';
+    this.input = input;
+    this.protocollessInput = input.replace(
+      /(http:\/\/|https:\/\/|file:\/\/)/,
+      '',
+    );
     const md = this.getWebsiteMetadata();
     this.cookies = md.cookies;
     this.customFOIA = md.customFOIA;
     this.customPrivacyPolicy = md.customPrivacyPolicy;
     this.searchNotReq = md.searchNotReq;
-    this.wwwPrefix = md.wwwPrefix;
-    this.queryString = md.queryString;
-    this.urlPath = md.urlPath;
     this.notes = md.notes;
-    this.completeUrl = this.constructUrl();
+    this.completeUrl = this.constructUrl(md);
   }
 
   /**
    * Given a domain name, returns a fully constructed URL with any necessary subdomain prefixes, url paths, or query strings
-   * @param domain {string}
+   * @param md {W}
    * @returns url {URL}
    */
-  constructUrl(): URL {
-    return new URL(
-      `https://${this.wwwPrefix}${this.domain}${this.urlPath}${this.queryString}`,
-    );
+  constructUrl(md: IWebsiteAttributes): URL {
+    return this.protocol === 'file://'
+      ? new URL(`${this.protocol}${this.protocollessInput}`)
+      : new URL(
+          `${this.protocol}${md.wwwPrefix}${this.input}${md.urlPath}${md.queryString}`,
+        );
   }
 
   /**
@@ -62,8 +69,8 @@ export class WebsiteMetadata implements IWebsiteAttributes {
    * @returns {WebsiteMetadata} object
    */
   getWebsiteMetadata(): IWebsiteAttributes {
-    return Object.prototype.hasOwnProperty.call(data, this.domain)
-      ? data[this.domain]
+    return Object.prototype.hasOwnProperty.call(data, this.input)
+      ? data[this.input]
       : emptyWebsiteMetadata();
   }
 }

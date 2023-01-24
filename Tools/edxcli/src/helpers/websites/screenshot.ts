@@ -18,7 +18,11 @@ export const screenshot = async (
       await page.goto(domain.toString());
       // eslint-disable-next-line no-await-in-loop
       const pageHash = await printHash(domain.toString());
-      const imgPath = `${sh.outputDirectory}/${domain.hostname}_${device}_${pageHash}.png`;
+      const name =
+        domain.protocol === 'https:'
+          ? domain.hostname
+          : domain.pathname.split('/')[domain.pathname.split('/').length - 1];
+      const imgPath = `${sh.outputDirectory}/${name}_${device}_${pageHash}.png`;
       // eslint-disable-next-line no-await-in-loop
       await page.screenshot({
         path: imgPath,

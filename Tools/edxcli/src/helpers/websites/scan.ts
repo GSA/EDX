@@ -32,6 +32,8 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
     websiteMetadata.completeUrl,
   );
   report.scanStatus = message;
+  // certain facets can only be run against websites rather than static files
+  const isWebsite = websiteMetadata.completeUrl.protocol === 'https://';
 
   if (pageFound) {
     if (sh.facets.includes(<facetType>'cui banner')) {
@@ -43,7 +45,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
     }
 
     // 'lighthouse desktop',
-    if (sh.facets.includes(<facetType>'lighthouse desktop')) {
+    if (isWebsite && sh.facets.includes(<facetType>'lighthouse desktop')) {
       report.lighthouse.desktopData = await lighthouseReport(
         sh,
         websiteMetadata,
@@ -52,7 +54,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
     }
 
     // 'lighthouse mobile',
-    if (sh.facets.includes(<facetType>'lighthouse mobile')) {
+    if (isWebsite && sh.facets.includes(<facetType>'lighthouse mobile')) {
       report.lighthouse.mobileData = await lighthouseReport(
         sh,
         websiteMetadata,
@@ -74,8 +76,8 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
       );
     }
 
-    if (sh.facets.includes(<facetType>'site scanner')) {
-      const scanReport = await siteScannerReport(websiteMetadata);
+    if (isWebsite && sh.facets.includes(<facetType>'site scanner')) {
+      const scanReport = await siteScannerReport(websiteMetadata.completeUrl);
       if (scanReport) report.siteScanner.data = scanReport;
     }
 
