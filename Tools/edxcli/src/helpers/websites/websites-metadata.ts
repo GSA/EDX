@@ -228,6 +228,21 @@ const data: Record<string, IWebsiteAttributes> = {
     urlPath: '',
     wwwPrefix: '',
   },
+  'challenge.gov': {
+    cookies: {
+      domain: '',
+      name: '',
+      path: '',
+      value: '',
+    },
+    customFOIA: false,
+    customPrivacyPolicy: true,
+    notes: '',
+    queryString: '',
+    searchNotReq: false,
+    urlPath: '',
+    wwwPrefix: '',
+  },
   'cm-jira.usa.gov': {
     cookies: {
       domain: '',
