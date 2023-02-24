@@ -4,12 +4,19 @@
 
 <!-- toc -->
 * [edxcli](#edxcli)
+* [Installation](#installation)
+* [GitHub Action Maintenance](#github-action-maintenance)
 * [Usage](#usage)
 * [Commands](#commands)
 * [Release Notes](#release-notes)
 <!-- tocstop -->
 
 - [edxcli](#edxcli)
+- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+    - [Airtable access](#airtable-access)
+    - [Touchpoints](#touchpoints)
+- [GitHub Action Maintenance](#github-action-maintenance)
 - [Usage](#usage)
 - [Commands](#commands)
   - [`edxcli data condense`](#edxcli-data-condense)
@@ -53,6 +60,37 @@
   - [0.0.3](#003)
   - [0.0.2](#002)
   - [0.0.1](#001)
+
+# Installation
+
+## Prerequisites
+
+Create .env file
+`echo "TOUCHPOINTS_API_KEY=\nAIRTABLE_API_KEY=" >> .env`
+
+### Airtable access
+
+- Have team member add you as administrator on the "EDX Website Team Eval Interviews" Base in Airtable
+- [Create Personal Access Token](https://airtable.com/create/tokens/new)
+  - Scopes:
+    - `data.records:read`
+    - `data.records:write`
+  - Access
+    - EDX Website Team Eval Interviews
+- Add PAT to `.env` file as value of AIRTABLE_API_KEY
+
+### Touchpoints
+
+- Navigate to [https://touchpoints.digital.gov/](https://touchpoints.digital.gov/)
+- Sign in
+- Click on email address in header to go to [User Profile](https://touchpoints.app.cloud.gov/profile) page
+- Copy API key and add to `.env` as value of TOUCHPOINTS_API_KEY
+
+# GitHub Action Maintenance
+
+A handful of GitHub Actions run against the EDX CLI with each PR as well as weekly jobs. As such, repository secrets must be maintained and updated by repo admins.
+
+GitHub Action Repository secrets share the same names as the keys in `.env`. As team members roll on and off, update secrets to be tied to active users.
 
 # Usage
 
