@@ -83,8 +83,12 @@ export class FetchHelper {
 /* eslint-disable camelcase */ //
 export type SiteScannerRecord = {
   scan_date: string;
+  not_found_scan_status: string;
+  primary_scan_status: string;
+  robots_txt_scan_status: string;
+  sitemap_xml_scan_status: string;
+  dns_scan_status: string;
   target_url_domain: string;
-  scan_status: string;
   final_url: string;
   final_url_live: boolean;
   final_url_domain: string;
@@ -97,14 +101,11 @@ export type SiteScannerRecord = {
   solutions_scan_status: string;
   uswds_usa_classes: number;
   uswds_string: number;
-  uswds_tables: number;
   uswds_inline_css: number;
   uswds_favicon: number;
   uswds_string_in_css: number;
   uswds_favicon_in_css: number;
-  uswds_merriweather_font: number;
   uswds_publicsans_font: number;
-  uswds_source_sans_font: number;
   uswds_semantic_version: string;
   uswds_version: number;
   uswds_count: number;
@@ -135,12 +136,21 @@ export type SiteScannerRecord = {
   sitemap_xml_pdf_count: number;
   third_party_service_domains: string[];
   third_party_service_count: number;
+  dns_ipv6: boolean;
+  login_detected: string | null;
+  dns_hostname: string | null;
+  final_url_website: string;
+  cloud_dot_gov_pages: boolean;
+  canonical_link: string;
+  cms: string | null;
   target_url: string;
   target_url_branch: string;
   target_url_agency_owner: string;
-  target_url_agency_code: string;
   target_url_bureau_owner: string;
-  target_url_bureau_code: string;
+  source_list_federal_domains: boolean;
+  source_list_dap: boolean;
+  source_list_pulse: boolean;
+  source_list_other: boolean;
 };
 /* eslint-enable camelcase */ //
 /**

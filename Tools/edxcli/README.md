@@ -36,6 +36,7 @@
   - [`edxcli websites scan`](#edxcli-websites-scan)
   - [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
 - [Release Notes](#release-notes)
+  - [0.0.25](#0025)
   - [0.0.24](#0024)
   - [0.0.23](#0023)
   - [0.0.22](#0022)
@@ -100,7 +101,7 @@ $ npm install -g edx_cli
 $ edxcli COMMAND
 running command...
 $ edxcli (--version)
-edx_cli/0.0.24 darwin-x64 node-v16.14.2
+edx_cli/0.0.25 darwin-x64 node-v16.14.2
 $ edxcli --help [COMMAND]
 USAGE
   $ edxcli COMMAND
@@ -437,7 +438,7 @@ EXAMPLES
   $ edxcli websites scan bulk
 ```
 
-_See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v0.0.24/dist/commands/websites/index.ts)_
+_See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v0.0.25/dist/commands/websites/index.ts)_
 
 ## `edxcli websites fetch SOURCE`
 
@@ -579,6 +580,10 @@ yarn run prepack
 # Release Notes
 
 All scan contain a `scanVersion` attribute which ties back to the version number listed in package.json. Each time an update has been made to the logic of the scans, the version number gets bumped. Doing so allows all teams to see the criteria at the time of the scan. We expect to update the version regularly so as to provide the most complete and accurate picture of websites at GSA.
+
+## 0.0.25
+
+[Issue 757](https://github.com/GSA/EDX/issues/757) - Updated types for TTS Site Scanner api response changes
 
 ## 0.0.24
 
