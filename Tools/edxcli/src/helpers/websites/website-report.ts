@@ -212,10 +212,12 @@ export type WebsiteReportType = {
   uswdsComponents: UswdsComponentsReport;
   siteScanner: {
     description: string;
+    error: string;
     data: SiteScannerRecord;
   };
   lighthouse: {
     description: string;
+    error: string;
     desktopData: any;
     mobileData: any;
   };
