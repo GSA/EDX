@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 dotenv.config();
-import { ScanHelper } from './scan';
+import { Facet, ScanHelper } from './scan';
 import { ScreenshotType } from './screenshot';
 import { PerformanceMetricReport } from './it-performance-metric';
 import { ICuiBanner } from './cui-banner';
@@ -30,6 +30,9 @@ export const websiteReport = (
         : domain.hostname,
     url: domain.toString(),
     scanStatus: '',
+    scanErrors: [],
+    scanPreset: sh.preset,
+    scanFacets: sh.facets,
     screenCapture: {
       description:
         'Holds screenshots taken throughout scan including homepage, search engine, and others.',
@@ -199,6 +202,9 @@ export type WebsiteReportType = {
   domain: string;
   url: string;
   scanStatus: string;
+  scanErrors: string[];
+  scanPreset: string;
+  scanFacets: Facet[];
   screenCapture: ScreenshotReport;
   performanceMetric: PerformanceMetricReport;
   cuiBanner: CuiBannerReport;
