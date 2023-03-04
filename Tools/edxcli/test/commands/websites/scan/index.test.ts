@@ -76,6 +76,26 @@ describe('websites scan...', () => {
           };
         });
     });
+    describe('Passing a list of facets valid and invalid options', () => {
+      test
+        .stdout()
+        .command([
+          'websites scan',
+          '-d',
+          dummyWebsite,
+          '-f',
+          'screenshot,blah,site scanner',
+        ])
+        // done is used since the api requests are Promises, this  ensures the test suite waits for the response
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        .it('warns user that an invalid option was provided', (done) => {
+          (ctx: any) => {
+            expect(ctx.stdout).to.contain(
+              `WARNING: Invalid Facet option entered, blah. Option will not be parsed, operation continuing.`,
+            );
+          };
+        });
+    });
   });
 
   describe('Authentication Flag', () => {
