@@ -37,16 +37,19 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
   const isWebsite = websiteMetadata.completeUrl.protocol === 'https:';
 
   if (pageFound) {
-    if (sh.facets.includes(<facetType>'cui banner')) {
+    if (sh.facets.includes(<facetType>'cuiBanner')) {
       report.cuiBanner.data = await cuiBanner(sh, websiteMetadata.completeUrl);
     }
 
-    if (sh.facets.includes(<facetType>'it performance metric')) {
-      report.performanceMetric = await itPerfMetricReport(sh, websiteMetadata);
+    if (sh.facets.includes(<facetType>'itPerformanceMetric')) {
+      report.itPerformanceMetric = await itPerfMetricReport(
+        sh,
+        websiteMetadata,
+      );
     }
 
     // 'lighthouse desktop',
-    if (isWebsite && sh.facets.includes(<facetType>'lighthouse desktop')) {
+    if (isWebsite && sh.facets.includes(<facetType>'lighthouseDesktop')) {
       report.lighthouse.desktopData = await lighthouseReport(
         sh,
         websiteMetadata,
@@ -55,7 +58,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
     }
 
     // 'lighthouse mobile',
-    if (isWebsite && sh.facets.includes(<facetType>'lighthouse mobile')) {
+    if (isWebsite && sh.facets.includes(<facetType>'lighthouseMobile')) {
       report.lighthouse.mobileData = await lighthouseReport(
         sh,
         websiteMetadata,
@@ -63,7 +66,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
       );
     }
 
-    if (sh.facets.includes(<facetType>'metadata tags')) {
+    if (sh.facets.includes(<facetType>'metadataTags')) {
       report.metadataTags.data = await metadataTags(
         sh,
         websiteMetadata.completeUrl,
@@ -77,12 +80,12 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
       ];
     }
 
-    if (isWebsite && sh.facets.includes(<facetType>'site scanner')) {
+    if (isWebsite && sh.facets.includes(<facetType>'siteScanner')) {
       const scanReport = await siteScannerReport(websiteMetadata.completeUrl);
       if (scanReport) report.siteScanner.data = scanReport;
     }
 
-    if (isWebsite && sh.facets.includes(<facetType>'search engine')) {
+    if (isWebsite && sh.facets.includes(<facetType>'searchEngine')) {
       const searchEngineURLs = [
         'https://google.com/search?q=',
         'https://www.bing.com/search?q=',
@@ -102,7 +105,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
       }
     }
 
-    if (sh.facets.includes(<facetType>'uswds components')) {
+    if (sh.facets.includes(<facetType>'uswdsComponents')) {
       report.uswdsComponents = await uswdsComponentsReport(
         sh,
         websiteMetadata.completeUrl,
@@ -111,7 +114,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
 
     // If Site Scanner returns true for DAP but IT Perf metric does not, overwrite the value
     if (report.siteScanner.data.dap_detected_final_url) {
-      report.performanceMetric.dap = true;
+      report.itPerformanceMetric.dap = true;
     }
   }
 
@@ -166,25 +169,25 @@ const presets = (preset: presetType): facetType[] => {
   const presetMap: Record<presetType, facetType[]> = {
     '': [],
     all: [
-      'cui banner',
-      'it performance metric',
-      'lighthouse desktop',
-      'lighthouse mobile',
-      'metadata tags',
+      'cuiBanner',
+      'itPerformanceMetric',
+      'lighthouseDesktop',
+      'lighthouseMobile',
+      'metadataTags',
       'screenshot',
-      'search engine',
-      'site scanner',
-      'uswds components',
+      'searchEngine',
+      'siteScanner',
+      'uswdsComponents',
     ],
     'edx scan': [
-      'it performance metric',
-      'lighthouse desktop',
-      'lighthouse mobile',
-      'metadata tags',
+      'itPerformanceMetric',
+      'lighthouseDesktop',
+      'lighthouseMobile',
+      'metadataTags',
       'screenshot',
-      'search engine',
-      'site scanner',
-      'uswds components',
+      'searchEngine',
+      'siteScanner',
+      'uswdsComponents',
     ],
   };
 
@@ -262,15 +265,16 @@ export type ScanHelper = {
 export type presetType = '' | 'all' | 'edx scan';
 
 export type facetType =
-  | 'cui banner'
-  | 'it performance metric'
-  | 'lighthouse desktop'
-  | 'lighthouse mobile'
-  | 'metadata tags'
+  | 'cuiBanner'
   | 'screenshot'
-  | 'search engine'
-  | 'site scanner'
-  | 'uswds components';
+  | 'lighthouseDesktop'
+  | 'lighthouseMobile'
+  | 'itPerformanceMetric'
+  | 'metadataTags'
+  | 'screenshot'
+  | 'searchEngine'
+  | 'siteScanner'
+  | 'uswdsComponents';
 
 export type userCredsType = {
   username: string;

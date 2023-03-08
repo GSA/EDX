@@ -17,7 +17,7 @@ export default class Bulk extends BaseCommand<typeof Bulk.flags> {
     'Scans websites using various modules to capture information about the sites';
 
   static examples = [
-    `$ edxcli websites scan bulk -d Touchpoints`,
+    `$ edxcli websites scan bulk -d Touchpoints -p "edx scan"`,
     `$ edxcli websites scan bulk -d Touchpoints --resume`,
   ];
 

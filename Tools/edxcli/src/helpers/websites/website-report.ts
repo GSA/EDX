@@ -38,7 +38,7 @@ export const websiteReport = (
         'Holds screenshots taken throughout scan including homepage, search engine, and others.',
       data: [],
     },
-    performanceMetric: {
+    itPerformanceMetric: {
       description: 'Represents GSA IT FY22 performance metrics',
       hsts: false,
       dap: false,
@@ -206,7 +206,7 @@ export type WebsiteReportType = {
   scanPreset: string;
   scanFacets: facetType[];
   screenCapture: ScreenshotReport;
-  performanceMetric: PerformanceMetricReport;
+  itPerformanceMetric: PerformanceMetricReport;
   cuiBanner: CuiBannerReport;
   metadataTags: MetadataTagsReport;
   uswdsComponents: UswdsComponentsReport;

@@ -28,7 +28,6 @@ describe('websites scan...', () => {
         });
     });
   });
-
   describe('Facets Flag', () => {
     describe('Passing facets with individual -f params', () => {
       test
@@ -40,7 +39,7 @@ describe('websites scan...', () => {
           '-f',
           'screenshot',
           '-f',
-          'site scanner',
+          'siteScanner',
         ])
         // done is used since the api requests are Promises, this  ensures the test suite waits for the response
         // eslint-disable-next-line @typescript-eslint/no-unused-vars

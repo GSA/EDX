@@ -16,9 +16,9 @@ export default class Scan extends BaseCommand<typeof Scan.flags> {
 
   static examples = [
     `$ edxcli websites scan -d gsa.gov -f screenshot`,
-    `$ edxcli websites scan -d buy.gsa.gov -f "screenshot" -f "lighthouse mobile" -f "site scanner" -o ~/some/other/directory`,
+    `$ edxcli websites scan -d buy.gsa.gov -f "screenshot" -f "lighthouseMobile" -f "siteScanner" -o ~/some/other/directory`,
     `$ edxcli websites scan -d buy.gsa.gov -f screenshot -o ~/some/other/directory`,
-    `$ edxcli websites scan -d sftool.gov -p Performance Metric`,
+    `$ edxcli websites scan -d sftool.gov -p "all"`,
     `$ edxcli websites scan -d "18f.gsa.gov,buy.gsa.gov,gsa.gov" -p "edx scan" --no-headless`,
     `$ edxcli websites scan -d "18f.gsa.gov" -f "screenshot" --loglevel debug`,
     `$ edxcli websites scan -d "18f.gsa.gov" -f "screenshot" --auth`,
