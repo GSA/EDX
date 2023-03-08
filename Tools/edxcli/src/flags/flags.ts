@@ -27,11 +27,11 @@ export const facets = Flags.build({
   multiple: true,
   options: [
     'cuiBanner',
-    'screenshot',
+    'itPerformanceMetric',
     'lighthouseDesktop',
     'lighthouseMobile',
-    'itPerformanceMetric',
     'metadataTags',
+    'screenshot',
     'searchEngine',
     'siteScanner',
     'uswdsComponents',

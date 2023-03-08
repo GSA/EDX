@@ -80,11 +80,6 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
       ];
     }
 
-    if (isWebsite && sh.facets.includes(<facetType>'siteScanner')) {
-      const scanReport = await siteScannerReport(websiteMetadata.completeUrl);
-      if (scanReport) report.siteScanner.data = scanReport;
-    }
-
     if (isWebsite && sh.facets.includes(<facetType>'searchEngine')) {
       const searchEngineURLs = [
         'https://google.com/search?q=',
@@ -103,6 +98,11 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
           )),
         ];
       }
+    }
+
+    if (isWebsite && sh.facets.includes(<facetType>'siteScanner')) {
+      const scanReport = await siteScannerReport(websiteMetadata.completeUrl);
+      if (scanReport) report.siteScanner.data = scanReport;
     }
 
     if (sh.facets.includes(<facetType>'uswdsComponents')) {
@@ -266,13 +266,12 @@ export type presetType = '' | 'all' | 'edx scan';
 
 export type facetType =
   | 'cuiBanner'
-  | 'screenshot'
+  | 'itPerformanceMetric'
   | 'lighthouseDesktop'
   | 'lighthouseMobile'
-  | 'itPerformanceMetric'
   | 'metadataTags'
-  | 'screenshot'
   | 'searchEngine'
+  | 'screenshot'
   | 'siteScanner'
   | 'uswdsComponents';
 
