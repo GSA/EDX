@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 dotenv.config();
-import { Facet, ScanHelper } from './scan';
+import { facetType, ScanHelper } from './scan';
 import { ScreenshotType } from './screenshot';
 import { PerformanceMetricReport } from './it-performance-metric';
 import { ICuiBanner } from './cui-banner';
@@ -204,7 +204,7 @@ export type WebsiteReportType = {
   scanStatus: string;
   scanErrors: string[];
   scanPreset: string;
-  scanFacets: Facet[];
+  scanFacets: facetType[];
   screenCapture: ScreenshotReport;
   performanceMetric: PerformanceMetricReport;
   cuiBanner: CuiBannerReport;

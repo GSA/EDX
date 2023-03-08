@@ -11,14 +11,14 @@
 * [Release Notes](#release-notes)
 <!-- tocstop -->
 
-- [edxcli](#edxcli)
-- [Installation](#installation)
+* [edxcli](#edxcli)
+* [Installation](#installation)
   - [Prerequisites](#prerequisites)
     - [Airtable access](#airtable-access)
     - [Touchpoints](#touchpoints)
-- [GitHub Action Maintenance](#github-action-maintenance)
-- [Usage](#usage)
-- [Commands](#commands)
+* [GitHub Action Maintenance](#github-action-maintenance)
+* [Usage](#usage)
+* [Commands](#commands)
   - [`edxcli data condense`](#edxcli-data-condense)
   - [`edxcli help [COMMANDS]`](#edxcli-help-commands)
   - [`edxcli plugins`](#edxcli-plugins)
@@ -35,7 +35,7 @@
   - [`edxcli websites push`](#edxcli-websites-push)
   - [`edxcli websites scan`](#edxcli-websites-scan)
   - [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
-- [Release Notes](#release-notes)
+* [Release Notes](#release-notes)
   - [0.0.25](#0025)
   - [0.0.24](#0024)
   - [0.0.23](#0023)
@@ -490,35 +490,37 @@ EXAMPLES
 
 ## `edxcli websites scan`
 
-Scans websites using various facets to capture information about the sites
+Scans websites using various facets to capture information about the sites. Running multiple facets requires individual -f inputs and does not take a list.
 
 ```
 USAGE
-  $ edxcli websites scan -d <value> [--loglevel error|info|debug] [-f <value>] [--headless] [-o <value>] [-p
-    |all|edx scan] [--auth]
+  $ edxcli websites scan -d <value> [--loglevel error|info|debug] [-f cui banner|screenshot|lighthouse
+    desktop|lighthouse mobile|it performance metric|screenshot|search engine|site scanner|uswds components] [--headless]
+    [-o <value>] [-p |all|edx scan] [--auth]
 
 FLAGS
-  -d, --domains=<value>      (required) Comma-separated list of domains to scan.
-  -f, --facets=<options>...  Comma-separated list of facets to use for the scan. e.g. (-f "screenshot,lighthouse,it
-                             metric").
-                             <options: | cui banner|screenshot|lighthouse desktop|lighthouse mobile|it performance
-                             metric|screenshot|search engine|site scanner|uswds components>
-  -o, --output=<value>       Output directory. Defualts to current directory
-  -p, --preset=<option>      Run a pre-configured suite of scan facets whose results will be output into a single file.
-                             <options: |all|edx scan>
-  --auth                     Boolean flag denoting whether or not to prompt for basic auth credentials for the given
-                             site. Defaults to false
-  --[no-]headless            Boolean flag, whether or not to run scans in headless mode. Defaults to true
-  --loglevel=<option>        [default: info]
-                             <options: error|info|debug>
+  -d, --domains=<value>     (required) Comma-separated list of domains to scan.
+  -f, --facets=<option>...  Comma-separated list of facets to use for the scan. e.g. (-f "screenshot" -f lighthouse -f
+                            "it metric").
+                            <options: cui banner|screenshot|lighthouse desktop|lighthouse mobile|it performance
+                            metric|screenshot|search engine|site scanner|uswds components>
+  -o, --output=<value>      Output directory. Defualts to current directory
+  -p, --preset=<option>     Run a pre-configured suite of scan facets whose results will be output into a single file.
+                            <options: |all|edx scan>
+  --auth                    Boolean flag denoting whether or not to prompt for basic auth credentials for the given
+                            site. Defaults to false
+  --[no-]headless           Boolean flag, whether or not to run scans in headless mode. Defaults to true
+  --loglevel=<option>       [default: info]
+                            <options: error|info|debug>
 
 DESCRIPTION
-  Scans websites using various facets to capture information about the sites
+  Scans websites using various facets to capture information about the sites. Running multiple facets requires
+  individual -f inputs and does not take a list.
 
 EXAMPLES
   $ edxcli websites scan -d gsa.gov -f screenshot
 
-  $ edxcli websites scan -d buy.gsa.gov -f "screenshot,lighthouse mobile,site scanner" -o ~/some/other/directory
+  $ edxcli websites scan -d buy.gsa.gov -f "screenshot" -f "lighthouse mobile" -f "site scanner" -o ~/some/other/directory
 
   $ edxcli websites scan -d buy.gsa.gov -f screenshot -o ~/some/other/directory
 
@@ -537,15 +539,16 @@ Scans websites using various modules to capture information about the sites
 
 ```
 USAGE
-  $ edxcli websites scan bulk [--loglevel error|info|debug] [-d Touchpoints] [-f <value>] [--headless] [-o <value>] [-p
-    |all|edx scan] [--resume]
+  $ edxcli websites scan bulk [--loglevel error|info|debug] [-d Touchpoints] [-f cui banner|screenshot|lighthouse
+    desktop|lighthouse mobile|it performance metric|screenshot|search engine|site scanner|uswds components] [--headless]
+    [-o <value>] [-p |all|edx scan] [--resume]
 
 FLAGS
   -d, --domainsSource=<option>  [default: Touchpoints] Name of the system to pull the list of domains
                                 <options: Touchpoints>
-  -f, --facets=<options>...     Comma-separated list of facets to use for the scan. e.g. (-f "screenshot,lighthouse,it
-                                metric").
-                                <options: | cui banner|screenshot|lighthouse desktop|lighthouse mobile|it performance
+  -f, --facets=<option>...      Comma-separated list of facets to use for the scan. e.g. (-f "screenshot" -f lighthouse
+                                -f "it metric").
+                                <options: cui banner|screenshot|lighthouse desktop|lighthouse mobile|it performance
                                 metric|screenshot|search engine|site scanner|uswds components>
   -o, --output=<value>          Output directory. Defualts to current directory
   -p, --preset=<option>         Run a pre-configured suite of scan facets whose results will be output into a single

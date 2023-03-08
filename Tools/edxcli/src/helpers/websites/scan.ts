@@ -37,16 +37,16 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
   const isWebsite = websiteMetadata.completeUrl.protocol === 'https:';
 
   if (pageFound) {
-    if (sh.facets.includes(<Facet>'cui banner')) {
+    if (sh.facets.includes(<facetType>'cui banner')) {
       report.cuiBanner.data = await cuiBanner(sh, websiteMetadata.completeUrl);
     }
 
-    if (sh.facets.includes(<Facet>'it performance metric')) {
+    if (sh.facets.includes(<facetType>'it performance metric')) {
       report.performanceMetric = await itPerfMetricReport(sh, websiteMetadata);
     }
 
     // 'lighthouse desktop',
-    if (isWebsite && sh.facets.includes(<Facet>'lighthouse desktop')) {
+    if (isWebsite && sh.facets.includes(<facetType>'lighthouse desktop')) {
       report.lighthouse.desktopData = await lighthouseReport(
         sh,
         websiteMetadata,
@@ -55,7 +55,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
     }
 
     // 'lighthouse mobile',
-    if (isWebsite && sh.facets.includes(<Facet>'lighthouse mobile')) {
+    if (isWebsite && sh.facets.includes(<facetType>'lighthouse mobile')) {
       report.lighthouse.mobileData = await lighthouseReport(
         sh,
         websiteMetadata,
@@ -63,26 +63,26 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
       );
     }
 
-    if (sh.facets.includes(<Facet>'metadata tags')) {
+    if (sh.facets.includes(<facetType>'metadata tags')) {
       report.metadataTags.data = await metadataTags(
         sh,
         websiteMetadata.completeUrl,
       );
     }
 
-    if (sh.facets.includes(<Facet>'screenshot')) {
+    if (sh.facets.includes(<facetType>'screenshot')) {
       report.screenCapture.data = [
         ...report.screenCapture.data,
         ...(await screenshot(sh, websiteMetadata.completeUrl, 'webpage')),
       ];
     }
 
-    if (isWebsite && sh.facets.includes(<Facet>'site scanner')) {
+    if (isWebsite && sh.facets.includes(<facetType>'site scanner')) {
       const scanReport = await siteScannerReport(websiteMetadata.completeUrl);
       if (scanReport) report.siteScanner.data = scanReport;
     }
 
-    if (isWebsite && sh.facets.includes(<Facet>'search engine')) {
+    if (isWebsite && sh.facets.includes(<facetType>'search engine')) {
       const searchEngineURLs = [
         'https://google.com/search?q=',
         'https://www.bing.com/search?q=',
@@ -102,7 +102,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
       }
     }
 
-    if (sh.facets.includes(<Facet>'uswds components')) {
+    if (sh.facets.includes(<facetType>'uswds components')) {
       report.uswdsComponents = await uswdsComponentsReport(
         sh,
         websiteMetadata.completeUrl,
@@ -131,10 +131,7 @@ export const scanHelper = async (
     flags.facets === undefined
       ? []
       : flags.facets.flatMap((element: string) =>
-          element
-            .split(',')
-            .map((entry: string) => entry.trim())
-            .filter((val: string) => isFacet(val)),
+          element.split(',').map((val: string) => val.trim()),
         );
   return {
     formattedDate: formattedDate,
@@ -164,9 +161,9 @@ export const scanHelper = async (
   };
 };
 
-const presets = (preset: presetType): Facet[] => {
+const presets = (preset: presetType): facetType[] => {
   // this can be tightented up to refer to lists of facetTypes
-  const presetMap: Record<presetType, Facet[]> = {
+  const presetMap: Record<presetType, facetType[]> = {
     '': [],
     all: [
       'cui banner',
@@ -255,7 +252,7 @@ export type ScanHelper = {
   outputDirectory: string;
   headless: boolean;
   // need function to expand preset into list of facets
-  facets: Facet[];
+  facets: facetType[];
   preset: presetType;
   devices: Record<string, puppeteer.Device>;
   browser: puppeteer.Browser;
@@ -264,31 +261,16 @@ export type ScanHelper = {
 
 export type presetType = '' | 'all' | 'edx scan';
 
-/* https://dev.to/hansott/how-to-check-if-string-is-member-of-union-type-1j4m */
-const FACETS = [
-  'cui banner',
-  'it performance metric',
-  'lighthouse desktop',
-  'lighthouse mobile',
-  'metadata tags',
-  'screenshot',
-  'search engine',
-  'site scanner',
-  'uswds components',
-] as const;
-export type FacetTuple = typeof FACETS;
-export type Facet = FacetTuple[number];
-
-export const isFacet = (value: string): value is Facet => {
-  if (!FACETS.includes(value as Facet)) {
-    console.warn(
-      `WARNING: Invalid Facet option entered, ${value}. Option will not be parsed, operation continuing.`,
-    );
-    return false;
-  }
-
-  return true;
-};
+export type facetType =
+  | 'cui banner'
+  | 'it performance metric'
+  | 'lighthouse desktop'
+  | 'lighthouse mobile'
+  | 'metadata tags'
+  | 'screenshot'
+  | 'search engine'
+  | 'site scanner'
+  | 'uswds components';
 
 export type userCredsType = {
   username: string;

@@ -12,11 +12,11 @@ import { scanHelper, scan } from '../../../helpers/websites/scan';
 
 export default class Scan extends BaseCommand<typeof Scan.flags> {
   static description =
-    'Scans websites using various facets to capture information about the sites';
+    'Scans websites using various facets to capture information about the sites. Running multiple facets requires individual -f inputs and does not take a list.';
 
   static examples = [
     `$ edxcli websites scan -d gsa.gov -f screenshot`,
-    `$ edxcli websites scan -d buy.gsa.gov -f "screenshot,lighthouse mobile,site scanner" -o ~/some/other/directory`,
+    `$ edxcli websites scan -d buy.gsa.gov -f "screenshot" -f "lighthouse mobile" -f "site scanner" -o ~/some/other/directory`,
     `$ edxcli websites scan -d buy.gsa.gov -f screenshot -o ~/some/other/directory`,
     `$ edxcli websites scan -d sftool.gov -p Performance Metric`,
     `$ edxcli websites scan -d "18f.gsa.gov,buy.gsa.gov,gsa.gov" -p "edx scan" --no-headless`,

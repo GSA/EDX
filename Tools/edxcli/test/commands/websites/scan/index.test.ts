@@ -30,28 +30,6 @@ describe('websites scan...', () => {
   });
 
   describe('Facets Flag', () => {
-    describe('Passing a comma-separated list of facets', () => {
-      test
-        .stdout()
-        .command([
-          'websites scan',
-          '-d',
-          dummyWebsite,
-          '-f',
-          'screenshot,site scanner',
-        ])
-        // done is used since the api requests are Promises, this  ensures the test suite waits for the response
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        .it('is consumed correctly', (done) => {
-          (ctx: any) => {
-            expect(ctx.stdout).to.equal(
-              `Performing scans with the following facets:
-            > screenshot
-            > site scanner`,
-            );
-          };
-        });
-    });
     describe('Passing facets with individual -f params', () => {
       test
         .stdout()
@@ -72,26 +50,6 @@ describe('websites scan...', () => {
               `Performing scans with the following facets:
             > screenshot
             > site scanner`,
-            );
-          };
-        });
-    });
-    describe('Passing a list of facets valid and invalid options', () => {
-      test
-        .stdout()
-        .command([
-          'websites scan',
-          '-d',
-          dummyWebsite,
-          '-f',
-          'screenshot,blah,site scanner',
-        ])
-        // done is used since the api requests are Promises, this  ensures the test suite waits for the response
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        .it('warns user that an invalid option was provided', (done) => {
-          (ctx: any) => {
-            expect(ctx.stdout).to.contain(
-              `WARNING: Invalid Facet option entered, blah. Option will not be parsed, operation continuing.`,
             );
           };
         });
