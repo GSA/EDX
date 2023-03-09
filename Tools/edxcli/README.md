@@ -495,15 +495,15 @@ Scans websites using various facets to capture information about the sites. Runn
 ```
 USAGE
   $ edxcli websites scan -d <value> [--loglevel error|info|debug] [-f
-    cuiBanner|screenshot|lighthouseDesktop|lighthouseMobile|itPerformanceMetric|metadataTags|screenshot|searchEngine|sit
-    eScanner|uswdsComponents] [--headless] [-o <value>] [-p |all|edx scan] [--auth]
+    cuiBanner|itPerformanceMetric|lighthouseDesktop|lighthouseMobile|metadataTags|screenshot|searchEngine|siteScanner|us
+    wdsComponents] [--headless] [-o <value>] [-p |all|edx scan] [--auth]
 
 FLAGS
   -d, --domains=<value>     (required) Comma-separated list of domains to scan.
   -f, --facets=<option>...  Comma-separated list of facets to use for the scan. e.g. (-f screenshot -f lighthouseDesktop
                             -f itPerformanceMetric).
-                            <options: cuiBanner|screenshot|lighthouseDesktop|lighthouseMobile|itPerformanceMetric|metada
-                            taTags|screenshot|searchEngine|siteScanner|uswdsComponents>
+                            <options: cuiBanner|itPerformanceMetric|lighthouseDesktop|lighthouseMobile|metadataTags|scre
+                            enshot|searchEngine|siteScanner|uswdsComponents>
   -o, --output=<value>      Output directory. Defualts to current directory
   -p, --preset=<option>     Run a pre-configured suite of scan facets whose results will be output into a single file.
                             <options: |all|edx scan>
@@ -540,16 +540,16 @@ Scans websites using various modules to capture information about the sites
 ```
 USAGE
   $ edxcli websites scan bulk [--loglevel error|info|debug] [-d Touchpoints] [-f
-    cuiBanner|screenshot|lighthouseDesktop|lighthouseMobile|itPerformanceMetric|metadataTags|screenshot|searchEngine|sit
-    eScanner|uswdsComponents] [--headless] [-o <value>] [-p |all|edx scan] [--resume]
+    cuiBanner|itPerformanceMetric|lighthouseDesktop|lighthouseMobile|metadataTags|screenshot|searchEngine|siteScanner|us
+    wdsComponents] [--headless] [-o <value>] [-p |all|edx scan] [--resume]
 
 FLAGS
   -d, --domainsSource=<option>  [default: Touchpoints] Name of the system to pull the list of domains
                                 <options: Touchpoints>
   -f, --facets=<option>...      Comma-separated list of facets to use for the scan. e.g. (-f screenshot -f
                                 lighthouseDesktop -f itPerformanceMetric).
-                                <options: cuiBanner|screenshot|lighthouseDesktop|lighthouseMobile|itPerformanceMetric|me
-                                tadataTags|screenshot|searchEngine|siteScanner|uswdsComponents>
+                                <options: cuiBanner|itPerformanceMetric|lighthouseDesktop|lighthouseMobile|metadataTags|
+                                screenshot|searchEngine|siteScanner|uswdsComponents>
   -o, --output=<value>          Output directory. Defualts to current directory
   -p, --preset=<option>         Run a pre-configured suite of scan facets whose results will be output into a single
                                 file.
@@ -564,7 +564,7 @@ DESCRIPTION
   Scans websites using various modules to capture information about the sites
 
 EXAMPLES
-  $ edxcli websites scan bulk -d Touchpoints
+  $ edxcli websites scan bulk -d Touchpoints -p "edx scan"
 
   $ edxcli websites scan bulk -d Touchpoints --resume
 ```

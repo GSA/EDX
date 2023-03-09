@@ -12,13 +12,15 @@ import { screenshot } from './screenshot';
 import { siteScannerReport } from './site-scanner';
 import { uswdsComponentsReport } from './uswds-components';
 import { WebsiteMetadata } from './websites-metadata';
-import { WebsiteReportType, websiteReport } from './website-report';
+import { WebsiteReport } from './website-report';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:scan');
 
 export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
   const websiteMetadata = new WebsiteMetadata(domain);
 
   // websiteReport forms the shell that all facets fit into
-  const report = websiteReport(websiteMetadata.completeUrl, sh);
+  const report = new WebsiteReport(websiteMetadata.completeUrl, sh);
   const path = `${sh.outputDirectory}/`;
 
   // create the directory
@@ -38,46 +40,68 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
 
   if (pageFound) {
     if (sh.facets.includes(<facetType>'cuiBanner')) {
-      report.cuiBanner.data = await cuiBanner(sh, websiteMetadata.completeUrl);
+      report.addReport({
+        cuiBanner: {
+          description: '',
+          data: await cuiBanner(sh, websiteMetadata.completeUrl),
+          errors: [],
+        },
+      });
     }
 
     if (sh.facets.includes(<facetType>'itPerformanceMetric')) {
-      report.itPerformanceMetric = await itPerfMetricReport(
-        sh,
-        websiteMetadata,
-      );
+      report.addReport({
+        itPerformanceMetric: {
+          description: 'Represents GSA IT FY22 performance metrics',
+          data: await itPerfMetricReport(sh, websiteMetadata),
+          errors: [],
+        },
+      });
     }
 
     // 'lighthouse desktop',
     if (isWebsite && sh.facets.includes(<facetType>'lighthouseDesktop')) {
-      report.lighthouse.desktopData = await lighthouseReport(
-        sh,
-        websiteMetadata,
-        'desktop',
-      );
+      report.addReport({
+        lighthouseDesktop: {
+          data: await lighthouseReport(sh, websiteMetadata, 'desktop'),
+          description: 'Google Lighthouse outputs for desktop.',
+          errors: [],
+        },
+      });
     }
 
     // 'lighthouse mobile',
     if (isWebsite && sh.facets.includes(<facetType>'lighthouseMobile')) {
-      report.lighthouse.mobileData = await lighthouseReport(
-        sh,
-        websiteMetadata,
-        'mobile',
-      );
+      report.addReport({
+        lighthouseMobile: {
+          data: await lighthouseReport(sh, websiteMetadata, 'mobile'),
+          description: 'Google Lighthouse outputs for mobile devices',
+          errors: [],
+        },
+      });
     }
 
-    if (sh.facets.includes(<facetType>'metadataTags')) {
-      report.metadataTags.data = await metadataTags(
-        sh,
-        websiteMetadata.completeUrl,
-      );
+    if (isWebsite && sh.facets.includes(<facetType>'metadataTags')) {
+      report.addReport({
+        metadataTags: {
+          description: '',
+          errors: [],
+          data: await metadataTags(sh, websiteMetadata.completeUrl),
+        },
+      });
     }
 
     if (sh.facets.includes(<facetType>'screenshot')) {
-      report.screenCapture.data = [
-        ...report.screenCapture.data,
-        ...(await screenshot(sh, websiteMetadata.completeUrl, 'webpage')),
-      ];
+      report.addReport({
+        screenshot: {
+          data: [
+            ...(await screenshot(sh, websiteMetadata.completeUrl, 'webpage')),
+          ],
+          errors: [],
+          description:
+            'Holds screenshots taken throughout scan including homepage, search engine, and others.',
+        },
+      });
     }
 
     if (isWebsite && sh.facets.includes(<facetType>'searchEngine')) {
@@ -88,33 +112,51 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
       ];
 
       for (const item of searchEngineURLs) {
-        report.screenCapture.data = [
-          ...report.screenCapture.data,
-          // eslint-disable-next-line no-await-in-loop
-          ...(await screenshot(
-            sh,
-            new URL(`${item}${websiteMetadata.completeUrl.hostname}`),
-            'search engine',
-          )),
-        ];
+        report.addReport({
+          screenshot: {
+            data: [
+              // eslint-disable-next-line no-await-in-loop
+              ...(await screenshot(
+                sh,
+                new URL(`${item}${websiteMetadata.completeUrl.hostname}`),
+                'search engine',
+              )),
+            ],
+            description:
+              'Holds screenshots taken throughout scan including homepage, search engine, and others.',
+            errors: [],
+          },
+        });
       }
     }
 
     if (isWebsite && sh.facets.includes(<facetType>'siteScanner')) {
+      debug('%s', 'siteScanner facet executing');
       const scanReport = await siteScannerReport(websiteMetadata.completeUrl);
-      if (scanReport) report.siteScanner.data = scanReport;
+      if (scanReport)
+        report.addReport({
+          siteScanner: { data: scanReport, errors: [], description: '' },
+        });
+      debug('%s', 'siteScanner facet completed');
     }
 
     if (sh.facets.includes(<facetType>'uswdsComponents')) {
-      report.uswdsComponents = await uswdsComponentsReport(
-        sh,
-        websiteMetadata.completeUrl,
-      );
+      report.addReport({
+        uswdsComponents: {
+          data: await uswdsComponentsReport(sh, websiteMetadata.completeUrl),
+          description:
+            'Listing each of the USWDS components as a boolean to indicate if the component is present',
+          errors: [],
+        },
+      });
     }
 
-    // If Site Scanner returns true for DAP but IT Perf metric does not, overwrite the value
-    if (report.siteScanner.data.dap_detected_final_url) {
-      report.itPerformanceMetric.dap = true;
+    // If Site Scanner returns true for DAP but IT Perf metric does not, overwrite the value.
+    if (
+      report.reports?.itPerformanceMetric !== undefined &&
+      report.reports.siteScanner.data.dap_detected_final_url
+    ) {
+      report.reports.itPerformanceMetric.data.dap = true;
     }
   }
 
@@ -122,6 +164,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
   report.endTime = new Date().toISOString();
   // close the browser
   // sh.browser.close();
+  debug('%j', JSON.stringify(report));
   // write the report
   await buildOutput(sh, report);
 };
@@ -194,6 +237,15 @@ const presets = (preset: presetType): facetType[] => {
   return presetMap[preset];
 };
 
+const constructBasicAuth = async (): Promise<userCredsType> => {
+  const username = await CliUx.ux.prompt('Username');
+  const password = await CliUx.ux.prompt('Password', {
+    type: 'hide',
+  });
+
+  return { username, password };
+};
+
 const initialCheck = async function (sh: ScanHelper, url: URL) {
   const scanStatus = { pageFound: true, message: 'Page loaded successfully' };
   const page = await sh.browser.newPage();
@@ -207,7 +259,7 @@ const initialCheck = async function (sh: ScanHelper, url: URL) {
 
   await page
     .goto(url.toString(), { waitUntil: 'networkidle2' })
-    .catch((error) => {
+    .catch((error: any) => {
       console.error('Initial check error:', error);
       scanStatus.pageFound = false;
       scanStatus.message = `Initial check error: ${error}`;
@@ -216,28 +268,14 @@ const initialCheck = async function (sh: ScanHelper, url: URL) {
   return scanStatus;
 };
 
-const buildOutput = async (
-  sh: ScanHelper,
-  websiteReport: WebsiteReportType,
-) => {
+const buildOutput = async (sh: ScanHelper, websiteReport: WebsiteReport) => {
   const pageHash = await printHash(websiteReport.domain);
   await writeJSONFile(
     websiteReport,
     sh.outputDirectory,
     `${websiteReport.domain}_${sh.formattedDate}_${pageHash}`,
   );
-};
-
-const constructBasicAuth = async (): Promise<userCredsType> => {
-  const username = await CliUx.ux.prompt('Username');
-  const password = await CliUx.ux.prompt('Password', {
-    type: 'hide',
-  });
-
-  return { username, password };
-};
-
-/**
+}; /**
  * function accepts any string and transforms to lowercase. The lowercase value is validated against the facetType type.
  * https://stackoverflow.com/questions/43677527/typescript-type-ignore-case#answer-64932909
  * @param {facetType} facet facetType in mixed case

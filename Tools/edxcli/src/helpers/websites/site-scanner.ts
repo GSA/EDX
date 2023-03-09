@@ -1,5 +1,7 @@
 import { SiteScannerRecord } from './fetch';
 const axios = require('axios').default;
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:site-scanner');
 
 export const siteScannerReport = async function (
   url: URL,
@@ -29,5 +31,6 @@ export const siteScannerReport = async function (
         console.error('Site Scanner API Error:', error);
       }
     });
+  debug('%j', response.data);
   if (response && response.status === 200) return response.data;
 };
