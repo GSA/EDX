@@ -1,5 +1,7 @@
 import { ScanHelper } from './scan';
 import { WebsiteMetadata } from './websites-metadata';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:it-performance-metric');
 
 export const itPerfMetricReport = async (
   sh: ScanHelper,
@@ -51,6 +53,7 @@ export const itPerfMetricReport = async (
 
   const data: PerformanceMetricReport = new PerformanceMetricReport();
   const page = await sh.browser.newPage();
+  debug('Number pages open: %s', (await sh.browser.pages()).length);
   await page.setCacheEnabled(false);
 
   if (websiteMetadata.cookies.name !== '') {
@@ -62,9 +65,16 @@ export const itPerfMetricReport = async (
       waitUntil: 'networkidle2',
     })
     .catch((error) => {
+      debug(
+        'Error trying to go to: %s',
+        websiteMetadata.completeUrl.toString(),
+      );
+      debug('IT Metric error: %O', error);
       console.error('IT Metric error:', error);
     });
-
+  debug('Response status %s', response?.status);
+  debug('Response headers %O', response?.headers);
+  debug('Request headers %O', response?.request);
   if (response) {
     data.hsts = Object.prototype.hasOwnProperty.call(
       response.headers(),
@@ -194,6 +204,8 @@ const reqdLinkEvaluation = async function (sh: ScanHelper, url: URL) {
     // if the click creates a new tab, identify that here and fetch url from the new tab. Otherwise, fetch from current
     // eslint-disable-next-line no-await-in-loop
     const pages = await sh.browser.pages(); // get all pages
+    // eslint-disable-next-line no-await-in-loop
+    debug('%s%', 'Pages open (in loop):', (await sh.browser.pages()).length);
     const page2 = pages[pages.length - 1]; // get the new page
     // this shows the current URL- compare it with the list
     linkDestination.url = page2.url();
@@ -206,6 +218,7 @@ const reqdLinkEvaluation = async function (sh: ScanHelper, url: URL) {
     i++;
   } while (i < reqdLinks.length);
 
+  debug('%s%', 'Pages open end of loop:', (await sh.browser.pages()).length);
   page.close();
   return linkDestinations;
 };

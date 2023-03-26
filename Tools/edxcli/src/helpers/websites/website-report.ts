@@ -46,29 +46,31 @@ export class WebsiteReport implements IWebsiteReport {
   }
 
   addReport(facetReport: Partial<Record<facetType, facetReport>>): void {
-    debug('%s', 'adding data to report');
+    debug('Adding data to report');
     const facets: facetType[] = Object.keys(facetReport) as facetType[];
-    try {
-      for (const facet in facets) {
-        if (Object.prototype.hasOwnProperty.call(facets, facet)) {
+
+    for (const facet in facets) {
+      if (Object.prototype.hasOwnProperty.call(facets, facet)) {
+        try {
           const val: facetType = facets[facet];
           if (
             this.reports[val] === undefined &&
             facetReport[val] !== undefined
           ) {
-            debug('first time this report is assigned');
+            debug(`First time ${val} report is has received data`);
             Object.assign(this.reports, facetReport);
           } else {
-            debug('merging with pre-existing data');
+            debug(`Merging ${val} with pre-existing data`);
             this.reports[val].data = [
               ...this.reports[val].data,
               ...(facetReport[val]?.data || []),
             ];
           }
+        } catch (error) {
+          debug(`Error adding data to report: %O`, error);
+          console.error(`error adding data to report`, error);
         }
       }
-    } catch (error) {
-      console.error('error adding data to report', error);
     }
   }
 }
@@ -90,7 +92,7 @@ export interface IWebsiteReport {
 
 export type facetReport = {
   description: string;
-  errors: string[];
+  errors: any;
   data: any;
 };
 /*
