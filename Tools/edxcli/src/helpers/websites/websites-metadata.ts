@@ -59,7 +59,7 @@ export class WebsiteMetadata {
     return this.protocol === 'file://'
       ? new URL(`${this.protocol}${this.protocollessInput}`)
       : new URL(
-          `${this.protocol}${md.wwwPrefix}${this.input}${md.urlPath}${md.queryString}`,
+          `${this.protocol}${md.wwwPrefix}${this.protocollessInput}${md.urlPath}${md.queryString}`,
         );
   }
 

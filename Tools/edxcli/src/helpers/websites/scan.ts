@@ -7,22 +7,27 @@ import { cuiBanner } from './cui-banner';
 import { printHash, writeJSONFile } from '../global/utils';
 import { itPerfMetricReport } from './it-performance-metric';
 import { lighthouseReport } from './lighthouse';
-import { metadataTags } from './metadata-tags';
-import { screenshot } from './screenshot';
+import { MetadataTags } from './metadata-tags';
+import { createScanFacet } from './scan-facet';
+import { Screenshot } from './screenshot';
 import { siteScannerReport } from './site-scanner';
 import { uswdsComponentsReport } from './uswds-components';
 import { WebsiteMetadata } from './websites-metadata';
 import { WebsiteReport } from './website-report';
+
 import * as Debug from 'debug';
 const debug = Debug.default('edxcli:scan');
 
+// eslint-disable-next-line complexity
 export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
+  debug('Scanning %s', domain);
   const websiteMetadata = new WebsiteMetadata(domain);
 
   // websiteReport forms the shell that all facets fit into
   const report = new WebsiteReport(websiteMetadata.completeUrl, sh);
   const path = `${sh.outputDirectory}/`;
 
+  debug('Writing output to %s', path);
   // create the directory
   fs.mkdir(path, { recursive: true }, function (dirErr: any) {
     if (dirErr) {
@@ -37,6 +42,9 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
   report.scanStatus = message;
   // certain facets can only be run against websites rather than static files
   const isWebsite = websiteMetadata.completeUrl.protocol === 'https:';
+
+  let data;
+  let error;
 
   if (pageFound) {
     if (sh.facets.includes(<facetType>'cuiBanner')) {
@@ -72,6 +80,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
 
     // 'lighthouse mobile',
     if (isWebsite && sh.facets.includes(<facetType>'lighthouseMobile')) {
+      debug('lighthouseMobile facet executing');
       report.addReport({
         lighthouseMobile: {
           data: await lighthouseReport(sh, websiteMetadata, 'mobile'),
@@ -79,32 +88,49 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
           errors: [],
         },
       });
+      debug('lighthouseMobile facet completed');
     }
 
     if (isWebsite && sh.facets.includes(<facetType>'metadataTags')) {
+      debug('metadataTags facet executing');
+      ({ data, error } = await createScanFacet(
+        MetadataTags,
+        sh,
+        websiteMetadata,
+      ).run());
       report.addReport({
         metadataTags: {
           description: '',
-          errors: [],
-          data: await metadataTags(sh, websiteMetadata.completeUrl),
+          errors: error,
+          data: data,
         },
       });
+      debug('metadataTags facet completed');
     }
 
     if (sh.facets.includes(<facetType>'screenshot')) {
+      debug('screenshot facet executing');
+      ({ data, error } = await createScanFacet(
+        Screenshot,
+        sh,
+        websiteMetadata,
+        { type: 'webpage' },
+      ).run());
       report.addReport({
         screenshot: {
-          data: [
-            ...(await screenshot(sh, websiteMetadata.completeUrl, 'webpage')),
-          ],
-          errors: [],
+          data: data,
+          errors: error,
           description:
             'Holds screenshots taken throughout scan including homepage, search engine, and others.',
         },
       });
+
+      debug('screenshot facet completed');
     }
 
     if (isWebsite && sh.facets.includes(<facetType>'searchEngine')) {
+      debug('searchEngine facet executing');
+
       const searchEngineURLs = [
         'https://google.com/search?q=',
         'https://www.bing.com/search?q=',
@@ -112,35 +138,42 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
       ];
 
       for (const item of searchEngineURLs) {
+        // eslint-disable-next-line no-await-in-loop
+        ({ data, error } = await createScanFacet(
+          Screenshot,
+          sh,
+          new WebsiteMetadata(`${item}${websiteMetadata.completeUrl.hostname}`),
+          { type: 'searchEngine' },
+        ).run());
+
         report.addReport({
           screenshot: {
-            data: [
+            data:
               // eslint-disable-next-line no-await-in-loop
-              ...(await screenshot(
-                sh,
-                new URL(`${item}${websiteMetadata.completeUrl.hostname}`),
-                'search engine',
-              )),
-            ],
+              Array.isArray(data) ? [...data] : [],
             description:
               'Holds screenshots taken throughout scan including homepage, search engine, and others.',
             errors: [],
           },
         });
       }
+
+      debug('searchEngine facet completed');
     }
 
     if (isWebsite && sh.facets.includes(<facetType>'siteScanner')) {
-      debug('%s', 'siteScanner facet executing');
+      debug('siteScanner facet executing');
       const scanReport = await siteScannerReport(websiteMetadata.completeUrl);
       if (scanReport)
         report.addReport({
           siteScanner: { data: scanReport, errors: [], description: '' },
         });
-      debug('%s', 'siteScanner facet completed');
+      debug('siteScanner facet completed');
     }
 
     if (sh.facets.includes(<facetType>'uswdsComponents')) {
+      debug('uswdsComponents facet executing');
+
       report.addReport({
         uswdsComponents: {
           data: await uswdsComponentsReport(sh, websiteMetadata.completeUrl),
@@ -149,6 +182,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
           errors: [],
         },
       });
+      debug('uswdsComponents facet completed');
     }
 
     // If Site Scanner returns true for DAP but IT Perf metric does not, overwrite the value.
@@ -156,15 +190,17 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
       report.reports?.itPerformanceMetric !== undefined &&
       report.reports.siteScanner.data.dap_detected_final_url
     ) {
+      debug('overwriting DAP value with siteScanner data');
       report.reports.itPerformanceMetric.data.dap = true;
     }
   }
 
   // scan complete
   report.endTime = new Date().toISOString();
+  debug('Scan for %s complete at %s', domain, report.endTime);
   // close the browser
   // sh.browser.close();
-  debug('%j', JSON.stringify(report));
+  // debug('%j', JSON.stringify(report));
   // write the report
   await buildOutput(sh, report);
 };

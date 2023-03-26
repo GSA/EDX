@@ -1,30 +1,62 @@
 import { ScanHelper } from './scan';
+import { ScanFacetInterface, scanFacetReport } from './scan-facet';
+import { WebsiteMetadata } from './websites-metadata';
 
-export const metadataTags = async (
-  sh: ScanHelper,
-  domain: URL,
-): Promise<IMetadataTags> => {
-  let keywordsArray: string[] = [];
-  const page = await sh.browser.newPage();
-  page.on('dialog', async (dialog) => {
-    dialog.message();
-    await dialog.accept();
-  });
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helper:websitesmetadata-tags');
 
-  await page.goto(domain.toString(), {
-    waitUntil: 'networkidle2',
-  });
-  const keywordHandle = await page.$("meta[name='keywords']");
-  // some sites don't have keywords set, skip evaluation if that's the case
-  if (keywordHandle) {
-    keywordsArray = await page
-      .evaluate((value) => value.content, keywordHandle)
-      .then((keywords) => keywords.split(','));
+export class MetadataTags implements ScanFacetInterface {
+  scanHelper: ScanHelper;
+  websiteMetadata: WebsiteMetadata;
+  data: unknown = {};
+  error: unknown = {};
+
+  constructor(sh: ScanHelper, websiteMetadata: WebsiteMetadata) {
+    this.scanHelper = sh;
+    this.websiteMetadata = websiteMetadata;
   }
 
-  page.close();
-  return { keywords: keywordsArray };
-};
+  async run(): Promise<scanFacetReport> {
+    let keywordsArray: string[] = [];
+    const page = await this.scanHelper.browser.newPage();
+    page.on('dialog', async (dialog) => {
+      dialog.message();
+      await dialog.accept();
+    });
+
+    try {
+      await page
+        .goto(this.websiteMetadata.completeUrl.toString(), {
+          waitUntil: 'networkidle2',
+        })
+        .catch((error) => {
+          debug('%O', error);
+          console.error('Metadata Tags error:', error);
+        });
+      const keywordHandle = await page.$("meta[name='keywords']");
+      // some sites don't have keywords set, skip evaluation if that's the case
+      if (keywordHandle) {
+        keywordsArray = await page
+          .evaluate((value) => value.content, keywordHandle)
+          .then((keywords) =>
+            keywords.split(',').map((item: string) => {
+              return item.trim();
+            }),
+          );
+      }
+
+      debug('%d keywords found', keywordsArray.length);
+
+      this.data = { keywords: keywordsArray };
+    } catch (error) {
+      debug(error);
+      this.error = error;
+    }
+
+    await page.close();
+    return { data: this.data, error: this.error };
+  }
+}
 
 export interface IMetadataTags {
   keywords?: string[];
