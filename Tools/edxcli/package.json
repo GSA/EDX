@@ -20,7 +20,8 @@
     "fast-fuzzy": "^1.11.2",
     "lighthouse": "^9.2.0",
     "lodash": "^4.17.21",
-    "puppeteer": "^14.3.0"
+    "puppeteer": "^14.3.0",
+    "serialize-error": "8.1.0"
   },
   "devDependencies": {
     "@oclif/test": "^2",

@@ -1,169 +1,142 @@
 // @ts-check
+import { serializeError, ErrorObject } from 'serialize-error';
 
 import { ScanHelper } from './scan';
+import { ScanFacetInterface, scanFacetReport } from './scan-facet';
+import { WebsiteMetadata } from './websites-metadata';
 
 /**
  * Class listing each of the USWDS components as a boolean to indicate if the component is present
  */
-export class UswdsComponentsReport implements IUswdsComponentsReport {
-  description: string;
-  accordion: boolean;
-  alert: boolean;
-  banner: boolean;
-  breadcrumb: boolean;
-  button: boolean;
-  buttonGroup: boolean;
-  card: boolean;
-  characterCount: boolean;
-  checkbox: boolean;
-  collection: boolean;
-  comboBox: boolean;
-  dateInput: boolean;
-  datePicker: boolean;
-  dateRangePicker: boolean;
-  dropdown: boolean;
-  fileInput: boolean;
-  footer: boolean;
-  form: boolean;
-  grid: boolean;
-  header: boolean;
-  icon: boolean;
-  iconList: boolean;
-  identifier: boolean;
-  inputPrefix: boolean;
-  inputSuffix: boolean;
-  link: boolean;
-  list: boolean;
-  modal: boolean;
-  pagination: boolean;
-  processList: boolean;
-  prose: boolean;
-  radioButton: boolean;
-  rangeSlider: boolean;
-  search: boolean;
-  sideNavigation: boolean;
-  siteAlert: boolean;
-  stepIndicator: boolean;
-  summaryBox: boolean;
-  table: boolean;
-  tag: boolean;
-  textInput: boolean;
-  timePicker: boolean;
-  tooltip: boolean;
-  validation: boolean;
+export class UswdsComponentsReport implements ScanFacetInterface {
+  scanHelper: ScanHelper;
+  websiteMetadata: WebsiteMetadata;
+  type = '';
+  data: UswdsComponents;
+  error: ErrorObject[] = [];
 
-  constructor() {
-    this.description =
-      'listing each of the USWDS components as a boolean to indicate if the component is present';
-    this.accordion = false;
-    this.alert = false;
-    this.banner = false;
-    this.breadcrumb = false;
-    this.button = false;
-    this.buttonGroup = false;
-    this.card = false;
-    this.characterCount = false;
-    this.checkbox = false;
-    this.collection = false;
-    this.comboBox = false;
-    this.dateInput = false;
-    this.datePicker = false;
-    this.dateRangePicker = false;
-    this.dropdown = false;
-    this.fileInput = false;
-    this.footer = false;
-    this.form = false;
-    this.grid = false;
-    this.header = false;
-    this.icon = false;
-    this.iconList = false;
-    this.identifier = false;
-    this.inputPrefix = false;
-    this.inputSuffix = false;
-    this.link = false;
-    this.list = false;
-    this.modal = false;
-    this.pagination = false;
-    this.processList = false;
-    this.prose = false;
-    this.radioButton = false;
-    this.rangeSlider = false;
-    this.search = false;
-    this.sideNavigation = false;
-    this.siteAlert = false;
-    this.stepIndicator = false;
-    this.summaryBox = false;
-    this.table = false;
-    this.tag = false;
-    this.textInput = false;
-    this.timePicker = false;
-    this.tooltip = false;
-    this.validation = false;
+  constructor(sh: ScanHelper, websiteMetadata: WebsiteMetadata) {
+    this.scanHelper = sh;
+    this.websiteMetadata = websiteMetadata;
+    this.data = {
+      accordion: false,
+      alert: false,
+      banner: false,
+      breadcrumb: false,
+      button: false,
+      buttonGroup: false,
+      card: false,
+      characterCount: false,
+      checkbox: false,
+      collection: false,
+      comboBox: false,
+      dateInput: false,
+      datePicker: false,
+      dateRangePicker: false,
+      dropdown: false,
+      fileInput: false,
+      footer: false,
+      form: false,
+      grid: false,
+      header: false,
+      icon: false,
+      iconList: false,
+      identifier: false,
+      inputPrefix: false,
+      inputSuffix: false,
+      link: false,
+      list: false,
+      modal: false,
+      pagination: false,
+      processList: false,
+      prose: false,
+      radioButton: false,
+      rangeSlider: false,
+      search: false,
+      sideNavigation: false,
+      siteAlert: false,
+      stepIndicator: false,
+      summaryBox: false,
+      table: false,
+      tag: false,
+      textInput: false,
+      timePicker: false,
+      tooltip: false,
+      validation: false,
+    };
+  }
+
+  async run(): Promise<scanFacetReport> {
+    const page = await this.scanHelper.browser.newPage();
+    try {
+      await page
+        .goto(this.websiteMetadata.completeUrl.toString(), {
+          waitUntil: 'networkidle2',
+        })
+        .catch((error) => {
+          console.log(
+            'An error has occurred and is logged to the resultant JSON file.',
+          );
+          this.error.push(error);
+        });
+      const content = await page.content();
+      this.data.accordion = /usa-accordion__heading/.test(content);
+      this.data.alert = /usa-alert/.test(content);
+      this.data.banner = /usa-banner/.test(content);
+      this.data.breadcrumb = /usa-breadcrumb/.test(content);
+      this.data.button = /usa-button/.test(content);
+      this.data.buttonGroup = /usa-button-group/.test(content);
+      this.data.card = /usa-card-group|usa-card__container/.test(content);
+      this.data.characterCount = /usa-character-count/.test(content);
+      this.data.checkbox = /usa-checkbox/.test(content);
+      this.data.collection = /usa-collection/.test(content);
+      this.data.comboBox = /usa-combo-box/.test(content);
+      this.data.dateInput = /usa-memorable-date/.test(content);
+      this.data.datePicker = /usa-date-picker/.test(content);
+      this.data.dateRangePicker = /usa-date-range-picker/.test(content);
+      this.data.dropdown = /usa-select/.test(content);
+      this.data.fileInput = /usa-file-input/.test(content);
+      this.data.footer = /usa-footer/.test(content);
+      this.data.grid = /grid-container/.test(content);
+      this.data.header = /usa-header/.test(content);
+      this.data.icon = /usa-icon/.test(content);
+      this.data.iconList = /usa-icon-list/.test(content);
+      this.data.identifier = /usa-identifier/.test(content);
+      this.data.inputPrefix = /usa-input-prefix/.test(content);
+      this.data.inputSuffix = /usa-input-suffix/.test(content);
+      this.data.link = /usa-link/.test(content);
+      this.data.list = /usa-list/.test(content);
+      this.data.modal = /usa-modal/.test(content);
+      this.data.pagination = /usa-pagination/.test(content);
+      this.data.processList = /usa-process-list/.test(content);
+      this.data.prose = /usa-prose/.test(content);
+      this.data.radioButton = /usa-radio|usa-radio__input/.test(content);
+      this.data.rangeSlider = /usa-range/.test(content);
+      this.data.search = /usa-search/.test(content);
+      this.data.sideNavigation = /usa-sidenav/.test(content);
+      this.data.siteAlert = /usa-site-alert/.test(content);
+      this.data.stepIndicator = /usa-step-indicator/.test(content);
+      this.data.summaryBox = /usa-summary-box/.test(content);
+      this.data.table = /usa-table/.test(content);
+      this.data.tag = /usa-tag/.test(content);
+      this.data.textInput = /usa-input/.test(content);
+      this.data.timePicker = /usa-time-picker/.test(content);
+      this.data.tooltip = /usa-tooltip/.test(content);
+      this.data.validation = /usa-alert--validation/.test(content);
+    } catch (error: any) {
+      console.log(
+        'An error has occurred and is logged to the resultant JSON file.',
+      );
+      this.error.push(serializeError(error));
+    }
+
+    page.close();
+
+    return { data: this.data, error: this.error };
   }
 }
 
-export const uswdsComponentsReport = async function (
-  sh: ScanHelper,
-  domain: URL,
-): Promise<UswdsComponentsReport> {
-  const data = new UswdsComponentsReport();
-  const page = await sh.browser.newPage();
-  await page
-    .goto(domain.toString(), { waitUntil: 'networkidle2' })
-    .catch((error) => {
-      console.error('USWDS error:', error);
-    });
-  const content = await page.content();
-
-  data.accordion = /usa-accordion__heading/.test(content);
-  data.alert = /usa-alert/.test(content);
-  data.banner = /usa-banner/.test(content);
-  data.breadcrumb = /usa-breadcrumb/.test(content);
-  data.button = /usa-button/.test(content);
-  data.buttonGroup = /usa-button-group/.test(content);
-  data.card = /usa-card-group|usa-card__container/.test(content);
-  data.characterCount = /usa-character-count/.test(content);
-  data.checkbox = /usa-checkbox/.test(content);
-  data.collection = /usa-collection/.test(content);
-  data.comboBox = /usa-combo-box/.test(content);
-  data.dateInput = /usa-memorable-date/.test(content);
-  data.datePicker = /usa-date-picker/.test(content);
-  data.dateRangePicker = /usa-date-range-picker/.test(content);
-  data.dropdown = /usa-select/.test(content);
-  data.fileInput = /usa-file-input/.test(content);
-  data.footer = /usa-footer/.test(content);
-  data.grid = /grid-container/.test(content);
-  data.header = /usa-header/.test(content);
-  data.icon = /usa-icon/.test(content);
-  data.iconList = /usa-icon-list/.test(content);
-  data.identifier = /usa-identifier/.test(content);
-  data.inputPrefix = /usa-input-prefix/.test(content);
-  data.inputSuffix = /usa-input-suffix/.test(content);
-  data.link = /usa-link/.test(content);
-  data.list = /usa-list/.test(content);
-  data.modal = /usa-modal/.test(content);
-  data.pagination = /usa-pagination/.test(content);
-  data.processList = /usa-process-list/.test(content);
-  data.prose = /usa-prose/.test(content);
-  data.radioButton = /usa-radio|usa-radio__input/.test(content);
-  data.rangeSlider = /usa-range/.test(content);
-  data.search = /usa-search/.test(content);
-  data.sideNavigation = /usa-sidenav/.test(content);
-  data.siteAlert = /usa-site-alert/.test(content);
-  data.stepIndicator = /usa-step-indicator/.test(content);
-  data.summaryBox = /usa-summary-box/.test(content);
-  data.table = /usa-table/.test(content);
-  data.tag = /usa-tag/.test(content);
-  data.textInput = /usa-input/.test(content);
-  data.timePicker = /usa-time-picker/.test(content);
-  data.tooltip = /usa-tooltip/.test(content);
-  data.validation = /usa-alert--validation/.test(content);
-  page.close();
-  return data;
-};
-
-export interface IUswdsComponentsReport {
-  description: string;
+export type UswdsComponents = {
   accordion: boolean;
   alert: boolean;
   banner: boolean;
@@ -208,4 +181,4 @@ export interface IUswdsComponentsReport {
   timePicker: boolean;
   tooltip: boolean;
   validation: boolean;
-}
+};

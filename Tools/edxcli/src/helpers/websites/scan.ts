@@ -11,7 +11,7 @@ import { MetadataTags } from './metadata-tags';
 import { createScanFacet } from './scan-facet';
 import { Screenshot } from './screenshot';
 import { siteScannerReport } from './site-scanner';
-import { uswdsComponentsReport } from './uswds-components';
+import { UswdsComponentsReport } from './uswds-components';
 import { WebsiteMetadata } from './websites-metadata';
 import { WebsiteReport } from './website-report';
 
@@ -173,13 +173,17 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
 
     if (sh.facets.includes(<facetType>'uswdsComponents')) {
       debug('uswdsComponents facet executing');
-
+      ({ data, error } = await createScanFacet(
+        UswdsComponentsReport,
+        sh,
+        websiteMetadata,
+      ).run());
       report.addReport({
         uswdsComponents: {
-          data: await uswdsComponentsReport(sh, websiteMetadata.completeUrl),
+          data: data,
           description:
             'Listing each of the USWDS components as a boolean to indicate if the component is present',
-          errors: [],
+          errors: error,
         },
       });
       debug('uswdsComponents facet completed');
