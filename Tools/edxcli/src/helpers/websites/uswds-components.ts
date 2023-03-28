@@ -1,5 +1,7 @@
 // @ts-check
 import { serializeError, ErrorObject } from 'serialize-error';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helper:uswds-components');
 
 import { ScanHelper } from './scan';
 import { ScanFacetInterface, scanFacetReport } from './scan-facet';
@@ -127,6 +129,7 @@ export class UswdsComponentsReport implements ScanFacetInterface {
       console.log(
         'An error has occurred and is logged to the resultant JSON file.',
       );
+      debug("%O",error)
       this.error.push(serializeError(error));
     }
 
