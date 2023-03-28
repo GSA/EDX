@@ -5,7 +5,7 @@ import puppeteer from 'puppeteer';
 import { browser } from '../../browser';
 import { cuiBanner } from './cui-banner';
 import { printHash, writeJSONFile } from '../global/utils';
-import { itPerfMetricReport } from './it-performance-metric';
+import { ItPerfMetricReport } from './it-performance-metric';
 import { lighthouseReport } from './lighthouse';
 import { MetadataTags } from './metadata-tags';
 import { createScanFacet } from './scan-facet';
@@ -58,13 +58,21 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
     }
 
     if (sh.facets.includes(<facetType>'itPerformanceMetric')) {
+      debug('itPerformanceMetric facet starting');
+
+      ({ data, error } = await createScanFacet(
+        ItPerfMetricReport,
+        sh,
+        websiteMetadata,
+      ).run());
       report.addReport({
         itPerformanceMetric: {
           description: 'Represents GSA IT FY22 performance metrics',
-          data: await itPerfMetricReport(sh, websiteMetadata),
-          errors: [],
+          data: data,
+          errors: error,
         },
       });
+      debug('itPerformanceMetric facet completed');
     }
 
     // 'lighthouse desktop',
@@ -192,7 +200,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
     // If Site Scanner returns true for DAP but IT Perf metric does not, overwrite the value.
     if (
       report.reports?.itPerformanceMetric !== undefined &&
-      report.reports.siteScanner.data.dap_detected_final_url
+      report.reports.siteScanner?.data.dap_detected_final_url
     ) {
       debug('overwriting DAP value with siteScanner data');
       report.reports.itPerformanceMetric.data.dap = true;
