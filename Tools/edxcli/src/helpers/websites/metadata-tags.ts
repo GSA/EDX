@@ -1,3 +1,5 @@
+import { serializeError, ErrorObject } from 'serialize-error';
+
 import { ScanHelper } from './scan';
 import { ScanFacetInterface, scanFacetReport } from './scan-facet';
 import { WebsiteMetadata } from './websites-metadata';
@@ -9,7 +11,7 @@ export class MetadataTags implements ScanFacetInterface {
   scanHelper: ScanHelper;
   websiteMetadata: WebsiteMetadata;
   data: unknown = {};
-  error: unknown = {};
+  error: ErrorObject[] = [];
 
   constructor(sh: ScanHelper, websiteMetadata: WebsiteMetadata) {
     this.scanHelper = sh;
@@ -30,8 +32,11 @@ export class MetadataTags implements ScanFacetInterface {
           waitUntil: 'networkidle2',
         })
         .catch((error) => {
-          debug('%O', error);
-          console.error('Metadata Tags error:', error);
+          debug(error);
+          this.error.push(serializeError(error));
+          console.error(
+            'Metadata Tags facet threw an error which has been logged to the resultant json file.',
+          );
         });
       const keywordHandle = await page.$("meta[name='keywords']");
       // some sites don't have keywords set, skip evaluation if that's the case
@@ -50,7 +55,7 @@ export class MetadataTags implements ScanFacetInterface {
       this.data = { keywords: keywordsArray };
     } catch (error) {
       debug(error);
-      this.error = error;
+      this.error.push(serializeError(error));
     }
 
     await page.close();
