@@ -77,9 +77,9 @@ export class UswdsComponentsReport implements ScanFacetInterface {
         })
         .catch((error) => {
           console.log(
-            'An error has occurred and is logged to the resultant JSON file.',
+            'USWDS Components facet threw an error has occurred and is logged to the resultant JSON file.',
           );
-          this.error.push(error);
+          this.error.push(serializeError(error));
         });
       const content = await page.content();
       this.data.accordion = /usa-accordion__heading/.test(content);
@@ -126,10 +126,10 @@ export class UswdsComponentsReport implements ScanFacetInterface {
       this.data.tooltip = /usa-tooltip/.test(content);
       this.data.validation = /usa-alert--validation/.test(content);
     } catch (error: any) {
-      console.log(
+      error.log(
         'An error has occurred and is logged to the resultant JSON file.',
       );
-      debug("%O",error)
+      debug('%O', error);
       this.error.push(serializeError(error));
     }
 

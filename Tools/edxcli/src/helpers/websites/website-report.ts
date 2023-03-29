@@ -6,7 +6,8 @@ import { ICuiBanner } from './cui-banner';
 import { IMetadataTags } from './metadata-tags';
 const { version: appVersion } = require('../../../package.json');
 import * as Debug from 'debug';
-const debug = Debug.default('edxcli:website-report');
+import { ErrorObject, serializeError } from 'serialize-error';
+const debug = Debug.default('edxcli:helper:website-report');
 
 /**
  * Represents all data elements in a websiteReport
@@ -23,7 +24,7 @@ export class WebsiteReport implements IWebsiteReport {
   domain: string;
   url: string;
   scanStatus: string;
-  scanErrors: string[];
+  scanErrors: ErrorObject[];
   scanPreset: presetType;
   scanFacets: facetType[];
   reports: Record<facetType, facetReport>;
@@ -67,7 +68,10 @@ export class WebsiteReport implements IWebsiteReport {
             ];
           }
         } catch (error) {
-          debug(`Error adding data to report: %O`, error);
+          this.scanErrors.push(serializeError(error));
+          debug(
+            `Error adding data to report from ${facet}. Error has been captured in the resultant JSON file`,
+          );
           console.error(`error adding data to report`, error);
         }
       }
@@ -84,7 +88,7 @@ export interface IWebsiteReport {
   domain: string;
   url: string;
   scanStatus: string;
-  scanErrors: string[];
+  scanErrors: ErrorObject[];
   scanPreset: string;
   scanFacets: facetType[];
   reports: Record<facetType, facetReport>;

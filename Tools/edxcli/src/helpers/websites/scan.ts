@@ -16,7 +16,7 @@ import { WebsiteMetadata } from './websites-metadata';
 import { WebsiteReport } from './website-report';
 
 import * as Debug from 'debug';
-const debug = Debug.default('edxcli:scan');
+const debug = Debug.default('edxcli:helper:scan');
 
 // eslint-disable-next-line complexity
 export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {

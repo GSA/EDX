@@ -1,10 +1,10 @@
 import { ScanHelper } from './scan';
 import { WebsiteMetadata } from './websites-metadata';
 const lighthouse = require('lighthouse');
-import * as Debug from 'debug';
 import { ScanFacetInterface, scanFacetReport } from './scan-facet';
 import { ErrorObject, serializeError } from 'serialize-error';
-const debug = Debug.default('edxcli:lighthouse');
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helper:lighthouse');
 
 export class LighthouseReport implements ScanFacetInterface {
   scanHelper: ScanHelper;
@@ -32,7 +32,10 @@ export class LighthouseReport implements ScanFacetInterface {
         waitUntil: 'networkidle2',
       })
       .catch((error) => {
-        console.error('Lighthouse error:', error);
+        console.error(
+          `Lighthouse facet error using ${this.device} device. Data logged to the resultant json file.`,
+        );
+        this.error.push(serializeError(error));
       });
     const options = {
       port: new URL(this.scanHelper.browser.wsEndpoint()).port,
@@ -54,7 +57,9 @@ export class LighthouseReport implements ScanFacetInterface {
       delete this.data.artifacts;
       delete this.data.report;
     } catch (error) {
-      console.error('An error occurred!', error);
+      console.error(
+        'Lighthouse facet threw an error which has been logged to the resultant json file.',
+      );
       this.error.push(serializeError(error));
     }
 

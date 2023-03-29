@@ -2,13 +2,16 @@ import { ScanHelper } from './scan';
 import { printHash } from '../global/utils';
 import { ScanFacetInterface, scanFacetReport } from './scan-facet';
 import { WebsiteMetadata } from './websites-metadata';
+import { ErrorObject, serializeError } from 'serialize-error';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helper:screenshot');
 
 export class Screenshot implements ScanFacetInterface {
   scanHelper: ScanHelper;
   websiteMetadata: WebsiteMetadata;
   type = '';
   data: ScreenshotType[] = [];
-  error: unknown = {};
+  error: ErrorObject[] = [];
 
   constructor(
     sh: ScanHelper,
@@ -39,7 +42,10 @@ export class Screenshot implements ScanFacetInterface {
           await page
             .goto(domain.toString(), { waitUntil: 'networkidle2' })
             .catch((error) => {
-              console.error('Screenshot error:', error);
+              this.error.push(serializeError(error));
+              console.error(
+                `Screenshot error when capturing with a ${device} device type. Full error output is captured in the resultant JSON file`,
+              );
             });
 
           // eslint-disable-next-line no-await-in-loop
@@ -68,7 +74,11 @@ export class Screenshot implements ScanFacetInterface {
 
       this.data = screenshotArray;
     } catch (error) {
-      this.error = error;
+      debug('Screenshot error took place: %O', error);
+      console.error(
+        'Metadata Tags facet threw an error which has been logged to the resultant json file.',
+      );
+      this.error.push(serializeError(error));
     }
 
     await page.close();

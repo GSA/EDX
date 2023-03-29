@@ -1,6 +1,6 @@
 import { serializeError, ErrorObject } from 'serialize-error';
 import * as Debug from 'debug';
-const debug = Debug.default('edxcli:it-performance-metric');
+const debug = Debug.default('edxcli:helper:it-performance-metric');
 
 import { ScanHelper } from './scan';
 import { WebsiteMetadata } from './websites-metadata';

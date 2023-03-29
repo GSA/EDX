@@ -1,11 +1,11 @@
 import { ScanFacetInterface, scanFacetReport } from './scan-facet';
 import { SiteScannerRecord } from './fetch';
 const axios = require('axios').default;
-import * as Debug from 'debug';
 import { WebsiteMetadata } from './websites-metadata';
 import { ScanHelper } from './scan';
 import { ErrorObject, serializeError } from 'serialize-error';
-const debug = Debug.default('edxcli:site-scanner');
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helper:site-scanner');
 
 export class SiteScannerReport implements ScanFacetInterface {
   scanHelper: ScanHelper;
