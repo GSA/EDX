@@ -3,7 +3,7 @@ import * as fs from 'node:fs';
 import puppeteer from 'puppeteer';
 
 import { browser } from '../../browser';
-import { cuiBanner } from './cui-banner';
+import { CuiBanner } from './cui-banner';
 import { printHash, writeJSONFile } from '../global/utils';
 import { ItPerfMetricReport } from './it-performance-metric';
 import { lighthouseReport } from './lighthouse';
@@ -48,13 +48,21 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
 
   if (pageFound) {
     if (sh.facets.includes(<facetType>'cuiBanner')) {
+      debug('CUI Banner facet starting');
+      ({ data, error } = await createScanFacet(
+        CuiBanner,
+        sh,
+        websiteMetadata,
+      ).run());
       report.addReport({
         cuiBanner: {
-          description: '',
-          data: await cuiBanner(sh, websiteMetadata.completeUrl),
-          errors: [],
+          description:
+            'Produces a confidence score indicating if the CUI warning banner is present on a given page. ',
+          data: data,
+          errors: error,
         },
       });
+      debug('CUI Banner facet completed');
     }
 
     if (sh.facets.includes(<facetType>'itPerformanceMetric')) {
