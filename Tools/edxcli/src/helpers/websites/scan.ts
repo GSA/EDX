@@ -6,7 +6,7 @@ import { browser } from '../../browser';
 import { CuiBanner } from './cui-banner';
 import { printHash, writeJSONFile } from '../global/utils';
 import { ItPerfMetricReport } from './it-performance-metric';
-import { lighthouseReport } from './lighthouse';
+import { LighthouseReport } from './lighthouse';
 import { MetadataTags } from './metadata-tags';
 import { createScanFacet } from './scan-facet';
 import { Screenshot } from './screenshot';
@@ -85,11 +85,17 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
 
     // 'lighthouse desktop',
     if (isWebsite && sh.facets.includes(<facetType>'lighthouseDesktop')) {
+      ({ data, error } = await createScanFacet(
+        LighthouseReport,
+        sh,
+        websiteMetadata,
+        { device: 'desktop' },
+      ).run());
       report.addReport({
         lighthouseDesktop: {
-          data: await lighthouseReport(sh, websiteMetadata, 'desktop'),
-          description: 'Google Lighthouse outputs for desktop.',
-          errors: [],
+          description: 'Google Lighthouse outputs for desktop devices',
+          errors: error,
+          data: data,
         },
       });
     }
@@ -97,11 +103,17 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
     // 'lighthouse mobile',
     if (isWebsite && sh.facets.includes(<facetType>'lighthouseMobile')) {
       debug('lighthouseMobile facet executing');
+      ({ data, error } = await createScanFacet(
+        LighthouseReport,
+        sh,
+        websiteMetadata,
+        { device: 'mobile' },
+      ).run());
       report.addReport({
         lighthouseMobile: {
-          data: await lighthouseReport(sh, websiteMetadata, 'mobile'),
           description: 'Google Lighthouse outputs for mobile devices',
-          errors: [],
+          errors: error,
+          data: data,
         },
       });
       debug('lighthouseMobile facet completed');
