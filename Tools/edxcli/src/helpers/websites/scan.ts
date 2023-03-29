@@ -10,7 +10,7 @@ import { lighthouseReport } from './lighthouse';
 import { MetadataTags } from './metadata-tags';
 import { createScanFacet } from './scan-facet';
 import { Screenshot } from './screenshot';
-import { siteScannerReport } from './site-scanner';
+import { SiteScannerReport } from './site-scanner';
 import { UswdsComponentsReport } from './uswds-components';
 import { WebsiteMetadata } from './websites-metadata';
 import { WebsiteReport } from './website-report';
@@ -179,11 +179,19 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
 
     if (isWebsite && sh.facets.includes(<facetType>'siteScanner')) {
       debug('siteScanner facet executing');
-      const scanReport = await siteScannerReport(websiteMetadata.completeUrl);
-      if (scanReport)
-        report.addReport({
-          siteScanner: { data: scanReport, errors: [], description: '' },
-        });
+      ({ data, error } = await createScanFacet(
+        SiteScannerReport,
+        sh,
+        websiteMetadata,
+      ).run());
+      report.addReport({
+        siteScanner: {
+          data: data,
+          errors: error,
+          description:
+            'Represents data retrieved from TTS Site Scanner for the given web property. https://digital.gov/guides/site-scanning/',
+        },
+      });
       debug('siteScanner facet completed');
     }
 
