@@ -8,17 +8,18 @@
 * [GitHub Action Maintenance](#github-action-maintenance)
 * [Usage](#usage)
 * [Commands](#commands)
+* [Debugging](#debugging)
 * [Release Notes](#release-notes)
 <!-- tocstop -->
 
-* [edxcli](#edxcli)
-* [Installation](#installation)
+- [edxcli](#edxcli)
+- [Installation](#installation)
   - [Prerequisites](#prerequisites)
     - [Airtable access](#airtable-access)
     - [Touchpoints](#touchpoints)
-* [GitHub Action Maintenance](#github-action-maintenance)
-* [Usage](#usage)
-* [Commands](#commands)
+- [GitHub Action Maintenance](#github-action-maintenance)
+- [Usage](#usage)
+- [Commands](#commands)
   - [`edxcli data condense`](#edxcli-data-condense)
   - [`edxcli help [COMMANDS]`](#edxcli-help-commands)
   - [`edxcli plugins`](#edxcli-plugins)
@@ -35,7 +36,8 @@
   - [`edxcli websites push`](#edxcli-websites-push)
   - [`edxcli websites scan`](#edxcli-websites-scan)
   - [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
-* [Release Notes](#release-notes)
+- [Debugging](#debugging)
+- [Release Notes](#release-notes)
   - [0.0.25](#0025)
   - [0.0.24](#0024)
   - [0.0.23](#0023)
@@ -578,6 +580,11 @@ yarn run test
 yarn run prepack
 ```
 
+# Debugging
+
+[Debug](https://github.com/debug-js/debug) is used for debugging scans and follows a convention by which
+
+`env DEBUG="edxcli:*" bin/run websites scan -d labs.gsa.gov -f screenshot -f searchEngine`
 <!-- Release Notes -->
 
 # Release Notes

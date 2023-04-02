@@ -48,12 +48,15 @@ export class WebsiteReport implements IWebsiteReport {
 
   addReport(facetReport: Partial<Record<facetType, facetReport>>): void {
     debug('Adding data to report');
+    // this results in an array with one entry, looking for better ways to get to the facet value
     const facets: facetType[] = Object.keys(facetReport) as facetType[];
-
+    debug('facets: %O', facets);
+    // eslint-disable-next-line guard-for-in
     for (const facet in facets) {
       if (Object.prototype.hasOwnProperty.call(facets, facet)) {
         try {
           const val: facetType = facets[facet];
+          debug('facet value: %s', val);
           if (
             this.reports[val] === undefined &&
             facetReport[val] !== undefined
