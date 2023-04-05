@@ -1,4 +1,6 @@
 import { CliUx } from '@oclif/core';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helper:scan');
 import * as fs from 'node:fs';
 import puppeteer from 'puppeteer';
 
@@ -14,9 +16,6 @@ import { SiteScannerReport } from './site-scanner';
 import { UswdsComponentsReport } from './uswds-components';
 import { WebsiteMetadata } from './websites-metadata';
 import { WebsiteReport } from './website-report';
-
-import * as Debug from 'debug';
-const debug = Debug.default('edxcli:helper:scan');
 
 // eslint-disable-next-line complexity
 export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {

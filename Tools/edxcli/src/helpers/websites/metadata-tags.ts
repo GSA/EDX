@@ -1,11 +1,10 @@
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helper:websitesmetadata-tags');
 import { serializeError, ErrorObject } from 'serialize-error';
 
 import { ScanHelper } from './scan';
 import { ScanFacetInterface, scanFacetReport } from './scan-facet';
 import { WebsiteMetadata } from './websites-metadata';
-
-import * as Debug from 'debug';
-const debug = Debug.default('edxcli:helper:websitesmetadata-tags');
 
 export class MetadataTags implements ScanFacetInterface {
   scanHelper: ScanHelper;

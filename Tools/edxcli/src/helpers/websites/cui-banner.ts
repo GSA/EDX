@@ -1,11 +1,12 @@
-import { ScanHelper } from './scan';
-import { fuzzy } from 'fast-fuzzy';
-import { serializeError, ErrorObject } from 'serialize-error';
 import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helper:cui-banner');
+import { fuzzy } from 'fast-fuzzy';
+import { Page } from 'puppeteer';
+import { serializeError, ErrorObject } from 'serialize-error';
+
+import { ScanHelper } from './scan';
 import { ScanFacetInterface, scanFacetReport } from './scan-facet';
 import { WebsiteMetadata } from './websites-metadata';
-import { Page } from 'puppeteer';
-const debug = Debug.default('edxcli:helper:cui-banner');
 
 export class CuiBanner implements ScanFacetInterface {
   scanHelper: ScanHelper;

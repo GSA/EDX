@@ -1,10 +1,11 @@
-import { ScanHelper } from './scan';
-import { WebsiteMetadata } from './websites-metadata';
 const lighthouse = require('lighthouse');
-import { ScanFacetInterface, scanFacetReport } from './scan-facet';
 import { ErrorObject, serializeError } from 'serialize-error';
 import * as Debug from 'debug';
 const debug = Debug.default('edxcli:helper:lighthouse');
+
+import { ScanHelper } from './scan';
+import { WebsiteMetadata } from './websites-metadata';
+import { ScanFacetInterface, scanFacetReport } from './scan-facet';
 
 export class LighthouseReport implements ScanFacetInterface {
   scanHelper: ScanHelper;

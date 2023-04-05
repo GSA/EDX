@@ -1,10 +1,11 @@
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helper:screenshot');
+import { ErrorObject, serializeError } from 'serialize-error';
+
 import { ScanHelper } from './scan';
 import { printHash } from '../global/utils';
 import { ScanFacetInterface, scanFacetReport } from './scan-facet';
 import { WebsiteMetadata } from './websites-metadata';
-import { ErrorObject, serializeError } from 'serialize-error';
-import * as Debug from 'debug';
-const debug = Debug.default('edxcli:helper:screenshot');
 
 export class Screenshot implements ScanFacetInterface {
   scanHelper: ScanHelper;
