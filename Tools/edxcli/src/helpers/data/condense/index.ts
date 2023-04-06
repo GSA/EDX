@@ -1,15 +1,19 @@
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helper:condense:index');
 import _ from 'lodash';
 import path from 'node:path';
 import fs from 'node:fs/promises';
+// import { serializeError, ErrorObject } from 'serialize-error';
+
 import CSV from '../../global/csv';
-import { collections, CsvHeaderType } from './collections';
+import { collections, CsvHeaderType, getCollectionVersionMap,getLatestCollection } from './collections';
 
 export class CondenseHelper {
   formattedDate: string;
   outputDirectory: string;
   folderList: string;
-  collection: string;
-  csvHeaders: CsvHeaderType[];
+  collectionName: string;
+  csvTemplateHeaders: CsvHeaderType[];
   csvWriter: CSV;
   fileParsePromiseArray: any[];
 
@@ -17,15 +21,13 @@ export class CondenseHelper {
     this.formattedDate = formattedDate;
     this.outputDirectory = flags.output;
     this.folderList = flags.folders;
-    this.collection = flags.collection;
-    this.csvHeaders = collections[flags.collection]
-      ? collections[flags.collection]
-      : collections.default;
+    this.collectionName = flags.collection;
+    this.csvTemplateHeaders = getLatestCollection(flags.collection);
     this.csvWriter = new CSV(
       formattedDate,
       this.outputDirectory,
       'condense',
-      this.csvHeaders,
+      this.csvTemplateHeaders,
     );
     this.fileParsePromiseArray = [];
   }
@@ -63,15 +65,24 @@ export class CondenseHelper {
 
   async extractDataPoints(data: any): Promise<{ [key: string]: string }[]> {
     const extractArray: { [key: string]: string }[] = [];
+    // loop through the array of parsed json files
     for (const row in data) {
       if (Object.prototype.hasOwnProperty.call(data, row)) {
         const extract: { [key: string]: string } = {};
-
-        for (const col in this.csvHeaders) {
-          if (Object.prototype.hasOwnProperty.call(this.csvHeaders, col)) {
-            extract[this.csvHeaders[col].id] = _.get(
+        // get the scanVersion number out of the json file
+        const scanVersion = data[row].scanVersion;
+        debug('Scan version for file %s, %s', scanVersion, row);
+        //  get the appropriate csvheader and jsonPath data for each file
+        const collectionVersion = getCollectionVersionMap(this.collectionName, scanVersion);
+        const csvHeaders = collections[this.collectionName][collectionVersion];
+        // for  each file, loop through the csvHeaders that are appropriate for the file
+        for (const col in csvHeaders) {
+          if (Object.prototype.hasOwnProperty.call(csvHeaders, col)) {
+            debug('ID: %s', csvHeaders[col].id);
+            debug('Value: %s', _.get(data[row], csvHeaders[col].id));
+            extract[csvHeaders[col].id] = _.get(
               data[row],
-              this.csvHeaders[col].id,
+              csvHeaders[col].jsonPath,
             );
           }
         }
