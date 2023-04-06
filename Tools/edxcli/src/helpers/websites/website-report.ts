@@ -8,6 +8,7 @@ const { version: appVersion } = require('../../../package.json');
 import * as Debug from 'debug';
 import { ErrorObject, serializeError } from 'serialize-error';
 const debug = Debug.default('edxcli:helper:website-report');
+import _ from 'lodash';
 
 /**
  * Represents all data elements in a websiteReport
@@ -65,10 +66,7 @@ export class WebsiteReport implements IWebsiteReport {
             Object.assign(this.reports, facetReport);
           } else {
             debug(`Merging ${val} with pre-existing data`);
-            this.reports[val].data = [
-              ...this.reports[val].data,
-              ...(facetReport[val]?.data || []),
-            ];
+            _.merge(this.reports[val].data, facetReport[val]?.data);
           }
         } catch (error) {
           this.scanErrors.push(serializeError(error));
