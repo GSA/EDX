@@ -143,6 +143,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
         websiteMetadata,
         { type: 'webpage' },
       ).run());
+      debug('%O', data);
       report.addReport({
         screenshot: {
           data: data,
@@ -158,26 +159,29 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
     if (isWebsite && sh.facets.includes(<facetType>'searchEngine')) {
       debug('searchEngine facet executing');
 
-      const searchEngineURLs = [
-        'https://google.com/search?q=',
-        'https://www.bing.com/search?q=',
-        'https://duckduckgo.com/?q=',
-      ];
+      const searchEngineURLs: Record<string, string> = {
+        google: 'https://google.com/search?q=',
+        bing: 'https://www.bing.com/search?q=',
+        duckduckgo: 'https://duckduckgo.com/?q=',
+      };
+      const searchEngines = Object.keys(searchEngineURLs);
+      for (const index of searchEngines) {
+        debug('URL %s', searchEngineURLs[index]);
+        debug('Index %s', index);
 
-      for (const item of searchEngineURLs) {
         // eslint-disable-next-line no-await-in-loop
         ({ data, error } = await createScanFacet(
           Screenshot,
           sh,
-          new WebsiteMetadata(`${item}${websiteMetadata.completeUrl.hostname}`),
-          { type: 'searchEngine' },
+          new WebsiteMetadata(
+            `${searchEngineURLs[index]}${websiteMetadata.completeUrl.hostname}`,
+          ),
+          { type: 'searchEngine', engine: index },
         ).run());
-
+        debug('%O', data);
         report.addReport({
           screenshot: {
-            data:
-              // eslint-disable-next-line no-await-in-loop
-              Array.isArray(data) ? [...data] : [],
+            data: data,
             description:
               'Holds screenshots taken throughout scan including homepage, search engine, and others.',
             errors: [],

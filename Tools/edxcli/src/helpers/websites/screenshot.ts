@@ -6,12 +6,14 @@ import { ScanHelper } from './scan';
 import { printHash } from '../global/utils';
 import { ScanFacetInterface, scanFacetReport } from './scan-facet';
 import { WebsiteMetadata } from './websites-metadata';
+import _ from 'lodash';
 
 export class Screenshot implements ScanFacetInterface {
   scanHelper: ScanHelper;
   websiteMetadata: WebsiteMetadata;
   type = '';
-  data: ScreenshotType[] = [];
+  engine = '';
+  data: any;
   error: ErrorObject[] = [];
 
   constructor(
@@ -22,10 +24,10 @@ export class Screenshot implements ScanFacetInterface {
     this.scanHelper = sh;
     this.websiteMetadata = websiteMetadata;
     this.type = options?.type === undefined ? '' : options.type;
+    this.engine = options?.engine === undefined ? '' : options.engine;
   }
 
   async run(): Promise<scanFacetReport> {
-    const screenshotArray: ScreenshotType[] = [];
     const domain = this.websiteMetadata.completeUrl;
     const page = await this.scanHelper.browser.newPage();
     page.on('dialog', async (dialog) => {
@@ -37,6 +39,7 @@ export class Screenshot implements ScanFacetInterface {
         if (
           Object.prototype.hasOwnProperty.call(this.scanHelper.devices, device)
         ) {
+          debug('Screenshot using %s', device);
           // eslint-disable-next-line no-await-in-loop
           await page.emulate(this.scanHelper.devices[device]);
           // eslint-disable-next-line no-await-in-loop
@@ -63,21 +66,38 @@ export class Screenshot implements ScanFacetInterface {
             path: imgPath,
           });
 
-          screenshotArray.push({
-            screenshotType: this.type,
-            domain: domain.hostname,
-            url: domain.toString(),
-            imgPath: imgPath,
-            device: device,
-          });
+          // there is a slight difference in structure between webpage screenshots and searchEngine screenshots, this ternary operator handles the inclusion/ exclusion of the this.engine attribute
+          const dataObj =
+            this.engine === ''
+              ? {
+                  [this.type]: {
+                    [device]: {
+                      domain: domain.hostname,
+                      url: domain.toString(),
+                      imgPath: imgPath,
+                    },
+                  },
+                }
+              : {
+                  [this.type]: {
+                    [this.engine]: {
+                      [device]: {
+                        domain: domain.hostname,
+                        url: domain.toString(),
+                        imgPath: imgPath,
+                      },
+                    },
+                  },
+                };
+          this.data =
+            this.data === undefined ? dataObj : _.merge(this.data, dataObj);
+          debug('screenshhot data %O', this.data);
         }
       }
-
-      this.data = screenshotArray;
     } catch (error) {
       debug('Screenshot error took place: %O', error);
       console.error(
-        'Metadata Tags facet threw an error which has been logged to the resultant json file.',
+        'Screenshots facet threw an error which has been logged to the resultant json file.',
       );
       this.error.push(serializeError(error));
     }
@@ -88,9 +108,7 @@ export class Screenshot implements ScanFacetInterface {
 }
 
 export type ScreenshotType = {
-  screenshotType: string;
   domain: string;
   url: string;
   imgPath: string;
-  device: string;
 };
