@@ -16,7 +16,7 @@ export type CsvHeaderType = {
   title: string;
 };
 
-// The version numbers follow NPM packaging version number specifications. See https://github.com/omichelsen/compare-versions for more examples of valid versions which may include: <, >, ~, ^ etc
+// The version numbers follow NPM packaging version number specifications. Version numbers are interpreted with https://github.com/omichelsen/compare-versions to help identify most recent or appropriate mapping for a given scanVersion
 export const collections: CollectionType = {
   default: {
     '0.0.1': [
@@ -143,7 +143,6 @@ export const collections: CollectionType = {
       {
         id: "lighthouse.mobileData.lhr.audits['speed-index'].score",
         jsonPath: "lighthouse.mobileData.lhr.audits['speed-index'].score",
-
         title: '(M) Speed Index Score',
       },
       {
@@ -159,31 +158,26 @@ export const collections: CollectionType = {
       {
         id: "lighthouse.desktopData.lhr.audits['content-width'].score",
         jsonPath: "lighthouse.desktopData.lhr.audits['content-width'].score",
-
         title: 'Page Content Width Set',
       },
       {
         id: "lighthouse.desktopData.lhr.audits['meta-viewport'].score",
         jsonPath: "lighthouse.desktopData.lhr.audits['meta-viewport'].score",
-
         title: 'Meta Viewport Set',
       },
       {
         id: "lighthouse.desktopData.lhr.audits['meta-description'].score",
         jsonPath: "lighthouse.desktopData.lhr.audits['meta-description'].score",
-
         title: 'Meta Description Set',
       },
       {
         id: "lighthouse.desktopData.lhr.audits['document-title'].score",
         jsonPath: "lighthouse.desktopData.lhr.audits['document-title'].score",
-
         title: 'Document Title Set',
       },
       {
         id: "lighthouse.desktopData.lhr.audits['html-has-lang'].score",
         jsonPath: "lighthouse.desktopData.lhr.audits['html-has-lang'].score",
-
         title: 'HTML Language Set',
       },
     ],
@@ -316,7 +310,6 @@ export const collections: CollectionType = {
         id: "lighthouse.mobileData.lhr.audits['speed-index'].score",
         jsonPath:
           "reports.lighthouseMobile.data.lhr.audits['speed-index'].score",
-
         title: '(M) Speed Index Score',
       },
       {
@@ -334,28 +327,24 @@ export const collections: CollectionType = {
         id: "lighthouse.desktopData.lhr.audits['content-width'].score",
         jsonPath:
           "reports.lighthouseDesktop.data.lhr.audits['content-width'].score",
-
         title: 'Page Content Width Set',
       },
       {
         id: "lighthouse.desktopData.lhr.audits['meta-viewport'].score",
         jsonPath:
           "reports.lighthouseDesktop.data.lhr.audits['meta-viewport'].score",
-
         title: 'Meta Viewport Set',
       },
       {
         id: "lighthouse.desktopData.lhr.audits['meta-description'].score",
         jsonPath:
           "reports.lighthouseDesktop.data.lhr.audits['meta-description'].score",
-
         title: 'Meta Description Set',
       },
       {
         id: "lighthouse.desktopData.lhr.audits['document-title'].score",
         jsonPath:
           "reports.lighthouseDesktop.data.lhr.audits['document-title'].score",
-
         title: 'Document Title Set',
       },
       {
@@ -391,7 +380,6 @@ export const collections: CollectionType = {
         jsonPath: 'reports.screenshot.data.webpage.desktop.imgPath',
         title: 'Desktop Image',
       },
-
       {
         id: 'screenshotMobileImgPath',
         jsonPath: 'reports.screenshot.data.webpage.mobile.imgPath',
