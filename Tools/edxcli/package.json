@@ -1,7 +1,7 @@
 {
   "name": "edx_cli",
   "description": "oclif based CLI to evaluate web properties",
-  "version": "0.0.25",
+  "version": "1.0.0",
   "author": "US General Services Administration",
   "bin": {
     "edxcli": "./bin/run"

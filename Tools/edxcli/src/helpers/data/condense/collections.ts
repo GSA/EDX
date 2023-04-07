@@ -378,13 +378,13 @@ export const collections: CollectionType = {
       { id: 'scanVersion', jsonPath: 'scanVersion', title: 'Scan Version' },
       {
         id: 'screenshotDesktopImgPath',
-        jsonPath: 'screenCapture.data[1].imgPath',
+        jsonPath: 'reports.screenshot.data.webpage.desktop.imgPath',
         title: 'Desktop Image',
       },
 
       {
         id: 'screenshotMobileImgPath',
-        jsonPath: 'screenCapture.data[0].imgPath',
+        jsonPath: 'reports.screenshot.data.webpage.mobile.imgPath',
         title: 'Mobile Image',
       },
     ],

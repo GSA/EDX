@@ -103,7 +103,7 @@ $ npm install -g edx_cli
 $ edxcli COMMAND
 running command...
 $ edxcli (--version)
-edx_cli/0.0.25 darwin-x64 node-v16.14.2
+edx_cli/1.0.0 darwin-x64 node-v18.15.0
 $ edxcli --help [COMMAND]
 USAGE
   $ edxcli COMMAND
@@ -440,7 +440,7 @@ EXAMPLES
   $ edxcli websites scan bulk
 ```
 
-_See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v0.0.25/dist/commands/websites/index.ts)_
+_See code: [dist/commands/websites/index.ts](https://github.com/gsa/edx/blob/v1.0.0/dist/commands/websites/index.ts)_
 
 ## `edxcli websites fetch SOURCE`
 

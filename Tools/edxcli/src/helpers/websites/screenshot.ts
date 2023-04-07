@@ -89,9 +89,9 @@ export class Screenshot implements ScanFacetInterface {
                     },
                   },
                 };
+          // on the first iteration, this.data is undefined. After though, lodash's merge function is needed
           this.data =
             this.data === undefined ? dataObj : _.merge(this.data, dataObj);
-          debug('screenshhot data %O', this.data);
         }
       }
     } catch (error) {

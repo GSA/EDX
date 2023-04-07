@@ -6,7 +6,12 @@ import fs from 'node:fs/promises';
 // import { serializeError, ErrorObject } from 'serialize-error';
 
 import CSV from '../../global/csv';
-import { collections, CsvHeaderType, getCollectionVersionMap,getLatestCollection } from './collections';
+import {
+  collections,
+  CsvHeaderType,
+  getCollectionVersionMap,
+  getLatestCollection,
+} from './collections';
 
 export class CondenseHelper {
   formattedDate: string;
@@ -73,13 +78,20 @@ export class CondenseHelper {
         const scanVersion = data[row].scanVersion;
         debug('Scan version for file %s, %s', scanVersion, row);
         //  get the appropriate csvheader and jsonPath data for each file
-        const collectionVersion = getCollectionVersionMap(this.collectionName, scanVersion);
+        const collectionVersion = getCollectionVersionMap(
+          this.collectionName,
+          scanVersion,
+        );
         const csvHeaders = collections[this.collectionName][collectionVersion];
         // for  each file, loop through the csvHeaders that are appropriate for the file
         for (const col in csvHeaders) {
           if (Object.prototype.hasOwnProperty.call(csvHeaders, col)) {
-            debug('ID: %s', csvHeaders[col].id);
-            debug('Value: %s', _.get(data[row], csvHeaders[col].id));
+            debug(
+              'ID, Value: %s, %s',
+              csvHeaders[col].id,
+              _.get(data[row], csvHeaders[col].jsonPath),
+            );
+            debug('jsonPath: %s', csvHeaders[col].jsonPath);
             extract[csvHeaders[col].id] = _.get(
               data[row],
               csvHeaders[col].jsonPath,

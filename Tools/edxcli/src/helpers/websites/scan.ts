@@ -143,7 +143,6 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
         websiteMetadata,
         { type: 'webpage' },
       ).run());
-      debug('%O', data);
       report.addReport({
         screenshot: {
           data: data,
@@ -178,7 +177,6 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
           ),
           { type: 'searchEngine', engine: index },
         ).run());
-        debug('%O', data);
         report.addReport({
           screenshot: {
             data: data,
