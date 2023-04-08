@@ -1,3 +1,6 @@
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helpers:global:utils');
+
 import { ATWebsiteFields } from '../airtable';
 import fs from 'node:fs';
 import { URL } from 'node:url';
@@ -10,6 +13,7 @@ const hash = crypto.createHash('md5');
  * @returns {boolean} whether the site is included in performance metrics
  */
 export function isCountedSite(data: ATWebsiteFields): boolean {
+  debug('Checking if %s is a counted website', data.Site);
   return (
     (data['Digital Brand Category'] === 'Hybrid' ||
       data['Digital Brand Category'] === 'GSA Business') &&
@@ -35,6 +39,7 @@ export const writeJSONFile = async (
   filename: string,
   date?: string,
 ): Promise<void> => {
+  debug('Writing json file to %s', path);
   path = path.endsWith('/') ? path : `${path}/`;
   fs.mkdirSync(path, { recursive: true });
   date = date ? `${date}_` : '';
@@ -47,6 +52,7 @@ export const writeJSONFile = async (
  * @returns {URL} node URL
  */
 export const createHttpsUrl = async function (domain: string): Promise<URL> {
+  debug('Creating URL with https:// for %s', domain);
   const regex = /(http:\/\/|https:\/\/)/;
   // strip out http/https if it exists
   domain = domain.replace(regex, '');
@@ -60,6 +66,7 @@ export const createHttpsUrl = async function (domain: string): Promise<URL> {
  * @returns {string} as an MD5 Hexidecimal hash
  */
 export const printHash = async function (text: string): Promise<string> {
+  debug('Constructing a hash for input text: %s', text);
   hash.update(text);
   return hash.copy().digest('hex');
 };

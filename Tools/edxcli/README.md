@@ -3,23 +3,24 @@
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 
 <!-- toc -->
-* [edxcli](#edxcli)
-* [Installation](#installation)
-* [GitHub Action Maintenance](#github-action-maintenance)
-* [Usage](#usage)
-* [Commands](#commands)
-* [Debugging](#debugging)
-* [Release Notes](#release-notes)
-<!-- tocstop -->
 
 - [edxcli](#edxcli)
 - [Installation](#installation)
-  - [Prerequisites](#prerequisites)
-    - [Airtable access](#airtable-access)
-    - [Touchpoints](#touchpoints)
 - [GitHub Action Maintenance](#github-action-maintenance)
 - [Usage](#usage)
 - [Commands](#commands)
+- [Debugging](#debugging)
+- [Release Notes](#release-notes)
+<!-- tocstop -->
+
+* [edxcli](#edxcli)
+* [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+    - [Airtable access](#airtable-access)
+    - [Touchpoints](#touchpoints)
+* [GitHub Action Maintenance](#github-action-maintenance)
+* [Usage](#usage)
+* [Commands](#commands)
   - [`edxcli data condense`](#edxcli-data-condense)
   - [`edxcli help [COMMANDS]`](#edxcli-help-commands)
   - [`edxcli plugins`](#edxcli-plugins)
@@ -36,8 +37,9 @@
   - [`edxcli websites push`](#edxcli-websites-push)
   - [`edxcli websites scan`](#edxcli-websites-scan)
   - [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
-- [Debugging](#debugging)
-- [Release Notes](#release-notes)
+* [Debugging](#debugging)
+  - [Examples](#examples)
+* [Release Notes](#release-notes)
   - [0.0.25](#0025)
   - [0.0.24](#0024)
   - [0.0.23](#0023)
@@ -98,6 +100,7 @@ GitHub Action Repository secrets share the same names as the keys in `.env`. As 
 # Usage
 
 <!-- usage -->
+
 ```sh-session
 $ npm install -g edx_cli
 $ edxcli COMMAND
@@ -109,27 +112,65 @@ USAGE
   $ edxcli COMMAND
 ...
 ```
+
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-* [`edxcli data condense`](#edxcli-data-condense)
-* [`edxcli help [COMMANDS]`](#edxcli-help-commands)
-* [`edxcli plugins`](#edxcli-plugins)
-* [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin)
-* [`edxcli plugins:inspect PLUGIN...`](#edxcli-pluginsinspect-plugin)
-* [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin-1)
-* [`edxcli plugins:link PLUGIN`](#edxcli-pluginslink-plugin)
-* [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin)
-* [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-1)
-* [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-2)
-* [`edxcli plugins update`](#edxcli-plugins-update)
-* [`edxcli websites`](#edxcli-websites)
-* [`edxcli websites fetch SOURCE`](#edxcli-websites-fetch-source)
-* [`edxcli websites push`](#edxcli-websites-push)
-* [`edxcli websites scan`](#edxcli-websites-scan)
-* [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
+
+- [edxcli](#edxcli)
+- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+    - [Airtable access](#airtable-access)
+    - [Touchpoints](#touchpoints)
+- [GitHub Action Maintenance](#github-action-maintenance)
+- [Usage](#usage)
+- [Commands](#commands)
+  - [`edxcli data condense`](#edxcli-data-condense)
+  - [`edxcli help [COMMANDS]`](#edxcli-help-commands)
+  - [`edxcli plugins`](#edxcli-plugins)
+  - [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin)
+  - [`edxcli plugins:inspect PLUGIN...`](#edxcli-pluginsinspect-plugin)
+  - [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin-1)
+  - [`edxcli plugins:link PLUGIN`](#edxcli-pluginslink-plugin)
+  - [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin)
+  - [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-1)
+  - [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-2)
+  - [`edxcli plugins update`](#edxcli-plugins-update)
+  - [`edxcli websites`](#edxcli-websites)
+  - [`edxcli websites fetch SOURCE`](#edxcli-websites-fetch-source)
+  - [`edxcli websites push`](#edxcli-websites-push)
+  - [`edxcli websites scan`](#edxcli-websites-scan)
+  - [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
+- [Debugging](#debugging)
+  - [Examples](#examples)
+- [Release Notes](#release-notes)
+  - [0.0.25](#0025)
+  - [0.0.24](#0024)
+  - [0.0.23](#0023)
+  - [0.0.22](#0022)
+  - [0.0.21](#0021)
+  - [0.0.20](#0020)
+  - [0.0.19](#0019)
+  - [0.0.18](#0018)
+  - [0.0.17](#0017)
+  - [0.0.16](#0016)
+  - [0.0.15](#0015)
+  - [0.0.14](#0014)
+  - [0.0.13](#0013)
+  - [0.0.12](#0012)
+  - [0.0.11](#0011)
+  - [0.0.10](#0010)
+  - [0.0.9](#009)
+  - [0.0.8](#008)
+  - [0.0.7](#007)
+  - [0.0.6](#006)
+  - [0.0.5](#005)
+  - [0.0.4](#004)
+  - [0.0.3](#003)
+  - [0.0.2](#002)
+  - [0.0.1](#001)
 
 ## `edxcli data condense`
 
@@ -232,7 +273,7 @@ ALIASES
   $ edxcli plugins add
 
 EXAMPLES
-  $ edxcli plugins:install myplugin 
+  $ edxcli plugins:install myplugin
 
   $ edxcli plugins:install https://github.com/someuser/someplugin
 
@@ -292,7 +333,7 @@ ALIASES
   $ edxcli plugins add
 
 EXAMPLES
-  $ edxcli plugins:install myplugin 
+  $ edxcli plugins:install myplugin
 
   $ edxcli plugins:install https://github.com/someuser/someplugin
 
@@ -570,6 +611,7 @@ EXAMPLES
 
   $ edxcli websites scan bulk -d Touchpoints --resume
 ```
+
 <!-- commandsstop -->
 
 <!-- Updating -->
@@ -582,9 +624,21 @@ yarn run prepack
 
 # Debugging
 
-[Debug](https://github.com/debug-js/debug) is used for debugging scans and follows a convention by which
+[Debug](https://github.com/debug-js/debug) is used for debugging scans. Debug statements use the file name and path as keys for debug statements.
 
-`env DEBUG="edxcli:*" bin/run websites scan -d labs.gsa.gov -f screenshot -f searchEngine`
+## Examples
+
+To turn on debug globally for the CLI prefix commands with `env DEBUG="edxcli:*"`.
+
+Turn on debug for website scan screenshot facet
+`env DEBUG="edxcli:helpers:websites:screenshot" bin/run websites scan -d labs.gsa.gov -f screenshot`
+
+Turn on debug for all statements containing "scan"
+`env DEBUG="*scan*" bin/run websites scan -d gsa.gov`
+
+Turn on debug for all puppeteer internals
+`env DEBUG="puppeteer*" bin/run websites scan -d gsa.gov`
+
 <!-- Release Notes -->
 
 # Release Notes

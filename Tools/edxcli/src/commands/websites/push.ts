@@ -1,4 +1,7 @@
 import { Flags, CliUx } from '@oclif/core';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:websites:push');
+
 import BaseCommand from '../../base';
 import { FetchHelper, TouchpointsRecord } from '../../helpers/websites/fetch';
 import * as Airtable from '../../helpers/airtable/index';
@@ -29,6 +32,7 @@ export default class Push extends BaseCommand<typeof Push.flags> {
   /* retrieves a list of domains from touchpoints, checks airtable for a record with the same domain, if it exists, issues a PATCH (only update fields specified), if not exists, creates record */
   async run(): Promise<void> {
     const { flags } = await this.parse(Push);
+    debug('Flags: %O', flags);
 
     CliUx.ux.action.start(`Fetching Touchpoints data`);
     const fh = new FetchHelper(BaseCommand.formattedDate(), flags);
@@ -73,8 +77,10 @@ export default class Push extends BaseCommand<typeof Push.flags> {
     const upsertPromisesArray: Promise<void>[] = [];
 
     /* iterate through touchpoints data and determine what needs to be updated */
+    debug('Iterating through Touchpoints data');
     for (const item in tpData) {
       if (Object.prototype.hasOwnProperty.call(tpData, item)) {
+        debug('Reviewing %s', tpData[item].Site);
         const tpDomain: string = tpData[item].Site;
         /* if the touchpoints site (domain) exists in atData, start comparing values */
         if (Object.prototype.hasOwnProperty.call(atData, tpDomain)) {
@@ -95,6 +101,7 @@ export default class Push extends BaseCommand<typeof Push.flags> {
 
     /* Update websites - airtable api allows for 10 records per call */
     while (websitesToUpdate.length > 0) {
+      debug('Airtable update loop');
       upsertPromisesArray.push(
         Airtable.updateWebsites(websitesToUpdate.splice(0, 10))
           .then((updatedWebsiteRecords) => {
@@ -122,6 +129,7 @@ export default class Push extends BaseCommand<typeof Push.flags> {
     }
 
     while (websitesToCreate.length > 0) {
+      debug('Airtable create loop');
       upsertPromisesArray.push(
         Airtable.createWebsites(websitesToCreate.splice(0, 10))
           .then((newWebsiteRecord) => {
@@ -134,6 +142,7 @@ export default class Push extends BaseCommand<typeof Push.flags> {
     }
 
     // write the before/ after content to files
+    debug('Writing before/after snapshots');
     Promise.all(upsertPromisesArray).then(() => {
       writeJSONFile(
         tpData,

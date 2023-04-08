@@ -1,9 +1,13 @@
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helpers:airtable');
+
 import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 dotenv.config();
 const AIRTABLE_BASE = 'appaxAzqTVnbOf7cm';
 const TABLE = 'WEBSITES';
 
 import Airtable from 'airtable';
+
 const base = new Airtable({
   endpointUrl: 'https://api.airtable.com',
   apiKey: `${process.env.AIRTABLE_API_KEY}`,
@@ -15,6 +19,7 @@ const base = new Airtable({
  * @returns {Promise<ATListResponseType>} promise of an ATListResponseType object
  */
 export function retrieveWebsite(domain: string): Promise<ATListResponseType> {
+  debug("Retrieving '%s' website from airtable", domain);
   // must return a promise since the "select" function is promise based. https://ckhang.com/blog/2021/javascript-promises-async-await/
   return new Promise<ATListResponseType>((resolve, reject) => {
     base(TABLE)
@@ -51,7 +56,8 @@ export function retrieveWebsite(domain: string): Promise<ATListResponseType> {
  */
 export async function retrieveWebsites(): Promise<any> {
   // must return a promise since the "select" function is promise based. https://ckhang.com/blog/2021/javascript-promises-async-await/
-
+  const viewName = 'ALL Sites';
+  debug('Retrieving all websites from %s', viewName);
   return new Promise<any>((resolve, reject) => {
     let dataObject: { [key: string]: Record<string, string> } = {};
     base(TABLE)
@@ -66,7 +72,7 @@ export async function retrieveWebsites(): Promise<any> {
           'Digital Brand Category',
           'Website Platform',
         ],
-        view: 'ALL Sites',
+        view: viewName,
       })
       // call to firstPage is valid since we are only expecting one record
       .eachPage(
@@ -103,6 +109,7 @@ export async function retrieveWebsites(): Promise<any> {
  * @returns {Promise<ATWebsite[]>} Promise containing ATWebsite object
  */
 export function updateWebsites(data: ATWebsite[]): Promise<any> {
+  debug('Updating %d websites in Airtable', data.length);
   return new Promise((resolve, reject) => {
     base(TABLE).update(data, function (error, records) {
       if (error) {
@@ -123,6 +130,7 @@ export function updateWebsites(data: ATWebsite[]): Promise<any> {
 export function createWebsites(
   newWebsites: Omit<ATWebsite, 'id' | 'createdTime'>[],
 ): Promise<ATWebsite[]> {
+  debug('Creating %d websites in airtable', newWebsites.length);
   return new Promise((resolve, reject) => {
     base(TABLE).create(newWebsites, function (err: any, records: any) {
       if (err) {

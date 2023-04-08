@@ -1,4 +1,7 @@
 import { CliUx } from '@oclif/core';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:websites:scan:bulk');
+
 import BaseCommand from '../../../base';
 import {
   domainsSource,
@@ -33,6 +36,7 @@ export default class Bulk extends BaseCommand<typeof Bulk.flags> {
 
   async run(): Promise<void> {
     const { flags } = await this.parse(Bulk);
+    debug('Flags: %O', flags);
     let domainArray: string[] = [];
     const fh = new FetchHelper(BaseCommand.formattedDate(), flags);
 
@@ -58,7 +62,7 @@ export default class Bulk extends BaseCommand<typeof Bulk.flags> {
 
     if (flags.domainsSource === 'Touchpoints' && domainArray.length === 0) {
       const tpData = await fh.getTouchpointsWebsites();
-
+      debug('Removing excess Touchpoints data');
       // eslint-disable-next-line unicorn/no-array-reduce
       domainArray = tpData.reduce((filteredList, tpItem) => {
         if (

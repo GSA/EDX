@@ -1,3 +1,6 @@
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:hooks:state_manager:helper');
+
 import { existsSync, readFileSync } from 'node:fs';
 
 /**
@@ -6,6 +9,7 @@ import { existsSync, readFileSync } from 'node:fs';
  * @returns array
  */
 export const retrieveFile = async (fileName: string): Promise<string[]> => {
+  debug('Retrieving file');
   if (!existsSync(fileName)) {
     return JSON.parse('[]');
   }

@@ -1,4 +1,7 @@
 import { Hook } from '@oclif/core';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:hooks:state_manager:create');
+
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
@@ -10,6 +13,7 @@ import path from 'node:path';
 const hook: Hook<'state_manager:create'> = async function (
   options,
 ): Promise<void> {
+  debug('Create hook called');
   if (!options.command || !options.data) {
     this.log('Missing parameters to create cached file, exiting...', 'info');
     return;
@@ -21,6 +25,7 @@ const hook: Hook<'state_manager:create'> = async function (
     mkdirSync(this.config.cacheDir);
   }
 
+  debug('Writing cache');
   writeFileSync(filePath, JSON.stringify(options.data));
 };
 

@@ -1,4 +1,7 @@
 import { Hook } from '@oclif/core';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:hooks:state_manager:retrieve');
+
 import path from 'node:path';
 import { retrieveFile } from './helper';
 
@@ -10,6 +13,7 @@ import { retrieveFile } from './helper';
 const hook: Hook<'state_manager:retrieve'> = async function (
   options,
 ): Promise<any[]> {
+  debug('Hook called');
   if (!options.command) {
     this.log('Missing parameters to create cached file, exiting...', 'info');
     return [];

@@ -1,7 +1,10 @@
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:data:condense');
 import { Flags, CliUx } from '@oclif/core';
 import BaseCommand from '../../../base';
 import { output } from '../../../flags/flags';
 import { CondenseHelper } from '../../../helpers/data/condense';
+
 export default class Condense extends BaseCommand<typeof Condense.flags> {
   static description =
     'Consolidates json output from website scans into CSV files';
@@ -35,6 +38,7 @@ export default class Condense extends BaseCommand<typeof Condense.flags> {
 
   async run(): Promise<void> {
     const { flags } = await this.parse(Condense);
+    debug('Flags: %O', flags);
 
     const ch = new CondenseHelper(BaseCommand.formattedDate(), flags);
     CliUx.ux.action.start(

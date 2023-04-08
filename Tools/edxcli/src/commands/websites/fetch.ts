@@ -1,4 +1,7 @@
 import { Flags, CliUx } from '@oclif/core';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:websites:fetch');
+
 import BaseCommand from '../../base';
 import {
   FetchHelper,
@@ -37,6 +40,8 @@ export default class Fetch extends BaseCommand<typeof Fetch.flags> {
 
   async run(): Promise<void> {
     const { args, flags } = await this.parse(Fetch);
+    debug("Args: %s", args);
+    debug("Flags: %s", flags)
     CliUx.ux.action.start(`Fetching ${args.source} data`);
     const fh = new FetchHelper(BaseCommand.formattedDate(), flags);
     // fh > input > file location, number of rows

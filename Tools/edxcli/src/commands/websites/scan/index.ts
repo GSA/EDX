@@ -1,4 +1,6 @@
 import { CliUx } from '@oclif/core';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:websites:scan');
 import BaseCommand from '../../../base';
 import {
   auth,
@@ -36,6 +38,7 @@ export default class Scan extends BaseCommand<typeof Scan.flags> {
 
   async run(): Promise<void> {
     const { flags } = await this.parse(Scan);
+    debug('Flags: %O', flags);
     let domainArray: string[] = [];
     if (flags.domains) {
       domainArray = flags.domains.split(',').map((val) => val.trim());

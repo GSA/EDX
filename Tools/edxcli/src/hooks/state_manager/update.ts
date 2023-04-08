@@ -1,4 +1,7 @@
 import { Hook } from '@oclif/core';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helpers:airtable');
+
 import { writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { retrieveFile } from './helper';
@@ -11,6 +14,7 @@ import { retrieveFile } from './helper';
 const hook: Hook<'state_manager:update'> = async function (
   options,
 ): Promise<void> {
+  debug('Hook called');
   if (!options.command) {
     this.log('Missing parameters to update cached file, exiting...', 'info');
     return;
