@@ -350,7 +350,9 @@ const buildOutput = async (sh: ScanHelper, websiteReport: WebsiteReport) => {
   await writeJSONFile(
     websiteReport,
     sh.outputDirectory,
-    `${websiteReport.domain}_${sh.formattedDate}_${pageHash}`,
+    `${websiteReport.domain.replace('www.', '')}_${
+      sh.formattedDate
+    }_${pageHash}`,
   );
 }; /**
  * function accepts any string and transforms to lowercase. The lowercase value is validated against the facetType type.
