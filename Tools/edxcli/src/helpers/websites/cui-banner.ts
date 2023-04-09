@@ -48,18 +48,33 @@ export class CuiBanner implements ScanFacetInterface {
     const loginTerms = /sign in|login|log in/gi;
     // loop the list of buttons and links to find any containing the regex above
     for (const element of linkList) {
+      debug(
+        'Looping list of links, on element: %O',
+        // eslint-disable-next-line no-await-in-loop
+        await element.evaluate((node) => node.outerHTML),
+      );
       // eslint-disable-next-line no-await-in-loop
       const valueHandle = await element.getProperty('innerText');
 
       // when a match is found, click on that element then evaluate the page for warning banner content
       if (loginTerms.test(valueHandle.toString())) {
-        // eslint-disable-next-line no-await-in-loop
-        await Promise.all([element.click(), page.waitForTimeout(4000)]);
-
-        // eslint-disable-next-line no-await-in-loop
-        await this.evaluatePage(page, 'login');
-        // once the first page has been evaluated, we break out of the loop
-        break;
+        debug('A login term was found on element listed above');
+        try {
+          // eslint-disable-next-line no-await-in-loop
+          await Promise.all([element.click(), page.waitForTimeout(4000)]);
+          // eslint-disable-next-line no-await-in-loop
+          await this.evaluatePage(page, 'login');
+          // once the first page has been evaluated, we break out of the loop
+          break;
+        } catch (error) {
+          debug(
+            'Error when trying to click element %O',
+            // eslint-disable-next-line no-await-in-loop
+            await element.evaluate((node) => node.outerHTML),
+          );
+          debug('Error: %O', serializeError(error));
+          this.error.push(serializeError(error));
+        }
       }
     }
 

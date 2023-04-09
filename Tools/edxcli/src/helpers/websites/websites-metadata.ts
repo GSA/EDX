@@ -348,6 +348,21 @@ const data: Record<string, IWebsiteAttributes> = {
     urlPath: '',
     wwwPrefix: '',
   },
+  'finance.ocfo.gsa.gov': {
+    cookies: {
+      domain: '',
+      name: '',
+      path: '',
+      value: '',
+    },
+    customFOIA: false,
+    customPrivacyPolicy: false,
+    notes: '',
+    queryString: '?token=PI001',
+    searchNotReq: false,
+    urlPath: '/piinotice.aspx',
+    wwwPrefix: '',
+  },
   'financeweb.gsa.gov': {
     cookies: {
       domain: '',

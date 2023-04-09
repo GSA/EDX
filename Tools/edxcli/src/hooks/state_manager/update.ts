@@ -20,7 +20,7 @@ const hook: Hook<'state_manager:update'> = async function (
     return;
   }
 
-  this.log('Removing item from list', 'debug');
+  this.log('Removing item from list');
   const fileName = path.join(this.config.cacheDir, `${options.command}.json`);
   const data = await retrieveFile(fileName);
   data.shift();
