@@ -29,6 +29,7 @@ describe('CSV', () => {
       });
     });
 
+    /*  this occasionally throws an error during test, re-running the test should resolve the issue */
     after(() => {
       unlink(csv.path, (err) => {
         if (err) throw err;

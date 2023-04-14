@@ -31,7 +31,7 @@ export class CondenseHelper {
     this.csvWriter = new CSV(
       formattedDate,
       this.outputDirectory,
-      'condense',
+      `condense_${this.collectionName}`,
       this.csvTemplateHeaders,
     );
     this.fileParsePromiseArray = [];
