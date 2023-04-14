@@ -12,8 +12,8 @@ import {
 } from '../../../src/helpers/websites/scan-facet';
 
 describe('IT Performance Metric', () => {
-  const sneakyWebsite = `file://${__dirname}/../../sneakysite.html`;
-  const testWebsite = `file://${__dirname}/../../testsite.html`;
+  const sneakyWebsite = `file://${__dirname}/../../data/sneakysite.html`;
+  const testWebsite = `file://${__dirname}/../../data/testsite.html`;
   const date = new Date();
   const formattedDate = `${date.getFullYear()}${
     date.getMonth() < 9 ? '0' : ''

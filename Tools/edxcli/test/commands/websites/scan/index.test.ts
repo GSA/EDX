@@ -10,7 +10,7 @@ describe('websites scan...', () => {
   const formattedDate = `${date.getFullYear()}${
     date.getMonth() < 9 ? '0' : ''
   }${date.getMonth() + 1}${date.getDate() < 10 ? '0' : ''}${date.getDate()}`;
-  const dummyWebsite = `file://${__dirname}/../../../testsite.html`;
+  const dummyWebsite = `file://${__dirname}/../../../data/testsite.html`;
 
   describe('Default scan against dummy website', () => {
     describe('scan helper scan is called one time', () => {

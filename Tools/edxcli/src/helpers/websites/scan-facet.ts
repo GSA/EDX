@@ -1,3 +1,6 @@
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helper:websites:scan-facet');
+
 import { ScanHelper } from './scan';
 import { WebsiteMetadata } from './websites-metadata';
 
@@ -30,5 +33,9 @@ export function createScanFacet(
   websiteMetadata: WebsiteMetadata,
   options?: Record<string, string>,
 ): ScanFacetInterface {
+  debug('Creating scan facet');
+  debug('Scan Helper %O', scanHelper);
+  debug('Website Metadata %O', websiteMetadata);
+  debug('Options %O', options);
   return new Ctor(scanHelper, websiteMetadata, options);
 }

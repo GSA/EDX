@@ -126,7 +126,7 @@ export class ItPerfMetricReport implements ScanFacetInterface {
         } else if (
           this.regexs[regex as keyof PerformanceMetricRegexs].type === 'link'
         ) {
-          console.log(`regex, ${regex} did not find a match`);
+          debug('regex, %s did not find a match', regex);
           // is there a reqd links array available
           if (typeof reqdLinks === 'undefined') {
             // if not, get it

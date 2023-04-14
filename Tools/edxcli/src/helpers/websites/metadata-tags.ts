@@ -1,10 +1,11 @@
 import * as Debug from 'debug';
-const debug = Debug.default('edxcli:helper:websitesmetadata-tags');
+const debug = Debug.default('edxcli:helper:websites:metadata-tags');
 import { serializeError, ErrorObject } from 'serialize-error';
 
 import { ScanHelper } from './scan';
 import { ScanFacetInterface, scanFacetReport } from './scan-facet';
 import { WebsiteMetadata } from './websites-metadata';
+import { ElementHandle } from 'puppeteer';
 
 export class MetadataTags implements ScanFacetInterface {
   scanHelper: ScanHelper;
@@ -31,13 +32,15 @@ export class MetadataTags implements ScanFacetInterface {
           waitUntil: 'networkidle2',
         })
         .catch((error) => {
-          debug(error);
+          debug('Error loading page %O', error);
           this.error.push(serializeError(error));
           console.error(
             'Metadata Tags facet threw an error which has been logged to the resultant json file.',
           );
         });
-      const keywordHandle = await page.$("meta[name='keywords']");
+      const keywordHandle: ElementHandle<HTMLMetaElement> | null = await page.$(
+        "meta[name='keywords']",
+      );
       // some sites don't have keywords set, skip evaluation if that's the case
       if (keywordHandle) {
         keywordsArray = await page

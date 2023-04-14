@@ -118,7 +118,7 @@ export const scan = async (sh: ScanHelper, domain: string): Promise<void> => {
       debug('lighthouseMobile facet completed');
     }
 
-    if (isWebsite && sh.facets.includes(<facetType>'metadataTags')) {
+    if (sh.facets.includes(<facetType>'metadataTags')) {
       debug('metadataTags facet executing');
       ({ data, error } = await createScanFacet(
         MetadataTags,
