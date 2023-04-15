@@ -5,239 +5,320 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>TEST SITE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script async="" type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&amp;subagency=OCE"></script>
+    <script
+      async=""
+      type="text/javascript"
+      id="_fed_an_ua_tag"
+      src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&amp;subagency=OCE"
+    ></script>
     <meta name="keywords" content="john,paul,george,ringo" />
+    <!-- the resources here are included so that if the page is opened in the browser, the styles can be seen -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.0.2/js/uswds-init.min.js"
+      integrity="sha512-O4/iaC7XNMEYqktWqYtH6Rg++++GZAdUMITJVzu0D1X4ckQyXHJOoC4SC4Ivwsr8YMTjhSnDxem0Ac62IQuG1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.0.2/js/uswds.min.js"
+      integrity="sha512-gcuBOTfcFpuFxkgEA704eh2Bb23eRkRyK4op9J+Ly35p6XZ3dMvY14kg5JcdNsBY1xjTlGR5pAH02xjhhuIvfw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.0.2/css/uswds.min.css"
+      integrity="sha512-eFHWV/jPeEHbVBAZGs6eXrxsHEhTeUFSLO4me3lk5fFzp3ysw3vnLghuScqcbBP03kaz0YXv7OwUThocJqfPTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <body>
-      <a class="usa-skipnav" href="#main-content">Skip to main content</a>
-      <section
-        class="usa-banner"
-        aria-label="Official website of the United States government"
-      >
-        <div class="usa-accordion">
-          <header class="usa-banner__header">
-            <div class="usa-banner__inner">
-              <div class="grid-col-auto">
-                <img
-                  aria-hidden="true"
-                  class="usa-banner__header-flag"
-                  src="/assets/img/us_flag_small.png"
-                  alt=""
-                />
-              </div>
-              <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
-                <p class="usa-banner__header-text">
-                  An official website of the United States government
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+    <section
+      class="usa-banner"
+      aria-label="Official website of the United States government"
+    >
+      <div class="usa-accordion">
+        <header class="usa-banner__header">
+          <div class="usa-banner__inner">
+            <div class="grid-col-auto">
+              <img
+                aria-hidden="true"
+                class="usa-banner__header-flag"
+                src="/assets/img/us_flag_small.png"
+                alt=""
+              />
+            </div>
+            <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+              <p class="usa-banner__header-text">
+                An official website of the United States government
+              </p>
+              <p class="usa-banner__header-action">Here’s how you know</p>
+            </div>
+            <button
+              type="button"
+              class="usa-accordion__button usa-banner__button"
+              aria-expanded="false"
+              aria-controls="gov-banner-default"
+            >
+              <span class="usa-banner__button-text">Here’s how you know</span>
+            </button>
+          </div>
+        </header>
+        <div
+          class="usa-banner__content usa-accordion__content"
+          id="gov-banner-default"
+        >
+          <div class="grid-row grid-gap-lg">
+            <div class="usa-banner__guidance tablet:grid-col-6">
+              <img
+                class="usa-banner__icon usa-media-block__img"
+                src="/assets/img/icon-dot-gov.svg"
+                role="img"
+                alt=""
+                aria-hidden="true"
+              />
+              <div class="usa-media-block__body">
+                <p>
+                  <strong>Official websites use .gov</strong><br />A
+                  <strong>.gov</strong> website belongs to an official
+                  government organization in the United States.
                 </p>
-                <p class="usa-banner__header-action">Here’s how you know</p>
               </div>
+            </div>
+            <div class="usa-banner__guidance tablet:grid-col-6">
+              <img
+                class="usa-banner__icon usa-media-block__img"
+                src="/assets/img/icon-https.svg"
+                role="img"
+                alt=""
+                aria-hidden="true"
+              />
+              <div class="usa-media-block__body">
+                <p>
+                  <strong>Secure .gov websites use HTTPS</strong><br />A
+                  <strong>lock</strong> (
+                  <span class="icon-lock"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="52"
+                      height="64"
+                      viewBox="0 0 52 64"
+                      class="usa-banner__lock-image"
+                      role="img"
+                      aria-labelledby="banner-lock-description"
+                      focusable="false"
+                    >
+                      <title id="banner-lock-title">Lock</title>
+                      <desc id="banner-lock-description">
+                        Locked padlock icon
+                      </desc>
+                      <path
+                        fill="#000000"
+                        fill-rule="evenodd"
+                        d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
+                      />
+                    </svg> </span
+                  >) or <strong>https://</strong> means you’ve safely connected
+                  to the .gov website. Share sensitive information only on
+                  official, secure websites.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="usa-overlay"></div>
+    <header class="usa-header usa-header--basic">
+      <div class="usa-nav-container">
+        <div class="usa-navbar">
+          <div class="usa-logo" id="-logo">
+            <em class="usa-logo__text"
+              ><a href="/" title="<Project title>">&lt;Project title&gt;</a></em
+            >
+          </div>
+          <button type="button" class="usa-menu-btn">Menu</button>
+        </div>
+        <nav aria-label="Primary navigation," class="usa-nav">
+          <button type="button" class="usa-nav__close">
+            <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
+          </button>
+          <ul class="usa-nav__primary usa-accordion">
+            <li class="usa-nav__primary-item">
               <button
                 type="button"
-                class="usa-accordion__button usa-banner__button"
+                class="usa-accordion__button usa-nav__link usa-current"
                 aria-expanded="false"
-                aria-controls="gov-banner-default"
+                aria-controls="basic-nav-section-one"
               >
-                <span class="usa-banner__button-text">Here’s how you know</span>
+                <span>&lt;Current section&gt;</span>
               </button>
-            </div>
-          </header>
-          <div
-            class="usa-banner__content usa-accordion__content"
-            id="gov-banner-default"
-          >
-            <div class="grid-row grid-gap-lg">
-              <div class="usa-banner__guidance tablet:grid-col-6">
-                <img
-                  class="usa-banner__icon usa-media-block__img"
-                  src="/assets/img/icon-dot-gov.svg"
-                  role="img"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <div class="usa-media-block__body">
-                  <p>
-                    <strong>Official websites use .gov</strong><br />A
-                    <strong>.gov</strong> website belongs to an official government
-                    organization in the United States.
-                  </p>
-                </div>
-              </div>
-              <div class="usa-banner__guidance tablet:grid-col-6">
-                <img
-                  class="usa-banner__icon usa-media-block__img"
-                  src="/assets/img/icon-https.svg"
-                  role="img"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <div class="usa-media-block__body">
-                  <p>
-                    <strong>Secure .gov websites use HTTPS</strong><br />A
-                    <strong>lock</strong> (
-                    <span class="icon-lock"
-                      ><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="52"
-                        height="64"
-                        viewBox="0 0 52 64"
-                        class="usa-banner__lock-image"
-                        role="img"
-                        aria-labelledby="banner-lock-description"
-                        focusable="false"
-                      >
-                        <title id="banner-lock-title">Lock</title>
-                        <desc id="banner-lock-description">
-                          Locked padlock icon
-                        </desc>
-                        <path
-                          fill="#000000"
-                          fill-rule="evenodd"
-                          d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
-                        />
-                      </svg> </span
-                    >) or <strong>https://</strong> means you’ve safely connected to
-                    the .gov website. Share sensitive information only on official,
-                    secure websites.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="usa-overlay"></div>
-      <header class="usa-header usa-header--basic">
-        <div class="usa-nav-container">
-          <div class="usa-navbar">
-            <div class="usa-logo" id="-logo">
-              <em class="usa-logo__text"
-                ><a href="/" title="<Project title>">&lt;Project title&gt;</a></em
+              <ul id="basic-nav-section-one" class="usa-nav__submenu">
+                <li class="usa-nav__submenu-item">
+                  <a href=""><span>&lt;Navigation link&gt;</span></a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href=""><span>&lt;Navigation link&gt;</span></a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href=""><span>&lt;Navigation link&gt;</span></a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href=""><span>&lt;Navigation link&gt;</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="usa-nav__primary-item">
+              <a href="" class="usa-nav-link"
+                ><span>&lt;Simple link&gt;</span></a
               >
-            </div>
-            <button type="button" class="usa-menu-btn">Menu</button>
-          </div>
-          <nav aria-label="Primary navigation," class="usa-nav">
-            <button type="button" class="usa-nav__close">
-              <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
-            </button>
-            <ul class="usa-nav__primary usa-accordion">
-              <li class="usa-nav__primary-item">
-                <button
-                  type="button"
-                  class="usa-accordion__button usa-nav__link usa-current"
-                  aria-expanded="false"
-                  aria-controls="basic-nav-section-one"
-                >
-                  <span>&lt;Current section&gt;</span>
-                </button>
-                <ul id="basic-nav-section-one" class="usa-nav__submenu">
-                  <li class="usa-nav__submenu-item">
-                    <a href=""><span>&lt;Navigation link&gt;</span></a>
-                  </li>
-                  <li class="usa-nav__submenu-item">
-                    <a href=""><span>&lt;Navigation link&gt;</span></a>
-                  </li>
-                  <li class="usa-nav__submenu-item">
-                    <a href=""><span>&lt;Navigation link&gt;</span></a>
-                  </li>
-                  <li class="usa-nav__submenu-item">
-                    <a href=""><span>&lt;Navigation link&gt;</span></a>
-                  </li>
-                </ul>
-              </li>
-              <li class="usa-nav__primary-item">
-                <a href="" class="usa-nav-link"><span>&lt;Simple link&gt;</span></a>
-              </li>
-              <li class="usa-nav__primary-item">
-                <a href="" class="usa-nav-link"><span>&lt;Simple link&gt;</span></a>
-              </li>
-            </ul>
-            <section aria-label="Search component">
-              <form class="usa-search usa-search--small" role="search">
-                <label class="usa-sr-only" for="search-field">Search</label>
-                <input
-                  class="usa-input"
-                  id="search-field"
-                  type="search"
-                  name="search"
+            </li>
+            <li class="usa-nav__primary-item">
+              <a href="" class="usa-nav-link"
+                ><span>&lt;Simple link&gt;</span></a
+              >
+            </li>
+          </ul>
+          <section aria-label="Search component">
+            <form class="usa-search usa-search--small" role="search">
+              <label class="usa-sr-only" for="search-field">Search</label>
+              <input
+                class="usa-input"
+                id="search-field"
+                type="search"
+                name="search"
+              />
+              <button class="usa-button" type="submit">
+                <img
+                  src="/assets/img/usa-icons-bg/search--white.svg"
+                  class="usa-search__submit-icon"
+                  alt="Search"
                 />
-                <button class="usa-button" type="submit">
-                  <img
-                    src="/assets/img/usa-icons-bg/search--white.svg"
-                    class="usa-search__submit-icon"
-                    alt="Search"
-                  />
-                </button>
-              </form>
-            </section>
-          </nav>
-        </div>
-      </header>
-      <div class="usa-section">
-        <div class="grid-container">
-          <div class="grid-row grid-gap">
-            <div class="usa-layout-docs__sidenav desktop:grid-col-3">
-              <nav aria-label="Secondary navigation">
-                <ul class="usa-sidenav">
-                  <li class="usa-sidenav__item"><a href="">Parent link</a></li>
-                  <li class="usa-sidenav__item">
-                    <a href="" class="usa-current">Current page</a>
-                    <ul class="usa-sidenav__sublist">
-                      <li class="usa-sidenav__item"><a href="">Child link</a></li>
-                      <li class="usa-sidenav__item">
-                        <a href="" class="usa-current">Child link</a>
-                        <ul class="usa-sidenav__sublist">
-                          <li class="usa-sidenav__item">
-                            <a href="">Grandchild link</a>
-                          </li>
-                          <li class="usa-sidenav__item">
-                            <a href="">Grandchild link</a>
-                          </li>
-                          <li class="usa-sidenav__item">
-                            <a href="" class="usa-current">Grandchild link</a>
-                          </li>
-                          <li class="usa-sidenav__item">
-                            <a href="">Grandchild link</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="usa-sidenav__item"><a href="">Child link</a></li>
-                      <li class="usa-sidenav__item"><a href="">Child link</a></li>
-                      <li class="usa-sidenav__item"><a href="">Child link</a></li>
-                    </ul>
+              </button>
+            </form>
+          </section>
+        </nav>
+      </div>
+    </header>
+    <div class="usa-section">
+      <div class="grid-container">
+        <div class="grid-row grid-gap">
+          <div class="usa-layout-docs__sidenav desktop:grid-col-3">
+            <nav aria-label="Secondary navigation">
+              <ul class="usa-sidenav">
+                <li class="usa-sidenav__item"><a href="">Parent link</a></li>
+                <li class="usa-sidenav__item">
+                  <a href="" class="usa-current">Current page</a>
+                  <ul class="usa-sidenav__sublist">
+                    <li class="usa-sidenav__item"><a href="">Child link</a></li>
+                    <li class="usa-sidenav__item">
+                      <a href="" class="usa-current">Child link</a>
+                      <ul class="usa-sidenav__sublist">
+                        <li class="usa-sidenav__item">
+                          <a href="">Grandchild link</a>
+                        </li>
+                        <li class="usa-sidenav__item">
+                          <a href="">Grandchild link</a>
+                        </li>
+                        <li class="usa-sidenav__item">
+                          <a href="" class="usa-current">Grandchild link</a>
+                        </li>
+                        <li class="usa-sidenav__item">
+                          <a href="">Grandchild link</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="usa-sidenav__item"><a href="">Child link</a></li>
+                    <li class="usa-sidenav__item"><a href="">Child link</a></li>
+                    <li class="usa-sidenav__item"><a href="">Child link</a></li>
+                  </ul>
+                </li>
+                <li class="usa-sidenav__item"><a href="">Parent link</a></li>
+              </ul>
+            </nav>
+          </div>
+          <main
+            class="desktop:grid-col-9 usa-prose usa-layout-docs"
+            id="main-content"
+          >
+            <div class="row">
+              <!-- Alert -->
+              <div class="usa-alert usa-alert--info">
+                <div class="usa-alert__body">
+                  <h4 class="usa-alert__heading">Informative status</h4>
+                  <p class="usa-alert__text">
+                    Lorem ipsum dolor sit amet,
+                    <a class="usa-link" href="javascript:void(0);"
+                      >consectetur adipiscing</a
+                    >
+                    elit, sed do eiusmod.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Breadcrumb -->
+              <nav class="usa-breadcrumb" aria-label="Breadcrumbs,,">
+                <ol class="usa-breadcrumb__list">
+                  <li class="usa-breadcrumb__list-item">
+                    <a href="" class="usa-breadcrumb__link"
+                      ><span>Home</span></a
+                    >
                   </li>
-                  <li class="usa-sidenav__item"><a href="">Parent link</a></li>
-                </ul>
+                  <li class="usa-breadcrumb__list-item">
+                    <a href="" class="usa-breadcrumb__link"
+                      ><span>Federal Contracting</span></a
+                    >
+                  </li>
+                  <li class="usa-breadcrumb__list-item">
+                    <a href="" class="usa-breadcrumb__link"
+                      ><span>Contracting assistance programs</span></a
+                    >
+                  </li>
+                  <li
+                    class="usa-breadcrumb__list-item usa-current"
+                    aria-current="page"
+                  >
+                    <span
+                      >Women-owned small business federal contracting
+                      program</span
+                    >
+                  </li>
+                </ol>
               </nav>
             </div>
-            <main
-              class="
-                usa-layout-docs__main
-                desktop:grid-col-9
-                usa-prose usa-layout-docs
-              "
-              id="main-content"
-            >
+            <!-- prose -->
+            <section class="usa-prose">
+              <aside
+                class="usa-in-page-nav"
+                data-title-text="On this page"
+                data-title-heading-level="h4"
+                data-scroll-offset="0"
+                data-root-margin="0px 0px 0px 0px"
+                data-threshold="1"
+              ></aside>
               <h1>Page heading (h1)</h1>
+
               <p class="usa-intro">
-                The page heading communicates the main focus of the page. Make your
-                page heading descriptive and keep it succinct.
+                The page heading communicates the main focus of the page. Make
+                your page heading descriptive and keep it succinct.
               </p>
               <h2 id="section-heading-h2">Section heading (h2)</h2>
               <p>
                 These headings introduce, respectively, sections and subsections
-                within your body copy. As you create these headings, follow the same
-                guidelines that you use when writing section headings: Be succinct,
-                descriptive, and precise.
+                within your body copy. As you create these headings, follow the
+                same guidelines that you use when writing section headings: Be
+                succinct, descriptive, and precise.
               </p>
               <h3 id="section-heading-h3">Subsection heading (h3)</h3>
               <p>
-                The particulars of your body copy will be determined by the topic of
-                your page. Regardless of topic, it’s a good practice to follow the
-                inverted pyramid structure when writing copy: Begin with the
-                information that’s most important to your users and then present
-                information of less importance.
+                The particulars of your body copy will be determined by the
+                topic of your page. Regardless of topic, it’s a good practice to
+                follow the inverted pyramid structure when writing copy: Begin
+                with the information that’s most important to your users and
+                then present information of less importance.
               </p>
               <p>
                 Keep each section and subsection focused — a good approach is to
@@ -248,152 +329,1175 @@
                 Use the side navigation menu to help your users quickly skip to
                 different sections of your page. The menu is best suited to
                 displaying a hierarchy with one to three levels and, as we
-                mentioned, to display the sub-navigation of a given page.
-              </p>
-              <p>
-                Read the full documentation on our side navigation on the component
+                mentioned, to display the sub-navigation of a given page. Read
+                the full documentation on our side navigation on the component
                 page.
               </p>
-            </main>
-          </div>
-        </div>
-      </div>
-      <footer class="usa-footer">
-        <div class="grid-container usa-footer__return-to-top">
-          <a href="#">Return to top</a>
-        </div>
-        <div class="usa-footer__primary-section">
-          <nav class="usa-footer__nav" aria-label="Footer navigation">
-            <ul class="grid-row grid-gap">
-              <li
-                class="
-                  mobile-lg:grid-col-4
-                  desktop:grid-col-auto
-                  usa-footer__primary-content
-                "
-              >
-                <a class="usa-footer__primary-link" href="javascript:void(0);"
-                  >&lt;Primary link&gt;</a
+              <a class="usa-link" href="javascript:void(0);">a text link</a>
+              <ul class="usa-list">
+                <li>Unordered list item</li>
+                <li>Unordered list item</li>
+                <li>Unordered list item</li>
+              </ul>
+            </section>
+            <div class="row">
+              <div class="margin-y-3">
+                <a
+                  href="#example-modal-1"
+                  class="usa-button"
+                  aria-controls="example-modal-1"
+                  data-open-modal
+                  >Open default modal</a
                 >
-              </li>
-              <li
-                class="
-                  mobile-lg:grid-col-4
-                  desktop:grid-col-auto
-                  usa-footer__primary-content
-                "
-              >
-                <a class="usa-footer__primary-link" href="javascript:void(0);"
-                  >&lt;Primary link&gt;</a
+                <div
+                  class="usa-modal"
+                  id="example-modal-1"
+                  aria-labelledby="modal-1-heading"
+                  aria-describedby="modal-1-description"
                 >
-              </li>
-              <li
-                class="
-                  mobile-lg:grid-col-4
-                  desktop:grid-col-auto
-                  usa-footer__primary-content
-                "
-              >
-                <a class="usa-footer__primary-link" href="javascript:void(0);"
-                  >&lt;Primary link&gt;</a
-                >
-              </li>
-              <li
-                class="
-                  mobile-lg:grid-col-4
-                  desktop:grid-col-auto
-                  usa-footer__primary-content
-                "
-              >
-                <a class="usa-footer__primary-link" href="javascript:void(0);"
-                  >&lt;Primary link&gt;</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="usa-footer__secondary-section">
-          <div class="grid-container">
-            <div class="grid-row grid-gap">
-              <div
-                class="
-                  usa-footer__logo
-                  grid-row
-                  mobile-lg:grid-col-6 mobile-lg:grid-gap-2
-                "
-              >
-                <div class="mobile-lg:grid-col-auto">
-                  <img
-                    class="usa-footer__logo-img"
-                    src="/assets/img/logo-img.png"
-                    alt=""
+                  <div class="usa-modal__content">
+                    <div class="usa-modal__main">
+                      <h2 class="usa-modal__heading" id="modal-1-heading">
+                        Are you sure you want to continue?
+                      </h2>
+                      <div class="usa-prose">
+                        <p id="modal-1-description">
+                          You have unsaved changes that will be lost.
+                        </p>
+                      </div>
+                      <div class="usa-modal__footer">
+                        <ul class="usa-button-group">
+                          <li class="usa-button-group__item">
+                            <button
+                              type="button"
+                              class="usa-button"
+                              data-close-modal
+                            >
+                              Continue without saving
+                            </button>
+                          </li>
+                          <li class="usa-button-group__item">
+                            <button
+                              type="button"
+                              class="usa-button usa-button--unstyled padding-105 text-center"
+                              data-close-modal
+                            >
+                              Go back
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="usa-button usa-modal__close"
+                      aria-label="Close this window"
+                      data-close-modal
+                    >
+                      <svg
+                        class="usa-icon"
+                        aria-hidden="true"
+                        focusable="false"
+                        role="img"
+                      >
+                        <use xlink:href="/assets/img/sprite.svg#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Accordion -->
+              <div class="usa-accordion">
+                <h4 class="usa-accordion__heading">
+                  <button
+                    type="button"
+                    class="usa-accordion__button"
+                    aria-expanded="true"
+                    aria-controls="a1"
+                  >
+                    First Amendment
+                  </button>
+                </h4>
+                <div id="a1" class="usa-accordion__content usa-prose">
+                  <p>
+                    Congress shall make no law respecting an establishment of
+                    religion, or prohibiting the free exercise thereof; or
+                    abridging the freedom of speech, or of the press; or the
+                    right of the people peaceably to assemble, and to petition
+                    the Government for a redress of grievances.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Button -->
+              <button type="" class="usa-button">Default</button>
+              <!-- Button Group -->
+              <ul class="usa-button-group">
+                <li class="usa-button-group__item">
+                  <a
+                    href="javascript:void(0);"
+                    class="usa-button usa-button--outline"
+                    >Back</a
+                  >
+                </li>
+                <li class="usa-button-group__item">
+                  <button type="button" class="usa-button">Continue</button>
+                </li>
+              </ul>
+            </div>
+            <div class="row">
+              <!-- Card -->
+              <ul class="usa-card-group">
+                <li class="usa-card tablet:grid-col-4">
+                  <div class="usa-card__container">
+                    <div class="usa-card__header">
+                      <h2 class="usa-card__heading">Card</h2>
+                    </div>
+                    <div class="usa-card__body">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Facilis earum tenetur quo cupiditate, eaque qui officia
+                        recusandae.
+                      </p>
+                    </div>
+                    <div class="usa-card__footer">
+                      <button type="button" class="usa-button">
+                        Visit Florida Keys
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="row">
+              <!-- form, character count, checkbox -->
+              <form class="usa-form">
+                <div class="usa-character-count">
+                  <div class="usa-form-group">
+                    <label class="usa-label" for="with-hint-input"
+                      >Text input</label
+                    >
+                    <span id="with-hint-input-hint" class="usa-hint"
+                      >This is an input with a character counter.</span
+                    >
+                    <input
+                      class="usa-input usa-character-count__field"
+                      id="with-hint-input"
+                      maxlength="25"
+                      name="with-hint-input"
+                      aria-describedby="with-hint-input-info with-hint-input-hint"
+                    />
+                  </div>
+                  <span
+                    id="with-hint-input-info"
+                    class="usa-character-count__message"
+                    >You can enter up to 25 characters</span
+                  >
+                </div>
+                <!-- checkbox -->
+                <fieldset class="usa-fieldset">
+                  <legend class="usa-legend">
+                    Select any historical figure
+                  </legend>
+                  <div class="usa-checkbox">
+                    <input
+                      class="usa-checkbox__input"
+                      id="check-historical-truth"
+                      type="checkbox"
+                      name="historical-figures"
+                      value="sojourner-truth"
+                      checked="checked"
+                    />
+                    <label
+                      class="usa-checkbox__label"
+                      for="check-historical-truth"
+                      >Sojourner Truth</label
+                    >
+                  </div>
+                  <div class="usa-checkbox">
+                    <input
+                      class="usa-checkbox__input"
+                      id="check-historical-douglass"
+                      type="checkbox"
+                      name="historical-figures"
+                      value="frederick-douglass"
+                    />
+                    <label
+                      class="usa-checkbox__label"
+                      for="check-historical-douglass"
+                      >Frederick Douglass</label
+                    >
+                  </div>
+                  <div class="usa-checkbox">
+                    <input
+                      class="usa-checkbox__input"
+                      id="check-historical-washington"
+                      type="checkbox"
+                      name="historical-figures"
+                      value="booker-t-washington"
+                    />
+                    <label
+                      class="usa-checkbox__label"
+                      for="check-historical-washington"
+                      >Booker T. Washington</label
+                    >
+                  </div>
+                  <div class="usa-checkbox">
+                    <input
+                      class="usa-checkbox__input"
+                      id="check-historical-carver"
+                      type="checkbox"
+                      name="historical-figures"
+                      value="george-washington-carver"
+                      disabled="disabled"
+                    />
+                    <label
+                      class="usa-checkbox__label"
+                      for="check-historical-carver"
+                      >George Washington Carver</label
+                    >
+                  </div>
+                </fieldset>
+                <!-- combo box -->
+                <label class="usa-label" for="fruit">Select a fruit</label>
+                <div class="usa-combo-box">
+                  <select class="usa-select" name="fruit" id="fruit">
+                    <option value>Select a fruit</option>
+                    <option value="apple">Apple</option>
+                    <option value="apricot">Apricot</option>
+                    <option value="avocado">Avocado</option>
+                  </select>
+                </div>
+                <!-- date picker -->
+                <div class="usa-form-group">
+                  <label
+                    class="usa-label"
+                    id="appointment-date-label"
+                    for="appointment-date"
+                    >Appointment date</label
+                  >
+                  <div class="usa-hint" id="appointment-date-hint">
+                    mm/dd/yyyy
+                  </div>
+                  <div class="usa-date-picker">
+                    <input
+                      class="usa-input"
+                      id="appointment-date"
+                      name="appointment-date"
+                      aria-labelledby="appointment-date-label"
+                      aria-describedby="appointment-date-hint"
+                    />
+                  </div>
+                </div>
+                <!-- date range picker -->
+                <div class="usa-date-range-picker">
+                  <div class="usa-form-group">
+                    <label
+                      class="usa-label"
+                      id="event-date-start-label"
+                      for="event-date-start"
+                      >Event start date</label
+                    >
+                    <div class="usa-hint" id="event-date-start-hint">
+                      mm/dd/yyyy
+                    </div>
+                    <div class="usa-date-picker">
+                      <input
+                        class="usa-input"
+                        id="event-date-start"
+                        name="event-date-start"
+                        aria-labelledby="event-date-start-label"
+                        aria-describedby="event-date-start-hint"
+                      />
+                    </div>
+                  </div>
+                  <div class="usa-form-group">
+                    <label
+                      class="usa-label"
+                      id="event-date-end-label"
+                      for="event-date-end"
+                      >Event end date</label
+                    >
+                    <div class="usa-hint" id="event-date-end-hint">
+                      mm/dd/yyyy
+                    </div>
+                    <div class="usa-date-picker">
+                      <input
+                        class="usa-input"
+                        id="event-date-end"
+                        name="event-date-end"
+                        aria-labelledby="event-date-end-label"
+                        aria-describedby="event-date-end-hint"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- file input -->
+                <div class="usa-form-group">
+                  <label class="usa-label" for="file-input-single"
+                    >Input accepts a single file</label
+                  >
+                  <input
+                    id="file-input-single"
+                    class="usa-file-input"
+                    type="file"
+                    name="file-input-single"
                   />
                 </div>
-                <div class="mobile-lg:grid-col-auto">
-                  <p class="usa-footer__logo-heading">&lt;Name of Agency&gt;</p>
+                <!-- input mask -->
+                <label class="usa-label" for="tel">US Telephone Number</label>
+                <div class="usa-hint" id="telHint">
+                  For example, 123-456-7890
+                </div>
+                <input
+                  id="tel"
+                  type="tel"
+                  inputmode="numeric"
+                  name="tel"
+                  placeholder="___-___-____"
+                  pattern="\d{3}-\d{3}-\d{4}"
+                  class="usa-input usa-masked"
+                  aria-describedby="telHint"
+                />
+                <!-- input prefix/ suffix  -->
+                <label class="usa-label" for="example-input-prefix"
+                  >Credit card number</label
+                >
+                <div class="usa-input-group">
+                  <div class="usa-input-prefix" aria-hidden="true">
+                    <svg
+                      aria-hidden="true"
+                      role="img"
+                      focusable="false"
+                      class="usa-icon"
+                    >
+                      <use
+                        xlink:href="/assets/img/sprite.svg#credit_card"
+                      ></use>
+                    </svg>
+                  </div>
+                  <input
+                    id="example-input-prefix"
+                    class="usa-input"
+                    pattern="[0-9]*"
+                    inputmode="numeric"
+                  />
+                </div>
+                <label class="usa-label" for="example-input-suffix"
+                  >Weight, in pounds</label
+                >
+                <div class="usa-input-group usa-input-group--sm">
+                  <input
+                    id="example-input-suffix"
+                    class="usa-input"
+                    pattern="[0-9]*"
+                    inputmode="numeric"
+                  />
+                  <div class="usa-input-suffix" aria-hidden="true">lbs.</div>
+                </div>
+                <!-- memorable date -->
+                <fieldset class="usa-fieldset">
+                  <legend class="usa-legend">Date of Birth</legend>
+                  <span class="usa-hint" id="mdHint"
+                    >For example: January 19 2000</span
+                  >
+                  <div class="usa-memorable-date">
+                    <div
+                      class="usa-form-group usa-form-group--month usa-form-group--select"
+                    >
+                      <label class="usa-label" for="date_of_birth_month"
+                        >Month</label
+                      >
+                      <select
+                        class="usa-select"
+                        id="date_of_birth_month"
+                        name="date_of_birth_month"
+                        aria-describedby="mdHint"
+                      >
+                        <option value>- Select -</option>
+                        <option value="1">01 - January</option>
+                        <option value="2">02 - February</option>
+                        <option value="3">03 - March</option>
+                        <option value="4">04 - April</option>
+                        <option value="5">05 - May</option>
+                        <option value="6">06 - June</option>
+                        <option value="7">07 - July</option>
+                        <option value="8">08 - August</option>
+                        <option value="9">09 - September</option>
+                        <option value="10">10 - October</option>
+                        <option value="11">11 - November</option>
+                        <option value="12">12 - December</option>
+                      </select>
+                    </div>
+                    <div class="usa-form-group usa-form-group--day">
+                      <label class="usa-label" for="date_of_birth_day"
+                        >Day</label
+                      >
+                      <input
+                        class="usa-input"
+                        aria-describedby="mdHint"
+                        id="date_of_birth_day"
+                        name="date_of_birth_day"
+                        maxlength="2"
+                        pattern="[0-9]*"
+                        inputmode="numeric"
+                        value=""
+                      />
+                    </div>
+                    <div class="usa-form-group usa-form-group--year">
+                      <label class="usa-label" for="date_of_birth_year"
+                        >Year</label
+                      >
+                      <input
+                        class="usa-input"
+                        aria-describedby="mdHint"
+                        id="date_of_birth_year"
+                        name="date_of_birth_year"
+                        minlength="4"
+                        maxlength="4"
+                        pattern="[0-9]*"
+                        inputmode="numeric"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </fieldset>
+                <!-- radio buttons -->
+                <fieldset class="usa-fieldset">
+                  <legend class="usa-legend usa-legend">
+                    Select one historical figure
+                  </legend>
+                  <div class="usa-radio">
+                    <input
+                      class="usa-radio__input"
+                      id="historical-truth"
+                      type="radio"
+                      name="historical-figures"
+                      value="sojourner-truth"
+                      checked="checked"
+                    />
+                    <label class="usa-radio__label" for="historical-truth"
+                      >Sojourner Truth</label
+                    >
+                  </div>
+                  <div class="usa-radio">
+                    <input
+                      class="usa-radio__input"
+                      id="historical-douglass"
+                      type="radio"
+                      name="historical-figures"
+                      value="frederick-douglass"
+                    />
+                    <label class="usa-radio__label" for="historical-douglass"
+                      >Frederick Douglass</label
+                    >
+                  </div>
+                  <div class="usa-radio">
+                    <input
+                      class="usa-radio__input"
+                      id="historical-washington"
+                      type="radio"
+                      name="historical-figures"
+                      value="booker-t-washington"
+                    />
+                    <label class="usa-radio__label" for="historical-washington"
+                      >Booker T. Washington</label
+                    >
+                  </div>
+                  <div class="usa-radio">
+                    <input
+                      class="usa-radio__input"
+                      id="historical-carver"
+                      type="radio"
+                      name="historical-figures"
+                      value="george-washington-carver"
+                      disabled="disabled"
+                    />
+                    <label class="usa-radio__label" for="historical-carver"
+                      >George Washington Carver</label
+                    >
+                  </div>
+                </fieldset>
+                <!-- range slider -->
+                <div>
+                  <label class="usa-label" for="usa-range">Range slider</label>
+                  <input
+                    id="usa-range"
+                    class="usa-range"
+                    type="range"
+                    min="0"
+                    max="100"
+                    step="10"
+                    value="20"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="20"
+                    role="slider"
+                  />
+                </div>
+                <!-- select -->
+                <div class="row">
+                  <label class="usa-label" for="options">Dropdown label</label>
+                  <select class="usa-select" name="options" id="options">
+                    <option value>- Select -</option>
+                    <option value="value1">Option A</option>
+                    <option value="value2">Option B</option>
+                    <option value="value3">Option C</option>
+                  </select>
+                </div>
+                <!-- text input -->
+                <div class="row">
+                  <label class="usa-label" for="input-type-text"
+                    >Text input label</label
+                  >
+                  <input
+                    class="usa-input"
+                    id="input-type-text"
+                    name="input-type-text"
+                  />
+                </div>
+                <!-- time picker -->
+                <div class="usa-form-group">
+                  <label
+                    class="usa-label"
+                    id="appointment-time-label"
+                    for="appointment-time"
+                    >Appointment time</label
+                  >
+                  <div class="usa-hint" id="appointment-time-hint">hh:mm</div>
+                  <div class="usa-time-picker">
+                    <input
+                      class="usa-input"
+                      id="appointment-time"
+                      name="appointment-time"
+                      aria-describedby="appointment-time-label appointment-time-hint"
+                    />
+                  </div>
+                </div>
+                <!-- validation -->
+                <fieldset class="usa-fieldset">
+                  <legend class="usa-legend usa-legend--large">
+                    Enter a code
+                  </legend>
+                  <div class="usa-alert usa-alert--info usa-alert--validation">
+                    <div class="usa-alert__body">
+                      <h3 class="usa-alert__heading">Code requirements</h3>
+                      <ul class="usa-checklist" id="validate-code">
+                        <li
+                          class="usa-checklist__item"
+                          data-validator="uppercase"
+                        >
+                          Use at least one uppercase character
+                        </li>
+                        <li
+                          class="usa-checklist__item"
+                          data-validator="numerical"
+                        >
+                          Use at least one number
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <label class="usa-label" for="code">Code</label>
+                  <input
+                    class="usa-input"
+                    id="code"
+                    name="code"
+                    data-validate-uppercase="[A-Z]"
+                    data-validate-numerical="\d"
+                    data-validation-element="validate-code"
+                  />
+                  <input class="usa-button" type="submit" value="Submit code" />
+                </fieldset>
+              </form>
+            </div>
+            <div class="row">
+              <!-- Collection -->
+              <ul class="usa-collection">
+                <li class="usa-collection__item">
+                  <div class="usa-collection__body">
+                    <h3 class="usa-collection__heading">
+                      <a
+                        class="usa-link"
+                        href="https://trumpadministration.archives.performance.gov/presidents-winners-press-release/"
+                        >Gears of Government President’s Award winners</a
+                      >
+                    </h3>
+                    <p class="usa-collection__description">
+                      Today, the Administration announces the winners of the
+                      Gears of Government President’s Award. This program
+                      recognizes the contributions of individuals and teams
+                      across the federal workforce who make a profound
+                      difference in the lives of the American people.
+                    </p>
+                    <ul
+                      class="usa-collection__meta"
+                      aria-label="More information"
+                    >
+                      <li class="usa-collection__meta-item">
+                        By Sondra Ainsworth and Constance Lu
+                      </li>
+                      <li class="usa-collection__meta-item">
+                        <time datetime="2020-09-30T12:00:00+01:00"
+                          >September 30, 2020</time
+                        >
+                      </li>
+                    </ul>
+                    <ul class="usa-collection__meta" aria-label="Topics">
+                      <li
+                        class="usa-collection__meta-item usa-tag usa-tag--new"
+                      >
+                        New
+                      </li>
+                      <li class="usa-collection__meta-item usa-tag">PMA</li>
+                      <li class="usa-collection__meta-item usa-tag">OMB</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="row">
+              <!-- icon -->
+              <a href="https://twitter.com/uswds">
+                <svg class="usa-icon" aria-hidden="true" role="img">
+                  <use xlink:href="/assets/img/sprite.svg#arrow_forward"></use>
+                </svg>
+                USWDS' Twitter account
+              </a>
+            </div>
+            <div class="row">
+              <!-- icon list -->
+              <ul class="usa-icon-list">
+                <li class="usa-icon-list__item">
+                  <div class="usa-icon-list__icon text-green">
+                    <svg class="usa-icon" aria-hidden="true" role="img">
+                      <use
+                        xlink:href="/assets/img/sprite.svg#check_circle"
+                      ></use>
+                    </svg>
+                  </div>
+                  <div class="usa-icon-list__content">
+                    Wash your hands for 20 seconds with soap
+                  </div>
+                </li>
+                <li class="usa-icon-list__item">
+                  <div class="usa-icon-list__icon text-green">
+                    <svg class="usa-icon" aria-hidden="true" role="img">
+                      <use
+                        xlink:href="/assets/img/sprite.svg#check_circle"
+                      ></use>
+                    </svg>
+                  </div>
+                  <div class="usa-icon-list__content">
+                    Stay six feet away from others
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="row">
+              <!-- pagination -->
+              <nav aria-label="Pagination" class="usa-pagination">
+                <ul class="usa-pagination__list">
+                  <li class="usa-pagination__item usa-pagination__arrow">
+                    <a
+                      href="javascript:void(0);"
+                      class="usa-pagination__link usa-pagination__previous-page"
+                      aria-label="Previous page"
+                      ><svg class="usa-icon" aria-hidden="true" role="img">
+                        <use
+                          xlink:href="/assets/img/sprite.svg#navigate_before"
+                        ></use>
+                      </svg>
+                      <span class="usa-pagination__link-text">Previous</span></a
+                    >
+                  </li>
+                  <li class="usa-pagination__item usa-pagination__page-no">
+                    <a
+                      href="javascript:void(0);"
+                      class="usa-pagination__button"
+                      aria-label="Page 1"
+                      >1</a
+                    >
+                  </li>
+                  <li
+                    class="usa-pagination__item usa-pagination__overflow"
+                    role="presentation"
+                  >
+                    <span>…</span>
+                  </li>
+                  <li class="usa-pagination__item usa-pagination__page-no">
+                    <a
+                      href="javascript:void(0);"
+                      class="usa-pagination__button"
+                      aria-label="Page 9"
+                      >9</a
+                    >
+                  </li>
+                  <li class="usa-pagination__item usa-pagination__page-no">
+                    <a
+                      href="javascript:void(0);"
+                      class="usa-pagination__button usa-current"
+                      aria-label="Page 10"
+                      aria-current="page"
+                      >10</a
+                    >
+                  </li>
+                  <li class="usa-pagination__item usa-pagination__page-no">
+                    <a
+                      href="javascript:void(0);"
+                      class="usa-pagination__button"
+                      aria-label="Page 11"
+                      >11</a
+                    >
+                  </li>
+                  <li
+                    class="usa-pagination__item usa-pagination__overflow"
+                    role="presentation"
+                  >
+                    <span>…</span>
+                  </li>
+                  <li class="usa-pagination__item usa-pagination__page-no">
+                    <a
+                      href="javascript:void(0);"
+                      class="usa-pagination__button"
+                      aria-label="Last page, page 24"
+                      >24</a
+                    >
+                  </li>
+                  <li class="usa-pagination__item usa-pagination__arrow">
+                    <a
+                      href="javascript:void(0);"
+                      class="usa-pagination__link usa-pagination__next-page"
+                      aria-label="Next page"
+                      ><span class="usa-pagination__link-text">Next </span
+                      ><svg class="usa-icon" aria-hidden="true" role="img">
+                        <use
+                          xlink:href="/assets/img/sprite.svg#navigate_next"
+                        ></use></svg
+                    ></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="row">
+              <!-- process list -->
+              <ol class="usa-process-list">
+                <li class="usa-process-list__item">
+                  <h4 class="usa-process-list__heading">Start a process</h4>
+                  <p class="margin-top-05">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Morbi commodo, ipsum sed pharetra gravida, orci magna
+                    rhoncus neque.
+                  </p>
+                  <ul>
+                    <li>
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                      Morbi commodo, ipsum sed pharetra gravida, orci magna
+                      rhoncus neque, id pulvinar odio lorem non turpis.
+                    </li>
+                    <li>
+                      Nullam sit amet enim. Suspendisse id velit vitae ligula
+                      volutpat condimentum.
+                    </li>
+                    <li>Aliquam erat volutpat. Sed quis velit.</li>
+                  </ul>
+                </li>
+                <li class="usa-process-list__item">
+                  <h4 class="usa-process-list__heading">
+                    Proceed to the second step
+                  </h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Morbi commodo, ipsum sed pharetra gravida, orci magna
+                    rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit
+                    amet enim. Suspendisse id velit vitae ligula volutpat
+                    condimentum. Aliquam erat volutpat. Sed quis velit. Nulla
+                    facilisi. Nulla libero. Vivamus pharetra posuere sapien.
+                  </p>
+                </li>
+                <li class="usa-process-list__item">
+                  <h4 class="usa-process-list__heading">
+                    Complete the step-by-step process
+                  </h4>
+                  <p>
+                    Nullam sit amet enim. Suspendisse id velit vitae ligula
+                    volutpat condimentum. Aliquam erat volutpat. Sed quis velit.
+                    Nulla facilisi. Nulla libero. Vivamus pharetra posuere
+                    sapien.
+                  </p>
+                </li>
+              </ol>
+            </div>
+            <!-- side navigation -->
+            <div class="row">
+              <div class="grid-row grid-gap">
+                <div
+                  class="tablet:grid-col-4 margin-bottom-4 tablet:margin-bottom-0"
+                >
+                  <nav aria-label="Side navigation,">
+                    <ul class="usa-sidenav">
+                      <li class="usa-sidenav__item">
+                        <a href="javascript:void(0);" class="usa-current"
+                          >Current page</a
+                        >
+                      </li>
+                      <li class="usa-sidenav__item">
+                        <a href="javascript:void(0);">Parent link</a>
+                      </li>
+                      <li class="usa-sidenav__item">
+                        <a href="javascript:void(0);">Parent link</a>
+                      </li>
+                    </ul>
+                  </nav>
                 </div>
               </div>
-              <div class="usa-footer__contact-links mobile-lg:grid-col-6">
-                <div class="usa-footer__social-links grid-row grid-gap-1">
-                  <div class="grid-col-auto">
-                    <a class="usa-social-link" href="javascript:void(0);"
-                      ><img
-                        class="usa-social-link__icon"
-                        src="/assets/img/usa-icons/facebook.svg"
-                        alt="Facebook"
-                    /></a>
-                  </div>
-                  <div class="grid-col-auto">
-                    <a class="usa-social-link" href="javascript:void(0);"
-                      ><img
-                        class="usa-social-link__icon"
-                        src="/assets/img/usa-icons/twitter.svg"
-                        alt="Twitter"
-                    /></a>
-                  </div>
-                  <div class="grid-col-auto">
-                    <a class="usa-social-link" href="javascript:void(0);"
-                      ><img
-                        class="usa-social-link__icon"
-                        src="/assets/img/usa-icons/youtube.svg"
-                        alt="YouTube"
-                    /></a>
-                  </div>
-                  <div class="grid-col-auto">
-                    <a class="usa-social-link" href="javascript:void(0);"
-                      ><img
-                        class="usa-social-link__icon"
-                        src="/assets/img/usa-icons/instagram.svg"
-                        alt="Instagram"
-                    /></a>
-                  </div>
-                  <div class="grid-col-auto">
-                    <a class="usa-social-link" href="javascript:void(0);"
-                      ><img
-                        class="usa-social-link__icon"
-                        src="/assets/img/usa-icons/rss_feed.svg"
-                        alt="RSS"
-                    /></a>
+            </div>
+            <!-- Site Alert -->
+            <section
+              class="usa-site-alert usa-site-alert--emergency"
+              aria-label="Site alert,,"
+            >
+              <div class="usa-alert">
+                <div class="usa-alert__body">
+                  <h3 class="usa-alert__heading">Emergency alert message</h3>
+                  <p class="usa-alert__text">
+                    Additional context and followup information including
+                    <a class="usa-link" href="javascript:void(0);">a link</a>.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <!-- step indicator -->
+            <div class="row">
+              <div
+                class="usa-step-indicator usa-step-indicator--no-labels"
+                aria-label="progress"
+              >
+                <ol class="usa-step-indicator__segments">
+                  <li
+                    class="usa-step-indicator__segment usa-step-indicator__segment--complete"
+                  >
+                    <span class="usa-step-indicator__segment-label"
+                      >Personal information
+                      <span class="usa-sr-only">completed</span></span
+                    >
+                  </li>
+                  <li
+                    class="usa-step-indicator__segment usa-step-indicator__segment--complete"
+                  >
+                    <span class="usa-step-indicator__segment-label"
+                      >Household status
+                      <span class="usa-sr-only">completed</span></span
+                    >
+                  </li>
+                  <li
+                    class="usa-step-indicator__segment usa-step-indicator__segment--current"
+                  >
+                    <span class="usa-step-indicator__segment-label"
+                      >Supporting documents</span
+                    >
+                  </li>
+                  <li class="usa-step-indicator__segment">
+                    <span class="usa-step-indicator__segment-label"
+                      >Signature
+                      <span class="usa-sr-only">not completed</span></span
+                    >
+                  </li>
+                  <li class="usa-step-indicator__segment">
+                    <span class="usa-step-indicator__segment-label"
+                      >Review and submit
+                      <span class="usa-sr-only">not completed</span></span
+                    >
+                  </li>
+                </ol>
+                <div class="usa-step-indicator__header">
+                  <h4 class="usa-step-indicator__heading">
+                    <span class="usa-step-indicator__heading-counter"
+                      ><span class="usa-sr-only">Step</span>
+                      <span class="usa-step-indicator__current-step">3</span>
+                      <span class="usa-step-indicator__total-steps"
+                        >of 5</span
+                      > </span
+                    ><span class="usa-step-indicator__heading-text"
+                      >Supporting documents</span
+                    >
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <!-- summary box -->
+            <div class="row">
+              <div
+                class="usa-summary-box"
+                role="region"
+                aria-labelledby="summary-box-key-information"
+              >
+                <div class="usa-summary-box__body">
+                  <h3
+                    class="usa-summary-box__heading"
+                    id="summary-box-key-information"
+                  >
+                    Key information
+                  </h3>
+                  <div class="usa-summary-box__text">
+                    <ul class="usa-list">
+                      <li>
+                        If you are under a winter storm warning,
+                        <a class="usa-summary-box__link" href=""
+                          >find shelter</a
+                        >
+                        right away.
+                      </li>
+                      <li>
+                        Sign up for
+                        <a class="usa-summary-box__link" href=""
+                          >your community’s warning system</a
+                        >.
+                      </li>
+                      <li>
+                        Learn the signs of, and basic treatments for,
+                        <a class="usa-summary-box__link" href="">frostbite</a>
+                        and
+                        <a class="usa-summary-box__link" href="">hypothermia</a
+                        >.
+                      </li>
+                      <li>
+                        Gather emergency supplies for your
+                        <a class="usa-summary-box__link" href="">home</a> and
+                        your <a class="usa-summary-box__link" href="">car</a>.
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <p class="usa-footer__contact-heading">
-                  &lt;Agency Contact Center&gt;
-                </p>
-                <address class="usa-footer__address">
-                  <div class="usa-footer__contact-info grid-row grid-gap">
-                    <div class="grid-col-auto">
-                      <a href="tel:1-800-555-5555">&lt;(800) 555-GOVT&gt;</a>
-                    </div>
-                    <div class="grid-col-auto">
-                      <a href="mailto:info@agency.gov">&lt;info@agency.gov&gt;</a>
-                    </div>
-                  </div>
-                </address>
               </div>
+            </div>
+            <!-- table -->
+            <div class="row">
+              <table class="usa-table usa-table--borderless">
+                <caption>
+                  Borderless table: A borderless table can be useful when you
+                  want the information to feel more a part of the text it
+                  accompanies and extends.
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Document title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Declaration of Independence</th>
+                    <td>
+                      Statement adopted by the Continental Congress declaring
+                      independence from the British Empire.
+                    </td>
+                    <td>1776</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Bill of Rights</th>
+                    <td>
+                      The first ten amendments of the U.S. Constitution
+                      guaranteeing rights and freedoms.
+                    </td>
+                    <td>1791</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Declaration of Sentiments</th>
+                    <td>
+                      A document written during the Seneca Falls Convention
+                      outlining the rights that American women should be
+                      entitled to as citizens.
+                    </td>
+                    <td>1848</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Emancipation Proclamation</th>
+                    <td>
+                      An executive order granting freedom to slaves in
+                      designated southern states.
+                    </td>
+                    <td>1863</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- tag -->
+            <div class="row">
+              <span class="usa-tag">Info</span>
+            </div>
+            <!-- tooltip -->
+            <div class="row">
+              <div class="padding-8">
+                <div class="margin-4">
+                  <button
+                    type="button"
+                    class="usa-button usa-tooltip"
+                    data-position="top"
+                    title="Top"
+                  >
+                    Show on top
+                  </button>
+                </div>
+                <div class="margin-4">
+                  <button
+                    type="button"
+                    class="usa-button usa-tooltip"
+                    data-position="right"
+                    title="Right"
+                  >
+                    Show on right
+                  </button>
+                </div>
+                <div class="margin-4">
+                  <button
+                    type="button"
+                    class="usa-button usa-tooltip"
+                    data-position="left"
+                    title="Left"
+                  >
+                    Show on left
+                  </button>
+                </div>
+                <div class="margin-4">
+                  <button
+                    type="button"
+                    class="usa-button usa-tooltip"
+                    data-position="bottom"
+                    title="Bottom"
+                  >
+                    Show on bottom
+                  </button>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <!-- 
+      FOOTER 
+    -->
+    <footer class="usa-footer">
+      <div class="grid-container usa-footer__return-to-top">
+        <a href="#">Return to top</a>
+      </div>
+      <div class="usa-footer__primary-section">
+        <nav class="usa-footer__nav" aria-label="Footer navigation">
+          <ul class="grid-row grid-gap">
+            <li
+              class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content"
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content"
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content"
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content"
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="usa-footer__secondary-section">
+        <div class="grid-container">
+          <div class="grid-row grid-gap">
+            <div
+              class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2"
+            >
+              <div class="mobile-lg:grid-col-auto">
+                <img
+                  class="usa-footer__logo-img"
+                  src="/assets/img/logo-img.png"
+                  alt=""
+                />
+              </div>
+              <div class="mobile-lg:grid-col-auto">
+                <p class="usa-footer__logo-heading">&lt;Name of Agency&gt;</p>
+              </div>
+            </div>
+            <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+              <div class="usa-footer__social-links grid-row grid-gap-1">
+                <div class="grid-col-auto">
+                  <a class="usa-social-link" href="javascript:void(0);"
+                    ><img
+                      class="usa-social-link__icon"
+                      src="/assets/img/usa-icons/facebook.svg"
+                      alt="Facebook"
+                  /></a>
+                </div>
+                <div class="grid-col-auto">
+                  <a class="usa-social-link" href="javascript:void(0);"
+                    ><img
+                      class="usa-social-link__icon"
+                      src="/assets/img/usa-icons/twitter.svg"
+                      alt="Twitter"
+                  /></a>
+                </div>
+                <div class="grid-col-auto">
+                  <a class="usa-social-link" href="javascript:void(0);"
+                    ><img
+                      class="usa-social-link__icon"
+                      src="/assets/img/usa-icons/youtube.svg"
+                      alt="YouTube"
+                  /></a>
+                </div>
+                <div class="grid-col-auto">
+                  <a class="usa-social-link" href="javascript:void(0);"
+                    ><img
+                      class="usa-social-link__icon"
+                      src="/assets/img/usa-icons/instagram.svg"
+                      alt="Instagram"
+                  /></a>
+                </div>
+                <div class="grid-col-auto">
+                  <a class="usa-social-link" href="javascript:void(0);"
+                    ><img
+                      class="usa-social-link__icon"
+                      src="/assets/img/usa-icons/rss_feed.svg"
+                      alt="RSS"
+                  /></a>
+                </div>
+              </div>
+              <p class="usa-footer__contact-heading">
+                &lt;Agency Contact Center&gt;
+              </p>
+              <address class="usa-footer__address">
+                <div class="usa-footer__contact-info grid-row grid-gap">
+                  <div class="grid-col-auto">
+                    <a href="tel:1-800-555-5555">&lt;(800) 555-GOVT&gt;</a>
+                  </div>
+                  <div class="grid-col-auto">
+                    <a href="mailto:info@agency.gov">&lt;info@agency.gov&gt;</a>
+                  </div>
+                </div>
+              </address>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
     <div class="usa-identifier">
       <section
         class="usa-identifier__section usa-identifier__section--masthead"

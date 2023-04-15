@@ -99,6 +99,7 @@ export class UswdsComponentsReport implements ScanFacetInterface {
       this.data.dropdown = /usa-select/.test(content);
       this.data.fileInput = /usa-file-input/.test(content);
       this.data.footer = /usa-footer/.test(content);
+      this.data.form = /usa-form/.test(content);
       this.data.grid = /grid-container/.test(content);
       this.data.header = /usa-header/.test(content);
       this.data.icon = /usa-icon/.test(content);
