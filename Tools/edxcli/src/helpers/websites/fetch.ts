@@ -1,6 +1,9 @@
 import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 dotenv.config();
 const axios = require('axios').default;
+// import { ErrorObject, serializeError } from 'serialize-error';
+import * as Debug from 'debug';
+const debug = Debug.default('edxcli:helper:fetch');
 
 /**
  * Provides access to Touchpoints and Site Scanner functions
@@ -47,13 +50,15 @@ export class FetchHelper {
         console.error(error);
       });
 
+    debug('Touchpoints data: %O', data);
+
     return data;
   }
 
   /**
    * Iterates through and returns siteScanner results. Can start at a later page number provided a pageNo param
    * @param {number} pageNo - Starting page number of site scanner results. Defaults to 1
-   * @return {Promise<TouchpointsRecord[]>} - Promise containing an array of TouchpointsRecord objects
+   * @return {Promise<SiteScannerRecord[]>} - Promise containing an array of TouchpointsRecord objects
    * */
   async getSiteScannerWebsites(pageNo = 1): Promise<SiteScannerRecord[]> {
     const promisesArray: Promise<SiteScannerRecord>[] = [];
@@ -75,6 +80,7 @@ export class FetchHelper {
     } while (next !== '');
 
     return Promise.all(promisesArray).then((data) => {
+      debug('Site Scanner websites returned: %s records', data.length);
       return data;
     });
   }

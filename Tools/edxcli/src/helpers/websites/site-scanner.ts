@@ -31,6 +31,7 @@ export class SiteScannerReport implements ScanFacetInterface {
     const response = await siteScan
       .get(`websites/${this.websiteMetadata.completeUrl.hostname}`)
       .then(function (response: any) {
+        debug('site scanner response', response);
         return response;
       })
       .catch((error: any) => {
@@ -66,6 +67,7 @@ export class SiteScannerReport implements ScanFacetInterface {
       });
 
     if (response?.data !== undefined) {
+      debug('Response includes data key, returning data %O', response.data);
       this.data = response.data;
     }
 
