@@ -38,7 +38,7 @@ export class WebsiteReport implements IWebsiteReport {
     this.domain =
       domain.protocol === 'file:'
         ? domain.pathname.split('/')[domain.pathname.split('/').length - 1]
-        : domain.hostname;
+        : domain.hostname.replace('www.', '');
     this.url = domain.toString();
     this.scanStatus = '';
     this.scanErrors = [];
