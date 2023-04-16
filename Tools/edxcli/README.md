@@ -40,6 +40,7 @@
 - [Debugging](#debugging)
   - [Examples](#examples)
 - [Release Notes](#release-notes)
+  - [1.0.0](#100)
   - [0.0.25](#0025)
   - [0.0.24](#0024)
   - [0.0.23](#0023)
@@ -146,6 +147,7 @@ USAGE
 - [Debugging](#debugging)
   - [Examples](#examples)
 - [Release Notes](#release-notes)
+  - [1.0.0](#100)
   - [0.0.25](#0025)
   - [0.0.24](#0024)
   - [0.0.23](#0023)
@@ -220,7 +222,7 @@ DESCRIPTION
   Display help for edxcli.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.1/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.9/src/commands/help.ts)_
 
 ## `edxcli plugins`
 
@@ -240,7 +242,7 @@ EXAMPLES
   $ edxcli plugins
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.2.4/src/commands/plugins/index.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.4.6/src/commands/plugins/index.ts)_
 
 ## `edxcli plugins:install PLUGIN...`
 
@@ -294,6 +296,9 @@ ARGUMENTS
 FLAGS
   -h, --help     Show CLI help.
   -v, --verbose
+
+GLOBAL FLAGS
+  --json  Format output as json.
 
 DESCRIPTION
   Displays installation properties of a plugin.
@@ -489,7 +494,7 @@ Retrieves a list of websites from one or more data sources.
 
 ```
 USAGE
-  $ edxcli websites fetch [SOURCE] [--loglevel error|info|debug] [-o <value>]
+  $ edxcli websites fetch SOURCE [--loglevel error|info|debug] [-o <value>]
 
 ARGUMENTS
   SOURCE  (Site Scanner|Touchpoints) Website list source
@@ -644,6 +649,33 @@ Turn on debug for all puppeteer internals
 # Release Notes
 
 All scan contain a `scanVersion` attribute which ties back to the version number listed in package.json. Each time an update has been made to the logic of the scans, the version number gets bumped. Doing so allows all teams to see the criteria at the time of the scan. We expect to update the version regularly so as to provide the most complete and accurate picture of websites at GSA.
+
+## 1.0.0
+
+[Issue 769](https://github.com/GSA/EDX/issues/769)
+
+- Reorganized scan outputs into a shared schema
+
+```json
+"reports": {
+  "facetName1": {
+    "data": [],
+    "errors": [],
+    "description": ""
+  },
+  "facetName2": {
+    "data": [],
+    "errors": [],
+    "description": ""
+  }
+}
+```
+
+- Established class structure for scanFacets.
+- Inclusion of debug.js and verbose messaging.
+- Capture of scan presets and facets in each report
+- Greater error handling throughout
+- Upgrade dependencies
 
 ## 0.0.25
 
