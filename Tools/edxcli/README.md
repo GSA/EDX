@@ -3,14 +3,14 @@
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 
 <!-- toc -->
-
-- [edxcli](#edxcli)
-- [Installation](#installation)
-- [GitHub Action Maintenance](#github-action-maintenance)
-- [Usage](#usage)
-- [Commands](#commands)
-- [Debugging](#debugging)
-- [Release Notes](#release-notes)
+* [edxcli](#edxcli)
+* [Installation](#installation)
+* [GitHub Action Maintenance](#github-action-maintenance)
+* [Usage](#usage)
+* [Commands](#commands)
+* [Debugging](#debugging)
+* [Quarterly Scans](#quarterly-scans)
+* [Release Notes](#release-notes)
 <!-- tocstop -->
 
 - [edxcli](#edxcli)
@@ -110,7 +110,6 @@ GitHub Action Repository secrets share the same names as the keys in `.env`. As 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g edx_cli
 $ edxcli COMMAND
@@ -122,75 +121,27 @@ USAGE
   $ edxcli COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-
-- [edxcli](#edxcli)
-- [Installation](#installation)
-  - [Prerequisites](#prerequisites)
-    - [Airtable access](#airtable-access)
-    - [Touchpoints](#touchpoints)
-- [GitHub Action Maintenance](#github-action-maintenance)
-- [Usage](#usage)
-- [Commands](#commands)
-  - [`edxcli data condense`](#edxcli-data-condense)
-  - [`edxcli help [COMMANDS]`](#edxcli-help-commands)
-  - [`edxcli plugins`](#edxcli-plugins)
-  - [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin)
-  - [`edxcli plugins:inspect PLUGIN...`](#edxcli-pluginsinspect-plugin)
-  - [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin-1)
-  - [`edxcli plugins:link PLUGIN`](#edxcli-pluginslink-plugin)
-  - [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin)
-  - [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-1)
-  - [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-2)
-  - [`edxcli plugins update`](#edxcli-plugins-update)
-  - [`edxcli websites`](#edxcli-websites)
-  - [`edxcli websites fetch SOURCE`](#edxcli-websites-fetch-source)
-  - [`edxcli websites push`](#edxcli-websites-push)
-  - [`edxcli websites scan`](#edxcli-websites-scan)
-  - [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
-- [Debugging](#debugging)
-  - [Examples](#examples)
-- [Quarterly Scans](#quarterly-scans)
-  - [1. Run Bulk Scan](#1-run-bulk-scan)
-  - [2. Consolidate Scan Outputs for IT Metric](#2-consolidate-scan-outputs-for-it-metric)
-  - [3. Backup Scan Data to Google Drive](#3-backup-scan-data-to-google-drive)
-  - [4. Copy data into Airtable](#4-copy-data-into-airtable)
-  - [5. Send Airtable Report to GEAR Team](#5-send-airtable-report-to-gear-team)
-  - [6. Send Scan Export to GEAR Team](#6-send-scan-export-to-gear-team)
-    - [6.1 Produce GEAR data export](#61-produce-gear-data-export)
-    - [6.2 Backup Data in Drive](#62-backup-data-in-drive)
-- [Release Notes](#release-notes)
-  - [1.0.0](#100)
-  - [0.0.25](#0025)
-  - [0.0.24](#0024)
-  - [0.0.23](#0023)
-  - [0.0.22](#0022)
-  - [0.0.21](#0021)
-  - [0.0.20](#0020)
-  - [0.0.19](#0019)
-  - [0.0.18](#0018)
-  - [0.0.17](#0017)
-  - [0.0.16](#0016)
-  - [0.0.15](#0015)
-  - [0.0.14](#0014)
-  - [0.0.13](#0013)
-  - [0.0.12](#0012)
-  - [0.0.11](#0011)
-  - [0.0.10](#0010)
-  - [0.0.9](#009)
-  - [0.0.8](#008)
-  - [0.0.7](#007)
-  - [0.0.6](#006)
-  - [0.0.5](#005)
-  - [0.0.4](#004)
-  - [0.0.3](#003)
-  - [0.0.2](#002)
-  - [0.0.1](#001)
+* [`edxcli data condense`](#edxcli-data-condense)
+* [`edxcli help [COMMANDS]`](#edxcli-help-commands)
+* [`edxcli plugins`](#edxcli-plugins)
+* [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin)
+* [`edxcli plugins:inspect PLUGIN...`](#edxcli-pluginsinspect-plugin)
+* [`edxcli plugins:install PLUGIN...`](#edxcli-pluginsinstall-plugin-1)
+* [`edxcli plugins:link PLUGIN`](#edxcli-pluginslink-plugin)
+* [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin)
+* [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-1)
+* [`edxcli plugins:uninstall PLUGIN...`](#edxcli-pluginsuninstall-plugin-2)
+* [`edxcli plugins update`](#edxcli-plugins-update)
+* [`edxcli websites`](#edxcli-websites)
+* [`edxcli websites fetch SOURCE`](#edxcli-websites-fetch-source)
+* [`edxcli websites push`](#edxcli-websites-push)
+* [`edxcli websites scan`](#edxcli-websites-scan)
+* [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
 
 ## `edxcli data condense`
 
@@ -293,7 +244,7 @@ ALIASES
   $ edxcli plugins add
 
 EXAMPLES
-  $ edxcli plugins:install myplugin
+  $ edxcli plugins:install myplugin 
 
   $ edxcli plugins:install https://github.com/someuser/someplugin
 
@@ -356,7 +307,7 @@ ALIASES
   $ edxcli plugins add
 
 EXAMPLES
-  $ edxcli plugins:install myplugin
+  $ edxcli plugins:install myplugin 
 
   $ edxcli plugins:install https://github.com/someuser/someplugin
 
@@ -634,7 +585,6 @@ EXAMPLES
 
   $ edxcli websites scan bulk -d Touchpoints --resume
 ```
-
 <!-- commandsstop -->
 
 <!-- Updating -->
