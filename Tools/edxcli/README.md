@@ -39,6 +39,15 @@
   - [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
 - [Debugging](#debugging)
   - [Examples](#examples)
+- [Quarterly Scans](#quarterly-scans)
+  - [1. Run Bulk Scan](#1-run-bulk-scan)
+  - [2. Consolidate Scan Outputs for IT Metric](#2-consolidate-scan-outputs-for-it-metric)
+  - [3. Backup Scan Data to Google Drive](#3-backup-scan-data-to-google-drive)
+  - [4. Copy data into Airtable](#4-copy-data-into-airtable)
+  - [5. Send Airtable Report to GEAR Team](#5-send-airtable-report-to-gear-team)
+  - [6. Send Scan Export to GEAR Team](#6-send-scan-export-to-gear-team)
+    - [6.1 Produce GEAR data export](#61-produce-gear-data-export)
+    - [6.2 Backup Data in Drive](#62-backup-data-in-drive)
 - [Release Notes](#release-notes)
   - [1.0.0](#100)
   - [0.0.25](#0025)
@@ -146,6 +155,15 @@ USAGE
   - [`edxcli websites scan bulk`](#edxcli-websites-scan-bulk)
 - [Debugging](#debugging)
   - [Examples](#examples)
+- [Quarterly Scans](#quarterly-scans)
+  - [1. Run Bulk Scan](#1-run-bulk-scan)
+  - [2. Consolidate Scan Outputs for IT Metric](#2-consolidate-scan-outputs-for-it-metric)
+  - [3. Backup Scan Data to Google Drive](#3-backup-scan-data-to-google-drive)
+  - [4. Copy data into Airtable](#4-copy-data-into-airtable)
+  - [5. Send Airtable Report to GEAR Team](#5-send-airtable-report-to-gear-team)
+  - [6. Send Scan Export to GEAR Team](#6-send-scan-export-to-gear-team)
+    - [6.1 Produce GEAR data export](#61-produce-gear-data-export)
+    - [6.2 Backup Data in Drive](#62-backup-data-in-drive)
 - [Release Notes](#release-notes)
   - [1.0.0](#100)
   - [0.0.25](#0025)
@@ -643,6 +661,83 @@ Turn on debug for all statements containing "scan"
 
 Turn on debug for all puppeteer internals
 `env DEBUG="puppeteer*" bin/run websites scan -d gsa.gov`
+
+<!-- Quarterly Scans -->
+
+# Quarterly Scans
+
+After quarterly scans are run against the list of websites, a number of actions are required.
+
+1. Run bulk scan
+2. Consolidate Scan outputs into IT Performance Metric Report
+3. Backup scan data to Google Drive
+4. Copy data into Airtable
+5. Send Airtable export to GEAR team
+6. Send Scan Export to GEAR Team
+
+## 1. Run Bulk Scan
+
+`bin/run websites scan bulk -p "edx scan" --no-headless`
+
+## 2. Consolidate Scan Outputs for IT Metric
+
+`bin/run data condense -f {folder(s)}`
+
+For example, if the scans were run over two days, you'd enter:
+
+`bin/run data condense -f "20230402,20230403"`
+
+Scan outputs will require some updates in Sheets in order to produce the IT Metric outputs. See :lock: [https://docs.google.com/document/d/1lzs4acbRg1Wr55Nk9TEGyz4Dro_uAhrqZFAqgSzYIgM/edit#heading=h.384sb3ahl2st](https://docs.google.com/document/d/1lzs4acbRg1Wr55Nk9TEGyz4Dro_uAhrqZFAqgSzYIgM/edit#heading=h.384sb3ahl2st) for full details.
+
+## 3. Backup Scan Data to Google Drive
+
+Copy scan folder(s) into [Scan Data folder](https://drive.google.com/drive/folders/1wyTsS5DBZY5rIp-hdVnlPX3P_PBWZHD6) within Drive
+
+## 4. Copy data into Airtable
+
+- Import results of condense operation into a Google Sheet
+- Create new column between columns C and D, leave it blank
+- Delete two columns, "URL" and "Scan Status"
+- Copy from row 2 through last row and all columns (last column should be AI)
+- Paste into Airtable USWDS Performance table at the bottom of the sheet. Paste operation should start in the second column (Websites). If you receive a warning that cells will be overwritten, press cancel and turn of automatic sorting on the table. Otherwise, you will be prompted and asked if you want to Expand the Table, click yes.
+
+## 5. Send Airtable Report to GEAR Team
+
+- In Airtable, download a CSV of the Websites table, send to GEAR team.
+
+## 6. Send Scan Export to GEAR Team
+
+As a reference, corresponding GEAR documentation is in :lock: [GEAR Playbook](https://docs.google.com/document/d/1MDf8hLrqORjSP6os_quxnI8LOQieE6YCjOvOwT7_IrE/edit#heading=h.g67uifgozv5o).
+
+### 6.1 Produce GEAR data export
+
+`bin/run data condense -c gearScans -f {folder(s)}`
+
+For example, if the scans were run over two days, you'd enter:
+
+`bin/run data condense -c gearScans -f "20230402,20230403"`
+
+- Open CSV file in text editor. Find/replace ".png" with ".webp"
+- Send CSV file to GEAR team.
+
+### 6.2 Backup Data in Drive
+
+- Copy all website screenshots into [Google Drive](https://drive.google.com/drive/folders/1q1IEjeTKYLNt68eK-ZaLucgIG_zlmMe9) (keep file names as is)
+- Navigate to folder containing scan outputs `edxcli/data/scans/{date}`.
+- Create new temporary folder to hold copies of webpage screenshots `mkdir webpageScreenshots`
+- Copy all webpage screenshots (ignoring search engine screenshots) into temporary directory.
+
+  `find . -type f -name "*.gov*.png" -exec cp "{}" webpageScreenshots/ \;`
+
+- Convert images
+
+  `cd websiteScreenshots`
+
+  `npx sharp-cli -f webp --input "*.png" -o .`
+
+- Delete .png files contained in `websiteScreenshots`
+- With all of the screenshots in a central location, upload them into the [GEAR Website Screenshot](https://drive.google.com/drive/folders/1q1IEjeTKYLNt68eK-ZaLucgIG_zlmMe9) folder in Drive.
+- GEAR team will then upload them into the server.
 
 <!-- Release Notes -->
 
