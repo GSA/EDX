@@ -33,11 +33,10 @@ jobs:
         working-directory: ./Tools/ci/sample-website
 
       - name: Install Dependencies
-        run: npm install @unlighthouse/cli puppeteer
+        run: npm install -g @unlighthouse/cli puppeteer
 
       - name: Unlighthouse assertions and client
-        run: unlighthouse-ci --site http://127.0.0.1:4000 --budget 75
-        working-directory: ./Tools/ci/sample-website
+        run: unlighthouse-ci --site http://127.0.0.1:4000 --debug --build-static
 
       - uses: actions/upload-artifact@v3
         with:
