@@ -25,7 +25,7 @@ jobs:
         working-directory: ./Tools/ci/sample-website
 
       - name: Start Server
-        run: bundle exec jekyll serve
+        run: bundle exec jekyll serve --detach
         working-directory: ./Tools/ci/sample-website
 
       - name: Unlighthouse assertions and client
