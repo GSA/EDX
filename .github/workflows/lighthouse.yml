@@ -1,0 +1,31 @@
+name: Assertions and static report
+
+on:
+  push:
+    branches: [ bh-github-action ]
+    paths:
+      - 'Tools/ci/sample-wesite/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install Dependencies
+        run: npm add @unlighthouse/cli puppeteer
+        working-directory: ./Tools/ci/sample-wesite
+
+      - name: Install Project Dependencies
+        run: bundle install
+        working-directory: ./Tools/ci/sample-wesite
+
+      - name: Start Server
+        run: bundle exec jekyll serve
+        working-directory: ./Tools/ci/sample-wesite
+
+      - name: Unlighthouse assertions and client
+        run: unlighthouse-ci --site http://localhost:4000 --budget 75
