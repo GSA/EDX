@@ -19,10 +19,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Dependencies
-        run: npm add @unlighthouse/cli puppeteer
-        working-directory: ./Tools/ci/sample-website
-
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7' # Not needed with a .ruby-version file
@@ -33,8 +29,17 @@ jobs:
         working-directory: ./Tools/ci/sample-website
 
       - name: Start Server
-        run: | 
-          bundle exec jekyll serve --detach
-          unlighthouse-ci --site http://localhost:4000 --budget 75
+        run: bundle exec jekyll serve --detach
         working-directory: ./Tools/ci/sample-website
 
+      - name: Install Dependencies
+        run: npm install @unlighthouse/cli puppeteer
+
+      - name: Unlighthouse assertions and client
+        run: unlighthouse-ci --site http://127.0.0.1:4000 --budget 75
+        working-directory: ./Tools/ci/sample-website
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: static_report
+          path: ./.unlighthouse
