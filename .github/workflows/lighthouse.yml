@@ -1,6 +1,14 @@
 name: Assertions and static report
 
 on:
+  push:
+    branches: [ bh-github-action-2 ]
+    # paths:
+    #   - 'Tools/ci/sample-wesite/**'
+  pull_request:
+    branches: [ main ]
+    # paths:
+    #   - 'Tools/ci/sample-wesite/**'
   workflow_dispatch:
 
 jobs:
@@ -25,8 +33,8 @@ jobs:
         working-directory: ./Tools/ci/sample-website
 
       - name: Start Server
-        run: bundle exec jekyll serve --detach
+        run: | 
+          bundle exec jekyll serve --detach
+          unlighthouse-ci --site http://localhost:4000 --budget 75
         working-directory: ./Tools/ci/sample-website
 
-      - name: Unlighthouse assertions and client
-        run: unlighthouse-ci --site http://localhost:4000 --budget 75
