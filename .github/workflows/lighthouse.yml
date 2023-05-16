@@ -4,11 +4,11 @@ on:
   push:
     branches: [ bh-github-action-2 ]
     paths:
-      - 'Tools/ci/sample-wesite/**'
+      - 'Tools/ci/sample-website/**'
   pull_request:
     branches: [ main ]
     paths:
-      - 'Tools/ci/sample-wesite/**'
+      - 'Tools/ci/sample-website/**'
   workflow_dispatch:
 
 jobs:
