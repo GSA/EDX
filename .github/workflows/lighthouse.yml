@@ -3,8 +3,8 @@ name: Assertions and static report
 on:
   push:
     branches: [ bh-github-action-2 ]
-    paths:
-      - 'Tools/ci/sample-website/**'
+    # paths:
+    #   - 'Tools/ci/sample-website/**'
   pull_request:
     branches: [ main ]
     paths:
@@ -21,8 +21,8 @@ jobs:
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.7' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          ruby-version: '2.7'
+          bundler-cache: true
 
       - name: Install Project Dependencies
         run: bundle install
