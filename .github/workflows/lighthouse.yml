@@ -13,15 +13,15 @@ jobs:
 
       - name: Install Dependencies
         run: npm add @unlighthouse/cli puppeteer
-        working-directory: ./Tools/ci/sample-wesite
+        working-directory: ./Tools/ci/sample-website
 
       - name: Install Project Dependencies
         run: bundle install
-        working-directory: ./Tools/ci/sample-wesite
+        working-directory: ./Tools/ci/sample-website
 
       - name: Start Server
         run: bundle exec jekyll serve
-        working-directory: ./Tools/ci/sample-wesite
+        working-directory: ./Tools/ci/sample-website
 
       - name: Unlighthouse assertions and client
         run: unlighthouse-ci --site http://localhost:4000 --budget 75
