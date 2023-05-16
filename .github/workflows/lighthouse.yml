@@ -3,12 +3,12 @@ name: Assertions and static report
 on:
   push:
     branches: [ bh-github-action-2 ]
-    # paths:
-    #   - 'Tools/ci/sample-wesite/**'
+    paths:
+      - 'Tools/ci/sample-wesite/**'
   pull_request:
     branches: [ main ]
-    # paths:
-    #   - 'Tools/ci/sample-wesite/**'
+    paths:
+      - 'Tools/ci/sample-wesite/**'
   workflow_dispatch:
 
 jobs:
@@ -41,4 +41,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: static_report
-          path: ./.unlighthouse
+          path: ./.unlighthouse/

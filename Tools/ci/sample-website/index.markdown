@@ -4,3 +4,5 @@
 
 layout: home
 ---
+
+![](https://www.gsa.gov/sites/gsa.gov/templates/resources/images/nav-logo.png)
