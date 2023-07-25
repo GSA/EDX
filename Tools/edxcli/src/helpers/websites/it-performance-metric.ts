@@ -22,7 +22,7 @@ export class ItPerfMetricReport implements ScanFacetInterface {
     },
     identifierPrivacy: {
       regex:
-        /website-information\/website-policies|website-information\/privacy-and-security-notice|portal\/content\/116609/i,
+        /website-information\/website-policies|website-information\/privacy-and-security-notice|portal\/content\/116609|\/privacy-and-security/i,
       type: 'link',
       titleRegex: 'Privacy',
     },
