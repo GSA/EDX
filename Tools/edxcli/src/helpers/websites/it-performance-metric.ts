@@ -22,7 +22,7 @@ export class ItPerfMetricReport implements ScanFacetInterface {
     },
     identifierPrivacy: {
       regex:
-        /website-information\/website-policies|website-information\/privacy-and-security-notice|portal\/content\/116609/i,
+        /website-information\/website-policies|website-information\/privacy-and-security-notice|portal\/content\/116609|\/privacy-and-security/i,
       type: 'link',
       titleRegex: 'Privacy',
     },
@@ -41,7 +41,7 @@ export class ItPerfMetricReport implements ScanFacetInterface {
     },
     search: {
       regex:
-        /https:\/\/search.usa.gov\/search|https:\/\/search.gsa.gov\/search|<label.*?>.*?search.*?<\/label>|placeholder=('|")search|aria-label="search.*"|type="search"/i,
+        /https:\/\/search.usa.gov\/search|https:\/\/search.gsa.gov\/search|<label.*?>.*?search.*?<\/label>|placeholder=('|")search|aria-label="search.*"|type="search"|id="searchtext"/i,
       type: 'other',
     },
     banner: {
