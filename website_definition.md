@@ -3,7 +3,6 @@ For the purposes of the EDX project, we are evaluating all public-facing domains
 * Domain managed by GSA and accessible from the public internet (no VPN)
 * All public-facing production websites and GSA-operated digital services (inclusive of those whose only public page consists of a login screen) that are managed by the General Services Administration (GSA). 
 
-
 Domains for exclusion are those that: 
 
 * Domains used for strictly for API's.
