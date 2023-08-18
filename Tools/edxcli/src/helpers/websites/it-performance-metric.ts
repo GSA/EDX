@@ -32,7 +32,7 @@ export class ItPerfMetricReport implements ScanFacetInterface {
       type: 'link',
     },
     identifierFOIA: {
-      regex: /reference\/freedom-of-information-act-foia|\/node\80729/i,
+      regex: /reference\/freedom-of-information-act-foia|\/node\80729|\/omb\/freedom-of-information-act-foia/i,
       type: 'link',
     },
     dap: {
