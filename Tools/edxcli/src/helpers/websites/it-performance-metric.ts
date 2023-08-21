@@ -32,7 +32,7 @@ export class ItPerfMetricReport implements ScanFacetInterface {
       type: 'link',
     },
     identifierFOIA: {
-      regex: /reference\/freedom-of-information-act-foia|\/node\80729/i,
+      regex: /reference\/freedom-of-information-act-foia|\/node\80729|\/omb\/freedom-of-information-act-foia/i,
       type: 'link',
     },
     dap: {
@@ -41,7 +41,7 @@ export class ItPerfMetricReport implements ScanFacetInterface {
     },
     search: {
       regex:
-        /https:\/\/search.usa.gov\/search|https:\/\/search.gsa.gov\/search|<label.*?>.*?search.*?<\/label>|placeholder=('|")search|aria-label="search.*"|type="search"|id="searchtext"/i,
+        /https:\/\/search.usa.gov\/search|https:\/\/search.gsa.gov\/search|<label.*?>.*?search.*?<\/label>|placeholder=('|")search|aria-label="search.*"|type="search"|id="searchtext"|id="indicator_search"/i,
       type: 'other',
     },
     banner: {
