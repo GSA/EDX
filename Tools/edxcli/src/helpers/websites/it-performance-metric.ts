@@ -28,7 +28,7 @@ export class ItPerfMetricReport implements ScanFacetInterface {
     },
     identifierAccessibility: {
       regex:
-        /website-information\/accessibility-aids|website-information\/website-policies|portal\/content\/116609/i,
+        /website-information\/accessibility-aids|website-information\/website-policies|portal\/content\/116609|website-information\/accessibility-statement/i,
       type: 'link',
     },
     identifierFOIA: {
