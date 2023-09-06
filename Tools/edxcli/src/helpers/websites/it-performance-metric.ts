@@ -41,7 +41,7 @@ export class ItPerfMetricReport implements ScanFacetInterface {
     },
     search: {
       regex:
-        /https:\/\/search.usa.gov\/search|https:\/\/search.gsa.gov\/search|<label.*?>.*?search.*?<\/label>|placeholder=('|")search|aria-label="search.*"|type="search"|id="searchtext"|id="indicator_search"/i,
+        /https:\/\/search.usa.gov\/search|https:\/\/search.gsa.gov\/search|<label.*?>.*?search.*?<\/label>|placeholder=('|")search|aria-label="search.*"|type="search"|id="searchtext"|id="indicator_search"|id="searchbox"/i,
       type: 'other',
     },
     banner: {
