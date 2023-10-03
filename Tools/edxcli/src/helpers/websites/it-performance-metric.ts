@@ -32,7 +32,8 @@ export class ItPerfMetricReport implements ScanFacetInterface {
       type: 'link',
     },
     identifierFOIA: {
-      regex: /reference\/freedom-of-information-act-foia|\/node\80729|\/omb\/freedom-of-information-act-foia/i,
+      regex:
+        /reference\/freedom-of-information-act-foia|\/node\80729|\/omb\/freedom-of-information-act-foia/i,
       type: 'link',
     },
     dap: {
@@ -98,8 +99,6 @@ export class ItPerfMetricReport implements ScanFacetInterface {
       );
     }
 
-    const content = await page.content();
-
     // some pages load the content of the identifier at the end, give the page a grace period to see if it all loads
     try {
       await page.waitForSelector('a.usa-identifier__required-link.usa-link', {
@@ -110,6 +109,8 @@ export class ItPerfMetricReport implements ScanFacetInterface {
         'timeout exceeded while waiting for usa-identifier selector - it may not exist',
       );
     }
+
+    const content = await page.content();
 
     let reqdLinks;
     // loop through the list of regex patterns
