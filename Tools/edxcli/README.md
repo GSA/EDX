@@ -111,11 +111,11 @@ GitHub Action Repository secrets share the same names as the keys in `.env`. As 
 
 <!-- usage -->
 ```sh-session
-$ npm install -g edx_cli
+$ npm install -g edxcli_gsa
 $ edxcli COMMAND
 running command...
 $ edxcli (--version)
-edx_cli/1.0.0 darwin-x64 node-v18.15.0
+edxcli_gsa/1.0.0 darwin-x64 node-v18.16.0
 $ edxcli --help [COMMAND]
 USAGE
   $ edxcli COMMAND
