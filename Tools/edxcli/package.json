@@ -1,5 +1,5 @@
 {
-  "name": "edx_cli",
+  "name": "edxcli_gsa",
   "description": "oclif based CLI to evaluate web properties",
   "version": "1.0.0",
   "author": "US General Services Administration",
