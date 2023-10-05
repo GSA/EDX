@@ -744,7 +744,7 @@ All scan contain a `scanVersion` attribute which ties back to the version number
 
 ## 0.0.20
 
-pbs-billing.gsa.gov has a public face via https://www.pbs-billing.gsa.gov/users/CheckIfUserExists.aspx, updating metadata to scan the public-page
+pbs-billing.gsa.gov has a public face via https://www.pbs-billing.gsa.gov/ROW/users/CheckIfUserExists.aspx, updating metadata to scan the public-page
 
 ## 0.0.19
 
