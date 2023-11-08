@@ -686,7 +686,7 @@ For example, if the scans were run over two days, you'd enter:
   `npx sharp-cli -f webp --input "*.png" -o .`
 
 - Delete .png files contained in `websiteScreenshots`
-- With all of the screenshots in a central location, upload them into the [GEAR Website Screenshot](https://drive.google.com/drive/folders/1q1IEjeTKYLNt68eK-ZaLucgIG_zlmMe9) folder in Drive.
+- With all of the screenshots in a central location, upload them into the [GEAR Website Screenshot](https://drive.google.com/drive/folders/1xhjXsEB6iNcpqWumiHW2uPsf-nhSDd3E) folder in Drive.
 - GEAR team will then upload them into the server.
 
 <!-- Release Notes -->
