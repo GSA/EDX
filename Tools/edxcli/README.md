@@ -646,10 +646,10 @@ Copy scan folder(s) into [Scan Data folder](https://drive.google.com/drive/folde
 ## 4. Copy data into Airtable
 
 - Import results of condense operation into a Google Sheet
-- Create new column between columns C and D, leave it blank
 - Delete two columns, "URL" and "Scan Status"
+- Create new column between columns C and D, leave it blank (this is for the calculated "Is Latest Scan" column).
 - Copy from row 2 through last row and all columns (last column should be AI)
-- Paste into Airtable USWDS Performance table at the bottom of the sheet. Paste operation should start in the second column (Websites). If you receive a warning that cells will be overwritten, press cancel and turn of automatic sorting on the table. Otherwise, you will be prompted and asked if you want to Expand the Table, click yes.
+- Paste into Airtable USWDS Performance table at the bottom of the sheet (note: make sure "Grid view" is selected on the left side of the screen in Airtable). Paste operation should start in the second column (Websites). If you receive a warning that cells will be overwritten, press cancel and turn of automatic sorting on the table. Otherwise, you will be prompted and asked if you want to Expand the Table, click yes.
 
 ## 5. Send Airtable Report to GEAR Team
 
