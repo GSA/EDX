@@ -18,5 +18,3 @@ GSA’s work to improve digital governance and [deliver a digital-first public e
 * Coordinating [enterprise web modernization efforts](https://github.com/GSA/wg-web-modernization) related to 21st Century IDEA
 * Collaborating with the Office of Strategic Communication and GSA IT to lead the Digital Council, support the Executive Board, and improve knowledge sharing across GSA on initiatives to improve digital experience.
 * Leading GSA's internal [Digital Community of Practice](https://groups.google.com/a/gsa.gov/g/gsadigitalcop).
-
-Questions about EDX? <a href="https://touchpoints.app.cloud.gov/touchpoints/1fc9c962/submit" target="_blank" rel="noopener">Get in touch 💭</a>
