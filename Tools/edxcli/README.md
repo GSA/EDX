@@ -627,7 +627,9 @@ After quarterly scans are run against the list of websites, a number of actions 
 
 ## 1. Run Bulk Scan
 
-`bin/run websites scan bulk -p "edx scan" --no-headless`
+`bin\run websites scan bulk -d Touchpoints -f itPerformanceMetric -p "edx scan" -f screenshot --no-headless`
+
+Please note that these scans should be run while off of the GSA network in order to mimic what a public user would see. Some of the sites check whether the user is on the GSA network and will present a different page from what the public would otherwise see. 
 
 ## 2. Consolidate Scan Outputs for IT Metric
 
