@@ -138,6 +138,21 @@ const data: Record<string, IWebsiteAttributes> = {
     urlPath: '',
     wwwPrefix: '',
   },
+  'afadvantage.gov': {
+    cookies: {
+      domain: '',
+      name: '',
+      path: '',
+      value: '',
+    },
+    customFOIA: false,
+    customPrivacyPolicy: false,
+    notes: '',
+    queryString: '?store=AIRFORCE',
+    searchNotReq: false,
+    urlPath: '/advantage/ws/main/start_page',
+    wwwPrefix: 'www.',
+  },
   'amp.fas.gsa.gov': {
     cookies: {
       domain: '',
@@ -316,7 +331,7 @@ const data: Record<string, IWebsiteAttributes> = {
     queryString: '',
     searchNotReq: true,
     urlPath: '',
-    wwwPrefix: '',
+    wwwPrefix: 'www.',
   },
   'federalistapp.18f.gov': {
     cookies: {
